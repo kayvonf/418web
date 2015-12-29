@@ -14,8 +14,6 @@ writing good parallel programs requires an understanding of key
 machine performance characteristics, this course will cover both
 parallel hardware and software design.  </p>
 
-<div class="overview_main_item"><a href="<?php echo site_url('courseinfo'); ?>">[ Course Policies, Logistics, and Details ]</a></div>
-
 <div class="overview_main_item overview_ruled_element">When We Meet</div>
 
 <div class="" style="padding-bottom: 15px;">
