@@ -48,9 +48,9 @@ site_code_base_url = '/mysite';
 # base directory for storing uploaded content.  It is recommended you
 # make this different from the base directory of the code itself to
 # allow the uploaded content to be hosted elsewhere if need be. This
-# separation must it easy to update the site without worried about
-# losing uploaded data -- just wax the code tree and
-# re-checkout/deploy an update.
+# separation makes it easy to update the site's code without worrying
+# about losing uploaded data -- just wax the code tree and
+# re-checkout/deploy a code update.
 #
 # e.g., # if you want content hosted from
 # http://www.foo.com/mysitecontent, then set content_site_base_dir to
@@ -74,7 +74,7 @@ site_local_code_base_dir = '/var/www' + site_code_base_url;
 
 site_local_content_base_dir = '/var/www' + site_content_base_url;
 
-# If a site_backdir_dir is specified, then the deploy script backs up
+# If a site_backup_dir is specified, then the deploy script backs up
 # the current site to this location prior to updating the live site
 # (the script will create the directory for you if it does not exist)
 

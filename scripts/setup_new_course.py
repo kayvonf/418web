@@ -8,7 +8,7 @@ def mkdirDashP(dir):
         os.mkdir(dir);
 
 def execute(cmd):
-    print "Executing: %s" % cmd;
+    # print "Executing: %s" % cmd;
     if os.system(cmd) != 0:
         print "ERROR EXECUTING %s: ABORTING" % cmd;
         sys.exit(-1);
@@ -42,15 +42,8 @@ if __name__ == "__main__":
     print "   mysql database name:  %s" % course_config.database_name;
     print "   content directory:    %s" % os.path.abspath(course_config.site_local_content_base_dir);
     print ""
-    print "You will be prompted twice for your SQL database password...";
+    print "You are about to be prompted for your SQL database password...";
     print "";
-   
-    # create the initial database
-     
-    mysql_commands =  "create database %s;" % course_config.database_name;
-
-    execute("mysql --user %s -p -e '%s'" % (course_config.database_user, mysql_commands));
-    execute("mysql --user %s -p %s < %s" % (course_config.database_user, course_config.database_name, INIT_DB_SCRIPT));
 
     # create directories
     mkdirDashP(course_config.site_local_content_base_dir);
@@ -58,6 +51,14 @@ if __name__ == "__main__":
     mkdirDashP(os.path.join(course_config.site_local_content_base_dir, UPLOADS_DIR));
     mkdirDashP(os.path.join(course_config.site_local_content_base_dir, PROFILE_PICS_DIR));
     mkdirDashP(os.path.join(course_config.site_local_content_base_dir, ARTICLE_IMAGES_DIR));
+   
+    # create the initial database
+     
+    mysql_commands  =  "create database %s;" % course_config.database_name;
+    mysql_commands +=  "use %s;" % course_config.database_name;
+    mysql_commands +=  "source %s;" % INIT_DB_SCRIPT;
+
+    execute("mysql --user %s -p -e '%s'" % (course_config.database_user, mysql_commands));
 
     # Give apache permissions to write to the content directory
     execute("chown -R %s:%s %s" % (course_config.webserver_user, course_config.webserver_user, course_config.site_local_content_base_dir));
@@ -67,5 +68,5 @@ if __name__ == "__main__":
     print ""
     print "This is a good time to ensure that:"
     print "  -- Imagemagick is installed on this machine."
-    print "  -- The value of upload_max_filesize in php5/apache2/php.ini is large enough for your slide uploads. (The PHP default is 2MB)";
+    print "  -- The value of upload_max_filesize in php5/apache2/php.ini is large enough for your slide uploads. (The PHP default is only 2MB, and the PDFs of your slides is likely to be much bigger!)";
     print ""
