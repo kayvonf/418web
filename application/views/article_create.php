@@ -5,12 +5,6 @@
 <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>assets/third_party/jquery/jquery-ui-1.9.2.custom/css/blitzer/jquery-ui-1.9.2.custom.min.css" type="text/css" />
 <script src="<?php echo base_url(); ?>assets/third_party/jquery/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
 <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>assets/third_party/jquery/timepicker/jquery-ui-timepicker-addon.css" type="text/css" />
-<script src="<?php echo base_url(); ?>assets/third_party/jquery/timepicker/jquery-ui-timepicker-addon.js"></script>
-<script>
-$(function(){
-$('#deadline').datetimepicker();
-});
-</script>
 
 <?php
 if (isset($parsed_result)) {
@@ -50,18 +44,13 @@ else {
 
 <p class="form_label"><input type="checkbox" name="is_public" value="public" checked>Public Article</p>
 
+<p class="form_label"><input type="checkbox" name="comments_enabled" value="allowcomments">Allow Comments</p>
+
 <p>
 <div class="form_label">Add Additional Authors </div>
 <div class="form_help_text">(comma separated usernames)</div>
 <input class="form_input_box" type="input" name="authors">
 </p>
-
-<?php if(isset($privileged)) { ?>
-<p>
-<div class="form_label">Deadline</div>
-<input class="form_input_box" id="deadline" name="deadline" type="text"></div>
-</p>
-<?php } ?>
 
 <div class="overview_main_item form_submit_button"><button type="submit"
 value="Submit"/>[ Create ]</button></div>

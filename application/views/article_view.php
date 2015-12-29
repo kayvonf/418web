@@ -5,35 +5,6 @@
 
 <div class="common_title title"><?php echo $article_title ?></div>
 
-<?php if (count($authors) > 0) { ?>
-
-<div class="author_list"> By
-<?php
-$i = 0;
-$num_authors = count($authors);
-foreach ($authors as $author)
-{
-    // HACK(kayvonf): English punctuation rules are annoying
-    if ($i < $num_authors-2) {
-        echo $author['username'] . ', ';
-    } else if ($i == $num_authors-2 && $num_authors == 2) {
-        echo $author['username'] . ' and ';
-    } else if ($i == $num_authors-2) {
-        echo $author['username'] . ', and ';
-    } else {
-        echo $author['username'];
-    }
-    $i++;
-}
-?>
-</div>
-
-<?php } ?>
-
-<?php  if (isset($deadline)) {  ?>
-<div class="deadline">Due on <?= $deadline ?></div>
-<?php } ?>
-
 <hr size="1">
 
 <?php

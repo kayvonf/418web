@@ -58,9 +58,6 @@ class article extends MY_Controller {
         $data['article_id'] = $article->id;
         $data['authors'] = $this->get_authors($article_id);
         $data['article_title'] = $article->title;
-        if ($article->deadline) {
-            $data['deadline'] = $article->deadline;
-        }
         $data['parsed_result'] = $parsed_result;
         if ($article->comments_enabled) {
             $data['comments_html'] = $this->comments_html('ARTICLE', $article);
@@ -73,12 +70,7 @@ class article extends MY_Controller {
     function create() {
         $this->require_login();
         $this->require_privileged();
-
-        // shortname
-        // authors
-        // due date
-        // lecture_link
-        $data = array('starting_text' => '');
+        $data = array('starting_text' => 'Add text here.');
         $this->load_view('Create Article', 'article_create', $data);
     }
 
@@ -87,7 +79,7 @@ class article extends MY_Controller {
             show_error('Only privileged users can access this page.', 403);
         }
 
-        $data = array('starting_text' => '',
+        $data = array('starting_text' => 'Add text here.',
                       'privileged' => '');
         $this->load_view('Create Article', 'article_create', $data);
     }
@@ -145,16 +137,15 @@ class article extends MY_Controller {
         $new_article['title'] = $this->input->post('title');
         $new_article['text'] = $this->input->post('article_content');
 
-        $new_article['public'] = true;
-        if (!$this->input->post('is_public') == 'checked') {
-            $new_article['public'] = false;
+        $new_article['public'] = false;
+        if ($this->input->post('is_public') === 'public') {
+            $new_article['public'] = true;
+        }
+        $new_article['comments_enabled'] = false;
+        if ($this->input->post('comments_enabled') === 'allowcomments') {
+            $new_article['comments_enabled'] = true;
         }
 
-        if ($mode == PRIVILEGED_CREATE && $this->input->post('deadline')) {
-            // TODO(mburman): do some proper validation here.
-            $datetime = new DateTime($this->input->post('deadline'));
-            $new_article['deadline'] = date_format($datetime, 'Y-m-d H:i:s');
-        }
         return $new_article;
     }
 
@@ -188,7 +179,6 @@ class article extends MY_Controller {
             // next author
             $author = strtok(",");
         }
-        return $new_article;
     }
 
 
@@ -330,6 +320,11 @@ class article extends MY_Controller {
         } else {
             $data['public'] = '';
         }
+        if ($article->comments_enabled) {
+            $data['comments_enabled'] = 'checked';
+        } else {
+            $data['comments_enabled'] = '';
+        }
         $data['version'] = $article->version;
         $data['authors'] = $this->get_authors($article_id);
         $data['paragraphs'] = $this->paragraphs_model->get_paragraphs_by_article($article_id);
@@ -350,11 +345,12 @@ class article extends MY_Controller {
         $data['starting_text'] = $this->input->post('article_content');
         $data['starting_additional_authors'] = $this->input->post('authors');
         $data['public'] = $this->input->post('is_public');
+	$data['comments_enabled'] = $this->input->post('comments_enabled');
         $data['version'] = $version;
 
         // FIXME(kayvonf): BUG. If the post contains new *valid* author
-        // info, then it will be discarded here since get_authors retrieves
-        // data from dB
+        // info, then it will be discarded here since get_authors()
+        // retrieves data from the dB
         $data['authors'] = $this->get_authors($article_id);
 
         $data['paragraphs'] = $this->paragraphs_model->get_paragraphs_by_article($article_id);

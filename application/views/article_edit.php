@@ -34,12 +34,10 @@ echo form_open_multipart(site_url('article/' . $article_id . '/do_edit/'. $versi
 <p>
 <p class="bold_text">Title</p>
 <p><input id="real_form_title" class="article_text_input" size="80" type="input" name="title" value="<?php echo $starting_title_text; ?>"></p>
-
 </p>
 
-    <p class="bold_text">Article Content</p>
-    <p><textarea id="real_form_content" class="article_text_input" rows="20" cols="90" name="article_content" /><?php echo $starting_text; ?></textarea><p>
-
+<p class="bold_text">Article Content</p>
+<p><textarea id="real_form_content" class="article_text_input" rows="20" cols="90" name="article_content" /><?php echo $starting_text; ?></textarea><p>
 
 <p class="bold_text">Upload More Images</p>
 
@@ -53,12 +51,15 @@ echo form_open_multipart(site_url('article/' . $article_id . '/do_edit/'. $versi
 <input type="button" id="add_file_button" value="Add Another Image" onclick="add_file_input()" />
 
 
-<p class="bold_text">Who Can See and Edit this Article</p>
+<p class="bold_text">Who Can View/Edit this Article</p>
+
+<p><input type="checkbox" name="is_public" value="public" <?php echo $public;?>> Public article (visible to all)</p>
+<p><input type="checkbox" name="comments_enabled" value="allowcomments" <?php echo $comments_enabled;?>> Allow comments on this article</p>
 
 <?php
 if (count($authors) > 0) { ?>
 
-<p>The following users are authors for this article.  Only authors can edit the article and view it when it is not public.</p>
+<p>The following users are authors for this article.  Only authors can edit/view private articles. (Note: instructors and TAs can view and edit any article.)</p>
 <p>
 <?php
     foreach($authors as $author) { ?>
@@ -80,9 +81,6 @@ if (count($authors) > 0) { ?>
 <input class="article_text_input" style="width: 360px;" type="input" name="authors" value="<?php echo $starting_additional_authors; ?>">
 </p>
 
-<p><input type="checkbox" name="is_public" value="public" <?php echo $public;?>> Public Article</p>
-
-
 <hr size=1>
 
 <p>
@@ -90,8 +88,6 @@ if (count($authors) > 0) { ?>
 <button type="button" class="basic_button" onclick="refresh_preview()" target="preview_target">[ Preview ]</button> |
 <button type="button" class="basic_button" onclick="save_article(false)">[ Save ]</button> |
 <button type="button" class="basic_button" onclick="save_article(true)">[ Save and Keep Editing ]</button>
-
-<!-- <input type="submit" value="Save And View" /> -->
 </p>
 
 </form>
@@ -113,10 +109,15 @@ if (count($authors) > 0) { ?>
 
 <?php if (count($article_images) == 0) { ?>
 
-<p>This article currently has no attached images.</p>
+<p>This article has no attached images.</p>
 
 <?php
     } else {
+?>
+
+<p>Right-click images to obtain a url for use in a Markdown image reference in the above article.</p>
+
+<?php
         foreach ($article_images as $article_image) {
 
     // NOTE(kayvonf): Below I convert the '.' in the filename to a '-'.

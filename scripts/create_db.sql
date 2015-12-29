@@ -28,10 +28,9 @@ CREATE TABLE `articles` (
   `text` mediumtext,
   `deadline_text` mediumtext,
   `public` tinyint(1) NOT NULL DEFAULT '1',
+  `comments_enabled` tinyint(1) NOT NULL DEFAULT '0',
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `version` int(11) NOT NULL DEFAULT '0',
-  `deadline` datetime DEFAULT NULL,
-  `comments_enabled` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 );
 
