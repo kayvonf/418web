@@ -327,7 +327,7 @@ class Markdown_Parser {
 
         # Run document gamut methods.
         foreach ($this->document_gamut as $method => $priority) {
-            log_message('debug', 'kf: Running ' . $method);
+            # log_message('debug', 'kf: Running ' . $method);
             $text = $this->$method($text);
         }
 
@@ -596,11 +596,9 @@ class Markdown_Parser {
     # whole-document pass.
     #
         foreach ($this->block_gamut as $method => $priority) {
-            log_message('debug', 'kf: Running block: ' . $method);
+            # log_message('debug', 'kf: Running block: ' . $method);
             $text = $this->$method($text);
         }
-
-        log_message('debug', 'kf: About to form paragraphs');
 
         # Finally form paragraphs and restore hashed blocks.
         $text = $this->formParagraphs($text);
