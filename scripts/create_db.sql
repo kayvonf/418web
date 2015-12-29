@@ -26,7 +26,6 @@ CREATE TABLE `articles` (
   `title` varchar(256) NOT NULL,
   `last_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `text` mediumtext,
-  `deadline_text` mediumtext,
   `public` tinyint(1) NOT NULL DEFAULT '1',
   `comments_enabled` tinyint(1) NOT NULL DEFAULT '0',
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
