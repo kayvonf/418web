@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|assets|robots\.txt)
+RewriteRule ^(.*)$ /MY_WEBSITE_BASE_DIRECTORY/index.php/$1 [L]

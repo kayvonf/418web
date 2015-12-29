@@ -1,0 +1,19 @@
+
+Connecting to the database:
+----------------------------------------------------
+
+mysql -u root -p test_learning
+
+Keep in mind that -p indicates you want to specify a password. It
+takes no arguments, so it is not followed by the password.
+test_learning is the database name.
+
+Very useful:
+----------------------------------------------------
+
+mysqlshow db_name table_name
+mysqldump -u root -p db_name table_name
+
+
+
+

@@ -1,0 +1,79 @@
+
+This web site was developed by Alex Reece, Manish Burman, Cary Yang,
+and Kayvon Fatahalian.
+
+#####################################################################
+SETTING UP A NEW INSTANCE OF THE COURSE WEBSITE
+#####################################################################
+
+1. Set up the host machine:
+   -- Install LAMP tools: apache, php, mysql
+   -- Install imagemagick: apt-get install imagemagick
+
+2. Apache/modphp configuration:   
+   -- You may wish to increase the default modphp upload file size.
+      The default is 2 MB and this is likely far too small for many
+      lecture slide decks.  
+       --> Change value of the variables 'upload_max_filesize' and
+           'post_max_size' in /etc/php5/apache2/php.ini
+
+3. Edit scripts/course_config.template.py to confgure the site for
+your needs, then save the modified file as: scripts/course_config.py.
+The configuration file requires you to specify database account
+information and local file system paths needed by site logic.  See
+course_config.template.py file for more detailed information.
+  
+4. From the scripts directory, run setup_new_course.py:
+
+      python setup_new_course.py
+
+   This will create the course database as well as a number of
+   required content directories.  You will be prompted for your mysql
+   database password. (Although the db password is in
+   course_config.py, I didn't want to synthesize a command line with
+   the password in plaintext -- there's probably a better way to do this.)
+
+5. From the scripts directory, run the deploy script to copy the
+contents of your working tree into your web tree:
+    
+      python deploy.py -c ..
+
+6. The site is now up and running.  Visit it in a browser and create a
+account with the desired USERNAME.
+
+7. The account creation process via the website UI only creates
+student users.  To modify the USERNAME account to have instructor (or
+TA) priviledges, use the change_user_type.py script:
+
+       python change_user_type.py USERNAME instructor
+
+   Note that valid user types are [instructor, ta, student], so for TA
+   accounts (once your TAs sign up) should be upgraded using:
+
+       python change_user_type.py TA_ACCOUNT_USERNAME ta
+
+8. The site is currently in the state is was at the end of 15-418 last
+semester. You'll want to customize the look of the site for your
+needs.  This is going to require directly modifying php files in the
+COURSE_CODE_DIR/application/views and
+COURSE_CODE_DIR/application/views/template folders:
+
+     -- I suggest grepping for '418', '618', 'andrew',
+        'parallel computer architecture and programming', 'CMU',
+        'Carnegie Mellon', and '2015'
+
+     -- You'll need to change presentation layer pages in:
+        COURSE_CODE_DIR/application/views/*.php
+
+     -- The only view that is slightly special is the home page,
+        which, for convenience builds a list of lectures in an array
+        and then renderer the array (see comments in home.php):
+        COURSE_CODE_DIR/application/views/home.php
+	
+     -- You'll probably want to update the account creation welcome message in
+        COURSE_CODE_DIR/application/views/welcome.php
+
+9. As the instructor, you may wish to look at the functionality
+available in the "Admin Console" (see the top bar of the page).  This
+is where you will upload lectures, create articles, etc.
+

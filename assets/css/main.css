@@ -1,0 +1,1053 @@
+
+
+html
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+
+  color: #505050;
+  
+  font-size: 11pt;  
+  font-family: open-sans;
+  font-style: normal;
+  font-weight: 400;
+}
+
+td
+{
+    /* NOTE(kayvonf): keep this consistent with the body element above.
+       It's very annoying how <td> doesn't inherent from it's container */
+    font-size: 11pt;
+    font-family: open-sans;
+    font-style: normal;
+    font-weight: 400;
+}
+
+body A {
+    color: #c00000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body A:hover
+{
+    text-decoration: underline;
+}
+
+.topbar {
+   height: 22px;
+   color: #ffffff;
+   background: #c02020;
+   border-bottom: #f44000 4px solid;
+   padding-top: 2px;
+   padding-right: 12px;
+   padding-left: 12px;
+   font-size: 10pt;
+}
+
+.topbar A
+{
+    color: #ffffff;
+}
+
+.topbar_left
+{
+   float: left;
+   padding-right: 16px;
+}
+
+.topbar_right
+{
+    text-align: right;
+    float: right;
+}
+
+.ta-name
+{
+    font-weight: bold;
+}
+
+.topbar_profile_picture
+{
+    width: 18px;
+    height: 18px;
+    border: #800000 1px solid;
+    margin-right: 2px;
+}
+
+.footer
+{
+  font-size: 9pt;
+  text-align: right;
+}
+
+.main_container
+{
+
+}
+
+.content_container
+{
+   padding: 8px 12px 8px 12px;
+}
+
+.narrow_container
+{
+    width: 800px;
+}
+
+.common_title
+{
+    color: #000000;
+    font-family: open-sans-condensed;
+    font-size: 28pt;
+    font-weight: 700;
+}
+
+.common_title_small
+{
+    color: #000000;
+    font-family: open-sans-condensed;
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+.colored_text
+{
+    color: #c00000;
+}
+
+.bold_text
+{
+    font-weight: bold;
+}
+
+.italic_text
+{
+    font-style: italic;
+    font-weight: normal;
+}
+
+.small_text
+{
+    font-size: 9pt;
+}
+
+.indented_block
+{
+    padding-left: 3em;
+}
+
+h1
+{
+    color: #000000;
+}
+
+h2
+{
+    color: #000000;
+}
+
+h3
+{
+    color: #000000;
+    font-size: 12pt;
+}
+
+blockquote
+{
+    background-color: #f9f9f9;
+    border-left: 10px solid #cccccc;
+    margin: 15px 10px;
+    padding: 5px 10px;
+    font-style: italic;
+}
+
+blockquote cite
+{
+    font-size: 9pt;
+    font-style: italic;
+    color: #666;
+}
+
+blockquote cite::before
+{
+    content: "\2014 \2009";
+}
+
+label input,
+label textarea
+{
+    margin-top: 2px;
+}
+
+/*
+ * *************************************************************************************
+ * For home page, course info page, etc.
+ ***************************************************************************************
+ */
+
+.home_container
+{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_title, .home_title, .feed_title, .playlist_title
+{
+    color: #000000;
+    font-family: open-sans-condensed;
+    font-size: 30pt;
+    font-weight: 700;
+}
+
+.home_title, .feed_title
+{
+    font-size: 48pt;
+    line-height: 92%;
+    padding: 10px 0px 10px 0px;
+}
+
+.feed_title
+{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 48pt;
+}
+
+.playlist_title {
+    text-align: center;
+    font-size: 48pt;
+}
+
+.book_lecture_title,
+.overview_main_item {
+    color: #000000;
+    font-family: open-sans-condensed;
+    font-size: 18pt;
+    font-weight: 700;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.overview_minor_item
+{
+    color: #000000;
+    font-weight: bold;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.overview_main_item A
+{
+    color: #000000;
+}
+
+.overview_ruled_element
+{
+    border-bottom: 1px solid #b0b0b0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+td.schedule_date
+{
+    vertical-align: top;
+    width: 80px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+td.schedule_lecture
+{
+    vertical-align: top;
+    padding-bottom: .6em;
+}
+
+/*
+ * *************************************************************************************
+ * All the various site forms
+ ***************************************************************************************
+ */
+
+.form_errors
+{
+   background-color: #fff0f0;
+   border: #c00000 2px dashed;
+   padding: 1em;
+   margin: 1em 1em 1em 0em;
+}
+
+.form_label
+{
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+.form_help_text
+{
+    font-size: 10pt;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.form_input_box
+{
+    width: 200px;
+    height: 1.5em;
+    font-size: 12pt;
+}
+
+.form_top_dashed
+{
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: #c00000 2px dashed;
+}
+
+.form_submit_button
+{
+    padding-top: .75em;
+}
+
+.form_submit_button button
+{
+    display: block;
+    color: #ffffff;
+    background-image: none;
+    background-color: #c00000;
+    font-family: open-sans-condensed;
+    font-size: 18pt;
+    font-weight: 700;
+    border: #a00000 1px solid;
+    /* -moz-box-shadow: 2px 2px 3px #c0c0c0;
+    -webkit-box-shadow: 2px 2px 3px #c0c0c0;
+    box-shadow: 2px 2px 3px #c0c0c0; */   
+}
+
+.basic_button
+{
+    color: #c00000;
+    background-image: none;
+    border: #a00000 0px solid;
+    background-color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 0px;
+    margin: 0px;
+}
+
+.basic_button:hover
+{
+    text-decoration: underline;
+}
+
+.profile_pic_preview
+{
+    width: 64px;
+    height: 64px;
+    border: #808080 1px solid;
+}
+
+/*
+ * *************************************************************************************
+ * Display of lecture slides 
+ ***************************************************************************************
+ */
+
+.lecture_title
+{
+    color: #000000;
+    font-family: open-sans-condensed;
+    font-size: 28pt;
+    font-weight: 700;
+    padding-bottom: .25em;
+}
+
+.lecture_title A
+{
+    color: #000000;
+}
+
+.lecture_summary_thumbnail_block
+{
+   margin-bottom: 10px;
+   border-bottom: #c0c0c0 3px solid;
+   padding-bottom: 10px;
+}
+
+.slide-thumbnail
+{
+    display: inline-block;
+   vertical-align: top;
+}
+
+.lecture_summary_thumbnail_img,
+.lecture_slide_img
+{
+   border: #c0c0c0 solid 1px;
+   -moz-box-shadow: 2px 2px 3px #c0c0c0;
+   -webkit-box-shadow: 2px 2px 3px #c0c0c0;
+   box-shadow: 2px 2px 3px #c0c0c0;
+}
+
+.lecture_summary_thumbnail_img
+{
+    margin: 10px 8px 0px 0px;
+}
+
+.slide-comments-link
+{
+    font-size: 8pt;
+}
+
+/*
+ * *************************************************************************************
+ * Book Table of Contents Page
+ ***************************************************************************************
+ */
+
+.book_lecture
+{
+    padding: 0px 0px 35px 0px; 
+}
+
+.book_lecture_subtitle {
+   
+   padding-bottom: .5em;
+}
+
+.book_lecture_indent
+{
+    padding-left: 30px;
+}
+
+.book_lecture .resources
+{
+    padding: 0px 0px 10px 0px;
+}
+
+
+/*
+ * *************************************************************************************
+ * Display of articles
+ ***************************************************************************************
+ */
+
+.article_container
+{
+    width: 800px;
+}
+
+.article_container p
+{
+    padding: .15em 0em .15em 0em;
+}
+
+.article_container li
+{
+    padding: .4em 0em .4em 0em;
+}
+
+.article_container sup
+{
+    vertical-align: top;
+    font-size: 9pt;
+}
+
+.article_container sup a
+{
+    vertical-align: top;
+}
+
+.article_container figure figcaption
+{
+    padding-top: 0em;
+    font-style: italic;
+}
+
+/* HACK(kayvonf) footnotes get a <p></p> for each <li>, so avoid double spacing */
+.article_container .footnotes li
+{
+    padding: 0px;
+}
+
+.article_container strong
+{
+    font-weight: bold;
+}
+
+.article_container .title
+{
+    
+}
+
+.article_container .author_list
+{
+    color: #000000;
+    font-weight: bold;
+}
+
+.article_container .deadline 
+{
+    color: #000000;
+    font-weight: bold;
+}
+
+.article_container .prettyprint
+{
+  color: #000000;
+  background-color: #f8f8f8;
+  border: #c0c0c0 1px solid;
+  font-size: 10pt;
+  font-family: Consolas, Lucida Console, monospace;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 8px;
+}
+
+/*
+ * *************************************************************************************
+ * Editing of articles
+ ***************************************************************************************
+ */
+
+.article_preview_pane
+{
+    width: 800px;
+    border: #c00000 dashed 1px;
+    padding: 10px;
+}
+
+.article_edit_border {
+    border: #c0c0c0 4px solid;
+    padding: 8px;
+}
+
+.article_text_input
+{
+    font-family: Consolas, Lucida Console, monospace;
+    font-size: 11pt;
+}
+
+.article_attached_image_preview
+{
+    border: #808080 1px solid;
+}
+
+.warning_message
+{
+    color: #c00000;
+    font-weight: bold;
+    border: #c00000 1px dashed;
+}
+
+/* article edit */
+.CodeMirror {
+    border: #c0c0c0 1px solid;
+    height: 500px;
+    -moz-box-shadow: 2px 2px 3px #c0c0c0;
+    -webkit-box-shadow: 2px 2px 3px #c0c0c0;
+    box-shadow: 2px 2px 3px #c0c0c0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    height: auto;
+}
+
+.CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.CodeMirror.input-focused {
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+/* TODO(awreece) This is not exhaustive. */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="input"]:focus {
+    border: #9ecaed solid 2px;
+    box-shadow:0 0 10px #9ecaed;
+    outline: none;
+}
+
+/*
+ * *************************************************************************************
+ * News feed
+ ***************************************************************************************
+ */
+
+#newsfeed img 
+{
+    margin-right: 10px;
+    width: 36px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: #a0a0a0 1px solid;
+    margin-top: 2px;
+}
+
+#newsfeed time
+{
+    font-size: 10pt;
+    color: gray;
+    font-style: italic;
+}
+
+#newsfeed .newsitem
+{
+    clear: both;
+    padding: 10px 0px 10px 0px;
+}
+
+#newsfeed .news_item_body
+{
+    width: 740px;  /* ick... assumption about width of container */
+    float: right;
+}
+
+#newsfeed .comment
+{
+    width: 740px;  /* -10 because of padding */
+    font-size: 10pt;
+    border: #c0c0c0 1px solid;
+    padding: 5px 5px 5px 5px;
+    margin-top: 3px;
+    -moz-box-shadow: 2px 2px 3px #c0c0c0;
+    -webkit-box-shadow: 2px 2px 3px #c0c0c0;
+    box-shadow: 2px 2px 3px #c0c0c0;
+ 
+}
+
+#newsfeed .headline
+{
+    padding-left: 6px;
+}
+
+.newsfeed_link
+{
+    color: #505050;
+    font-weight: bold;
+}
+
+/*
+ * *************************************************************************************
+ * Display of comments
+ ***************************************************************************************
+ */
+
+.summary_comments_container
+{
+}
+
+.slide_comments_container
+{
+    /* to be kept in sync with slide image size */
+    width: 800px;
+
+}
+
+.comment
+{
+    padding: 4px 4px 8px 0px;
+    overflow: auto;
+    border-bottom: #c0c0c0 1px dashed;
+    margin-top: 4px;
+}
+
+.private-comment-form, .comment-form
+{
+    padding: 10px 0;
+    border-bottom: #a0a0a0 3px solid;
+}
+
+.private-comment .comment
+{
+    padding: 10px 10px 10px 0;
+    background-color: #eeeeee;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* HACK(caryy) */
+.private-comment .comment .about
+{
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.private-comment-button-container
+{
+    text-align: center;
+}
+
+.add-private-comment
+{
+    color: white;
+    background-color: #aaaaaa;
+    background-image: none;
+    border: none;
+
+    -webkit-transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+    transition: all 0.05s ease-in-out;
+}
+
+.add-private-comment:hover,
+.add-private-comment:focus
+{
+    outline: none;
+    background-color: #888888;
+}
+
+.add-private-comment:active
+{
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.comment .about
+{
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    font-size: 10pt;
+}
+
+.comment .about img
+{
+	width: 35px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: #a0a0a0 1px solid;
+}
+
+.comment .user 
+{
+	font-weight: bold;
+}
+
+.comment .prompt-students-form,
+.comment .edit-comment-form,
+.comment .comment-data
+{
+    display: inline-block;
+    vertical-align: top;
+    /* This is a bit of a HACK(awreece) - this + .about width + fudge = 800px */
+    width: 640px;
+}
+
+.comment .prompt-students-form
+{
+    /* HACK(caryy) .about width + .about padding-right + 3px fudge */
+    margin-left: 138px;
+}
+
+.comment .prompt-students-form label,
+.comment .edit-comment-form label
+{
+    font-weight: 600;
+}
+
+.comment .prompt-preview
+{
+    box-sizing: border-box;
+    margin: 2px 0 10px;
+    padding: 5px;
+    border: 1px solid gray;
+    background-color: #eeeeee;
+    overflow-x: scroll;
+    font-weight: 400;
+}
+
+.prompt-students-form label
+{
+    display: block;
+}
+
+.comment button {
+    margin-left: 0;
+}
+
+.comment .button-container
+{
+    width: 100%;
+    text-align: right;
+}
+
+.comment .button-container,
+.comment .button-container button,
+.slide-prompt-button
+{
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.comment .button-container button.active
+{
+    font-weight: 700;
+}
+
+.comment .button-container button,
+.comment .button-container button:active,
+.slide-prompt-button,
+.slide-prompt-button:active
+{
+    padding: 0;
+    color: #c00000;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+}
+
+.comment .button-container button:hover,
+.comment .button-container button:focus,
+.slide-prompt-button:hover,
+.slide-prompt-button:focus
+{
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.comment .points-text {
+    font-weight: 400;
+}
+
+.comment input[type="text"],
+.comment input[type="input"],
+.comment textarea,
+.comment-form textarea,
+.private-comment-form textarea
+{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    font-family: Consolas, Lucida Console, monospace;
+    font-size: 11pt;
+    border: #c0c0c0 1px solid;
+    margin-bottom: 10px;
+    -moz-box-shadow: 2px 2px 3px #c0c0c0;
+    -webkit-box-shadow: 2px 2px 3px #c0c0c0;
+    box-shadow: 2px 2px 3px #c0c0c0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+.comment input[type="text"]:focus,
+.comment input[type="input"]:focus,
+.comment textarea:focus,
+.comment-form textarea:focus,
+.private-comment-form textarea:focus
+{
+    -moz-box-shadow: 2px 2px 10px #c0c0c0;
+    -webkit-box-shadow: 2px 2px 10px #c0c0c0;
+    box-shadow: 2px 2px 10px #c0c0c0;
+    outline: none;
+}
+
+.comment .edit-reason-text {
+    font-size: 8pt;
+}
+
+.delete-comment-form
+{
+	display: inline;
+}
+
+.submit_button_container
+{
+    float: left;
+}
+
+.subscription_container
+{
+    float: right;
+}
+
+.subscription_container:not(.subscribed) .text_subscribed
+{
+    display: none;
+}
+
+.subscription_container.subscribed .text_unsubscribed
+{
+    display: none;
+}
+
+.submit_button
+{
+	text-align: center;
+	margin: 0;
+	margin-top: 2px;
+}
+
+.subscribe_button
+{
+    text-align: center;
+    margin: 0;
+    margin-top: 2px;
+
+    content: "Subscribe";
+}
+
+.submit_button,
+form input[type=submit],
+button
+{
+	background-color: whiteSmoke;
+	background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+	background-image:    -moz-linear-gradient(top, white, #E6E6E6);
+	background-image:         linear-gradient(top, white, #E6E6E6);
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0.14902);
+	border-bottom-color: rgba(0, 0, 0, 0.247059);
+    
+	cursor: pointer;
+}
+
+.slide-thumbnail .comments-container 
+{
+    position: absolute;
+    display: none;
+    width: 800px;
+    margin-left:-400px;
+    left:50%;
+    padding: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.history-container .comments-container
+{
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+    padding: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    border: #c00000 1px dashed;
+    background-color: #eeeeee;
+}
+
+#modal_overlay
+{
+    display: none;
+    z-index: 5;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    filter:alpha(opacity=30);
+}
+
+.slide-thumbnail .comments-container .comment,
+.slide-thumbnail .comments-container form
+{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0;
+    padding-top: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
+}
+
+.slide-thumbnail 
+{
+    /* width: 180px; NOTE(kayvonf): had to remove to support variable-sized slides */
+    text-align: center;
+}
+
+.comments-container {
+    text-align: left;
+}
+
+.slide-thumbnail img,
+.slide-thumbnail button {
+    position: relative;
+}
+
+.modal {
+    z-index: 10;
+    background: white;
+}
+
+.article-content .comments-container 
+{
+    display: none;
+    position: relative;
+}
+
+.show-comments-button:hover
+{
+    text-decoration: underline;
+}
+
+.show-comments-button
+{
+    background: transparent;
+    border: none;
+    color: #c00000;
+    font-weight: bold;
+}
+
+figure img {
+    width: 100%;
+}
+
+figure {
+    text-align: center;
+    display: block;
+    max-width: 90%;
+    margin: 10px auto;
+}
+
+
+.scoreboard > div {
+    vertical-align: top;
+    display: inline-block;
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+
+.scoreboard td {
+    font-size: 9pt;
+}
+
+/*
+p code {
+    background-color: #f8f8f8;
+    border: #c0c0c0 1px solid;
+}
+*/
