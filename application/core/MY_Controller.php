@@ -6,7 +6,7 @@ class AreeceParser extends MarkdownExtra_Parser {
     function AreeceParser($CI, $article) {
         // TODO(awreece) Don't parse stuff in mathjax.
         $this->span_gamut += array(
-            # This has to be less than 10, because thats when images get parsed.
+            # This has to be less than 10, because that's when images get parsed.
             'doCourseLinks' => 5
         );
         $this->article = $article;
@@ -17,39 +17,40 @@ class AreeceParser extends MarkdownExtra_Parser {
 
     function doCourseLinks($text) {
         $text = preg_replace_callback(
-            "/cmulecture:([\w-]+)\[([\w]+)\]/",
+            "/classlecture:([\w-]+)\[([\w]+)\]/",
             function ($match) {
                 return slide_url($match[1], $match[2]);
             }, $text);
         $text = preg_replace_callback(
-            "/cmulecture:([\w-]+)/",
+            "/classlecture:([\w-]+)/",
             function ($match) {
                 return lecture_url($match[1]);
             }, $text);
         $text = preg_replace_callback(
-            "/cmuarticle:([\d]+)/",
+            "/classarticle:([\d]+)/",
             function ($match) {
                 return article_url($match[1]);
             }, $text);
-    
+
+            
         // PHP is evil - we have to do this because the closures don't have
         // access to $this and it is protected so we can't use() it.
         $me = $this;
 
         $text = preg_replace_callback(
-            "/cmulecturevideo:([\w-]+)\[([\d]+)\]/",
+            "/classlecturevideo:([\w-]+)\[([\d]+)\]/",
             function ($match) use ($me) {
                 return $me->CI->video_url($match[1], $match[2]);
             }, $text);
         $text = preg_replace_callback(
-            "/cmulecturevideo:([\w-]+)/",
+            "/classlecturevideo:([\w-]+)/",
             function ($match) use ($me) {
                 return $me->CI->video_url($match[1]);
             }, $text);
 
         $text = preg_replace_callback(
             // TODO(awreece) This regex should match the one in paragraphs model.
-            "/@cmucomments:([\w]{1,16})@/",
+            "/@classcomments:([\w]{1,16})@/",
             function ($match) use ($me) {
                 if (!is_null($me->article)) {
                     if (!$me->CI->paragraphs_model->get_paragraph_by_article_and_name($me->article->id, $match[1])) {
@@ -542,10 +543,10 @@ class MY_Controller extends CI_Controller
     function get_shorthand_url_for_resource($noun_type, $noun_id, $noun_item) {
         switch ($noun_type) {
         case ARTICLE:
-            return "cmuarticle:$noun_id";
+            return "classarticle:$noun_id";
         case LECTURE:
             $lecture = $this->lectures_model->get_lecture($noun_id);
-            $shorthand = 'cmulecture:' . $lecture->shortname;
+            $shorthand = 'classlecture:' . $lecture->shortname;
 
             // comment on lecture summary
             if ($noun_item == NULL) {
