@@ -60,7 +60,7 @@ class Lecture extends MY_Controller {
             show_404();
         }
 
-	$slide_aspect_ratio = $this->get_aspect_ratio($lecture->aspect_ratio);
+	    $slide_aspect_ratio = $this->get_aspect_ratio($lecture->aspect_ratio);
 
         // TODO(awreece) Oh, this is gonna be awksauce.
         list($slide_number) = sscanf($db_slide->name, SLIDE_NAME_FORMAT_STRING);
