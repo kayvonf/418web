@@ -535,7 +535,7 @@ class Lecture extends MY_Controller {
     function get_image_resize_cmd_string($input_filename, $output_filename, $image_height, $image_quality) {
 
         // NOTE(kayvonf): the 'scene 1' argument starts counting at 1
-	// instead of 0 (its ignored if the output filename is not a pattern)
+	    // instead of 0 (its ignored if the output filename is not a pattern)
 
         // XXX(awreece) Check for command injection!
         $cmd = IMAGEMAGICK_EXEC . ' ' . $input_filename .
