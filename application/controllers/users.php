@@ -323,7 +323,7 @@ class Users extends MY_Controller {
         $new_user_data['firstname'] = $this->input->post('firstname');
         $new_user_data['lastname'] = $this->input->post('lastname');
         $new_user_data['andrewid'] = $this->input->post('andrewid');
-	$new_user_data['email'] = $this->input->post('email');	
+	    $new_user_data['email'] = $this->input->post('email');	
         $new_user_data['department'] = $this->input->post('department');
         $new_user_data['year'] = $this->input->post('year');
 

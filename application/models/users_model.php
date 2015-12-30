@@ -32,20 +32,32 @@ class Users_model extends CI_Model {
     }
 
     public function add_user($data) {
+
+        // NOTE(kayvonf): This logic exists to assign users to groups
+        // for A/B testing. I'm essentially disabling it by assigning
+        // everyone to the upvote only group.
+    
         $group_choices = array(
             NOVOTE_GROUP,
             UPVOTE_GROUP,
             UPDOWNVOTE_GROUP
         );
-        $data['group'] = $group_choices[mt_rand(0, count($group_choices) - 1)];
+        // $data['group'] = $group_choices[mt_rand(0, count($group_choices) - 1)];
+        $data['group'] = UPVOTE_GROUP;
 
+        // NOTE(kayvonf): This logic exists to assign users to groups
+        // for A/B testing. I'm essentially disabling it by assigning
+        // everyone to the positive encouragement group (all users can
+        // be prompted)
+        
         $encouragement_choices = array(
             NEUTRAL_ENCOURAGEMENT,
             POSITIVE_ENCOURAGEMENT
         );
-        $data['encouragement_segment'] =
-            $encouragement_choices[mt_rand(0, count($encouragement_choices) - 1)];
-
+        // $data['encouragement_segment'] =
+        //    $encouragement_choices[mt_rand(0, count($encouragement_choices) - 1)];
+        $data['encouragement_segment'] = POSITIVE_ENCOURAGEMENT;
+            
         return $this->db->insert('users', $data);
     }
 
