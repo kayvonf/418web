@@ -180,12 +180,19 @@ class MY_Controller extends CI_Controller
     }
 
     function comment_html($comment, $logged_in_user) {
+    
         if ($comment->state === PRIVATE_COMMENT) {
             // Comment will always exist, don't need to pass in parent type,
             // parent id, parent item.
             return $this->load->view('private_comment', array(
                 'comment' => $comment
             ), TRUE);
+            
+        } else if ($comment->state === INSTRUCTOR_COMMENT) {
+            return $this->load->view('instructor_comment', array(
+                'comment' => $comment
+            ), TRUE);
+        
         } else {
             $shorthand_url = $this->get_shorthand_url_for_resource($comment->parent_type, $comment->parent_id, $comment->parent_item);
             // TODO(caryy) Really really hacky. This is later replaced with the

@@ -34,7 +34,7 @@
 
 <div class="comment" data-id="<?php echo $comment->id ?>">
     <div class="about">
-        <span class="user">Instructor Note</span> <time class="timeago" datetime="<?=date(DATE_ISO8601, strtotime($comment->edit_author ? $comment->edit_timestamp : $comment->created))?>"></time>
+        <span class="user">Instructor Note</span>
     </div>
     <div class="comment-data">
         <?= $comment->body_html ?>

@@ -156,7 +156,7 @@ EOT
             return NULL;
         }
         $user = $this->get_logged_in_user();
-        $comment = $this->comments_model->get_comment($id, array(ACTIVE, PRIVATE_COMMENT));
+        $comment = $this->comments_model->get_comment($id, array(ACTIVE, PRIVATE_COMMENT, INSTRUCTOR_COMMENT));
         if (!$comment) {
             show_error("No such comment");
             return NULL;
@@ -172,6 +172,7 @@ EOT
     }
 
     function ajax_edit_comment() {
+
         $comment = $this->_common_mutate_comment();
         if (is_null($comment)) {
             $this->ajax_error("Comment not found");
@@ -195,7 +196,7 @@ EOT
         $this->comments_model->update_comment($comment, $user, $new_markdown, $edit_reason);
 
         // TODO(awreece) Only query db once?
-        $comment = $this->comments_model->get_comment($comment->id, array(ACTIVE, PRIVATE_COMMENT));
+        $comment = $this->comments_model->get_comment($comment->id, array(ACTIVE, PRIVATE_COMMENT, INSTRUCTOR_COMMENT));
         $this->prepare_comment($comment, $user);
         $comment_html = $this->comment_html($comment, $user);
 

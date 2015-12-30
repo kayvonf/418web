@@ -32,7 +32,7 @@
 <?php } else { ?>
 <div class="comment" data-id="<?php echo $comment->id ?>">
     <div class="about">
-        <span class="user">Private Notes</span> <time class="timeago" datetime="<?=date(DATE_ISO8601, strtotime($comment->edit_author ? $comment->edit_timestamp : $comment->created))?>"></time>
+        <span class="user">My Notes</span>
     </div>
     <div class="comment-data">
         <?= $comment->body_html ?>
