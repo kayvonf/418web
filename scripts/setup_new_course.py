@@ -68,5 +68,5 @@ if __name__ == "__main__":
     print ""
     print "This is a good time to ensure that:"
     print "  -- Imagemagick is installed on this machine."
-    print "  -- The value of upload_max_filesize in php5/apache2/php.ini is large enough for your slide uploads. (The PHP default is only 2MB, and the PDFs of your slides is likely to be much bigger!)";
+    print "  -- The value of upload_max_filesize in php5/apache2/php.ini is large enough for your slide uploads. (The PHP default is only 2MB, and slide PDFs are likely to be much bigger than that.)";
     print ""
