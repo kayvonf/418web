@@ -1,4 +1,7 @@
-<?php if ($comment == NULL) {
+<?php
+if ($can_make_instructor_comment && $comment == NULL) {
+?>
+
     $attributes = array(
         'class' => 'instructor-comment-form',
         'style' => 'display: none;'
@@ -30,8 +33,13 @@
     <div style="clear: both;"></div>
 <?php echo form_close(''); ?>
 
-<?php } else { ?>
+<?php } else {
 
+  if ($comment != NULL) {
+      // so we need to show the instructor comment, but *how* we show
+      // it depends on whether this user can edit instructor comments     
+?>
+  
 <div class="comment" data-id="<?php echo $comment->id ?>">
     <div class="about">
         <span class="user">Instructor Note</span>
@@ -39,6 +47,9 @@
     <div class="comment-data">
         <?= $comment->body_html ?>
     </div>
+
+    <?php if ($can_make_instructor_comment) { ?>
+    
     <form class="edit-comment-form" style="display: none;">
         <textarea name="body_markdown" rows="10"><?= $comment->body_markdown ?></textarea>
         <input type="submit" name="submit" value="Submit changes"  />
@@ -47,6 +58,14 @@
      <div class="button-container">
         <button class="edit-button" type="button">Edit</button>
     </div>
+
+    <?php } ?>
+    
 </div>
 
-<?php } // if comment exists ?>
+<?php
+  }  // if the comment exists
+}
+?>
+
+

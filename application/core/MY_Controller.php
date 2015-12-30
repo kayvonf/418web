@@ -190,6 +190,7 @@ class MY_Controller extends CI_Controller
             
         } else if ($comment->state === INSTRUCTOR_COMMENT) {
             return $this->load->view('instructor_comment', array(
+                'can_make_instructor_comment' => $this->users_model->is_user_privileged($logged_in_user),
                 'comment' => $comment
             ), TRUE);
         
@@ -271,10 +272,10 @@ class MY_Controller extends CI_Controller
         }
 
         $defaults['instructor_html'] = $this->load->view('instructor_comment', array(
-            'parent_type' => $parent_type,
             'parent_id' => $parent->id,
             'parent_item' => $parent_item,
-            'comment' => $instructor_comment
+            'comment' => $instructor_comment,
+            'can_make_instructor_comment' => $this->users_model->is_user_privileged($user)
         ), TRUE);
 
         ////////////////////////////////////////////////////////////////////
