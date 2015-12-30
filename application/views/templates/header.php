@@ -49,6 +49,7 @@ var edit_comment_url = "<?php echo site_url("comments/ajax_edit_comment")?>";
 var delete_comment_url = "<?php echo site_url("comments/ajax_delete_comment")?>";
 var archive_comment_url = "<?php echo site_url("comments/ajax_archive_comment")?>";
 var add_private_comment_url = "<?php echo site_url("comments/ajax_add_private_comment"); ?>";
+var add_instructor_comment_url = "<?php echo site_url("comments/ajax_add_instructor_comment"); ?>";
 var add_comment_url = "<?php echo site_url("comments/ajax_add_comment"); ?>";
 var comment_vote_url = "<?php echo site_url("comments/ajax_comment_vote"); ?>";
 var toggle_subscribe_url = "<?php echo site_url("comments/ajax_toggle_subscribe"); ?>";

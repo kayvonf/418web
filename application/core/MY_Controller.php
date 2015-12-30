@@ -232,6 +232,10 @@ class MY_Controller extends CI_Controller
             $defaults['is_privileged'] = FALSE;
         }
 
+        ////////////////////////////////////////////////////////////////////  
+        // handle "private comments", which are visible only to the current user
+        ////////////////////////////////////////////////////////////////////
+        
         $private_comment = $this->comments_model->get_private_comment(
             $user->id, $parent_type, $parent->id, $parent_item
         );
@@ -245,6 +249,31 @@ class MY_Controller extends CI_Controller
             'comment' => $private_comment
         ), TRUE);
 
+        ////////////////////////////////////////////////////////////////////
+        // handle "instructor comments", which is instructor-provided text 
+        // directly underneath the slide. The idea of instructor comments is
+        // that they might be the official slide summary.
+        ////////////////////////////////////////////////////////////////////
+        
+        $instructor_comment = $this->comments_model->get_instructor_comment(
+            $parent_type, $parent->id, $parent_item
+        );
+
+        if ($instructor_comment !== NULL) {
+            $this->prepare_comment($instructor_comment, $user);
+        }
+
+        $defaults['instructor_html'] = $this->load->view('instructor_comment', array(
+            'parent_type' => $parent_type,
+            'parent_id' => $parent->id,
+            'parent_item' => $parent_item,
+            'comment' => $instructor_comment
+        ), TRUE);
+
+        ////////////////////////////////////////////////////////////////////
+        // Now handle all the rest of the comments
+        ////////////////////////////////////////////////////////////////////
+        
         $comment_htmls = array();
         foreach($comments as $comment) {
             $this->prepare_comment($comment, $user);

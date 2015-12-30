@@ -71,6 +71,17 @@ class Comments_model extends CI_Model {
         return ($query->num_rows() > 0) ? $query->row() : NULL;
     }
 
+    public function get_instructor_comment($parent_type, $parent_id, $parent_item) {
+        $this->db->where(array(
+            'state' => INSTRUCTOR_COMMENT,
+            'parent_type' => $parent_type,
+            'parent_id' => $parent_id,
+            'parent_item' => $parent_item
+        ));
+        $query = $this->db->get('comments');
+        return ($query->num_rows() > 0) ? $query->row() : NULL;
+    }
+
     public function get_comment_edit_history($id) {
         $this->db->where('state', REVISED);
         $this->db->where('original_comment', $id);

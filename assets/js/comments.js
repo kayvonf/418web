@@ -115,7 +115,7 @@ jQuery(function($) {
                 comment_tag.replaceWith(new_comment);
             },
             error: function(jdXHR, text, error) {
-                alert('error' + text + error);
+                alert('Error: ' + text + ' ' + error);
             }
         });
         return false;
@@ -142,7 +142,7 @@ jQuery(function($) {
                     // `update_display_comments_verb`.
                 },
                 error: function(jdXHR, text, error) {
-                    alert('error' + text + error);
+                    alert('Error: ' + text + ' ' + error);
                 }
             });
             return false;
@@ -150,6 +150,14 @@ jQuery(function($) {
         return actual_handler;
     }
 
+    function toggle_instructor_comment() {
+        var private_comment = $(this).closest('.instructor-comment');
+        var form = private_comment.find('.instructor-comment-form');
+        var btn = private_comment.find('.add-instructor-comment');
+        form.toggle();
+        btn.toggle();
+    }
+    
     function toggle_private_comment() {
         var private_comment = $(this).closest('.private-comment');
         var form = private_comment.find('.private-comment-form');
@@ -158,10 +166,41 @@ jQuery(function($) {
         btn.toggle();
     }
 
+    function instructor_comment_form_handler() {
+        var text_area = $(this).find("textarea[name='body_markdown']");
+        if (text_area.val().length == 0) {
+            alert("You can't submit an empty instructor comment");
+            return false;
+        }
+        $.ajax({
+            type: 'POST',
+            url: add_instructor_comment_url,
+            data: $(this).serialize(),
+            dataType: "json",
+            context: this,
+            success: function (resp) {
+                if (resp.error) {
+                    alert(resp.error);
+                    return false;
+                }
+                var container = $(this).closest('.instructor-comment');
+                var comment_tag = $(resp.html);
+
+                container.html(comment_tag);
+                comment_tag.postProcess();
+            },
+            error: function(jdXHR, text, error) {
+                alert('Error: ' + text + ' ' + error);
+            }
+        });
+        // TODO(awreece) Show loading icon?
+        return false;
+    }
+    
     function private_comment_form_handler() {
         var text_area = $(this).find("textarea[name='body_markdown']");
         if (text_area.val().length == 0) {
-            alert("You can't submit an empty private comment");
+            alert("Comment is empty.");
             return false;
         }
         $.ajax({
@@ -182,7 +221,7 @@ jQuery(function($) {
                 comment_tag.postProcess();
             },
             error: function(jdXHR, text, error) {
-                alert('error' + text + error);
+               alert('Error: ' + text + ' ' + error); 
             }
         });
         // TODO(awreece) Show loading icon?
@@ -219,7 +258,7 @@ jQuery(function($) {
         if ($(this).find('.add-comment-area').is(':visible')) {
             var text_area = $(this).find("textarea[name='body_markdown']");
             if (text_area.val().length == 0) {
-                alert("You can't submit an empty comment");
+                alert("Comment is empty.");
                 return false;
             }
             $.ajax({
@@ -246,7 +285,7 @@ jQuery(function($) {
                     $(this).find('.subscription_container').toggleClass('subscribed', resp.subscribed);
                 },
                 error: function(jdXHR, text, error) {
-                    alert('error' + text + error);
+                    alert('Error: ' + text + ' ' + error);
                 }
             });
             text_area.val("");
@@ -268,7 +307,7 @@ jQuery(function($) {
                     alert(resp.message);
                 },
                 error: function(jdXHR, text, error) {
-                    alert('error' + text + error);
+                    alert('Error: ' + text + ' ' + error);
                 }
             });
         }
@@ -364,7 +403,7 @@ jQuery(function($) {
                 alert(resp.message);
             },
             error: function(jdXHR, text, error) {
-                alert('error' + text + error);
+                alert('Error: ' + text + ' ' + error);
             }
         });
         return false;
@@ -391,10 +430,19 @@ jQuery(function($) {
 
     function initialize_comments() {
         // Bind any event handlers related to comments
+
+        // private comments
         $('.add-private-comment').on('click', toggle_private_comment);
         $('.cancel-private-btn').on('click', toggle_private_comment);
         $('.private-comment-form').on('submit', private_comment_form_handler);
 
+        // instructor comments
+        $('.add-instructor-comment').on('click', toggle_instructor_comment);
+        $('.cancel-instructor-btn').on('click', toggle_instructor_comment);
+        $('.instructor-comment-form').on('submit', instructor_comment_form_handler);
+
+        // rest of comments
+        
         $('.slide-prompt-button').on('click', function() {
             return toggle_slide_prompt_view($(this).closest('form'));
         });

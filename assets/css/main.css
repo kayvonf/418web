@@ -664,13 +664,14 @@ input[type="input"]:focus {
     margin-top: 4px;
 }
 
-.private-comment-form, .comment-form
+.private-comment-form, .instructor-comment-form, .comment-form
 {
     padding: 10px 0;
     border-bottom: #a0a0a0 3px solid;
 }
 
-.private-comment .comment
+.private-comment .comment,
+.instructor-comment .comment
 {
     padding: 10px 10px 10px 0;
     background-color: #eeeeee;
@@ -680,18 +681,21 @@ input[type="input"]:focus {
 }
 
 /* HACK(caryy) */
-.private-comment .comment .about
+.private-comment .comment .about,
+.instructor-comment .comment .about
 {
     padding-left: 10px;
     box-sizing: border-box;
 }
 
-.private-comment-button-container
+.private-comment-button-container,
+.instructor-comment-button-container
 {
     text-align: center;
 }
 
-.add-private-comment
+.add-private-comment,
+.add-instructor-comment
 {
     color: white;
     background-color: #aaaaaa;
@@ -704,13 +708,16 @@ input[type="input"]:focus {
 }
 
 .add-private-comment:hover,
-.add-private-comment:focus
+.add-private-comment:focus,
+.add-instructor-comment:hover,
+.add-instructor-comment:focus
 {
     outline: none;
     background-color: #888888;
 }
 
-.add-private-comment:active
+.add-private-comment:active,
+.add-instructor-comment:active
 {
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
@@ -833,7 +840,8 @@ input[type="input"]:focus {
 .comment input[type="input"],
 .comment textarea,
 .comment-form textarea,
-.private-comment-form textarea
+.private-comment-form textarea,
+.instructor-comment-form textarea
 {
     box-sizing: border-box;
     width: 100%;
@@ -853,7 +861,8 @@ input[type="input"]:focus {
 .comment input[type="input"]:focus,
 .comment textarea:focus,
 .comment-form textarea:focus,
-.private-comment-form textarea:focus
+.private-comment-form textarea:focus,
+.instructor-comment-form textarea:focus
 {
     -moz-box-shadow: 2px 2px 10px #c0c0c0;
     -webkit-box-shadow: 2px 2px 10px #c0c0c0;

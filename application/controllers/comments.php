@@ -249,7 +249,8 @@ EOT
         $this->ajax_return(array('num_points' => $new_points));
     }
 
-    function ajax_add_private_comment() {
+    function add_special_comment($special_comment_type) {
+    
         $this->require_login();
         $this->require_post();
 
@@ -262,7 +263,7 @@ EOT
         $user = $this->get_logged_in_user();
 
         $data = array(
-            'state' => PRIVATE_COMMENT,
+            'state' => $special_comment_type,
             'parent_type' => $this->input->post('parent_type'),
             'parent_id' => $this->input->post('parent_id'),
             'body_markdown' => $this->input->post('body_markdown', TRUE), # XSS filter data.
@@ -288,9 +289,17 @@ EOT
 
         $this->ajax_return(array(
             'html' => $this->comment_html($comment, $user)
-        ));
+        ));    
+    }
+    
+    function ajax_add_private_comment() {
+        $this->add_special_comment(PRIVATE_COMMENT);
     }
 
+    function ajax_add_instructor_comment() {
+        $this->add_special_comment(INSTRUCTOR_COMMENT);
+    }
+    
     function ajax_add_comment() {
         $this->require_login();
         $this->require_post();
@@ -302,7 +311,7 @@ EOT
         }
 
         $user = $this->get_logged_in_user();
-
+        
         $data = array(
             'parent_type' => $this->input->post('parent_type'),
             'parent_id' => $this->input->post('parent_id'),

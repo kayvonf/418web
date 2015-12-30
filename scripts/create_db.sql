@@ -63,7 +63,7 @@ CREATE TABLE `trolls` (
 DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `state` enum('PRIVATE', 'DELETED', 'ARCHIVED', 'REVISED', 'ACTIVE') NOT NULL DEFAULT 'ACTIVE',
+  `state` enum('INSTRUCTOR', 'PRIVATE', 'DELETED', 'ARCHIVED', 'REVISED', 'ACTIVE') NOT NULL DEFAULT 'ACTIVE',
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `author` int(11) NOT NULL COMMENT 'Primary key of users table',
   `parent_type` enum('ARTICLE','LECTURE') NOT NULL,
