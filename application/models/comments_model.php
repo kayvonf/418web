@@ -93,10 +93,12 @@ class Comments_model extends CI_Model {
 
     public function delete_comment($id) {
         $this->db->where('id', $id);
-        $this->db->where('state', ACTIVE);
+        $this->db->where_in('state', array(ACTIVE, PRIVATE_COMMENT, INSTRUCTOR_COMMENT) );
         $this->db->update('comments', array('state' => DELETED));
-        // TODO(mburman) Delete associated event! Not a functional problem,
-        // since only active comments appear in the newsfeed.
+
+        // TODO(mburman) We should also delete events associated with
+        // this comment in the events table! But it's not a big
+        // problem, since only events for active comments appear in the newsfeed.
     }
 
     public function archive_comment($id) {

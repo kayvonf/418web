@@ -18,7 +18,7 @@
     <div class="add-private-comment-area">
         <?php echo form_textarea(array(
             'name' => 'body_markdown',
-            'placeholder' => 'Add private notes for yourself. These notes can only be seen by you.',
+            'placeholder' => "Add private notes here. These notes will only be visible to you.",
             'rows' => 10
         )); ?>
     </div>
@@ -44,6 +44,7 @@
 
      <div class="button-container">
         <button class="edit-button" type="button">Edit</button>
+        <button class="delete-button" type="button">Delete</button>  
     </div>
 </div>
 <?php } // $comment == NULL ?>

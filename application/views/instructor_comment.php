@@ -1,6 +1,5 @@
 <?php
 if ($can_make_instructor_comment && $comment == NULL) {
-?>
 
     $attributes = array(
         'class' => 'instructor-comment-form',
@@ -58,6 +57,7 @@ if ($can_make_instructor_comment && $comment == NULL) {
 
      <div class="button-container">
         <button class="edit-button" type="button">Edit</button>
+        <button class="delete-button" type="button">Delete</button> 
     </div>
 
     <?php } ?>
