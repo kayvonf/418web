@@ -23,8 +23,8 @@
 
 <p class="form_help_text">Note: Lecture upload triggers image
 processing operations to rip apart the pdf and generate slide pages
-and slide thumbnails.  Please be patient, this operation will take a
-few seconds, especially for large pdfs.</p>
+and slide thumbnails.  Please be patient, this operation can take
+nearly a minute, especially for large pdfs.</p>
 
 <p class="form_submit_button"><input type="submit" value="Create Lecture" /></p>
 

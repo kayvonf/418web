@@ -10,7 +10,7 @@
      <img src="<?php echo $slide->image_url; ?>" width="<?php echo $slide_image_width; ?>" height="<?php echo $slide_image_height; ?>" class="lecture_slide_img"></a>
 </div>
 
-<!-- begin slide nagivation elements -->
+<!-- begin slide navigation elements -->
 
 <div style="width: <?php echo $slide_image_width; ?>px; border-bottom: #c0c0c0 3px solid; padding-top: 6px; padding-bottom: 10px; margin-bottom: 10px;">
 
@@ -23,9 +23,6 @@
     <a id="next-slide" href="<?php echo $next_slide_url ?>">Next</a>
 <?php } ?>
 
-<?php // TODO(caryy) Change this after this offering of the class (Spring 2015).
-      // We can't do it now, because we want the URLs and slide number to be
-      // consistent, and changing the URLs would break existing links. ?>
 --- Slide <?php echo ($slide->slide_number); ?> of <?php echo $lecture->num_slides; ?>
 </div>
 

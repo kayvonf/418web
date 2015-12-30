@@ -5,12 +5,6 @@
 <div><a href="<?=$lecture->video_url?>">Watch the Lecture Video</a></div>
 <?php } ?>
 <div><a href="<?php echo $lecture_pdf_url;  ?>">Download slides as PDF</a></div>
-<?php if (isset($lecture->summary_article_id)) { 
-    // TODO(awreece) Use lecture_summary_url? 
-    // TODO(awreece) Check if public?
-?>
-<div><a href="<?=article_url($lecture->summary_article_id)?>">Read the Explanation</a></div>
-<?php } ?>
 
 <p>
 <div class="lecture_summary_thumbnail_block">
@@ -39,6 +33,7 @@ foreach ($slides as $slide)
 </div>
 </p>
 
-<div class="summary_comments_container">
+<!-- <div class="summary_comments_container">
 <?php if (isset($comments_html)) { echo $comments_html; } ?>
 </div>
+-->

@@ -17,17 +17,17 @@ class Slides_model extends CI_Model {
 
     public function add_slides_for_lecture($lecture, $slide_count) {
         $array = array();
-        for ($i = 0; $i < $slide_count; $i++) {
+        for ($i = 1; $i <= $slide_count; $i++) {
             $slide_data = array(
                 'parent_id' => $lecture->id,
                 'name' => sprintf(SLIDE_NAME_FORMAT_STRING, $i),
                 'previous_name' => sprintf(SLIDE_NAME_FORMAT_STRING, $i - 1),
                 'next_name' => sprintf(SLIDE_NAME_FORMAT_STRING, $i + 1)
             );
-            if ($i == 0) {
+            if ($i == 1) {
                 $slide_data['previous_name'] = NULL;
             }
-            if ($i + 1 == $slide_count) {
+            if ($i  == $slide_count) {
                 $slide_data['next_name'] = NULL;
             }
             array_push($array, $slide_data);

