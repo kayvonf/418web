@@ -32,8 +32,3 @@ foreach ($slides as $slide)
 
 </div>
 </p>
-
-<!-- <div class="summary_comments_container">
-<?php if (isset($comments_html)) { echo $comments_html; } ?>
-</div>
--->

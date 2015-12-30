@@ -86,7 +86,8 @@ class Lecture extends MY_Controller {
             $data['next_slide_url'] = lecture_url($shortname);
         }
 
-        $data['comments_html'] = $this->comments_html('LECTURE', $lecture, $slide_name);
+        if ($lecture->comments_enabled)
+            $data['comments_html'] = $this->comments_html('LECTURE', $lecture, $slide_name);
 
         // TODO(awreece) Load comments for slide.
         $this->load_view('Slide View', 'lecture_slide', $data);
@@ -112,14 +113,19 @@ class Lecture extends MY_Controller {
                 $this->get_lecture_base_url($lecture->number, $lecture->shortname) . '/' .
                 $this->get_lecture_image_rel_path($slide->name, LECTURE_THUMBS_DIR);
 
-            $comments_query = array('parent_type' => 'LECTURE',
-                                    'parent_id' => $lecture->id,
-                                    'parent_item' => $slide->name);
 
+            $num_slide_comments = 0;
+            if ($lecture->comments_enabled) {
+                $comments_query = array('parent_type' => 'LECTURE',
+                                        'parent_id' => $lecture->id,
+                                        'parent_item' => $slide->name);
+                $num_slide_comments =  $this->comments_model->count_comments_matching($comments_query);
+            }
+                                    
             array_push($slides_array, array(
                 'image_url' => $thumbnail_image_url,
                 'link_url' => slide_url($lecture->shortname, $slide->name),
-                'num_comments' => $this->comments_model->count_comments_matching($comments_query)
+                'num_comments' => $num_slide_comments 
             ));
         }
 
@@ -132,7 +138,7 @@ class Lecture extends MY_Controller {
             $this->get_lecture_base_url($lecture->number, $lecture->shortname) . '/' .
             $this->get_lecture_pdf_rel_path($lecture->number, $lecture->shortname);
 
-        $data['comments_html'] = $this->comments_html('LECTURE', $lecture);
+        //$data['comments_html'] = $this->comments_html('LECTURE', $lecture);
         $data['slide_thumbnail_height'] = SLIDE_THUMBNAIL_IMAGE_HEIGHT;
         $data['slide_thumbnail_width'] = intval($slide_aspect_ratio * SLIDE_THUMBNAIL_IMAGE_HEIGHT);
         $data['slide_thumbnail_horiz_spacing'] = $data['slide_thumbnail_width'] + 7;
@@ -170,7 +176,7 @@ class Lecture extends MY_Controller {
             show_404();
         }
 
-	// set up form validation    
+	    // set up form validation    
         $this->form_validation->set_rules('title', 'title',
             'required|trim|max_length[128]|xss_clean');
         $this->form_validation->set_rules('video_url', 'video_url',
@@ -184,12 +190,22 @@ class Lecture extends MY_Controller {
             return;
         }
 
-	// now update the db
+	    // now update the db
 
         $updated_lecture = array();
         $updated_lecture['title'] = $this->input->post('title');
         $updated_lecture['video_url'] = $this->input->post('video_url');
 
+        $updated_lecture['comments_enabled'] = false;
+        if ($this->input->post('comments_enabled') === 'allowcomments') {
+            $updated_lecture['comments_enabled'] = true;
+        }
+
+        $updated_lecture['instructor_notes_enabled'] = false;
+        if ($this->input->post('instructor_notes_enabled') === 'shownotes') {
+            $updated_lecture['instructor_notes_enabled'] = true;
+        }
+        
         // Update user data
         $this->lectures_model->edit_lecture($lecture->shortname, $updated_lecture);
 
@@ -475,7 +491,7 @@ class Lecture extends MY_Controller {
             $this->slides_model->add_slides_for_lecture($lecture, $slide_count);
 
             // Done: display a success message
-            $this->load_view('Upload Success', 'lecture_create_success', $data);
+            $this->load_view('Lecture Created', 'lecture_create_success', array('lecture' => $lecture) );
         }
     }
 

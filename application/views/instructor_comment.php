@@ -1,5 +1,5 @@
 <?php
-if ($can_make_instructor_comment && $comment == NULL) {
+if ($user_can_make_instructor_comment && $comment == NULL) {
 
     $attributes = array(
         'class' => 'instructor-comment-form',
@@ -47,7 +47,7 @@ if ($can_make_instructor_comment && $comment == NULL) {
         <?= $comment->body_html ?>
     </div>
 
-    <?php if ($can_make_instructor_comment) { ?>
+    <?php if ($user_can_make_instructor_comment) { ?>
     
     <form class="edit-comment-form" style="display: none;">
         <textarea name="body_markdown" rows="10"><?= $comment->body_markdown ?></textarea>
