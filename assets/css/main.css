@@ -680,6 +680,10 @@ input[type="input"]:focus {
     border-radius: 4px;
 }
 
+.instructor-comment .comment {
+    background-color: #ffffff;
+}
+
 /* HACK(caryy) */
 .private-comment .comment .about,
 .instructor-comment .comment .about
