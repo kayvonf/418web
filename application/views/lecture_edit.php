@@ -27,6 +27,11 @@ processing operations to rip apart the pdf and generate slide pages
 and slide thumbnails.  Please be patient, this operation will take a
 few seconds, especially for large pdfs.</p>
 
+<p class="bold_text">
+The pdf you upload MUST have the same number of slides as the current
+lecture.  You cannot add or remove slides with an edit.
+</p>
+
 <p><input type="file" name="userfile" size="20" /></p>
 
 <p class="form_submit_button"><input type="submit" value="Update Lecture Slides" /></p>
