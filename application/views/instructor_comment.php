@@ -52,6 +52,7 @@ if ($can_make_instructor_comment && $comment == NULL) {
     
     <form class="edit-comment-form" style="display: none;">
         <textarea name="body_markdown" rows="10"><?= $comment->body_markdown ?></textarea>
+        <input name="edit_reason" type="hidden" value="general instructor note edit" /> 
         <input type="submit" name="submit" value="Submit changes"  />
     </form>
 
