@@ -109,7 +109,6 @@ class Comments_model extends CI_Model {
         // since only active comments appear in the newsfeed.
     }
 
-
     public function get_comments() {
         $this->db->where_not_in('state', array(PRIVATE_COMMENT, REVISED));
         $query = $this->db->get('comments');

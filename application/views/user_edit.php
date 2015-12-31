@@ -1,13 +1,15 @@
 <div class="narrow_container">
 
-<h2>Edit Information, <?php echo $user->username; ?></h2>
-
 <?php if(isset($updated)) { ?>
 <p>
 Profile successfully updated!
 </p>
 <?php } ?>
 
+<h2>User Information for <?php echo $user->username; ?></h2>
+
+<p>You have made <?php echo $num_comments; ?> comments. (<a href="<?php echo site_url('user/' . $logged_in_user->username) ?>">seem them all here</a>)</p>
+<p>You have made <?php echo $num_private_comments; ?> private comments.</p>
 
 <?php echo form_open_multipart('users/do_edit');?>
 

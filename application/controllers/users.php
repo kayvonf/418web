@@ -63,9 +63,21 @@ class Users extends MY_Controller {
         }
 
         $user = $this->users_model->get_user($user_id);
+
+        $match = array('author' => $user_id);
+        $comments = $this->comments_model->get_comments_matching($match);    
+        
+        $match_private = array('author' => $user_id, 'state' => PRIVATE_COMMENT);
+        $private_comments = $this->comments_model->get_comments_matching($match_private);
+
         $data = array('user' => $user,
-                      'profile_pictures_dir' => $this->profile_pictures_dir);
+                      'profile_pictures_dir' => $this->profile_pictures_dir,
+                      'num_comments' => count($comments),
+                      'num_private_comments' => count($private_comments) );
         $this->load_view("Edit User Information", "user_edit", $data);
+
+        
+        
     }
 
     function do_edit() {
