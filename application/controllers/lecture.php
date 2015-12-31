@@ -89,7 +89,6 @@ class Lecture extends MY_Controller {
         if ($lecture->comments_enabled)
             $data['comments_html'] = $this->comments_html('LECTURE', $lecture, $slide_name);
 
-        // TODO(awreece) Load comments for slide.
         $this->load_view('Slide View', 'lecture_slide', $data);
     }
 

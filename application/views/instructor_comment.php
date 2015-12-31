@@ -1,5 +1,5 @@
 <?php
-if ($user_can_make_instructor_comment && $comment == NULL) {
+if ($user_can_make_instructor_comment && $comment === NULL) {
 
     $attributes = array(
         'class' => 'instructor-comment-form',
@@ -34,7 +34,7 @@ if ($user_can_make_instructor_comment && $comment == NULL) {
 
 <?php } else {
 
-  if ($comment != NULL) {
+  if ($comment !== NULL) {
       // so we need to show the instructor comment, but *how* we show
       // it depends on whether this user can edit instructor comments     
 ?>
