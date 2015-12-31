@@ -382,12 +382,11 @@ class MY_Controller extends CI_Controller
         switch($level) {
             case VIEW: {
                             return $article->public || $this->is_article_author($user, $article);
-
                        }
             case DELETE:
             case EDIT: {
-                           return $this->is_article_author($user, $article);
-                        }
+                            return $this->is_article_author($user, $article);
+                       }
             case COMMENT: {
                 return $user->type != USER_TYPE_ANONYMOUS && 
                         $article->comments_enabled;

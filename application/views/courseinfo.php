@@ -1,14 +1,20 @@
 
+<?php
+
+function make_url($first, $second) {
+  return $first . '/' . $second;
+}
+
+?>
+
 <div class="home_container">
 
 <div class="home_title">Parallel Computer Architecture and Programming <span style="font-size: 12pt;">(CMU 15-418/618)</span> </div>
 
-
-<div>CMU 15-418/618, Spring 2015</div>
+<div>CMU 15-418/618, Spring 2016</div>
      <div><Mon/Wed 3:00 - 4:20pm</div>
-     <div>Doherty Hall A302</div>
-<div style="padding-bottom: 20px;">Instructor: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a></div>
-
+     <div>GHC 4401 (Rashid Auditorium)</div>
+     <div style="padding-bottom: 20px;">Instructors: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="http://www.cs.cmu.edu/~bryant/">Randy Bryant</a></div>
 
 <div class="overview_main_item overview_ruled_element">Course Description</div>
 
@@ -28,68 +34,67 @@ will cover both parallel hardware and software design.
 
 <div class="indented_block">
 
-<p>
-<img src="<?php echo base_url('assets/images/staff_photos/kayvonf.jpg') ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_images_url,'kayvonf.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
 <div><a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a></div>
-<div>[kayvonf at cs.cmu.edu] </div>
+<div>[kayvonf at cs] </div>
 <div>Smith Hall 225</div>
 <div>Office hours: drop by anytime, or by appointment</div>
-</p>
+<div style="clear: both;">&nbsp;</div>
+</div>
+
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div><a href="http://www.cs.cmu.edu/~bryant/">Randy Bryant</a></div>
+<div>[bryant at cs]</div>
+<div>GHC 9125</div>
+<div>Office hours: TBD</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
 
 <div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful TAs:</div>
 
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Gregory Rose</div>
+<div>grose at andrew</div>
+<div class="bold_text">Office hours:</div>
+<div>TBD</div>
+<div>Location: TBD</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
+
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo base_url('assets/images/staff_photos/wcrichto.jpg') ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Will Crichton</div>
-<div>wcrichto at andrew</div>
+<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Kevin Ku</div>
+<div>kevinku at cmu</div>
 <div class="bold_text">Office hours:</div>
-<div>Mon 5-7pm</div>
-<div>Location: Gates Collaborative Commons (5th floor)</div>
+<div>TBD</div> 
+<div>Location: TBD</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
-<div style="width: 380px; float: left;">
-<img src="<?php echo base_url('assets/images/staff_photos/arjunh.jpg') ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Arjun Hans</div>
-<div>arjunh at andrew</div>
-<div class="bold_text">Office hours:</div>
-<div>Sun 6-8pm</div>
-<div>Location: Gates Collaborative Commons (5th floor)</div>
-<div style="clear: both;">&nbsp;</div>
-</div>
-
-<div style="clear: both;">&nbsp;</div>
-
-<div style="width: 360px; float: left;">
-<img src="<?php echo base_url('assets/images/staff_photos/vrkrishn.jpg') ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Vivek Krishnan</div>
-<div>vrkrishn at andrew</div>
-<div class="bold_text">Office hours:</div>
-<div>Wed 6:30-8:30pm</div> 
-<div>Location: Gates Collaborative Commons (5th floor)</div>
-<div style="clear: both;">&nbsp;</div>
-</div>
-
-<div style="width: 360px; float: left;">
-<img src="<?php echo base_url('assets/images/staff_photos/xli2.jpg') ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Xiaofan Li</div>
-<div>xli2 at andrew</div>
-<div class="bold_text">Office hours:</div>
-<div>Tue 5-7pm</div>
-<div>Location: Gates Collaborative Commons (5th floor)</div>
-<div style="clear: both;">&nbsp;</div>
-</div>
 
 <div style="clear: both;">&nbsp;</div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo base_url('assets/images/staff_photos/caryy.jpg') ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Cary Yang</div>
-<div>caryy at andrew</div>
+<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Karima Ma</div>
+<div>kcma at andrew</div>
 <div class="bold_text">Office hours:</div>
-<div>Thu 5-7pm</div>
-<div>Location: Gates Collaborative Commons (5th foor)</div>
+<div>TBD</div>
+<div>Location: TBD</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
+
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Oguz Ulgen</div>
+<div>oulgen at andrew</div>
+<div class="bold_text">Office hours:</div>
+<div>TBD</div>
+<div>Location: TBD</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
@@ -99,18 +104,17 @@ will cover both parallel hardware and software design.
 
 <div class="overview_main_item overview_ruled_element">Prerequisites</div>
 
-<p>
-15-213 (Intro to Computer Systems) is a strict prerequisite for
-this course. We will build directly upon the material presented in
-15-213, including memory hierarchies, memory management, basic
-networking, etc. While 18-447 (Intro to Computer Architecture) would
-be helpful for understanding the material in this course, it is not a
-prerequisite.  Students are expected to be strong C/C++ programmers as
-there will be exposure to a variety of "C-like" parallel programming
-languages in this course.  Previous experience with operating systems
-(15-410), distributed systems (15-440), or compilers (15-411) may
-prove to be very helpful.
-</p>
+<p> <span class="bold_text">15-213/513 (Intro to Computer Systems) is
+a strict prerequisite for this course.</span> We
+will build directly upon the material presented in 15-213, including
+memory hierarchies, memory management, basic networking, etc. While
+18-447 (Intro to Computer Architecture) would be helpful for
+understanding the material in this course, it is not a prerequisite.
+Students are expected to be strong C/C++ programmers as there will be
+exposure to a variety of "C-like" parallel programming languages in
+this course.  Previous experience with operating systems (15-410),
+distributed systems (15-440), or compilers (15-411) may prove to be
+very helpful.  </p>
 
 <div class="overview_main_item overview_ruled_element">Textbook</div>
 
@@ -131,8 +135,10 @@ two textbooks will be put on reserve in the library for your use.</p>
 
 <div class="overview_main_item overview_ruled_element">Discussion Boards</div>
 
-<p>We will be using Piazza for announcements. The 15-418/618 Piazza page is located <a href="http://piazza.com/cmu/spring2015/15418/home" target="_blank">here</a>.</p>
-
+<p>We will be using Piazza for general class announcements. The
+15-418/618 Piazza page is located <a
+href="http://piazza.com/cmu/spring2016/15418618/home"
+target="_blank">here</a>.</p>
 
 <div class="overview_main_item overview_ruled_element">Assignments, Projects, and Exams (What you'll be doing!)</div>
 
@@ -140,8 +146,8 @@ two textbooks will be put on reserve in the library for your use.</p>
 <span class="italic_text">Programming assignments.</span> Students
 will complete four programming assignments.  Assignment 1 will be
 performed individually. The remaining three assignments may be
-performed in groups of at most two. Although it is not necessary to have a partner in
-15-418/618, it is highly recommended.
+performed in groups of at most two. Although it is not necessary to
+have a partner in 15-418/618, it is highly recommended.
 </p>
 
 <p><span class="italic_text">Take home quizzes.</span> Students will
@@ -151,15 +157,16 @@ total). Quizzes will be release on Wed night and be due on Thursday at
 discussion with other students, but will be graded on a participation
 basis only.  </p>
 
-<p><span class="italic_text">Creation of study aid comments.</span>
-Each student must individually contribute one interesting comment per
+<p><span class="italic_text">Making per-lecture comments.</span> Each
+student must individually contribute one interesting comment per
 lecture using the course web site.</p>
 
-<p><span class="italic_text">Final project.</span> Over the last six weeks
-of the course students will propose and complete a self-selected final
-project.  The final project can be performed individually or in groups
-of two. Each team will present the project orally during the 15-418/618 Parallelism Competition and produce a
-detailed write-up describing their work and results.</p>
+<p><span class="italic_text">Final project.</span> Over the last six
+weeks of the course students will propose and complete a self-selected
+final project.  The final project can be performed individually or in
+groups of two. Each team will present the project orally during the
+15-418/618 Parallelism Competition and produce a detailed write-up
+describing their work and results.</p>
 
 <p>
 <span class="italic_text">Exams.</span> There will be two in-class exams.
@@ -175,7 +182,12 @@ detailed write-up describing their work and results.</p>
 </ul>
 
 <p>
-<span class="italic_text">Late hand-in policy.</span> Each student is allotted a total of <span class="bold_text">five late-day points</span> for the semester. Late-day points are for use on programming assignments only. (They cannot be used for quizzes or final projects)  Late-day points work as follows:</p>
+
+<span class="italic_text">Late hand-in policy.</span> Each student is
+allotted a total of <span class="bold_text">five late-day
+points</span> for the semester. Late-day points are for use on
+programming assignments only. (They cannot be used for quizzes or
+final projects) Late-day points work as follows:</p>
 
 <ul>
 <li>A one-person team can extend a programming assignment deadline by one day using one point.</li>
@@ -193,12 +205,12 @@ the problems and sketching general approaches to a solution. Each
 programming project team must write their own code and produce their
 own writeup.
 
-Consulting another student's or team's solution is prohibited and
-submitted solutions may not be copied from any source. <span
-class="colored_text">These and any other form of collaboration on
-assignments constitute cheating.</span> If you have any question about
-whether some activity would constitute cheating, just be cautious and
-ask the instructors before proceeding!</p>
+<span class="bold_text colored_text">Consulting another student's or
+team's solution, or solutions from the internet, is prohibited. These
+and any other form of collaboration on assignments constitute
+cheating.</span> If you have any question about whether some activity
+would constitute cheating, just be cautious and ask the instructors
+before proceeding!</p>
 
 <p> You may not supply code, assignment writeups, or exams you
 complete during 15-418/618 to other students in future instances of

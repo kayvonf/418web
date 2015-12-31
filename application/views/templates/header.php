@@ -2,7 +2,14 @@
 <html>
 <head>
 <link rel="icon" href="<?=base_url()?>assets/images/favicon/dragon.png" type="image/png">
-<title><?php echo $page_name; ?> : <?php echo $course_name; ?></title>
+<?php
+   $page_title = $page_name;
+   if (strlen($page_name) == 0)
+       $page_title = $course_name;
+   else
+       $page_title = $page_name . ' : ' . $course_name; 
+?>
+<title><?php echo $page_title; ?></title>
 
 <!--[if lt IE 9]>
 <script>
@@ -71,7 +78,6 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 <div class="topbar">
 <div class="topbar_left"><a href="<?php echo site_url('home'); ?>">[Home]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div>
-<div class="topbar_left"><a href="<?php echo site_url('courseinfo'); ?>">[Info]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('reading'); ?>">[Lectures]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('exercises'); ?>">[Exercises]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('competition'); ?>">[Competition]</a></div>

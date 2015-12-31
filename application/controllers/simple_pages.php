@@ -19,11 +19,12 @@ class Simple_pages extends MY_Controller {
                 '">Create Article(Privileged)</a></p>';
         }
 
-        $this->load_view("Parallel Computer Architecture and Programming", "home", $data);
+        $this->load_view("", "home", $data);
     }
 
     function courseinfo() {
-        $this->load_view("Course Information", "courseinfo", array());
+        $staff_images_url = $this->config->item('content_base_url') . '/staff_images';
+        $this->load_view("Course Information", "courseinfo", array('staff_images_url' => $staff_images_url));
     }
 
     function reading() {
@@ -40,7 +41,7 @@ class Simple_pages extends MY_Controller {
     function welcome() {
         $user = $this->get_logged_in_user();
         $data = array('user_firstname' => $user->firstname);
-        $this->load_view("Welcome to 15-418", "welcome", $data);
+        $this->load_view("Welcome", "welcome", $data);
     }
 
     function admin_console() {
