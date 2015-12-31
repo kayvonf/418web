@@ -73,12 +73,14 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 <div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('courseinfo'); ?>">[Info]</a></div>
 
+<!--
 <?php
     if (isset($logged_in_user)) {
 ?>
 <div class="topbar_left"><a href="<?php echo site_url('user/' .
 $logged_in_user->username) ?>">[Your Activity]</a></div>
 <? } ?>
+-->
 
 <div class="topbar_left"><a href="<?php echo site_url('reading'); ?>">[Lectures]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('exercises'); ?>">[Exercises]</a></div>
