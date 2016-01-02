@@ -55,7 +55,7 @@ will cover both parallel hardware and software design.
 <div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful TAs:</div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<img src="<?php echo make_url($staff_images_url, 'grose.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
 <div class="ta-name">Gregory Rose</div>
 <div>grose at andrew</div>
 <div class="bold_text">Office hours:</div>
@@ -66,7 +66,7 @@ will cover both parallel hardware and software design.
 
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<img src="<?php echo make_url($staff_images_url, 'incognito.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
 <div class="ta-name">Kevin Ku</div>
 <div>kevinku at cmu</div>
 <div class="bold_text">Office hours:</div>
@@ -79,7 +79,7 @@ will cover both parallel hardware and software design.
 <div style="clear: both;">&nbsp;</div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<img src="<?php echo make_url($staff_images_url, 'kcma.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
 <div class="ta-name">Karima Ma</div>
 <div>kcma at andrew</div>
 <div class="bold_text">Office hours:</div>
@@ -89,7 +89,7 @@ will cover both parallel hardware and software design.
 </div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<img src="<?php echo make_url($staff_images_url, 'oguz.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
 <div class="ta-name">Oguz Ulgen</div>
 <div>oulgen at andrew</div>
 <div class="bold_text">Office hours:</div>
