@@ -23,8 +23,8 @@ class Simple_pages extends MY_Controller {
     }
 
     function courseinfo() {
-        $staff_images_url = $this->config->item('content_base_url') . '/staff_images';
-        $this->load_view("Course Information", "courseinfo", array('staff_images_url' => $staff_images_url));
+        $staff_photos_url = $this->config->item('content_base_url') . '/staff_photos';
+        $this->load_view("Course Information", "courseinfo", array('staff_photos_url' => $staff_photos_url));
     }
 
     function reading() {

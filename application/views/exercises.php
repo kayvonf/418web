@@ -6,7 +6,7 @@
 
 <p>This page contains practice exercises to help you understand
 material in the course. Reference material and lecture videos are
-available on the <a href="<?php echo site_url('reading'); ?>">References</a> page.</p>
+available on the <a href="<?php echo site_url('reading'); ?>">Lectures</a> page.</p>
 
 <div class="overview_main_item overview_ruled_element">Self-Check Exercises</div>
 

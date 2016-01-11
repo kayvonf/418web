@@ -3,6 +3,28 @@
 
 <div class="home_title">Parallel Computer Architecture and Programming <span style="font-size: 12pt;">(CMU 15-418/618)</span> </div>
 
+
+<div class="bold_text colored_text">
+
+<p style="font-size: 14pt;">NOTE TO STUDENTS ON THE SPRING 2016 WAITLIST:</p>
+
+<p>We are excited that so many students are interested in 418/618, but
+unfortunately we are not going to be able to accommodate all
+students.</p>
+
+<p style="font-size: 14pt;">YOUR ORDER ON THE WAITLIST IN SIO DOES NOT MATTER.</p>
+
+<p>After handling special requests and students with a particular need
+to take 418/618 (please come talk to us if you're one of those folks),
+it is the instructors' policy to clear the waitlist in the order of
+students that hand in "A-quality" implementations of assignment 1
+prior to the course add deadline (the end of the second week of
+class).  We make changes to assignments each year, but the best way to
+get a good jump on this year's assignment is to take a look at last
+year's assignment 1 (good luck!): <a
+href="http://15418.courses.cs.cmu.edu/spring2015/article/1">http://15418.courses.cs.cmu.edu/spring2015/article/1</a></p>
+</div>
+
 <p style="padding-bottom: .15em"> From smart phones, to multi-core
 CPUs and GPUs, to the world's largest supercomputers and web sites,
 parallel processing is ubiquitous in modern computing. The goal of
@@ -203,7 +225,7 @@ foreach ($lectures as $lecture)
     <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Simple Renderer in CUDA</span></td>
 </tr>
 <tr>
-<td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: TBD</span></td>
+<td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: to be announced</span></td>
 </tr>
 <tr>
     <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple, Elastic Web Server</span></td>
@@ -214,7 +236,7 @@ foreach ($lectures as $lecture)
 </tr>
 
 <tr>
-    <td class="schedule_date">weekly</td><td class="schedule_lecture"><a href="<?php echo article_url('3'); ?>">Guidelines and Tips for Making Good Lecture Comments</a></td>
+    <td class="schedule_date">weekly</td><td class="schedule_lecture"><a href="<?php echo article_url('1'); ?>">Guidelines and Tips for Making Good Lecture Comments</a></td>
 </tr>
 
 
