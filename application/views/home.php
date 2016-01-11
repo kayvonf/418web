@@ -77,9 +77,10 @@ $lectures = array(
   lecture_def('Jan 18', 'No Class (CMU MLK holiday)', '', 'bold'),
 
   lecture_def('Jan 20', 'Parallel Programming Models and their Corresponding HW/SW Implementations', '', 'bold',
-              array('Quiz 1 due (on Thu Jan 22)', 'Assignment 1 due (on Fri Jan 22)')),
+              array('Quiz 1 due (on Fri Jan 22)')),
 
-  lecture_def('Jan 25', 'Parallel Programming Basics (the parallelization thought process)', '', 'bold'),
+  lecture_def('Jan 25', 'Parallel Programming Basics (the parallelization thought process)', '', 'bold',
+              array('Assignment 1 due (on Mon Jan 25)')),
  
   lecture_def('Jan 27', 'GPU Architecture and CUDA Programming', '', 'bold', array('Assignment 2 out')),
 
@@ -91,23 +92,25 @@ $lectures = array(
 
   lecture_def('Feb 10', 'Workload-Driven Performance Evaluation', '', 'bold', array('Assignment 2 due', 'Assignment 3 out (on Thu Feb 12)')),
 
-  lecture_def('Feb 15', 'Snooping-Based Cache Coherence I', '', 'bold'),
+  lecture_def('Feb 15', 'Snooping-Based Cache Coherence', '', 'bold'),
 
-  lecture_def('Feb 17', 'Snooping-Based Cache Coherence II', '', 'bold', array('Quiz 3 due (on Fri Feb 20)')),
+  lecture_def('Feb 17', 'Directory-Based Cache Coherence', '', 'bold', array('Quiz 3 due (on Fri Feb 19)')),
 
-  lecture_def('Feb 22', 'Directory-Based Cache Coherence', '', 'bold'),
+  lecture_def('Feb 22', 'Memory Consistency', '', 'bold'),
 
-  lecture_def('Feb 24', 'Memory Consistency (+ Course-So-Far Review)', '', 'bold', array('Assignment 3 due (on Thu Feb 26)')),
-
+  lecture_def('Mar 24', 'Basic Snooping-Based Multiprocessor Implementation  (+ Course-So-Far Review)', '', 'bold',
+              array('Assignment 3 due (on Thu Feb 26)')),
+  
   lecture_def('Feb 29', 'Exam I', '', 'bold'),
 
-  lecture_def('Mar 2', 'Scaling a Web Site: Scale-Out Parallelism, Elasticity, and Caching', '', 'bold'),
+  lecture_def('Mar 2', 'Scaling a Web Site: Scale-Out Parallelism, Elasticity, and Caching', '', 'bold',
+              array('Assignment 4 out (on Wed Mar 2)')),
 
   lecture_def('Mar 7-11', 'Spring Break. Partaaay!', '', 'bold'),
 
-  lecture_def('Mar 14', 'Basic Snooping-Based Multiprocessor Implementation', '', 'bold', array('Assignment 4 out (on Sun Mar 15)')),
+  lecture_def('Mar 14', 'Topic TBD', '', 'bold'),
 
-  lecture_def('Mar 16', 'Implementing Synchronization', '', 'bold', array('Quiz 4 due (on Fri Mar 20)')),
+  lecture_def('Mar 16', 'Implementing Synchronization', '', 'bold', array('Quiz 4 due (on Fri Mar 18)')),
 
   lecture_def('Mar 21', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold'),
 
@@ -115,21 +118,23 @@ $lectures = array(
 
   lecture_def('Mar 28', 'Transactional Memory', '', 'bold'),
 
-  lecture_def('Mar 30', 'Scheduling Fork-Join Parallelism', '', 'bold', array('Project Proposal Due (on Thu Apr 2)')),
+  lecture_def('Mar 30', 'Scheduling Fork-Join Parallelism', '', 'bold',
+             array('Quiz 5 due (on Fri Apr 1)', 'Project Proposal Due (on Fri Apr 1)')),
                         
-  lecture_def('Apr 4', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bols'),
+  lecture_def('Apr 4', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold'),
 
-  lecture_def('Apr 6', 'Domain-Specific Parallel Programming Systems', '', 'bold', array('Quiz 5 due (on Fri Apr 10)')),
+  lecture_def('Apr 6', 'Domain-Specific Parallel Programming Systems', '', 'bold'),
 
   lecture_def('Apr 11', 'Domain-Specific Frameworks for Parallel Graph Processing', '', 'bold'),
 
-  lecture_def('Apr 13', 'Database Systems Do Not Scale to 1,000 CPU Cores (guest lecture by Andy Palvo)', '', 'bold', array('Project Checkpoint Due (on Thu Apr 16)')),
-
+  lecture_def('Apr 13', 'Topic TBD', '', 'bold',
+              array('Quiz 6 due (on Fri Apr 15)', 'Project Checkpoint Due (on Thu Apr 15)')),
+              
   lecture_def('Apr 18', 'In-Memory Distributed Computing in Spark', '', 'bold'),
 
-  lecture_def('Apr 20', 'Addressing the Memory Wall', '', 'bold', array('Quiz 6 due (on Fri Apr 24)')),  
+  lecture_def('Apr 20', 'Addressing the Memory Wall', '', 'bold'),
 
-  lecture_def('Apr 25', 'Exam II (and a Bonus Lecture on Parallel Triangle Rendering on a GPU)', '', 'bold'),
+  lecture_def('Apr 25', 'Exam II (and a Bonus Lecture on Parallel 3D Graphics)', '', 'bold'),
 
   lecture_def('Apr 27', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', '', 'bold'),
 

@@ -100,6 +100,18 @@ will cover both parallel hardware and software design.
 
 <div style="clear: both;">&nbsp;</div>
 
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_images_url, 'cacay.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Josh Acay</div>
+<div>cacay at andrew</div>
+<div class="bold_text">Office hours:</div>
+<div>TBD</div>
+<div>Location: TBD</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+
 </div> <!-- indented -->
 
 <div class="overview_main_item overview_ruled_element">Prerequisites</div>

@@ -19,9 +19,11 @@
 
      <div class="book_lecture_indent">
 
+     <!--
      <div class="resources">
      <div><a href="http://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b40a163a-9e0f-41d7-bd1f-eb508a695d5a" target="_blank">Watch the Lecture</a></div>
      </div>
+     -->
 
      <div>Further Reading:</div>
      <ul>
