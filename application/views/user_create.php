@@ -1,7 +1,7 @@
 
 <div class="narrow_container">
 
-<h1>Welcome to 15-418/618 Spring 2015</h1>
+<h1>Welcome to 15-418/618</h1>
 
 <h2>
 Step 1: Create an account on the course web site (or <a href="<?php echo site_url('users/login'); ?>">login</a>)

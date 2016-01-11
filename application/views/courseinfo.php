@@ -44,7 +44,7 @@ will cover both parallel hardware and software design.
 </div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_images_url, 'incognito'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<img src="<?php echo make_url($staff_images_url, 'randy.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
 <div><a href="http://www.cs.cmu.edu/~bryant/">Randy Bryant</a></div>
 <div>[bryant at cs]</div>
 <div>GHC 9125</div>
@@ -66,7 +66,7 @@ will cover both parallel hardware and software design.
 
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_images_url, 'incognito.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<img src="<?php echo make_url($staff_images_url, 'kku.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
 <div class="ta-name">Kevin Ku</div>
 <div>kevinku at cmu</div>
 <div class="bold_text">Office hours:</div>
