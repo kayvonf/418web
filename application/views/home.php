@@ -92,7 +92,7 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Jan 11', 'Why Parallelism?', '', 'bold'),
+  lecture_def('Jan 11', 'Why Parallelism?', lecture_url('whyparallelism')),
 
   lecture_def('Jan 13', 'A Modern Multi-Core Processor: Forms of Parallelism + Understanding Latency and BW', '', 'bold', array('Assignment 1 out')),
 
