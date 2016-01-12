@@ -120,8 +120,8 @@ $lectures = array(
 
   lecture_def('Feb 22', 'Memory Consistency', '', 'bold'),
 
-  lecture_def('Mar 24', 'Basic Snooping-Based Multiprocessor Implementation  (+ Course-So-Far Review)', '', 'bold',
-              array('Assignment 3 due (on Thu Feb 26)')),
+  lecture_def('Feb 24', 'Basic Snooping-Based Multiprocessor Implementation  (+ Course-So-Far Review)', '', 'bold',
+              array('Assignment 3 due (on Thu Feb 25)')),
   
   lecture_def('Feb 29', 'Exam I', '', 'bold'),
 
@@ -150,7 +150,7 @@ $lectures = array(
   lecture_def('Apr 11', 'Domain-Specific Frameworks for Parallel Graph Processing', '', 'bold'),
 
   lecture_def('Apr 13', 'Topic TBD', '', 'bold',
-              array('Quiz 6 due (on Fri Apr 15)', 'Project Checkpoint Due (on Thu Apr 15)')),
+              array('Quiz 6 due (on Fri Apr 15)', 'Project Checkpoint Due (on Fri Apr 15)')),
               
   lecture_def('Apr 18', 'In-Memory Distributed Computing in Spark', '', 'bold'),
 
