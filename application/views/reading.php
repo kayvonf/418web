@@ -33,9 +33,33 @@
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('basicarch'); ?>">Lecture 2: Lecture 2: A Modern Multi-Core Processor</a></div>
+     <div class="colored_text book_lecture_subtitle">(forms of parallelism + understanding Latency and BW)</div>
+
+     <div class="book_lecture_indent">
+
+     <!--
+     <div class="resources">
+     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     </div>
+     -->
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://queue.acm.org/detail.cfm?id=2181798" target="_blank">CPU DB: Recording Microprocessor History</a>. A. Danowitz, K. Kelley, J. Mao, J.P. Stevenson, M. Horowitz, ACM Queue 2005. (You can also take a peak at the <a href="http://cpudb.stanford.edu/">CPU DB</a> website)</li>
+     <li><a href="https://software.intel.com/sites/default/files/managed/c5/9a/The-Compute-Architecture-of-Intel-Processor-Graphics-Gen9-v1d0.pdf" target="_blank">The Compute Architecture of Intel Processor Graphics</a>. Intel Technical Report, 2015  (a very nice description of a modern throughput processor)</li>
+     <li><a href="http://www.realworldtech.com/haswell-cpu/" target="_blank">Intel's Haswell CPU Microarchitecture</a>. D. Kanter, 2013 (realworldtech.com article)</li>
+     <li><a href="http://international.download.nvidia.com/geforce-com/international/pdfs/GeForce_GTX_980_Whitepaper_FINAL.PDF" target="_blank">NVIDIA GeForce GTX 980 Whitepaper</a>. NVIDIA Technical Report 2014</li>
+     </ul>
+     </div>
+</div>
+
+
 <!--
 <div class="book_lecture">
-     <div class="book_lecture_title">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
      <a href="<?php echo lecture_url(''); ?>">Lecture 1:
      XXXX</a></div>
 

@@ -11,13 +11,13 @@ available on the <a href="<?php echo site_url('reading'); ?>">Lectures</a> page.
 <div class="overview_main_item overview_ruled_element">Self-Check Exercises</div>
 
 <p>
-To be releasd over the course of the semester.
+To be released over the course of the semester.
 </p>
 
 <div class="overview_main_item overview_ruled_element">Programming Assignments</div>
 
 <p>
-To be releasd over the course of the semester.
+<div><a href="<?php echo article_url('3'); ?>">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a></div>
 </p>
 
 <p>&nbsp;</p>
