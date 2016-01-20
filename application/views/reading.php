@@ -6,9 +6,9 @@
 
 <p>This page contains lecture slides, videos, and recommended readings for the Spring 2016 offering of 15-418/618.
 
-<!-- The full listing of lecture videos is available on the Panopto site
-<a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22a5862643-2416-49ef-b46b-13465d1b6df0%22" target="_blank">here</a>.</p>
--->
+The full listing of lecture videos is available on the Panopto site
+<a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22f62c2297-de88-4e63-aff2-06641fa25e98%22" target="_blank">here</a>.</p>
+
 </p>
 
 
@@ -19,11 +19,10 @@
 
      <div class="book_lecture_indent">
 
-     <!--
      <div class="resources">
-     <div><a href="http://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b40a163a-9e0f-41d7-bd1f-eb508a695d5a" target="_blank">Watch the Lecture</a></div>
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d0795ff8-76aa-4e24-a7cc-e8126025720c" target="_blank">Watch the Lecture</a></div>
      </div>
-     -->
+
 
      <div>Further Reading:</div>
      <ul>
@@ -40,11 +39,9 @@
 
      <div class="book_lecture_indent">
 
-     <!--
      <div class="resources">
-     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=66c4b4cc-5dbd-425c-87ed-5d0d217c20b3" target="_blank">Watch the Lecture</a></div>
      </div>
-     -->
      
      <div>Further Reading:</div>
      <ul>

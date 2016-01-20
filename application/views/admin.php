@@ -3,7 +3,7 @@
 
 <p><?= kayvon_button("Create Article (Privileged)", 'article/create_privileged') ?></p>
 
-<p><?= kayvon_button("Lectures", 'lectures') ?> </p>
+<p><?= kayvon_button("Lectures", 'lecture') ?> </p>
 
 <p><?= kayvon_button("Articles", 'article') ?> </p>
 

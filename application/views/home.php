@@ -3,7 +3,7 @@
 
 <div class="home_title">Parallel Computer Architecture and Programming <span style="font-size: 12pt;">(CMU 15-418/618)</span> </div>
 
-
+<!--
 <div class="bold_text colored_text">
 
 <p style="font-size: 14pt;">NOTE TO STUDENTS ON THE SPRING 2016 WAITLIST:</p>
@@ -19,11 +19,9 @@ to take 418/618 (please come talk to us if you're one of those folks),
 it is the instructors' policy to clear the waitlist in the order of
 students that hand in "A-quality" implementations of assignment 1
 prior to the course add deadline (the end of the second week of
-class).  We make changes to assignments each year, but the best way to
-get a good jump on this year's assignment is to take a look at last
-year's assignment 1 (good luck!): <a
-href="http://15418.courses.cs.cmu.edu/spring2015/article/1">http://15418.courses.cs.cmu.edu/spring2015/article/1</a></p>
+class).  
 </div>
+-->
 
 <p style="padding-bottom: .15em"> From smart phones, to multi-core
 CPUs and GPUs, to the world's largest supercomputers and web sites,
@@ -94,7 +92,7 @@ $lectures = array(
 
   lecture_def('Jan 11', 'Why Parallelism?', lecture_url('whyparallelism')),
 
-  lecture_def('Jan 13', 'A Modern Multi-Core Processor: Forms of Parallelism + Understanding Latency and BW', '', 'bold', array('Assignment 1 out')),
+  lecture_def('Jan 13', 'A Modern Multi-Core Processor: Forms of Parallelism + Understanding Latency and BW', lecture_url('basicarch'), '', array('Assignment 1 out')),
 
   lecture_def('Jan 18', 'No Class (CMU MLK holiday)', '', 'bold'),
 
@@ -112,7 +110,7 @@ $lectures = array(
 
   lecture_def('Feb 8', 'Parallel Application Case Studies', '', 'bold'),
 
-  lecture_def('Feb 10', 'Workload-Driven Performance Evaluation', '', 'bold', array('Assignment 2 due', 'Assignment 3 out (on Thu Feb 12)')),
+  lecture_def('Feb 10', 'Workload-Driven Performance Evaluation', '', 'bold', array('Assignment 2 due', 'Assignment 3 out (on Wed Feb 10)')),
 
   lecture_def('Feb 15', 'Snooping-Based Cache Coherence', '', 'bold'),
 
@@ -219,7 +217,7 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</span></td>
+    <td class="schedule_date">Jan 25</td><td class="schedule_lecture"><a href="<?php echo article_url('3') ?>">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a></td>
 </tr>
 <tr>
     <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Simple Renderer in CUDA</span></td>

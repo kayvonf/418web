@@ -68,7 +68,7 @@ $route['lecture/(:any)/do_editmeta'] = 'lecture/do_editmeta/$1';
 $route['lecture/(:any)/do_editslides'] = 'lecture/do_editslides/$1';
 $route['lecture/(:any)/(:any)'] = 'lecture/view_slide/$1/$2';
 $route['lecture/(:any)'] = 'lecture/view_summary/$1';
-$route['lectures'] = 'lecture/index';
+$route['lecture'] = 'lecture/index';
 
 $route['comments/list'] = 'comments/list_all';
 $route['comments/download'] = 'comments/comments_csv';
@@ -101,7 +101,7 @@ $route['competition'] = 'article/view/13';
 $route['getstarted'] = 'users/create';
 $route['welcome'] = 'simple_pages/welcome';
 $route['courseinfo'] = 'simple_pages/courseinfo';
-$route['reading'] = 'simple_pages/reading';
+$route['lectures'] = 'simple_pages/reading';
 $route['exercises'] = 'simple_pages/exercises';
 $route['admin'] = 'simple_pages/admin_console';
 $route['votes'] = 'simple_pages/votes_overview';
