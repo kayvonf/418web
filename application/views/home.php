@@ -39,7 +39,7 @@ parallel hardware and software design.  </p>
 <div style="padding-bottom: 15px;">
 <div>Mon/Wed 3:00 - 4:20pm</div>
 <div>GHC 4401 (Rashid Auditorium)</div>
-<div>Instructors: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="http://www.cs.cmu.edu/~bryant/">Randy Bryant</a></div>
+<div>Instructors: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="http://www.cs.cmu.edu/~bryant/">Randal Bryant</a></div>
 <div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on policies and logistics.</div>
 </div>
 
@@ -96,13 +96,13 @@ $lectures = array(
 
   lecture_def('Jan 18', 'No Class (CMU MLK holiday)', '', 'bold'),
 
-  lecture_def('Jan 20', 'Parallel Programming Models and their Corresponding HW/SW Implementations', '', 'bold',
+  lecture_def('Jan 20', 'Parallel Programming Models and their Corresponding HW/SW Implementations', lecture_url('progabstractions'), '',
               array('Quiz 1 due (on Fri Jan 22)')),
 
-  lecture_def('Jan 25', 'Parallel Programming Basics (the parallelization thought process)', '', 'bold',
+  lecture_def('Jan 25', 'Parallel Programming Basics (the parallelization thought process)', lecture_url('progbasics'), '',
               array('Assignment 1 due (on Mon Jan 25)')),
  
-  lecture_def('Jan 27', 'GPU Architecture and CUDA Programming', '', 'bold', array('Assignment 2 out')),
+  lecture_def('Jan 27', 'GPU Architecture and CUDA Programming', lecture_url('gpuarch'), '', array('Assignment 2 out')),
 
   lecture_def('Feb 1', 'Performance Optimization I: Work Distribution', '', 'bold'),
 
@@ -217,10 +217,10 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">Jan 25</td><td class="schedule_lecture"><a href="<?php echo article_url('3') ?>">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a></td>
+    <td class="schedule_date">Jan 25</td><td class="schedule_lecture"><a href="<?php echo article_url('3'); ?>">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a></td>
 </tr>
 <tr>
-    <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Simple Renderer in CUDA</span></td>
+    <td class="schedule_date">Feb 10</td><td class="schedule_lecture"><a href="<?php echo article_url('4'); ?>">Assignment 2: A Simple Renderer in CUDA</a></td>
 </tr>
 <tr>
 <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: to be announced</span></td>

@@ -11,13 +11,19 @@ available on the <a href="<?php echo site_url('reading'); ?>">Lectures</a> page.
 <div class="overview_main_item overview_ruled_element">Self-Check Exercises</div>
 
 <p>
-To be released over the course of the semester.
+<div><a href="<?php echo $exercises_base_url . '/exercise_01.pdf'; ?>">Exercise 1: A Task Queue on a Multi-Core, Multi-Threaded CPU</a></div>
+<div class="small_text colored_text">Concepts tested: multi-core architecture, hardware multi-threading</div>
 </p>
+
 
 <div class="overview_main_item overview_ruled_element">Programming Assignments</div>
 
 <p>
 <div><a href="<?php echo article_url('3'); ?>">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a></div>
+</p>
+
+<p>
+<div><a href="<?php echo article_url('4'); ?>">Assignment 2: A Simple Renderer in CUDA</a></div>
 </p>
 
 <p>&nbsp;</p>

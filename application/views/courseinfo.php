@@ -14,7 +14,7 @@ function make_url($first, $second) {
 <div>CMU 15-418/618, Spring 2016</div>
      <div><Mon/Wed 3:00 - 4:20pm</div>
      <div>GHC 4401 (Rashid Auditorium)</div>
-     <div style="padding-bottom: 20px;">Instructors: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="http://www.cs.cmu.edu/~bryant/">Randy Bryant</a></div>
+     <div style="padding-bottom: 20px;">Instructors: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="http://www.cs.cmu.edu/~bryant/">Randal Bryant</a></div>
 
 <div class="overview_main_item overview_ruled_element">Course Description</div>
 
@@ -39,13 +39,13 @@ will cover both parallel hardware and software design.
 <div><a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a></div>
 <div>[kayvonf at cs] </div>
 <div>Smith Hall 225</div>
-<div>Office hours: Wed 4:45-5:45<br/>or by appointment</div>
+<div>Office hours: Fri 4-5pm<br/>or by appointment</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div style="width: 360px; float: left;">
 <img src="<?php echo make_url($staff_photos_url, 'randy.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div><a href="http://www.cs.cmu.edu/~bryant/">Randy Bryant</a></div>
+<div><a href="http://www.cs.cmu.edu/~bryant/">Randal Bryant</a></div>
 <div>[bryant at cs]</div>
 <div>GHC 9125</div>
 <div>Office hours: Mon 1:30-2:30pm</div>
@@ -116,7 +116,7 @@ will cover both parallel hardware and software design.
 <div class="ta-name">Kevin Ku</div>
 <div>kevinku at cmu</div>
 <div class="bold_text">Office hours:</div>
-<div>Fri 1-2pm</div>
+<div>Wed 5:30-6:30, Fri 1-2pm</div>
 <div>Location: Gates Collaborative Commons (5th floor)</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
@@ -177,8 +177,8 @@ have a partner in 15-418/618, it is highly recommended.
 
 <p><span class="italic_text">Take home quizzes.</span> Students will
 complete take-home quizzes assigned every two weeks (six in
-total). Quizzes will be release on Wed night and be due on Thursday at
-11:59pm. These quizzes must be completed individually without
+total). Quizzes will be released on Wed night and be due the next
+Friday at 10am. These quizzes must be completed individually without
 discussion with other students, but will be graded on a participation
 basis only.  </p>
 

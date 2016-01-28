@@ -34,7 +34,7 @@ The full listing of lecture videos is available on the Panopto site
 
 <div class="book_lecture">
      <div class="book_lecture_title" style="padding-bottom: 0px">
-     <a href="<?php echo lecture_url('basicarch'); ?>">Lecture 2: Lecture 2: A Modern Multi-Core Processor</a></div>
+     <a href="<?php echo lecture_url('basicarch'); ?>">Lecture 2: A Modern Multi-Core Processor</a></div>
      <div class="colored_text book_lecture_subtitle">(forms of parallelism + understanding Latency and BW)</div>
 
      <div class="book_lecture_indent">
@@ -53,12 +53,78 @@ The full listing of lecture videos is available on the Panopto site
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('progabstractions'); ?>">Lecture 3: Parallel Programming Models</a></div>
+     <div class="colored_text book_lecture_subtitle">(ways of thinking about parallel programs, and their corresponding hardware implementations)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1d93f5a8-d435-4e4a-8219-05536d53886a" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('progbasics'); ?>">Lecture 4: Parallel Programming Basics</a></div>
+     <div class="colored_text book_lecture_subtitle">(the thought process of parallelizing a program)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=55cb2ba2-10ad-40c3-8315-0c8598e64977" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('gpuarch'); ?>">Lecture 5: GPU Architecture and CUDA Programming</a></div>
+     <div class="colored_text book_lecture_subtitle">(CUDA programming abstractions, and how they are implemented on modern GPUs)</div>
+
+     <div class="book_lecture_indent">
+
+     <!--
+     <div class="resources">
+     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     </div>
+     -->
+
+     <div>Further Reading:</div>
+     <ul>
+     <li>You may enjoy the free Coursera Course <a href="https://www.udacity.com/course/cs344">Intro to Parallel Programming Using CUDA</a> by Luebke and Owens</li>
+     <li>The <a href="http://thrust.github.io/" target="_blank">Thrust Library</a> is a useful collection library for CUDA.</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/blythe08_riseofgpu.pdf">Rise of the Graphics Processor</a>. D. Blythe (Proceedings of IEEE 2008)
+     a nice overview of GPU history.</li>
+     <li><a href="http://international.download.nvidia.com/geforce-com/international/pdfs/GeForce_GTX_980_Whitepaper_FINAL.PDF" target="_blank">NVIDIA GeForce GTX 980 Whitepaper</a>. NVIDIA Technical Report 2014</li>
+     <li><a href="https://software.intel.com/sites/default/files/managed/c5/9a/The-Compute-Architecture-of-Intel-Processor-Graphics-Gen9-v1d0.pdf" target="_blank">The Compute Architecture of Intel Processor Graphics</a>. Intel Technical Report, 2015  (a very nice description of a modern Intel integrated GPU)</li>
+     </ul>
+     </div>
+</div>
+
+
 
 <!--
 <div class="book_lecture">
      <div class="book_lecture_title" style="padding-bottom: 0px">
-     <a href="<?php echo lecture_url(''); ?>">Lecture 1:
-     XXXX</a></div>
+     <a href="<?php echo lecture_url(''); ?>">Lecture 1:</a></div>
+     <div class="colored_text book_lecture_subtitle">XXXX</div>
 
      <div class="book_lecture_indent">
 
