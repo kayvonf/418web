@@ -20,10 +20,11 @@ if ($can_comment || count($comment_htmls) > 0) {
 </button>
 <?php } ?>
 
-<?php if ($can_comment) { ?>
 <div class="instructor-comment">
      <?php echo $instructor_html; ?>
 </div>
+
+<?php if ($can_comment) { ?>
 <div class="private-comment">
     <?php echo $private_html; ?>
 </div>

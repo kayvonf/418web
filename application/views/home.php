@@ -104,7 +104,7 @@ $lectures = array(
  
   lecture_def('Jan 27', 'GPU Architecture and CUDA Programming', lecture_url('gpuarch'), '', array('Assignment 2 out')),
 
-  lecture_def('Feb 1', 'Performance Optimization I: Work Distribution', '', 'bold'),
+  lecture_def('Feb 1', 'Performance Optimization I: Work Distribution and Scheduling', '', 'bold'),
 
   lecture_def('Feb 3', 'Performance Optimization II: Locality, Communication, and Contention', '', 'bold', array('Quiz 2 due (on Fri Feb 5)')),
 
@@ -128,31 +128,31 @@ $lectures = array(
 
   lecture_def('Mar 7-11', 'Spring Break. Partaaay!', '', 'bold'),
 
-  lecture_def('Mar 14', 'Topic TBD', '', 'bold'),
+  lecture_def('Mar 14', 'Interconnection Networks', '', 'bold'),
 
   lecture_def('Mar 16', 'Implementing Synchronization', '', 'bold', array('Quiz 4 due (on Fri Mar 18)')),
 
   lecture_def('Mar 21', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold'),
 
-  lecture_def('Mar 23', 'Interconnection Networks', '', 'bold', array('Assignment 4 due (on Fri Mar 25)')),
+  lecture_def('Mar 23', 'Transactional Memory', '', 'bold', array('Assignment 4 due (on Fri Mar 25)')),
 
-  lecture_def('Mar 28', 'Transactional Memory', '', 'bold'),
+  lecture_def('Mar 28', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold'),
 
-  lecture_def('Mar 30', 'Scheduling Fork-Join Parallelism', '', 'bold',
+  lecture_def('Mar 30', 'Domain-Specific Parallel Programming Systems', '', 'bold',
              array('Quiz 5 due (on Fri Apr 1)', 'Project Proposal Due (on Fri Apr 1)')),
                         
-  lecture_def('Apr 4', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold'),
+  lecture_def('Apr 4', 'Domain-Specific Frameworks for Parallel Graph Processing', '', 'bold'),
 
-  lecture_def('Apr 6', 'Domain-Specific Parallel Programming Systems', '', 'bold'),
+  lecture_def('Apr 6', 'In-Memory Distributed Computing in Spark', '', 'bold'),
 
-  lecture_def('Apr 11', 'Domain-Specific Frameworks for Parallel Graph Processing', '', 'bold'),
+  lecture_def('Apr 11', 'Addressing the Memory Wall', '', 'bold'),
 
   lecture_def('Apr 13', 'Topic TBD', '', 'bold',
               array('Quiz 6 due (on Fri Apr 15)', 'Project Checkpoint Due (on Fri Apr 15)')),
               
-  lecture_def('Apr 18', 'In-Memory Distributed Computing in Spark', '', 'bold'),
+  lecture_def('Apr 18', 'Topic TBD', '', 'bold'),
 
-  lecture_def('Apr 20', 'Addressing the Memory Wall', '', 'bold'),
+  lecture_def('Apr 20', 'Topic TBD', '', 'bold'),
 
   lecture_def('Apr 25', 'Exam II (and a Bonus Lecture on Parallel 3D Graphics)', '', 'bold'),
 

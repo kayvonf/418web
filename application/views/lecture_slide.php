@@ -51,7 +51,7 @@ $(document).keydown(function (e) {
 </div>
 
 
-<!-- end slide nagivation elements  -->
+<!-- end slide navigation elements  -->
 
 <div class="slide_comments_container">
 <?php if (isset($comments_html)) { echo $comments_html; } ?>

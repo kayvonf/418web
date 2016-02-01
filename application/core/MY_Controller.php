@@ -256,8 +256,7 @@ class MY_Controller extends CI_Controller
             if ($instructor_comment !== NULL) {
                 $this->prepare_comment($instructor_comment, $user);
             }
-
-            log_message('debug', 'RUNNING VIEW ' . $parent->id . ' ' . $parent_item);
+            
             $defaults['instructor_html'] = $this->load->view('instructor_comment', array(
                 'parent_type' => $parent_type,
                 'parent_id' => $parent->id,
@@ -265,7 +264,7 @@ class MY_Controller extends CI_Controller
                 'comment' => $instructor_comment,
                 'user_can_make_instructor_comment' => $this->users_model->is_user_privileged($user)
             ), TRUE);
-            log_message('debug', 'DONE RUNNING VIEW') ; 
+            
             
         } else {
 
