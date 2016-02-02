@@ -100,15 +100,13 @@ The full listing of lecture videos is available on the Panopto site
 
      <div class="book_lecture_indent">
 
-     <!--
      <div class="resources">
-     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c802ccf7-c8bc-4feb-83da-19ef17f1ee90" target="_blank">Watch the Lecture</a></div>
      </div>
-     -->
 
      <div>Further Reading:</div>
      <ul>
-     <li>You may enjoy the free Coursera Course <a href="https://www.udacity.com/course/cs344">Intro to Parallel Programming Using CUDA</a> by Luebke and Owens</li>
+     <li>You may enjoy the free Udacity Course <a href="https://www.udacity.com/course/cs344">Intro to Parallel Programming Using CUDA</a> by Luebke and Owens</li>
      <li>The <a href="http://thrust.github.io/" target="_blank">Thrust Library</a> is a useful collection library for CUDA.</li>
      <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/blythe08_riseofgpu.pdf">Rise of the Graphics Processor</a>. D. Blythe (Proceedings of IEEE 2008)
      a nice overview of GPU history.</li>
@@ -118,6 +116,26 @@ The full listing of lecture videos is available on the Panopto site
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('progperf1'); ?>">Lecture 6: Performance Optimization I: Work Distribution and Scheduling</a></div>
+     <div class="colored_text book_lecture_subtitle">(good work balance while minimizing the overhead of making the assignment, scheduling Cilk programs with work stealing)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0b01804-2bb2-418a-b436-e5446822ebf4" target="_blank">Watch the Lecture</a></div>
+     </div>
+     
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://www.cilkplus.org/">CilkPlus documentation</a></li>
+     <li><a href="http://supertech.csail.mit.edu/papers/steal.pdf" target="_blank">Scheduling Multithreaded Computations by Work Stealing</a>. by Blumofe and Leiserson, JACM 1999</li>
+     <li><a href="http://supertech.csail.mit.edu/papers/cilk5.pdf" target="_blank">Implementation of the Cilk 5 Multi-Threaded Language</a>. by Frigo et al. PLDI 1998</li>
+     </ul>
+     </div>
+</div>
 
 
 <!--

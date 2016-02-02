@@ -104,7 +104,7 @@ $lectures = array(
  
   lecture_def('Jan 27', 'GPU Architecture and CUDA Programming', lecture_url('gpuarch'), '', array('Assignment 2 out')),
 
-  lecture_def('Feb 1', 'Performance Optimization I: Work Distribution and Scheduling', '', 'bold'),
+  lecture_def('Feb 1', 'Performance Optimization I: Work Distribution and Scheduling', lecture_url('progperf1')),
 
   lecture_def('Feb 3', 'Performance Optimization II: Locality, Communication, and Contention', '', 'bold', array('Quiz 2 due (on Fri Feb 5)')),
 
