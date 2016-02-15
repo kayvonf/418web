@@ -39,7 +39,7 @@ will cover both parallel hardware and software design.
 <div><a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a></div>
 <div>[kayvonf at cs] </div>
 <div>Smith Hall 225</div>
-<div>Office hours: Fri 4-5pm<br/>or by appointment</div>
+<div>Office hours: Tue 4-5pm,<br/>Fri 4-5pm, or by appointment</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 

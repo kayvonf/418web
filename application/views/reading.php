@@ -106,7 +106,7 @@ The full listing of lecture videos is available on the Panopto site
 
      <div>Further Reading:</div>
      <ul>
-     <li>You may enjoy the free Udacity Course <a href="https://www.udacity.com/course/cs344">Intro to Parallel Programming Using CUDA</a> by Luebke and Owens</li>
+     <li>You may enjoy the free Udacity Course: <a href="https://www.udacity.com/course/cs344">Intro to Parallel Programming Using CUDA</a>, by Luebke and Owens</li>
      <li>The <a href="http://thrust.github.io/" target="_blank">Thrust Library</a> is a useful collection library for CUDA.</li>
      <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/blythe08_riseofgpu.pdf">Rise of the Graphics Processor</a>. D. Blythe (Proceedings of IEEE 2008)
      a nice overview of GPU history.</li>
@@ -135,6 +135,89 @@ The full listing of lecture videos is available on the Panopto site
      <li><a href="http://supertech.csail.mit.edu/papers/cilk5.pdf" target="_blank">Implementation of the Cilk 5 Multi-Threaded Language</a>. by Frigo et al. PLDI 1998</li>
      </ul>
      </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('progperf2'); ?>">Lecture 7: Performance Optimization II: Locality, Communication, and Contention</a></div>
+     <div class="colored_text book_lecture_subtitle">(message passing, async vs. blocking sends/receives, pipelining, techniques to increase arithmetic intensity, avoiding contention)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6915770a-6986-45f9-a3a8-8978a5ff5465" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('casestudies'); ?>">Lecture 8: Parallel Programming Case Studies</a></div>
+     <div class="colored_text book_lecture_subtitle">(examples of optimizing parallel programs)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6772161b-61d8-4091-bba1-c95ef3360b85" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('perfeval'); ?>">Lecture 9: Workload-Driven Performance Evaluation</a></div>
+     <div class="colored_text book_lecture_subtitle">(hard vs. soft scaling, memory-constrained scaling, scaling problem size, tips for analyzing code performance)</div>
+
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7dd2d111-09e4-44d6-b953-885fa679d3a1" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('snoopcoherence'); ?>">Lecture 10: Snooping-Based Cache Coherence</a></div>
+     <div class="colored_text book_lecture_subtitle">(definition of memory coherence, invalidation-based coherence using MSI and MESI, maintaining coherence with multi-level caches, false sharing)</div>
+
+     <!--
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     </div>
+     -->
 </div>
 
 

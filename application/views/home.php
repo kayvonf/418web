@@ -106,20 +106,19 @@ $lectures = array(
 
   lecture_def('Feb 1', 'Performance Optimization I: Work Distribution and Scheduling', lecture_url('progperf1')),
 
-  lecture_def('Feb 3', 'Performance Optimization II: Locality, Communication, and Contention', '', 'bold', array('Quiz 2 due (on Fri Feb 5)')),
+  lecture_def('Feb 3', 'Performance Optimization II: Locality, Communication, and Contention', lecture_url('progperf2'), '', array('Quiz 2 due (on Fri Feb 5)')),
 
-  lecture_def('Feb 8', 'Parallel Application Case Studies', '', 'bold'),
+  lecture_def('Feb 8', 'Parallel Application Case Studies', lecture_url('casestudies')),
 
-  lecture_def('Feb 10', 'Workload-Driven Performance Evaluation', '', 'bold', array('Assignment 2 due', 'Assignment 3 out (on Wed Feb 10)')),
+  lecture_def('Feb 10', 'Workload-Driven Performance Evaluation', lecture_url('perfeval'), '', array('Assignment 2 due', 'Assignment 3 out (on Fri Feb 12)')),
 
-  lecture_def('Feb 15', 'Snooping-Based Cache Coherence', '', 'bold'),
+  lecture_def('Feb 15', 'Snooping-Based Cache Coherence', lecture_url('snoopcoherence')),
 
   lecture_def('Feb 17', 'Directory-Based Cache Coherence', '', 'bold', array('Quiz 3 due (on Fri Feb 19)')),
 
   lecture_def('Feb 22', 'Memory Consistency', '', 'bold'),
 
-  lecture_def('Feb 24', 'Basic Snooping-Based Multiprocessor Implementation  (+ Course-So-Far Review)', '', 'bold',
-              array('Assignment 3 due (on Thu Feb 25)')),
+  lecture_def('Feb 24', 'Basic Snooping-Based Multiprocessor Implementation  (+ Course-So-Far Review)', '', 'bold', array('Assignment 3 due (on Fri Feb 26)')),
   
   lecture_def('Feb 29', 'Exam I', '', 'bold'),
 
@@ -223,7 +222,7 @@ foreach ($lectures as $lecture)
     <td class="schedule_date">Feb 10</td><td class="schedule_lecture"><a href="<?php echo article_url('4'); ?>">Assignment 2: A Simple Renderer in CUDA</a></td>
 </tr>
 <tr>
-<td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: to be announced</span></td>
+<td class="schedule_date">Feb 26</td><td class="schedule_lecture"><a href="<?php echo article_url('9'); ?>">Assignment 3: ParaGraph: A Parallel Graph Library on Xeon Phi</a></td>
 </tr>
 <tr>
     <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple, Elastic Web Server</span></td>
