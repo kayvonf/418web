@@ -114,20 +114,19 @@ $lectures = array(
 
   lecture_def('Feb 15', 'Snooping-Based Cache Coherence', lecture_url('snoopcoherence')),
 
-  lecture_def('Feb 17', 'Directory-Based Cache Coherence', '', 'bold', array('Quiz 3 due (on Fri Feb 19)')),
+  lecture_def('Feb 17', 'Directory-Based Cache Coherence', lecture_url('dircoherence'), '', array('Quiz 3 due (on Fri Feb 19)')),
 
-  lecture_def('Feb 22', 'Memory Consistency', '', 'bold'),
+  lecture_def('Feb 22', 'Basic Snooping-Based Multiprocessor Implementation', lecture_url('snoopimpl')),
 
-  lecture_def('Feb 24', 'Basic Snooping-Based Multiprocessor Implementation  (+ Course-So-Far Review)', '', 'bold', array('Assignment 3 due (on Fri Feb 26)')),
+  lecture_def('Feb 24', 'Memory Consistency (+ Course-So-Far Review)', lecture_url('consistency'), '', array('Assignment 3 due (on Fri Feb 26)')),
   
   lecture_def('Feb 29', 'Exam I', '', 'bold'),
 
-  lecture_def('Mar 2', 'Scaling a Web Site: Scale-Out Parallelism, Elasticity, and Caching', '', 'bold',
-              array('Assignment 4 out (on Wed Mar 2)')),
+  lecture_def('Mar 2', 'Scaling a Web Site: Scale-Out Parallelism, Elasticity, and Caching', '', 'bold'),
 
   lecture_def('Mar 7-11', 'Spring Break. Partaaay!', '', 'bold'),
 
-  lecture_def('Mar 14', 'Interconnection Networks', '', 'bold'),
+  lecture_def('Mar 14', 'Interconnection Networks', '', 'bold', array('Assignment 4 out')),
 
   lecture_def('Mar 16', 'Implementing Synchronization', '', 'bold', array('Quiz 4 due (on Fri Mar 18)')),
 

@@ -20,6 +20,11 @@ available on the <a href="<?php echo site_url('lectures'); ?>">Lectures</a> page
 <div class="small_text colored_text">Concepts tested: multi-core architecture, hardware multi-threading, data-parallel algorithms, abstraction vs. implementation</div>
 </p>
 
+<p>
+<div><a href="<?php echo $exercises_base_url . '/exercise_03.pdf'; ?>">Exercise 3: More on Histograms, Angry Students</a></div>
+<div class="small_text colored_text">Concepts tested: cache coherence, performance optimization</div>
+</p>
+
 
 <div class="overview_main_item overview_ruled_element">Programming Assignments</div>
 
