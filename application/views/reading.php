@@ -205,20 +205,64 @@ The full listing of lecture videos is available on the Panopto site
      <a href="<?php echo lecture_url('snoopcoherence'); ?>">Lecture 10: Snooping-Based Cache Coherence</a></div>
      <div class="colored_text book_lecture_subtitle">(definition of memory coherence, invalidation-based coherence using MSI and MESI, maintaining coherence with multi-level caches, false sharing)</div>
 
-     <!--
+          <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5481e0db-ded7-41af-9cff-3bc1ac3cb889" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     </div>
+
+
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('dircoherence'); ?>">Lecture 11: Directory-Based Cache Coherence</a></div>
+     <div class="colored_text book_lecture_subtitle">(scaling problem of snooping, implementation of directories, directory storage optimization)</div>
+
      <div class="book_lecture_indent">
 
      <div class="resources">
-     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=36177ab3-22ce-4b11-bf06-eabedf306e26" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('snoopimpl'); ?>">Lecture 12: A Basic Snooping-Based Multi-Processor Implementation</a></div>
+     <div class="colored_text book_lecture_subtitle">(deadlock, livelock, starvation, implementation of coherence on an atomic and split-transaction bus)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ccef6fd3-916a-426a-b28e-2feec7cab663" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('consistency'); ?>">Lecture 13: Memory Consistency</a></div>
+     <div class="colored_text book_lecture_subtitle">(consistency vs. coherence, relaxed consistency models and their motivation, acquire/release semantics)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d08db410-12b9-4079-aa97-e00557bd081f" target="_blank">Watch the Lecture</a></div>
      </div>
 
      <div>Further Reading:</div>
      <ul>
-     <li><a href="" target="_blank"></a>. by XXXX</li>
+     <li><a href="https://lagunita.stanford.edu/c4x/Engineering/CS316/asset/A_Primer_on_Memory_Consistency_and_Coherence.pdf" target="_blank">A Primer on Memory Consistency and Coherence</a>. by Sorin, Hill, and Wood.</li>
+     <li><a href="http://www.cl.cam.ac.uk/~pes20/weakmemory" target="_blank">A Useful Page with Links to a Bunch of Resources on Relaxed Memory Models</a></li>
      </ul>
      </div>
-     -->
 </div>
+
 
 
 <!--

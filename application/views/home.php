@@ -122,7 +122,7 @@ $lectures = array(
   
   lecture_def('Feb 29', 'Exam I', '', 'bold'),
 
-  lecture_def('Mar 2', 'Scaling a Web Site: Scale-Out Parallelism, Elasticity, and Caching', '', 'bold'),
+  lecture_def('Mar 2', 'Scaling a Web Site: Scale-Out Parallelism, Elasticity, and Caching', lecture_url('webscaling')),
 
   lecture_def('Mar 7-11', 'Spring Break. Partaaay!', '', 'bold'),
 
@@ -156,7 +156,7 @@ $lectures = array(
 
   lecture_def('Apr 27', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', '', 'bold'),
 
-  lecture_def('TBD', '5th Annual Parallelism Competition', '', 'bold', array('text'=> 'Final Projects Due'))
+  lecture_def('May 9', '5th Annual Parallelism Competition', '', 'bold', array('text'=> 'Final Projects Due'))
 );
 
 
@@ -224,11 +224,11 @@ foreach ($lectures as $lecture)
 <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><a href="<?php echo article_url('9'); ?>">Assignment 3: ParaGraph: A Parallel Graph Library on Xeon Phi</a></td>
 </tr>
 <tr>
-    <td class="schedule_date">due TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple, Elastic Web Server</span></td>
+    <td class="schedule_date">Mar 25</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple, Elastic Web Server</span></td>
 </tr>
 
 <tr>
-    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Final Project / Parallelism Competition</span></td>
+    <td class="schedule_date">May 9</td><td class="schedule_lecture"><a href="<?php echo article_url('14'); ?>">Final Project / Parallelism Competition</a></td>
 </tr>
 
 <tr>

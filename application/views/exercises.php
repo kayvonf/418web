@@ -25,6 +25,11 @@ available on the <a href="<?php echo site_url('lectures'); ?>">Lectures</a> page
 <div class="small_text colored_text">Concepts tested: cache coherence, performance optimization</div>
 </p>
 
+<p>
+<div><a href="<?php echo $exercises_base_url . '/exam1_practice.pdf'; ?>">Exam 1 Practice Exercises</a></div>
+<div class="small_text colored_text">Concepts tested: everything up to Exam 1</div>
+</p>
+
 
 <div class="overview_main_item overview_ruled_element">Programming Assignments</div>
 
