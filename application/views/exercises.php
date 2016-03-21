@@ -30,6 +30,11 @@ available on the <a href="<?php echo site_url('lectures'); ?>">Lectures</a> page
 <div class="small_text colored_text">Concepts tested: everything up to Exam 1</div>
 </p>
 
+<p>
+<div><a href="<?php echo $exercises_base_url . '/exercise_04.pdf'; ?>">Exercise 4: Good Business Practices, Understanding Load-linked, Store-conditional</a></div>
+<div class="small_text colored_text">Concepts tested: elastic scheduling, implementing synchronization, review of cache coherence and latency hiding</div>
+</p>
+
 
 <div class="overview_main_item overview_ruled_element">Programming Assignments</div>
 
@@ -44,6 +49,11 @@ available on the <a href="<?php echo site_url('lectures'); ?>">Lectures</a> page
 <p>
 <div><a href="<?php echo article_url('9'); ?>">Assignment 3: ParaGraph: A Parallel Graph Library on Xeon Phi</a></div>
 </p>
+
+<p>
+<div><a href="<?php echo article_url('7'); ?>">Assignment 4: A Simple, Elastic Web Server</a></div>
+</p>
+
 
 <p>&nbsp;</p>
 

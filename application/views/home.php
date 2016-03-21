@@ -126,11 +126,11 @@ $lectures = array(
 
   lecture_def('Mar 7-11', 'Spring Break. Partaaay!', '', 'bold'),
 
-  lecture_def('Mar 14', 'Interconnection Networks', '', 'bold', array('Assignment 4 out')),
+  lecture_def('Mar 14', 'Interconnection Networks', lecture_url('interconnects'), '', array('Assignment 4 out')),
 
-  lecture_def('Mar 16', 'Implementing Synchronization', '', 'bold', array('Quiz 4 due (on Fri Mar 18)')),
+  lecture_def('Mar 16', 'Implementing Synchronization', lecture_url('synchronization'), '', array('Quiz 4 due (on Fri Mar 18)')),
 
-  lecture_def('Mar 21', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold'),
+  lecture_def('Mar 21', 'Fine-Grained Synchronization and Lock-Free Programming', lecture_url('lockfree')),
 
   lecture_def('Mar 23', 'Transactional Memory', '', 'bold', array('Assignment 4 due (on Fri Mar 25)')),
 
@@ -224,7 +224,7 @@ foreach ($lectures as $lecture)
 <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><a href="<?php echo article_url('9'); ?>">Assignment 3: ParaGraph: A Parallel Graph Library on Xeon Phi</a></td>
 </tr>
 <tr>
-    <td class="schedule_date">Mar 25</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple, Elastic Web Server</span></td>
+    <td class="schedule_date">Mar 25</td><td class="schedule_lecture"><a href="<?php echo article_url('7'); ?>">Assignment 4: A Simple, Elastic Web Server</a></td>
 </tr>
 
 <tr>

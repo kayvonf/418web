@@ -263,6 +263,64 @@ The full listing of lecture videos is available on the Panopto site
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('webscaling'); ?>">Lecture 14: Scaling a Web Site</a></div>
+     <div class="colored_text book_lecture_subtitle">(scale out, load balancing, elasticity, caching)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3bb2f332-fbdb-4434-9f3b-0c2b3f9668c8" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.highscalability.com" target="_blank">www.highscalability.com</a>. A cool site with many case studies (see "All Time Favorites" section)</li>
+     <li><a href="http://perspectives.mvdirona.com" target="_blank">James Hamilton's Blog</li></ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('interconnects'); ?>">Lecture 15: Interconnection Networks</a></div>
+     <div class="colored_text book_lecture_subtitle">(network properties, topology, basics of flow control)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=20d21b98-4359-4188-a374-2983cecc2b38" target="_blank">Watch the Lecture</a></div>
+     </div>
+     
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('synchronization'); ?>">Lecture 16: Implementing Synchronization</a></div>
+     <div class="colored_text book_lecture_subtitle">(machine-level atomic operations, implementing locks, implementing, barriers)</div>
+
+     <!--
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     </div>
+     -->
+</div>
 
 
 <!--
@@ -284,7 +342,6 @@ The full listing of lecture videos is available on the Panopto site
      </div>
 </div>
 -->
-
 
 <p>&nbsp;</p>
 
