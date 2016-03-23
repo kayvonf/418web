@@ -132,7 +132,7 @@ $lectures = array(
 
   lecture_def('Mar 21', 'Fine-Grained Synchronization and Lock-Free Programming', lecture_url('lockfree')),
 
-  lecture_def('Mar 23', 'Transactional Memory', '', 'bold', array('Assignment 4 due (on Fri Mar 25)')),
+  lecture_def('Mar 23', 'Transactional Memory', lecture_url('transactionalmem'), '', array('Assignment 4 due (on Fri Mar 25)')),
 
   lecture_def('Mar 28', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold'),
 

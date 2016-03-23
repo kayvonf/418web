@@ -307,9 +307,50 @@ The full listing of lecture videos is available on the Panopto site
      <a href="<?php echo lecture_url('synchronization'); ?>">Lecture 16: Implementing Synchronization</a></div>
      <div class="colored_text book_lecture_subtitle">(machine-level atomic operations, implementing locks, implementing, barriers)</div>
 
-     <!--
      <div class="book_lecture_indent">
 
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0553fcc3-8278-4d59-bd31-dd7f608f2b43" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     </div>
+     -->
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('lockfree'); ?>">Lecture 17: Fine-Grained Synchronization and Lock-Free Programming</a></div>
+     <div class="colored_text book_lecture_subtitle">(fine-grained snychronization via locks, basics of lock-free programming: single-reader/writer queues, lock-free stacks, the ABA problem, hazard pointers)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=535b2461-438a-44e2-9e7b-028ffec7f44a" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('transactionalmem'); ?>">Lecture 18: Transactional Memory</a></div>
+     <div class="colored_text book_lecture_subtitle">(motivation for transactions, design space of transactional memory implementations, lazy-optimistic HTM)</div>
+
+     <div class="book_lecture_indent">
+
+     <!--
      <div class="resources">
      <div><a href="" target="_blank">Watch the Lecture</a></div>
      </div>
@@ -318,9 +359,11 @@ The full listing of lecture videos is available on the Panopto site
      <ul>
      <li><a href="" target="_blank"></a>. by XXXX</li>
      </ul>
-     </div>
      -->
+     </div>
 </div>
+
+
 
 
 <!--
