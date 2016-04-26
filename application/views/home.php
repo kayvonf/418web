@@ -110,15 +110,18 @@ $lectures = array(
 
   lecture_def('Feb 8', 'Parallel Application Case Studies', lecture_url('casestudies')),
 
-  lecture_def('Feb 10', 'Workload-Driven Performance Evaluation', lecture_url('perfeval'), '', array('Assignment 2 due', 'Assignment 3 out (on Fri Feb 12)')),
+  lecture_def('Feb 10', 'Workload-Driven Performance Evaluation', lecture_url('perfeval'), '',
+                 array('Assignment 2 due', 'Assignment 3 out (on Fri Feb 12)')),
 
   lecture_def('Feb 15', 'Snooping-Based Cache Coherence', lecture_url('snoopcoherence')),
 
-  lecture_def('Feb 17', 'Directory-Based Cache Coherence', lecture_url('dircoherence'), '', array('Quiz 3 due (on Fri Feb 19)')),
+  lecture_def('Feb 17', 'Directory-Based Cache Coherence', lecture_url('dircoherence'), '',
+                 array('Quiz 3 due (on Fri Feb 19)')),
 
   lecture_def('Feb 22', 'Basic Snooping-Based Multiprocessor Implementation', lecture_url('snoopimpl')),
 
-  lecture_def('Feb 24', 'Memory Consistency (+ Course-So-Far Review)', lecture_url('consistency'), '', array('Assignment 3 due (on Fri Feb 26)')),
+  lecture_def('Feb 24', 'Memory Consistency (+ Course-So-Far Review)', lecture_url('consistency'), '',
+                array('Assignment 3 due (on Fri Feb 26)')),
   
   lecture_def('Feb 29', 'Exam I', '', 'bold'),
 
@@ -134,25 +137,26 @@ $lectures = array(
 
   lecture_def('Mar 23', 'Transactional Memory', lecture_url('transactionalmem'), '', array('Assignment 4 due (on Fri Mar 25)')),
 
-  lecture_def('Mar 28', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold'),
+  lecture_def('Mar 28', 'Heterogeneous Parallelism and Hardware Specialization', lecture_url('heterogeneity')),
 
-  lecture_def('Mar 30', 'Domain-Specific Parallel Programming Systems', '', 'bold',
+  lecture_def('Mar 30', 'Domain-Specific Parallel Programming Systems', lecture_url('dsl'), '',
              array('Quiz 5 due (on Fri Apr 1)', 'Project Proposal Due (on Fri Apr 1)')),
                         
-  lecture_def('Apr 4', 'Domain-Specific Frameworks for Parallel Graph Processing', '', 'bold'),
+  lecture_def('Apr 4', 'Domain-Specific Programming on Graphs', lecture_url('graphdsl')),
 
-  lecture_def('Apr 6', 'In-Memory Distributed Computing in Spark', '', 'bold'),
+  lecture_def('Apr 6', 'In-Memory Distributed Computing in Spark', lecture_url('spark')),
 
-  lecture_def('Apr 11', 'Addressing the Memory Wall', '', 'bold'),
+  lecture_def('Apr 11', 'Addressing the Memory Wall', lecture_url('memory')),
 
-  lecture_def('Apr 13', 'Topic TBD', '', 'bold',
-              array('Quiz 6 due (on Fri Apr 15)', 'Project Checkpoint Due (on Fri Apr 15)')),
+  lecture_def('Apr 13', 'The Future of High-Performance Computing', lecture_url('hpcfuture')),
               
-  lecture_def('Apr 18', 'Topic TBD', '', 'bold'),
+  lecture_def('Apr 18', 'Efficiently Evaluating Deep Neural Networks', lecture_url('dnneval'), '',
+                array('Quiz 6 due (on Mon Apr 18)', 'Project Checkpoint Due (on Tues Apr 19)')),
 
-  lecture_def('Apr 20', 'Topic TBD', '', 'bold'),
+  lecture_def('Apr 20', 'Parallel Deep Neural Network Training', lecture_url('paralleltraining')),
 
-  lecture_def('Apr 25', 'Exam II (and a Bonus Lecture on Parallel 3D Graphics)', '', 'bold'),
+  lecture_def('Apr 25', 'Parallelizing the 3D Graphics Pipeline', lecture_url('gfxpipeline'), '',
+                         array('Exam 2 (evening exam)')),
 
   lecture_def('Apr 27', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', '', 'bold'),
 

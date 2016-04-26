@@ -35,6 +35,21 @@ available on the <a href="<?php echo site_url('lectures'); ?>">Lectures</a> page
 <div class="small_text colored_text">Concepts tested: elastic scheduling, implementing synchronization, review of cache coherence and latency hiding</div>
 </p>
 
+<p>
+<div><a href="<?php echo $exercises_base_url . '/exercise_05.pdf'; ?>">Exercise 5: Concurrent Linked Lists and Heaps</a></div>
+<div class="small_text colored_text">Concepts tested: fine-grained locking and transactional memory</div>
+</p>
+
+<p>
+<div><a href="<?php echo $exercises_base_url . '/exercise_06.pdf'; ?>">Exercise 6: Justin, Kanye and Taylor Bring Locality Back, Controlling DRAM</a></div>
+<div class="small_text colored_text">Concepts tested: scheduling Spark programs, how DRAM works</div>
+</p>
+
+<p>
+<div><a href="<?php echo $exercises_base_url . '/exam2_practice.pdf'; ?>">Exam 2 Practice Exercises</a></div>
+<div class="small_text colored_text">Concepts tested: everything from the memory consistency lecture onward</div>
+</p>
+
 
 <div class="overview_main_item overview_ruled_element">Programming Assignments</div>
 

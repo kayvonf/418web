@@ -318,8 +318,9 @@ The full listing of lecture videos is available on the Panopto site
      <ul>
      <li><a href="" target="_blank"></a>. by XXXX</li>
      </ul>
-     </div>
      -->
+     </div>
+
 </div>
 
 <div class="book_lecture">
@@ -333,12 +334,17 @@ The full listing of lecture videos is available on the Panopto site
      <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=535b2461-438a-44e2-9e7b-028ffec7f44a" target="_blank">Watch the Lecture</a></div>
      </div>
 
-     <!--
+     
      <div>Further Reading:</div>
      <ul>
-     <li><a href="" target="_blank"></a>. by XXXX</li>
+       <li><a href="https://www.cl.cam.ac.uk/research/srg/netos/papers/2001-caslists.pdf" target="_blank">A Pragmatic Implementation of
+          Non-Blocking Linked-Lists</a>. by T. Harris, 2001</li>
+       <li><a href="http://www.cse.yorku.ca/~ruppert/papers/lfll.pdf" target="_blank">Lock-Free Linked Lists and Skip Lists</a>. by M. Fomitchev and E. Ruppert, 2004</li>
+       <li><a href="https://www.research.ibm.com/people/m/michael/ieeetpds-2004.pdf" target="_blank">Hazard Pointers: Safe Memory Reclamation for
+     Lock-Free Objects</a>. by M. Michael, IEEE Trans on Parallel and Distributed Systems, 2004</li>
+       <li><a href="http://www.drdobbs.com/lock-free-data-structures-with-hazard-po/184401890" target="_blank">Lock-Free Data Structures with Hazard pointers</a>. by A. Alexandrescu and M. Michael, Dr. Dobbs, 2004</li>
      </ul>
-     -->
+     
      </div>
 </div>
 
@@ -350,11 +356,11 @@ The full listing of lecture videos is available on the Panopto site
 
      <div class="book_lecture_indent">
 
-     <!--
      <div class="resources">
-     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=22b2da9a-b1f4-4084-9077-aa9bfc85427c" target="_blank">Watch the Lecture</a></div>
      </div>
 
+     <!--
      <div>Further Reading:</div>
      <ul>
      <li><a href="" target="_blank"></a>. by XXXX</li>
@@ -363,7 +369,180 @@ The full listing of lecture videos is available on the Panopto site
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('heterogeneity'); ?>">Lecture 19: Heterogeneous Parallelism and Hardware Specialization</a></div>
+     <div class="colored_text book_lecture_subtitle">(energy-efficient computing, motivation for heterogeneous processing, fixed-function processing, FPGAs, what's in a modern SoC)</div>
 
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=82747e8c-e3c4-4448-94df-3798ceef0ce8" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('dsl'); ?>">Lecture 20: Domain-Specific Programming Systems</a></div>
+     <div class="colored_text book_lecture_subtitle">(motivation for DSLs, case studies on Lizst and Halide)</div>
+
+     <div class="book_lecture_indent">
+
+     <!--
+     <div class="resources">
+     <div><a href="" target="_blank">Watch the Lecture</a></div>
+     </div>
+     -->
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://graphics.stanford.edu/hackliszt/" target="_blank">Lizst: A DSL for solving mesh-based PDEs</a></li>
+     <li><a href="http://halide-lang.org/" target="_blank">Halide: a language for image processing and computational photography</a></li>
+     <li><a href="http://graphics.stanford.edu/papers/darkroom14/" target="_blank">Darkroom: Darkroom: Compiling High-Level Image Processing Code into Hardware Pipelines</a>. Hegarty et al. SIGGRAPH 2014</li>
+     <li><a href="http://people.csail.mit.edu/jrk/simit.pdf" target="_blank">Simit:  A Language for Physical Simulation</a>. Kjolstad et al. 2015</li>
+     </ul>
+     </div>
+    
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('graphdsl'); ?>">Lecture 21: Domain-Specific Programming on Graphs</a></div>
+     <div class="colored_text book_lecture_subtitle">(GraphLab abstractions, GraphLab implementation, streaming graph processing, graph compression)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b608f28f-bc2d-451b-b5b9-53fed153e095" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://dato.com/products/create/open_source.html" target="_blank">GraphLab Documentation</a></li>
+     <li><a href="http://www.eecs.berkeley.edu/~jshun/ligra.html" target="_blank">Ligra: A Lightweight Graph Processing Framework for Shared Memory</a>. by Shun and Blelloch, PPOPP 13</li>
+     <li><a href="http://www.cs.cmu.edu/~pavlo/courses/fall2013/static/papers/osdi2012-graphchi.pdf" target="_blank">GraphChi: Large-Scale Graph Computation on Just a PC</a>. by Kyrola et al. OSDI 12
+
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('spark'); ?>">Lecture 22: In-Memory Distributed Computing using Spark</a></div>
+     <div class="colored_text book_lecture_subtitle">(producer-consumer locality, RDD abstraction, Spark implementation and scheduling)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f10f5d5a-74c9-4253-aefa-dc4769ea7b96" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://spark.apache.org" target="_blank">Apache Spark Web Site</a></li>
+     <li><a href="https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf" target="_blank"></a>. by Zaharia et al. NSDI 2012</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('memory'); ?>">Lecture 23: Addressing the Memory Wall</a></div>
+     <div class="colored_text book_lecture_subtitle">(how DRAM works, cache compression, DRAM compression, upgoing memory technologies)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4068f6f4-d2c2-4812-9cc7-ccff02fe2a09" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://users.ece.cmu.edu/~omutlu/pub/bdi-compression_pact12.pdf" target="_blank">Base-Delta-Immediate Compression: Practical Data Compression for On-Chip Caches</a>. by Pekhimenko et al. PACT 2012</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('hpcfuture'); ?>">Lecture 24: The Future of High-Performance Computing</a></div>
+     <div class="colored_text book_lecture_subtitle">(supercomputing vs. distributed computing/analytics, design philosophy of both systems)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="http://15418.courses.cs.cmu.edu/spring2016content/lectures/24_hpcfuture/24_hpcfuture_slides.pdf" target="_blank">Watch the Lecture</a></div>
+     </div>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('dnneval'); ?>">Lecture 25: Efficiently Evaluating Deep Networks</a></div>
+     <div class="colored_text book_lecture_subtitle">(intro to deep networks, what convolution does, mapping convolutin to matrix multiplication, deep network compression)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b1addcfa-d051-4c7b-8279-60b245491fc8" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('paralleltraining'); ?>">Lecture 26: Parallel Deep Network Training</a></div>
+     <div class="colored_text book_lecture_subtitle">(basics of gradient descent and backpropagation, memory footpring issues, asynchronous parallel implementations of gradient descent)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c22a3cac-a493-43d2-9922-ec0b5cdcc93e" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('gfxpipeline'); ?>">Lecture 27: Parallelizing the 3D Graphics Pipeline</a></div>
+     <div class="colored_text book_lecture_subtitle">(parallel rasterization, Z/color-buffer compression, tiled rendering, sort-everywhere parallel rendering)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=91194a11-4805-45cd-9269-d214153aefcf" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+      -->
+     </div>
+</div>
 
 
 <!--
