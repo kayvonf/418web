@@ -544,6 +544,27 @@ The full listing of lecture videos is available on the Panopto site
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('wrapup'); ?>">Lecture 28: Course Wrap Up + How to Give a Talk</a></div>
+     <div class="colored_text book_lecture_subtitle">(tips for giving a clear talk, philosophy)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aa1df0ed-1d47-4084-8ae4-3802ffd80e6e" target="_blank">Watch the Lecture</a></div>
+     </div>
+
+     <!--
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a>. by XXXX</li>
+     </ul>
+     -->
+     </div>
+</div>
+
+
 
 <!--
 <div class="book_lecture">

@@ -158,7 +158,7 @@ $lectures = array(
   lecture_def('Apr 25', 'Parallelizing the 3D Graphics Pipeline', lecture_url('gfxpipeline'), '',
                          array('Exam 2 (evening exam)')),
 
-  lecture_def('Apr 27', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', '', 'bold'),
+  lecture_def('Apr 27', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', lecture_url('wrapup')),
 
   lecture_def('May 9', '5th Annual Parallelism Competition', '', 'bold', array('text'=> 'Final Projects Due'))
 );
