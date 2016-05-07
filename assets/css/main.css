@@ -13,7 +13,7 @@ body {
   color: #505050;
   
   font-size: 11pt;  
-  font-family: open-sans;
+  font-family: open-sans, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -23,7 +23,7 @@ td
     /* NOTE(kayvonf): keep this consistent with the body element above.
        It's very annoying how <td> doesn't inherent from it's container */
     font-size: 11pt;
-    font-family: open-sans;
+    font-family: open-sans, sans-serif;
     font-style: normal;
     font-weight: 400;
 }
@@ -104,7 +104,7 @@ body A:hover
 .common_title
 {
     color: #000000;
-    font-family: open-sans-condensed;
+    font-family: open-sans-condensed, sans-serif;
     font-size: 28pt;
     font-weight: 700;
 }
@@ -112,7 +112,7 @@ body A:hover
 .common_title_small
 {
     color: #000000;
-    font-family: open-sans-condensed;
+    font-family: open-sans-condensed, sans-serif;
     font-size: 16pt;
     font-weight: 700;
 }
@@ -202,7 +202,7 @@ label textarea
 .main_title, .home_title, .feed_title, .playlist_title
 {
     color: #000000;
-    font-family: open-sans-condensed;
+    font-family: open-sans-condensed, sans-serif;
     font-size: 30pt;
     font-weight: 700;
 }
@@ -229,7 +229,7 @@ label textarea
 .book_lecture_title,
 .overview_main_item {
     color: #000000;
-    font-family: open-sans-condensed;
+    font-family: open-sans-condensed, sans-serif;
     font-size: 18pt;
     font-weight: 700;
     padding-top: .5em;
@@ -322,7 +322,7 @@ td.schedule_lecture
     color: #ffffff;
     background-image: none;
     background-color: #c00000;
-    font-family: open-sans-condensed;
+    font-family: open-sans-condensed, sans-serif;
     font-size: 18pt;
     font-weight: 700;
     border: #a00000 1px solid;
@@ -364,7 +364,7 @@ td.schedule_lecture
 .lecture_title
 {
     color: #000000;
-    font-family: open-sans-condensed;
+    font-family: open-sans-condensed, sans-serif;
     font-size: 28pt;
     font-weight: 700;
     padding-bottom: .25em;

@@ -11,13 +11,15 @@
 ?>
 <title><?php echo $page_title; ?></title>
 
-<!--[if lt IE 9]>
-<script>
-    if (confirm("This site is *known buggy* on versions of Internet Explorer less than IE9. Do you want to download a modern browser instead?")) {
-        window.location = "https://www.google.com/intl/en/chrome/browser/";
-    }
-</script>
-<![endif]-->
+<script src="http://use.edgefonts.net/open-sans:n3,i3,n4,i4,n6,i6,n7,i7,n8,i8.js"></script>
+<script src="http://use.edgefonts.net/open-sans-condensed:n3,i3,n7.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/third_party/jquery/1.8.3/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/third_party/jquery/timeago/jquery.timeago.js"></script>
+<script src="<?php echo base_url(); ?>assets/third_party/jquery/cookie/jquery.cookie.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/third_party/codemirror-3.0/lib/codemirror.js"></script>
+<script src="<?php echo base_url(); ?>assets/third_party/codemirror-3.0/mode/markdown/markdown.js"></script>
 
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -34,15 +36,7 @@ MathJax.Hub.Config({
 });
 </script>
 
-<script src="http://use.edgefonts.net/open-sans:n3,i3,n4,i4,n6,i6,n7,i7,n8,i8.js"></script>
-<script src="http://use.edgefonts.net/open-sans-condensed:n3,i3,n7.js"></script>
 
-<script src="<?php echo base_url(); ?>assets/third_party/jquery/1.8.3/jquery.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/third_party/jquery/timeago/jquery.timeago.js"></script>
-<script src="<?php echo base_url(); ?>assets/third_party/jquery/cookie/jquery.cookie.js"></script>
-
-<script src="<?php echo base_url(); ?>assets/third_party/codemirror-3.0/lib/codemirror.js"></script>
-<script src="<?php echo base_url(); ?>assets/third_party/codemirror-3.0/mode/markdown/markdown.js"></script>
 <link rel="stylesheet" type="text/css" href=" <?php echo base_url(); ?>assets/third_party/codemirror-3.0/lib/codemirror.css">
 
 <script src="<?php echo base_url(); ?>assets/third_party/google-code-prettify/prettify.js"></script>
@@ -80,7 +74,7 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 <div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('lectures'); ?>">[Lectures]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('exercises'); ?>">[Exercises]</a></div>
-<!--<div class="topbar_left"><a href="<?php echo site_url('competition'); ?>">[Competition]</a></div>-->
+<div class="topbar_left"><a href="<?php echo site_url('competition'); ?>">[Competition]</a></div>
 
 <?php // TODO(mburman) use check_privileged
     if (isset($logged_in_user) &&
