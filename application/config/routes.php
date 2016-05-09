@@ -98,6 +98,7 @@ $route['scoreboard/(:any)'] = 'scoreboard/index/$1';
 */
 
 $route['projects'] = 'article/view/17';
+$route['competition'] = 'article/view/17';
 $route['getstarted'] = 'users/create';
 $route['welcome'] = 'simple_pages/welcome';
 $route['courseinfo'] = 'simple_pages/courseinfo';
