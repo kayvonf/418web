@@ -547,7 +547,7 @@ The full listing of lecture videos is available on the Panopto site
 <div class="book_lecture">
      <div class="book_lecture_title" style="padding-bottom: 0px">
      <a href="<?php echo lecture_url('wrapup'); ?>">Lecture 28: Course Wrap Up + How to Give a Talk</a></div>
-     <div class="colored_text book_lecture_subtitle">(tips for giving a clear talk, philosophy)</div>
+     <div class="colored_text book_lecture_subtitle">(tips for giving a clear talk, a bit of philosophy)</div>
 
      <div class="book_lecture_indent">
 
@@ -561,6 +561,19 @@ The full listing of lecture videos is available on the Panopto site
      <li><a href="" target="_blank"></a>. by XXXX</li>
      </ul>
      -->
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo site_url('projects'); ?>">Student Final Projects</a></div>
+     <div class="colored_text book_lecture_subtitle">(the students explore high-performance and high-efficiency topics of their choosing)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1f3986ba-3389-4b6f-8832-58a6887cda24" target="_blank">Watch the Parallelism Competition Finalists</a></div>
+     </div>
      </div>
 </div>
 

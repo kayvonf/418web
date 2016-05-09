@@ -97,7 +97,7 @@ $route['scoreboard/(:any)/(:any)'] = 'scoreboard/index/$1/$2';
 $route['scoreboard/(:any)'] = 'scoreboard/index/$1';
 */
 
-$route['competition'] = 'article/view/17';
+$route['projects'] = 'article/view/17';
 $route['getstarted'] = 'users/create';
 $route['welcome'] = 'simple_pages/welcome';
 $route['courseinfo'] = 'simple_pages/courseinfo';
