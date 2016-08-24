@@ -34,10 +34,10 @@ database_passwd = 'YOUR_DATABASE_PASSWORD';
 # Apache configuration
 ##################################################
 
-# Local Linux user that should own all code/content directories.  By
-# default www-data.
+# Local Linux group that will own all code/content directories. By
+# default www-data
 
-webserver_user = 'www-data';
+webserver_group = 'www-data';
 
 # base directory of the site relative to the web host's root.  e.g.,
 # if your site is to be located at http://www.foo.com/mysite, then set

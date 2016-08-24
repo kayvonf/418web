@@ -8,7 +8,7 @@ def mkdirDashP(dir):
         os.mkdir(dir);
 
 def execute(cmd):
-    # print "Executing: %s" % cmd;
+    print "Executing: %s" % cmd;
     if os.system(cmd) != 0:
         print "ERROR EXECUTING %s: ABORTING" % cmd;
         sys.exit(-1);
@@ -57,12 +57,15 @@ if __name__ == "__main__":
     mysql_commands  =  "create database %s;" % course_config.database_name;
     mysql_commands +=  "use %s;" % course_config.database_name;
     mysql_commands +=  "source %s;" % INIT_DB_SCRIPT;
-
     execute("mysql --user %s -p -e '%s'" % (course_config.database_user, mysql_commands));
 
-    # Give apache permissions to write to the content directory
-    execute("chown -R %s:%s %s" % (course_config.webserver_user, course_config.webserver_user, course_config.site_local_content_base_dir));
-
+    # Give apache permissions to write to the content directory (by
+    # changing group to the webserver group and giving that group the
+    # appropriate permissions
+    execute("chgrp -R %s %s" % (course_config.webserver_group, course_config.site_local_content_base_dir));
+    execute("chmod -R g+rwx %s" % course_config.site_local_content_base_dir);
+    execute("chmod -R o-rwx %s" % course_config.site_local_content_base_dir);
+    
     print ""
     print "SUCCESS! CREATED CONTENT DIR AND NEW DATABASE!"
     print ""
