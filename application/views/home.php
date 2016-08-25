@@ -37,13 +37,13 @@ parallel hardware and software design.  </p>
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-<div>Mon/Wed 3:00 - 4:20pm</div>
-<div>GHC 4401 (Rashid Auditorium)</div>
-<div>Instructors: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="http://www.cs.cmu.edu/~bryant/">Randal Bryant</a></div>
+<div>TIME TBD</div>
+<div>LOCATION TBD</div>
+<div>Instructors: <a href="TBD">TBD</a> and <a href="TBD">TBD</a></div>
 <div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on policies and logistics.</div>
 </div>
 
-<div class="overview_main_item overview_ruled_element">Spring 2016 Schedule</div>
+<div class="overview_main_item overview_ruled_element">Fall 2016 Schedule</div>
 
 <table>
 

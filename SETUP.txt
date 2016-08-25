@@ -52,17 +52,17 @@ TA) priviledges, use the change_user_type.py script:
 
        python change_user_type.py TA_ACCOUNT_USERNAME ta
 
-8. The site is currently in the state is was at the end of 15-418 last
-semester. You'll want to customize the look of the site for your
-needs.  This is going to require directly modifying php files in the
+8. You'll want to customize the look of the site for your needs.  This
+is going to require directly modifying php files in the
 COURSE_CODE_DIR/application/views and
 COURSE_CODE_DIR/application/views/template folders:
 
-     -- I suggest grepping for '418', '618', 'andrew',
-        'parallel computer architecture and programming', 'CMU',
-        'Carnegie Mellon', and '2015'
+     -- If you are running a course that is not 15418, or not CMU, I
+        suggest grepping for '418', '618', 'andrew', 'parallel
+        computer architecture and programming', 'CMU', 'Carnegie
+        Mellon', and prior years like '2014', '2015'
 
-     -- You'll need to change presentation layer pages in:
+     -- You'll want to change presentation layer pages in:
         COURSE_CODE_DIR/application/views/*.php
 
      -- The only view that is slightly special is the home page,
@@ -70,7 +70,7 @@ COURSE_CODE_DIR/application/views/template folders:
         and then renderer the array (see comments in home.php):
         COURSE_CODE_DIR/application/views/home.php
 	
-     -- You'll probably want to update the account creation welcome message in
+     -- You may want to update the account creation welcome message in
         COURSE_CODE_DIR/application/views/welcome.php
 
 9. As the instructor, you may wish to look at the functionality
