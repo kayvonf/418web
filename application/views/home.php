@@ -1,45 +1,42 @@
 
 <div class="home_container">
 
-<div class="home_title">Parallel Computer Architecture and Programming <span style="font-size: 12pt;">(CMU 15-418/618)</span> </div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">CMU 15-769</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">VISUAL COMPUTING SYSTEMS</div>
 
-<!--
-<div class="bold_text colored_text">
-
-<p style="font-size: 14pt;">NOTE TO STUDENTS ON THE SPRING 2016 WAITLIST:</p>
-
-<p>We are excited that so many students are interested in 418/618, but
-unfortunately we are not going to be able to accommodate all
-students.</p>
-
-<p style="font-size: 14pt;">YOUR ORDER ON THE WAITLIST IN SIO DOES NOT MATTER.</p>
-
-<p>After handling special requests and students with a particular need
-to take 418/618 (please come talk to us if you're one of those folks),
-it is the instructors' policy to clear the waitlist in the order of
-students that hand in "A-quality" implementations of assignment 1
-prior to the course add deadline (the end of the second week of
-class).  
+<div>
+<img style="padding-bottom: 5px;" src="<?php echo base_url('assets/images/teaser.jpg'); ?>" width="800" height="\
+125"></a>
 </div>
--->
 
-<p style="padding-bottom: .15em"> From smart phones, to multi-core
-CPUs and GPUs, to the world's largest supercomputers and web sites,
-parallel processing is ubiquitous in modern computing. The goal of
-this course is to provide a deep understanding of the fundamental
-principles and engineering trade-offs involved in designing modern
-parallel computing systems as well as to teach parallel programming
-techniques necessary to effectively utilize these machines.  Because
-writing good parallel programs requires an understanding of key
-machine performance characteristics, this course will cover both
-parallel hardware and software design.  </p>
+<p style="padding-bottom: .15em">
+
+Visual computing tasks such as 2D/3D graphics, image processing, and
+image understanding are important responsibilities of modern computer
+systems ranging from sensor-rich smart phones to large
+datacenters. These workloads demand exceptional system efficiency and
+this course examines the key ideas, techniques, and challenges
+associated with the design of parallel (and heterogeneous) systems
+that serve to accelerate visual computing applications. This course is
+intended for graduate and advanced undergraduate-level students
+interested in architecting efficient future graphics, image
+processing, and computer vision platforms and for students seeking to
+develop scalable algorithms for these platforms.  </p>
+
+<p class="colored_text bold_text" style="font-size: 18pt;">
+NOTE TO STUDENTS: THE FIRST DAY OF CLASS FOR 15-769 WILL BE WEDNESDAY, AUGUST 31.  SEE YOU THEN!!!!!
+</p>
+
+<p class="colored_text bold_text" style="font-size: 18pt;">
+Please signup on <a href="http://www.piazza.com/cmu/fall2016/15769">Piazza</a>.
+</p>
 
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-<div>TIME TBD</div>
-<div>LOCATION TBD</div>
-<div>Instructors: <a href="TBD">TBD</a> and <a href="TBD">TBD</a></div>
+<div>Mon/Wed 10:30-11:50am</div>
+<div>GHC 4303</div>
+<div>Instructor: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a></div>
 <div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on policies and logistics.</div>
 </div>
 
@@ -90,13 +87,13 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Jan 1', 'Why Parallelism?', lecture_url('testlecture'), '', array('Example subitem 1', "Example subitem 2")),
-
-  lecture_def('Jan 2', 'Lecture With No Link', '', 'bold'),
-
-  lecture_def('Jan 3', 'Lecture With No Link', '', 'bold'),
+  lecture_def('Aug 31', 'Course Introduction + Parallel Architecture Review', '', 'bold'),
     
-  lecture_def('Jan 4', 'No Class (Labor Day)', '', 'bold')
+  lecture_def('Sep 2', 'No Class -- Memorial Day', '', 'bold'),
+
+  lecture_def('Sep 4', 'COMING SOON', '', 'bold'),
+
+  lecture_def('Sep 6', 'COMING TBD', '', 'bold')
   );
 
 
@@ -155,26 +152,15 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">Jan 1</td><td class="schedule_lecture"><a href="<?php echo article_url('3'); ?>">Assignment 1: This is a dummy link</a></td>
+  <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: COMING SOON</span></td>
 </tr>
 <tr>
-    <td class="schedule_date">weekly</td><td class="schedule_lecture"><a href="<?php echo article_url('1'); ?>">Guidelines and Tips for Making Good Lecture Comments</a></td>
+    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: COMING SOON</span></td>
 </tr>
-
-
+<tr>
+    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: COMING SOON</span></td>
+</tr>
 </table>
-
-<div class="overview_main_item overview_ruled_element">Acknowledgments</div>
-
-<p> Special thanks to the <a href="http://www.intel.com">Intel
-Corporation</a>, the <a href="http://www.nvidia.com">NVIDIA
-Corporation</a>, and to <a href="http://www.dell.com">DELL</a> for
-equipment donations and/or financial support for course development.
-<a href="http://www.cs.cmu.edu/~tcm">Todd Mowry</a> created the
-original version of 15-418 and much of the structure of his innovative
-course persists today. Thanks to Matt Pharr for technical assistance
-with ISPC. Alex Reece, Manish Burman, and Cary Yang developed the
-course web site.  </p>
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>

@@ -1,17 +1,11 @@
 
 <div class="home_container">
 
-<div class="home_title">Parallel Computer Architecture and Programming <span style="font-size: 12pt;">(CMU 15-418/618)</span> </div>
+<div class="home_title">VISUAL COMPUTING SYSTEMS</div>
 
+<p>This page contains lecture slides, videos, and recommended readings for the Spring 2016 offering of 15-769.</p>
 
-<p>This page contains lecture slides, videos, and recommended readings for the Spring 2016 offering of 15-418/618.
-
-The full listing of lecture videos is available on the Panopto site
-<a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22f62c2297-de88-4e63-aff2-06641fa25e98%22" target="_blank">here</a>.</p>
-
-</p>
-
-
+<!--
 <div class="book_lecture">
      <div class="book_lecture_title">
      <a href="<?php echo lecture_url('whyparallelism'); ?>">Lecture 1:
@@ -31,6 +25,7 @@ The full listing of lecture videos is available on the Panopto site
      </ul>
      </div>
 </div>
+-->
 
 <p>&nbsp;</p>
 
