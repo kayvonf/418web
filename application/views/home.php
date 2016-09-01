@@ -24,7 +24,7 @@ processing, and computer vision platforms and for students seeking to
 develop scalable algorithms for these platforms.  </p>
 
 <p class="colored_text bold_text" style="font-size: 18pt;">
-NOTE TO STUDENTS: THE FIRST DAY OF CLASS FOR 15-769 WILL BE WEDNESDAY, AUGUST 31.  SEE YOU THEN!!!!!
+NOTE TO STUDENTS: THE FIRST DAY OF CLASS FOR 15-769 WILL BE WEDNESDAY, AUGUST 31 at 4:30 in NSH 3305.  SEE YOU THEN!!!!!
 </p>
 
 <p class="colored_text bold_text" style="font-size: 18pt;">
@@ -87,8 +87,8 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Aug 31', 'Course Introduction + Parallel Hardware Architecture Review', '', 'bold',
-  array('Review of multi-core, multi-threading, SIMD, heterogeneity via CPUs/GPUs/ASICs/FPGAs')),
+  lecture_def('Aug 31', 'Course Introduction + Parallel Hardware Architecture Review', lecture_url('introhwreview'), '',
+  array('History of visual computing, review of multi-core, multi-threading, SIMD, heterogeneity via CPUs/GPUs/ASICs/FPGAs')),
     
   lecture_def('Sep 5', 'No Class (Labor Day Holiday)', '', 'bold'),
 

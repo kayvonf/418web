@@ -172,7 +172,7 @@ class Users extends MY_Controller {
 
         $token = $this->users_model->generate_reset_token($user);
 
-        $this->email->subject('15-418 Password Reset');
+        $this->email->subject('15-769 Password Reset');
         $this->email->to($user->email);
 
         $email_data = array(

@@ -2,7 +2,7 @@
 
 <?php if (isset($token)) { ?>
     <div class="main_title">Change Password</div>
-    <div>CMU 15-418/618</div>
+    <div>CMU 15-769</div>
 
 <?php echo form_open('users/do_password_change', '', array('token' => $token));?>
         <p>
