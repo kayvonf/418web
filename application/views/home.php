@@ -23,14 +23,6 @@ interested in architecting efficient future graphics, image
 processing, and computer vision platforms and for students seeking to
 develop scalable algorithms for these platforms.  </p>
 
-<p class="colored_text bold_text" style="font-size: 18pt;">
-NOTE TO STUDENTS: THE FIRST DAY OF CLASS FOR 15-769 WILL BE WEDNESDAY, AUGUST 31 at 4:30 in NSH 3305.  SEE YOU THEN!!!!!
-</p>
-
-<p class="colored_text bold_text" style="font-size: 18pt;">
-Please signup on <a href="http://www.piazza.com/cmu/fall2016/15769">Piazza</a>.
-</p>
-
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
@@ -235,13 +227,7 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-  <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: COMING SOON</span></td>
-</tr>
-<tr>
-    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: COMING SOON</span></td>
-</tr>
-<tr>
-    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: COMING SOON</span></td>
+  <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">COMING SOON!</span></td>
 </tr>
 </table>
 

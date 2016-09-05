@@ -12,25 +12,30 @@ function make_url($first, $second) {
 <div class="home_title">VISUAL COMPUTING SYSTEMS</div>
 
 <div>CMU 15-769, Fall 2016</div>
-     <div><Mon/Wed 10:30 - 11:50pm</div>
+     <div>Mon/Wed 10:30 - 11:50pm</div>
      <div>GHC 4303</div>
      <div style="padding-bottom: 20px;">Instructor: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a></div>
 
 <div class="overview_main_item overview_ruled_element">Course Description</div>
 
-<p>
-Visual computing tasks such as 2D/3D graphics, image processing, and
-image understanding are important responsibilities of modern computer
-systems ranging from sensor-rich smart phones to large
-datacenters. These workloads demand exceptional system efficiency and
+<p> Visual computing tasks such as 2D/3D graphics, image processing,
+and image understanding are important responsibilities of modern
+computer systems ranging from sensor-rich smart phones to large
+data-centers. These workloads demand exceptional system efficiency and
 this course examines the key ideas, techniques, and challenges
 associated with the design of parallel (and heterogeneous) systems
 that serve to accelerate visual computing applications. This course is
 intended for graduate and advanced undergraduate-level students
 interested in architecting efficient future graphics, image
 processing, and computer vision platforms and for students seeking to
-develop scalable algorithms for these platforms.  </p>
-</p>
+develop scalable algorithms for these platforms.  Topics covered
+include the implementation of the camera RAW pipeline, optimizing
+compilers for image processing, image processing hardware, design of
+frameworks for DNN evaluation and training, hardware architectures for
+DNN acceleration, large-scale 3D reconstruction techniques, the design
+and implementation of real-time 3D graphics pipelines, hardware
+accelerated ray tracing, and the design of domain-specific languages
+and compilers for visual computing.</p>
 
 <div class="overview_main_item overview_ruled_element">Instructors</div>
 

@@ -1064,3 +1064,8 @@ p code {
     border: #c0c0c0 1px solid;
 }
 */
+
+.instructions {
+   font-style: italic;
+   padding: 0px 0px 0px 20px;
+}
