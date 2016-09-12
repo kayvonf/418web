@@ -86,17 +86,17 @@ $lectures = array(
 
   lecture_def('', 'Part 1: High-Efficiency Image Processing', '', 'bold2'),
   
-  lecture_def('Sep 7', 'The Digital Camera Image Processing Pipeline: Part I', '', 'bold',
+  lecture_def('Sep 7', 'The Digital Camera Image Processing Pipeline: Part I', lecture_url('camerapipeline1'), '',
   array('From raw sensor measurements to an RGB image: demosaicing, correcting aberrations, color space conversions')),
 
-  lecture_def('Sep 9', 'The Digital Camera Image Processing Pipeline: Part II (FRIDAY LECTURE)', '', 'bold',
-  array('JPG image compression, high-dynamic range processing')),
+  lecture_def('Sep 9', 'The Digital Camera Image Processing Pipeline: Part II', lecture_url('camerapipeline2'), '',
+  array('JPG image compression, auto-focus/auto-exposure, high-dynamic range processing')),
 
-  lecture_def('Sep 12', 'Efficiently Scheduling Image Processing Algorithms on Multi-Core Hardware', '', 'bold',
+  lecture_def('Sep 12', 'Efficiently Scheduling Image Processing Algorithms on Multi-Core Hardware', lecture_url('halide'), '',
   array('Balancing parallelism/local/extra work, programming using Halide')),
 
   lecture_def('Sep 14', 'Image Processing Algorithm Grab Bag', '', 'bold',
-  array('Bilateral filter, median filter, local Laplacian filtering, optical flow')),
+  array('Fast bilateral filter and median filters, local Laplacian filtering, optical flow')),
 
   lecture_def('Sep 19', 'No class -- Kayvon out of town', '', 'bold'),
 

@@ -62,24 +62,78 @@ architectures. (You don't need to write this down, but you could.)
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('camerapipeline1'); ?>">Lecture 2:
+     The Camera Image Processing Pipeline (Part I)</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li>The Stanford CS448A <a href="http://graphics.stanford.edu/courses/cs448a-10/" target="_blank">course notes</a> are very good reference camera image processing pipeline algorithms and issues.</li>
+     <li>The <a href="http://graphics.stanford.edu/courses/cs178-11/applets/applets.html" target="_blank">interactive demos</a> on the Stanford CS178 course site are very well done (some were shown in class)</li>
+     <li><a href="http://www.clarkvision.com/articles/index.html">Clarkvision.com</a> has some very interesting material on cameras.</li>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('camerapipeline2'); ?>">Lecture 3:
+     The Camera Image Processing Pipeline (Part II)</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/adams10_fcam.pdf" target="_blank">The Frankencamera: An Experimental Platform for Computational Photography</a>. A. Adams et al. SIGGRAPH 2010</li>
+     <li><a href="http://www.hdrplusdata.org/hdrplus_preprint.pdf">Burst Photography for High Dynamic Range and Low-light Imaging
+     on Mobile Cameras</a>. by S. Hasinoff et al. SIGGRAPH Asia 2016</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('halide'); ?>">Lecture 4:
+     Productive, High-Performance Image Processing Using Halide</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="http://people.csail.mit.edu/jrk/jrkthesis.pdf" target="_blank">Decoupling Algorithms from the Organization of Computation for High Performance Image Processing</a> (please read Chapters 1, 4, 5, and 6.1), by J. Ragan-Kelley (MIT Ph.D. thesis, 2014)</li>
+     <li><a href="http://graphics.cs.cmu.edu/projects/halidesched/" target="_blank">Automatically Scheduling Halide Image Processing Pipelines</a>, by R. Mullapudi et al. SIGGRAPH 2016</li>
+     </ul>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://halide-lang.org/" target="_blank">Halide Language Website</a> (contains documentation and many tutorials)</li>
+     </ul>
+     </div>
+</div>
+
+
 
 <!--
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <a href="<?php echo lecture_url('whyparallelism'); ?>">Lecture 1:
-     Why Parallelism</a></div>
+     <a href="<?php echo lecture_url(''); ?>">Lecture 1:
+     XXXXX</a></div>
 
      <div class="book_lecture_indent">
 
-     <div class="resources">
-     <div><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d0795ff8-76aa-4e24-a7cc-e8126025720c" target="_blank">Watch the Lecture</a></div>
-     </div>
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="" target="_blank"></a></li>
+     </ul>
 
-
+     
      <div>Further Reading:</div>
      <ul>
-     <li><a href="http://queue.acm.org/detail.cfm?id=1095418" target="_blank">The Future of Microprocessors</a>. by K. Olukotun and L. Hammond, ACM Queue 2005</li>
-     <li><a href="http://dl.acm.org/citation.cfm?id=621693" target="_blank">Power: A First-Class Architectural Design Constraint</a>. by Trevor Mudge IEEE Computer 2001</li>
+     <li><a href="" target="_blank"></a></li>
      </ul>
      </div>
 </div>
