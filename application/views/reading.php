@@ -97,7 +97,7 @@ architectures. (You don't need to write this down, but you could.)
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <a href="<?php echo lecture_url('halide'); ?>">Lecture 4:
+     <a href="<?php echo lecture_url('halidefcam'); ?>">Lecture 4:
      Productive, High-Performance Image Processing Using Halide</a></div>
 
      <div class="book_lecture_indent">
@@ -115,6 +115,145 @@ architectures. (You don't need to write this down, but you could.)
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('imageprocessing'); ?>">Lecture 5:
+     Image Processing Algorithm Grab Bag</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://dl.acm.org/citation.cfm?id=1141918" target="_blank">Fast Median and Bilateral Filtering</a>. B. Weiss. SIGGRAPH 2006</li>
+     <li><a href="http://dl.acm.org/citation.cfm?id=1069066" target="_blank">A Non-Local Algorithm for Image Denoising</a>. A. Buades et al. CVPR 2005</li>
+     <li><a href="http://people.csail.mit.edu/sparis/bf_course/" target="_blank">A Gentle Introduction to Bilateral Filtering and its Applications</a>. S. Paris et al. SIGGRAPH 2008 Course Notes</li>
+     <li><a href="http://people.csail.mit.edu/sparis/bf/" target="_blank">Sylvain Paris' Fast Bilateral Filter</a> page</li>
+     <li><a href="http://people.csail.mit.edu/sparis/publi/2006/tr/Paris_06_Fast_Bilateral_Filter_MIT_TR.pdf" target="_blank">A Fast Approximation of the Bilateral Filter using a Signal Processing Approach</a>. Sylvain Paris and Fr&#233;do Durand. MIT technical report 2006 (extends their ECCV 2006 paper)</li>
+     <li><a href="http://www.ri.cmu.edu/pub_files/pub3/lucas_bruce_d_1981_2/lucas_bruce_d_1981_2.pdf" target="_blank">An Iterative Image Registration Technique with an Application to Stereo Vision</a>. Bruce Lucas and Takeo Kanade. IJCAI 1981</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/baker04_lucaskanade.pdf" target="_blank">Lucas-Kanade 20 Years On: A Unifying Framework</a>. Simon Baker and Iain Matthews. ICCV 2004</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('imagehardware'); ?>">Lecture 6:
+     Specializing Hardware for Image Processing</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="http://graphics.stanford.edu/papers/rigel/" target="_blank">Rigel: Flexible Multi-Rate Image Processing Hardware</a>, J. Hegarty et al. SIGGRAPH 2016. (You can learn more about Rigel on its <a href="https://github.com/jameshegarty/rigel" target="_blank">Github project page</a>. I would be interested in a student attempting to try out Rigel in a course project.)</li>
+     <li><a href="http://graphics.stanford.edu/papers/darkroom14/" target="_blank">Darkroom: Compiling High-Level Image Processing Code into Hardware Pipelines</a>, J. Hegarty et al. SIGGRAPH 2014</li>
+     <li><a href="http://csl.stanford.edu/~christos/publications/2010.efficiency.isca.pdf" target="_blank">Understanding Sources of Inefficiency in General-Purpose Chips</a>, R. Hameed et al. ISCA 2010</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('videocompression'); ?>">Lecture 7: H.264 Video Compression</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/wiegand03_h264.pdf" target="_blank">Overview of the H.264/AVC Video Coding Standard</a></li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnneval'); ?>">Lecture 8: Basics of DNN Evaluation</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://cs231n.stanford.edu" target="_blank">Stanford cs231: Convolutional Neural Networks for Visual Recognition</a>. I recommend that you read through the lecture notes for modules 1 and 2 for very nice explanation of key topics.</li>     
+     <li><a href="http://neuralnetworksanddeeplearning.com" target="_blank">Neural Networks and Deep Learning</a>, Nielson, 2016 (a free online book)</li> 
+     <li>Check out the <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a> tutorials and play around in the <a href="http://playground.tensorflow.org" target="_blank">TensorFlow Playground</a></li>
+     <li><a href="https://arxiv.org/pdf/1311.2901v1.pdf" target="_blank">Visualizing and Understanding Convolutional Neural Networks</a>. Zeiler and Fergus, ECCV14</li>
+     <li><a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank">ImageNet Classification with Deep Convolutional Neural Networks</a>. Krizhevsky et al. NIPS 2012 (this is the original "AlexNet" paper)</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnntraining'); ?>">Lecture 9:
+     Parallel DNN Training</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+
+     <div class="instructions">Now that we've covered the basics of
+     what a DNN is, and discussed the basics of forward evaluation and
+     training workloads, we'll take a look at more recent DNN
+     topologies that are designed to be evaluated/trained more
+     efficiently and/or yield higher accuracy.
+     </div>
+   
+     <ul>
+     <li><a href="https://arxiv.org/abs/1409.4842" target="_blank">Going Deeper with Convolutions</a>. Szegedy et al. CVPR 2015</li>
+     <li><a href="https://arxiv.org/abs/1602.07360" target="_blank">SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and &lt;0.5MB model size</a>. Iandola et al. 2016</li>
+     </ul>
+
+     <div>Further Reading: </div>
+     <ul>
+     <li><a href="Scaling Distributed Machine Learning with the Parameter Server" target="_blank">https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf</a>. Li et al. OSDI 2014</li>
+     <li><a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-chilimbi.pdf" target="_blank">Project Adam: Building an Efficient and Scalable Deep Learning Training System</a>. Chilimbi et al. OSDI 2014</li>
+     <li><a href="https://arxiv.org/abs/1511.00175" target="_blank">FireCaffe: Near-linear Acceleration of Deep Neural Network Training on Compute Clusters</a>. Iandola et al. CVPR 2016</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('detectioncasestudy'); ?>">Lecture 10: Optimizing Object Detection: R-CNN, Fast R-CNN, Faster R-CNN</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <div class="bold_text" style="padding-bottom: 10px;">See links from previous lecture..</div>
+     </ul>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://people.eecs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf" target="_blank">Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation</a>. R. Girshick et al. CVPR 2014 (the R-CNN paper)</li>
+     <li><a href="http://arxiv.org/pdf/1504.08083.pdf" target="_blank">Fast R-CNN</a>. R. Girshick, ICCV 2015</li>
+     <li><a href="http://arxiv.org/pdf/1506.01497.pdf" target="_blank">Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks</a>. S Ren et al. NIPS 2015</li>
+     <li><a href="https://arxiv.org/abs/1512.03385" target="_blank">Deep Residual Learning for Image Recognition</a>. K. He et al. CVPR 2016 (this is the ResNet paper)</li>
+     <li><a href="https://arxiv.org/pdf/1409.1556.pdf" target="_blank">Very Deep Convolutional Networks for Large-Scale Image Recognition</a>. K. Simonyan and A. Zisserman, ICLR 2015 (this is the VGG paper)</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <span class="bold_text">Lecture 11: Efficient DNN Evaluation via Approximation</span></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="https://arxiv.org/pdf/1510.00149.pdf" target="_blank">Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding</a>. S. Han et al. ICLR 2016</li>
+     </ul>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://arxiv.org/pdf/1506.02626.pdf" target="_blank">Learning both Weights and Connections for Efficient Neural Networks</a>. S. Han et al. NIPS 2015</li>
+     <li><a href="https://arxiv.org/abs/1602.01528" target="_blank">EIE: Efficient Inference Engine on Compressed Deep Neural Network</a>. S. Han et al. ISCA 2016</li>
+     <li><a href="https://arxiv.org/abs/1608.03609" target="_blank">Clockwork Convnets for Video Semantic Segmentation</a>. E. Shelhamer et al. ECCV16</li>
+     </ul>
+     </div>
+</div>
 
 
 <!--
@@ -138,6 +277,7 @@ architectures. (You don't need to write this down, but you could.)
      </div>
 </div>
 -->
+
 
 <p>&nbsp;</p>
 

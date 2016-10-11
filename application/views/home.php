@@ -92,77 +92,81 @@ $lectures = array(
   lecture_def('Sep 9', 'The Digital Camera Image Processing Pipeline: Part II', lecture_url('camerapipeline2'), '',
   array('JPG image compression, auto-focus/auto-exposure, high-dynamic range processing')),
 
-  lecture_def('Sep 12', 'Efficiently Scheduling Image Processing Algorithms on Multi-Core Hardware', lecture_url('halide'), '',
+  lecture_def('Sep 12', 'Efficiently Scheduling Image Processing Algorithms on Multi-Core Hardware', lecture_url('halidefcam'), '',
   array('Balancing parallelism/local/extra work, programming using Halide')),
 
-  lecture_def('Sep 14', 'Image Processing Algorithm Grab Bag', '', 'bold',
-  array('Fast bilateral filter and median filters, local Laplacian filtering, optical flow')),
+  lecture_def('Sep 14', 'Image Processing Algorithm Grab Bag', lecture_url('imageprocessing'), '',
+  array('Fast bilateral filter and median filters, bilateral grid, optical flow')),
 
   lecture_def('Sep 19', 'No class -- Kayvon out of town', '', 'bold'),
 
   lecture_def('Sep 21', 'No class -- Kayvon out of town', '', 'bold'),
 
-  lecture_def('Sep 26', 'Image and Video Processing Hardware', '', 'bold',
+  lecture_def('Sep 26', 'Specializing Hardware for Image Processing', lecture_url('imagehardware'), '',
   array('Contrasting efficiency of GPUs, DSPs, Image Signal Processors, and FGPAs for image processing')),  
 
-  lecture_def('Sep 28', 'H.264 Video Compression', '', 'bold'),
+  lecture_def('Sep 28', 'H.264 Video Compression', lecture_url('videocompression'), '',
+  array('Basics of H.264 video stream encoding')),
 
   lecture_def('', 'Part 2: Trends in Deep Network Acceleration', '', 'bold2'),
   
-  lecture_def('Oct 3', 'Efficient Deep Neural Network Evaluation', '', 'bold',
-  array('Reduction to dense linear algebra, sparsification and pruning, expression via data flow frameworks (TensorFlow, MxNet)')),
+  lecture_def('Oct 3', 'Basics of Deep Neural Network Evaluation', lecture_url('dnneval'), '',
+  array('DNN topology, reduction to dense linear algebra, challenges of direct implementation')),
 
-  lecture_def('Oct 5', 'Authoring Deep Networks for Image Analysis', '', 'bold',
-    array('Examples of modern deep network design.')),
-  
-  lecture_def('Oct 10', 'Hardware Accelerators for Deep Neural Network Evaluation', '', 'bold',
+  lecture_def('Oct 5', 'Parallel DNN Training', lecture_url('dnntraining'), '',
+    array('basics of back-prop, stochastic gradient descent (SGD), memory footprint issues, parallelizing SGD')),
+
+  lecture_def('Oct 10', 'Performance/Accuracy Optimization Case Study: End-to-End Training for Object Detection', lecture_url('detectioncasestudy'), '',
+  array('R-CNN, Fast R-CNN, and then Faster R-CNN')),
+
+  lecture_def('Oct 12', 'Efficient DNN Evaluation', '', 'bold',
+  array('pruning and sparsification techniques, precision reduction, temporal rate reductions')),
+
+  lecture_def('Oct 17', 'Hardware Accelerators for Deep Neural Network Evaluation', '', 'bold',
   array('A comparison of the various ISCA 2016 hardware accelerator papers')),
 
-  lecture_def('Oct 12', 'Large-scale Parallel DNN Training', '', 'bold',
-  array('Asynchronous parameter update, conflicting goals of work efficiency and parallelism')),
-
+  lecture_def('Oct 19', 'Deep Neural Network Module Grab Bag', '', 'bold',
+  array('spatial transformer networks, auto-encoders, skip-layers, semantic-segmentation networks',
+        'Exam 1 Released (take home exam)')),
+  
   lecture_def('', 'Part 3: Systems Challenges of 3D Reconstruction', '', 'bold2'),
   
-  lecture_def('Oct 17', 'Real-Time 3D Reconstruction', '', 'bold', array('Space vs. dense methods, KinectFusion') ),
+  lecture_def('Oct 24', 'Real-Time 3D Reconstruction', '', 'bold', array('Space vs. dense methods, KinectFusion') ),
 
-  lecture_def('Oct 19', 'Large-Scale 3D Reconstruction', '', 'bold', array('City-scale reconstruction') ),
+  lecture_def('Oct 26', 'Large-Scale 3D Reconstruction', '', 'bold', array('City-scale reconstruction') ),
 
-  lecture_def('Oct 24', '3D Reconstruction Topic TBD', '', 'bold', array('Probably VR video')),
+  lecture_def('Oct 31', '3D Reconstruction Topic TBD', '', 'bold', array('Probably VR video')),
 
   lecture_def('', 'Part 4: The Design and Implementation of 3D Graphics Systems', '', 'bold2'),
   
-  lecture_def('Oct 26', 'Architecture of the GPU-Accelerated Real-Time 3D Graphics Pipeline', '', 'bold',
+  lecture_def('Nov 2', 'Architecture of the GPU-Accelerated Real-Time 3D Graphics Pipeline', '', 'bold',
   array('Graphics pipeline abstractions, scheduling challenges')),
 
-  lecture_def('Oct 31', 'Rasterization and Occlusion', '', 'bold',
+  lecture_def('Nov 7', 'Rasterization and Occlusion', '', 'bold',
   array('Hardware acceleration, depth and color compression algorithms')),
 
-  lecture_def('Nov 2', 'Texture Mapping', '', 'bold',
+  lecture_def('Nov 9', 'Texture Mapping', '', 'bold',
   array('Texture sampling and prefiltering, texture compression, data layout optimizations')),
 
-  lecture_def('Nov 7', 'Parallel Scheduling of the Graphics Pipeline', '', 'bold',
+  lecture_def('Nov 14', 'Parallel Scheduling of the Graphics Pipeline', '', 'bold',
   array('Molnar taxonomy, scheduling under data amplification, tiled rendering')),
 
-  lecture_def('Nov 9', 'Deferred Shading and Image-Space Rendering Techniques', '', 'bold',
+  lecture_def('Nov 16', 'Deferred Shading and Image-Space Rendering Techniques', '', 'bold',
   array('Deferred shading as a scheduling decision, image-space anti-aliasing')),
 
-  lecture_def('Nov 14', 'Hardware-Accelerated Ray Tracing', '', 'bold',
+  lecture_def('Nov 21', 'Hardware-Accelerated Ray Tracing', '', 'bold',
   array('Ray-tracing as an alternative to rasterization, what does modern ray tracing HW do?')),
 
-  lecture_def('Nov 16', 'Shading Language Design', '', 'bold',
+  lecture_def('Nov 28', 'Shading Language Design', '', 'bold',
   array('Contrasting different shading languages, is CUDA a DSL?')),
 
-  lecture_def('Nov 21', 'Case Study: The Spire Shading Language', '', 'bold',
+  lecture_def('Nov 30', 'Case Study: The Spire Shading Language', '', 'bold',
   array('Discussion of relationship to other recent DSLs')),
 
   lecture_def('', 'Part 5: Miscellaneous Topics', '', 'bold2'),
   
-  lecture_def('Nov 28', 'DSLs for Physical Simulation: Lizst and Ebb', '', 'bold',
+  lecture_def('Dec 5', 'DSLs for Physical Simulation: Lizst and Ebb', '', 'bold',
   array('Open research questions on high-performance DSL design')),
-
-  lecture_def('Nov 30', 'Topic TBD', '', 'bold'),
-
-  lecture_def('Dec 5', 'Topic TBD', '', 'bold'),
 
   lecture_def('Dec 7', 'Topic TBD', '', 'bold')
   
@@ -227,7 +231,7 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-  <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">COMING SOON!</span></td>
+  <td class="schedule_date">Sep 28</td><td class="schedule_lecture"><a href="<?php echo article_url('2'); ?>">Assignment 1: The kPhone Camera Pipeline</a></td>
 </tr>
 </table>
 
