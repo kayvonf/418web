@@ -119,16 +119,16 @@ $lectures = array(
   lecture_def('Oct 10', 'Performance/Accuracy Optimization Case Study: End-to-End Training for Object Detection', lecture_url('detectioncasestudy'), '',
   array('R-CNN, Fast R-CNN, and then Faster R-CNN')),
 
-  lecture_def('Oct 12', 'Efficient DNN Evaluation', '', 'bold',
+  lecture_def('Oct 12', 'Optimizing DNN Inference via Approximation', lecture_url('dnnapprox'), '',
   array('pruning and sparsification techniques, precision reduction, temporal rate reductions')),
 
-  lecture_def('Oct 17', 'Hardware Accelerators for Deep Neural Network Evaluation', '', 'bold',
-  array('A comparison of the various ISCA 2016 hardware accelerator papers')),
+  lecture_def('Oct 19', 'Imposing Structure on DNN Topology', lecture_url('dnnstructure'), '',
+  array('image compression networks, cross-stitch networks, spatial transformer networks, convolutional pose machines')),
 
-  lecture_def('Oct 19', 'Deep Neural Network Module Grab Bag', '', 'bold',
-  array('spatial transformer networks, auto-encoders, skip-layers, semantic-segmentation networks',
-        'Exam 1 Released (take home exam)')),
-  
+  lecture_def('Oct 21', 'Hardware Accelerators for Deep Neural Network Evaluation', '', 'bold',
+  array('A comparison of the various recent hardware accelerator papers',
+         'Oct 23: Exam 1 Released (take home exam)')),
+      
   lecture_def('', 'Part 3: Systems Challenges of 3D Reconstruction', '', 'bold2'),
   
   lecture_def('Oct 24', 'Real-Time 3D Reconstruction', '', 'bold', array('Space vs. dense methods, KinectFusion') ),
@@ -233,6 +233,10 @@ foreach ($lectures as $lecture)
 <tr>
   <td class="schedule_date">Sep 28</td><td class="schedule_lecture"><a href="<?php echo article_url('2'); ?>">Assignment 1: The kPhone Camera Pipeline</a></td>
 </tr>
+<tr>
+  <td class="schedule_date">Nov 4</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: Implementing a Mini-DNN Framework</span></td>
+</tr>
+
 </table>
 
 <div>&nbsp;</div>

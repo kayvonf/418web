@@ -237,7 +237,7 @@ architectures. (You don't need to write this down, but you could.)
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <span class="bold_text">Lecture 11: Efficient DNN Evaluation via Approximation</span></div>
+     <a href="<?php echo lecture_url('dnnapprox'); ?>">Lecture 11: Efficient DNN Evaluation via Approximation</a></div>
 
      <div class="book_lecture_indent">
 
@@ -255,6 +255,26 @@ architectures. (You don't need to write this down, but you could.)
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnnstructure'); ?>">Lecture 12:
+     Imposing Structure on DNN Topologies</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://arxiv.org/abs/1511.06085" target="_blank">Variable Rate Image Compression with Recurrent Neural Networks</a>. Toderici et al. ICLR 2016</li>
+     <li><a href="https://arxiv.org/abs/1608.05148v1" target="_blank">Full Resolution Image Compression with Recurrent Neural Networks</a>. Toderici et al. 2016</li>
+     <li><a href="https://arxiv.org/abs/1604.03539" target="_blank">Cross-stitch Networks for Multi-task Learning</a>. Misra et al. CVPR 2016</li>
+     <li><a href="https://arxiv.org/abs/1506.02025" target="_blank">Spatial Transformer Networks</a>. Jaderberg et al. NIPS 2015</li>
+     <li><a href="https://arxiv.org/abs/1602.00134" target="_blank">Convolutional Pose Machines</a>. Wei et al. CVPR 2016</li>
+     <li><a href="https://arxiv.org/abs/1511.02799" target="_blank">Neural Module Networks</a>. Andreas et al. CVPR 2016</li>
+     </ul>
+     </div>
+</div>
 
 <!--
 <div class="book_lecture">
