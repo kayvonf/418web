@@ -82,8 +82,6 @@ $lectures = array(
   lecture_def('Aug 31', 'Course Introduction + Parallel Hardware Architecture Review', lecture_url('introhwreview'), '',
   array('History of visual computing, review of multi-core, multi-threading, SIMD, heterogeneity via CPUs/GPUs/ASICs/FPGAs')),
     
-  lecture_def('Sep 5', 'No Class (Labor Day Holiday)', '', 'bold'),
-
   lecture_def('', 'Part 1: High-Efficiency Image Processing', '', 'bold2'),
   
   lecture_def('Sep 7', 'The Digital Camera Image Processing Pipeline: Part I', lecture_url('camerapipeline1'), '',
@@ -98,17 +96,13 @@ $lectures = array(
   lecture_def('Sep 14', 'Image Processing Algorithm Grab Bag', lecture_url('imageprocessing'), '',
   array('Fast bilateral filter and median filters, bilateral grid, optical flow')),
 
-  lecture_def('Sep 19', 'No class -- Kayvon out of town', '', 'bold'),
-
-  lecture_def('Sep 21', 'No class -- Kayvon out of town', '', 'bold'),
-
   lecture_def('Sep 26', 'Specializing Hardware for Image Processing', lecture_url('imagehardware'), '',
   array('Contrasting efficiency of GPUs, DSPs, Image Signal Processors, and FGPAs for image processing')),  
 
   lecture_def('Sep 28', 'H.264 Video Compression', lecture_url('videocompression'), '',
   array('Basics of H.264 video stream encoding')),
 
-  lecture_def('', 'Part 2: Trends in Deep Network Acceleration', '', 'bold2'),
+  lecture_def('', 'Part 2: Trends in Deep Neural Network Authoring and Acceleration', '', 'bold2'),
   
   lecture_def('Oct 3', 'Basics of Deep Neural Network Evaluation', lecture_url('dnneval'), '',
   array('DNN topology, reduction to dense linear algebra, challenges of direct implementation')),
@@ -122,28 +116,26 @@ $lectures = array(
   lecture_def('Oct 12', 'Optimizing DNN Inference via Approximation', lecture_url('dnnapprox'), '',
   array('pruning and sparsification techniques, precision reduction, temporal rate reductions')),
 
-  lecture_def('Oct 19', 'Imposing Structure on DNN Topology', lecture_url('dnnstructure'), '',
+  lecture_def('Oct 19', 'Imposing Task-Specific Structure on DNN Topology', lecture_url('dnnstructure'), '',
   array('image compression networks, cross-stitch networks, spatial transformer networks, convolutional pose machines')),
 
-  lecture_def('Oct 21', 'Hardware Accelerators for Deep Neural Network Evaluation', '', 'bold',
+  lecture_def('Oct 21', 'Hardware Accelerators for Deep Neural Network Evaluation (discussion only)', '', 'bold',
   array('A comparison of the various recent hardware accelerator papers',
          'Oct 23: Exam 1 Released (take home exam)')),
       
   lecture_def('', 'Part 3: Systems Challenges of 3D Reconstruction', '', 'bold2'),
+
+  lecture_def('Oct 24-26', 'Large-Scale 3D Reconstruction + Image Retrieval', lecture_url('3dreconstruction'), '', array('City-scale 3D reconstruction, content-based image retrieval') ),
   
-  lecture_def('Oct 24', 'Real-Time 3D Reconstruction', '', 'bold', array('Space vs. dense methods, KinectFusion') ),
+  lecture_def('Oct 31', 'Real-Time 3D Reconstruction from RGBD Input', lecture_url('realtime3d'), '', array('dense 3D reconstruction methods, implicit scene representations (TSDF), KinectFusion, BundleFusion') ),
 
-  lecture_def('Oct 26', 'Large-Scale 3D Reconstruction', '', 'bold', array('City-scale reconstruction') ),
-
-  lecture_def('Oct 31', '3D Reconstruction Topic TBD', '', 'bold', array('Probably VR video')),
-
-  lecture_def('', 'Part 4: The Design and Implementation of 3D Graphics Systems', '', 'bold2'),
+  lecture_def('', 'Part 4: Real-Time 3D Rendering Systems', '', 'bold2'),
   
-  lecture_def('Nov 2', 'Architecture of the GPU-Accelerated Real-Time 3D Graphics Pipeline', '', 'bold',
-  array('Graphics pipeline abstractions, scheduling challenges')),
+  lecture_def('Nov 2', 'Real-Time 3D Graphics Pipeline Architecture', lecture_url('gfxpipeline'), '',
+  array('Graphics pipeline as a machine architecture, basic pipeline semantics/functionality')),
 
-  lecture_def('Nov 7', 'Rasterization and Occlusion', '', 'bold',
-  array('Hardware acceleration, depth and color compression algorithms')),
+  lecture_def('Nov 7', 'Visibility: Rasterization and Occlusion', lecture_url('visibility'), '',
+  array('algorithms and hardware acceleration, depth and color compression')),
 
   lecture_def('Nov 9', 'Texture Mapping', '', 'bold',
   array('Texture sampling and prefiltering, texture compression, data layout optimizations')),
@@ -234,7 +226,11 @@ foreach ($lectures as $lecture)
   <td class="schedule_date">Sep 28</td><td class="schedule_lecture"><a href="<?php echo article_url('2'); ?>">Assignment 1: The kPhone Camera Pipeline</a></td>
 </tr>
 <tr>
-  <td class="schedule_date">Nov 4</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: Implementing a Mini-DNN Framework</span></td>
+  <td class="schedule_date">Nov 8</td><td class="schedule_lecture"><a href="<?php echo article_url('3'); ?>">Assignment 2: Kaffe: a Mini-DNN Framework</a></td>
+  </tr>
+  <tr>
+  <td class="schedule_date">Dec 16</td><td class="schedule_lecture"><a href="<?php echo article_url('5'); ?>">Final Project</a></td>
+  
 </tr>
 
 </table>
