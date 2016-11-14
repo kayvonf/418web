@@ -137,11 +137,11 @@ $lectures = array(
   lecture_def('Nov 7', 'Visibility: Rasterization and Occlusion', lecture_url('visibility'), '',
   array('algorithms and hardware acceleration, depth and color compression')),
 
-  lecture_def('Nov 9', 'Texture Mapping', '', 'bold',
-  array('Texture sampling and prefiltering, texture compression, data layout optimizations')),
+  lecture_def('Nov 9', 'Texture Mapping Algorithms and Hardware', lecture_url('texture'), '',
+  array('Texture sampling and prefiltering, texture compression, data layout, latency hiding')),
 
-  lecture_def('Nov 14', 'Parallel Scheduling of the Graphics Pipeline', '', 'bold',
-  array('Molnar taxonomy, scheduling under data amplification, tiled rendering')),
+  lecture_def('Nov 14', 'Scheduling the Graphics Pipeline on a GPU', lecture_url('scedulinggfx'), 'bold',
+  array('Molnar sorting taxonomy, scheduling under data amplification, tiled rendering')),
 
   lecture_def('Nov 16', 'Deferred Shading and Image-Space Rendering Techniques', '', 'bold',
   array('Deferred shading as a scheduling decision, image-space anti-aliasing')),

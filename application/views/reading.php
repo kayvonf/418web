@@ -350,6 +350,101 @@ architectures. (You don't need to write this down, but you could.)
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('gfxpipeline'); ?>">Lecture 17: Real-Time 3D Graphics Pipeline Architecture
+     </a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/design_opengl.pdf" target="_blank">The Design of the OpenGL Graphics Interface</a>. by M. Segal and K. Akeley. [unpublished 1994]</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/blythe06_d3d10.pdf" target="_blank">The Direct3D 10 System</a> by D. Blythe. SIGGRAPH 2006</li>     
+<li><a href="http://www.realtimerendering.com/" target="_blank">Real-Time Rendering</a> (Third Edition, chapters 2 and 3), by T. Akenine-Moller, E. Haines, and N. Hoffman</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('visibility'); ?>">Lecture 18: Rasterization and Occlusion
+     </a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/abrash09_lrbrast.pdf" target="_blank">Rasterization on Larrabee</a>. M. Abrash. Dr. Dobbs Portal, May 1, 2009 (original article is available online <a href="http://drdobbs.com/high-performance-computing/217200602">here</a>)</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/olano97_homogeneous.pdf" target="_blank">Triangle Scan Conversation Using 2D Homogeneous Coordinates</a>. M. Olano and T. Greer. Graphics Hardware 1997</li>
+     <li><a href="http://research.nvidia.com/publication/high-performance-software-rasterization-gpus" target="_blank">High-Performance Software Rasterization on GPUs</a>. S. Laine et al. High Performance Graphics 2011. (source code is available on the paper page)</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/greene93_hierarchicalz.pdf" target="_blank">Hierarchical Z-Buffer Visibility</a>. N. Greene et al. SIGGRAPH 1993</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/hasselgren06_zcompression.pdf" target="_blank">Efficient Depth Buffer Compression</a>. J. Hasselgren and T. Akenine M&ouml;ller. </li>
+<li><a href="http://software.intel.com/sites/default/files/article/392311/stochastic-depth-buffer-compression-using-generalized-plane-encoding.pdf" target="_blank">Stochastic Depth Buffer Compression using Generalized Plane Encoding</a>. M. Andersson et al. Computer Graphics Forum 2013</li>     
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/johnson05_irregularzbuf.pdf" target="_blank">The Irregular Z-Buffer: Hardware Acceleration for Irregular Data Structures</a>. G. Johnson et al.  Transactions on Graphics, 2005</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/fatahalian09_mprast.pdf" target="_blank">Data-Parallel Rasterization of Micropolygons with Defocus and Motion Blur</a>. K. Fatahalian et al. High Performance Graphics 2009</li>     
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/laine11_dualspace.pdf" target="_blank">Clipless Dual-Space Bounds for Faster Stochastic Rasterization</a>. S. Laine et al. SIGGRAPH 2011</li>     
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/heckbert91_persptex.pdf" target="_blank">Interpolation for Polygon Texture Mapping and Shading</a>. P. Heckbert and H. Moreton, State of the Art in Computer Graphics: Visualization and Modeling. 1991</li>
+
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('gfxpipeline'); ?>">Lecture 19: Texture Mapping Algorithms and Hardware
+     </a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/williams83_mipmap.pdf" target="_blank">Pyramidal Parametrics</a>. L. Williams, Computer Graphics 1983</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/peachey90_texthrift.pdf" target="_blank">Texture on Demand</a>. D. Peachy. Pixar Technical Memory #217. 1990</li>
+<li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/hakura97_texcaching.pdf" target="_blank">The Design and Analysis of a Cache Architecture for Texture Mapping</a>. Z. S. Hakura and Anoop Gupta, ISCA 1997</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/igehy98_texprefetching.pdf" target="_blank">Prefetching in a Texture Cache Architecture</a>. H. Igehy et al. Graphics Hardware 1998<br/></li>
+     <li><a href="http://faculty.cs.tamu.edu/schaefer/research/cardinality.pdf" target="_blank">Cardinality-Constrained Texture Filtering</a>. J. Manson and S. Schaefer. SIGGRAPH 2013.</li>
+<li><a href="http://faculty.cs.tamu.edu/schaefer/research/ParamAwareMIP.pdf" target="_blank">Parameterization-Aware MIP-Mapping</a>. J. Manson and S. Schaefer. Computer Graphics Forum. 2012.</li>
+     </ul>
+
+     <div>Further Reading on Texture Compression:</div>
+     <ul>
+     <li><a href="http://web.onetel.net.uk/~simonnihal/assorted3d/fenney03texcomp.pdf" target="_blank">Texture Compression using Low-Frequency Signal Modulation</a>. S. Fenney. Graphics Hardware 2003</li>
+     <li><a href="http://fileadmin.cs.lth.se/graphics/research/papers/ipackman2005/"  target="_blank">iPACKMAN: High-Quality, Low-Complexity Texture Compression for Mobile Phones</a>. J. Str&ouml;m and T. Akenine-M&ouml;ller. Graphics Hardware 2005</li>
+     <li><a href="http://www.jacobstrom.com/publications/StromPetterssonGH07.pdf"  target="_blank">ETC2: Texture Compression using Invalid Combinations</a>. J. Str&ouml;m and M. Pettersson. Graphics Hardware 2007</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/nystad12_astc.pdf"  target="_blank">Adaptive Scalable Texture Compression</a>. T. Olson et al. High Performance Graphics 2012</li>
+<li><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb694531(v=vs.85).aspx" target="_blank">Block Compression in Direct3D 10</a>. MSDN Developer Reference. 2013</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('schedulinggfx'); ?>">Lecture 20: Scheduling the Graphics Pipeline on a GPU</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/eldridge00_pomegranate.pdf" target="_blank">Pomegranate: A Fully Scalable Graphics Architecture</a>. M. Eldridge et al. SIGGRAPH 2000</li>
+     </ul>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline" target="_blank">Life of a Triangle - NVIDIA's Logical Pipeline</a>. C. Kubisch (NVIDIA GameWorks Blog, 2015)
+     <li><a href="http://attila.ac.upc.edu/wiki/images/d/db/HPG10_Hot3D_Fermi.pdf" target="_blank">Fast Tessellated Rendering on Fermi GF100</a>. T. Purcell (High Performance Graphics Hot3D talk)</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/molnar94_sorting.pdf" target="_blank">A Sorting Classification of Parallel Rendering</a>. S. Molnar et al. IEEE Computer Graphics and Applications, 1994.</li>
+     </ul>
+     </div>
+</div>
+
+
 
 <!--
 <div class="book_lecture">
