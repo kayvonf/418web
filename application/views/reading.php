@@ -396,7 +396,7 @@ architectures. (You don't need to write this down, but you could.)
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <a href="<?php echo lecture_url('gfxpipeline'); ?>">Lecture 19: Texture Mapping Algorithms and Hardware
+     <a href="<?php echo lecture_url('texture'); ?>">Lecture 19: Texture Mapping Algorithms and Hardware
      </a></div>
 
      <div class="book_lecture_indent">
@@ -444,6 +444,100 @@ architectures. (You don't need to write this down, but you could.)
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('deferred'); ?>">Lecture 21: Deferred Shading</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/reshetov09_mlaa.pdf" target="_blank">Morphological Anti-Aliasing</a>. A. Reshetov. High Performance Graphics 2009</li>
+     </ul>
+     
+     <div>Further Reading:</div>
+     <ul>
+<li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/clarberg13_deferred.pdf" target="_blank">A Sort-based Deferred Shading Architecture for Decoupled Sampling</a>. P. Clarberg. SIGGRAPH 2013</li>
+     <li><a href="http://bps10.idav.ucdavis.edu/talks/12-lauritzen_DeferredShading_BPS_SIGGRAPH2010_Notes.pdf" target="_blank">Deferred Rendering for Current and Future Rendering Pipelines</a>. A. Lauritzen. SIGGRAPH Beyond Programmable Shading Course 2010</li>
+<li><a href="http://bps12.idav.ucdavis.edu/talks/03_lauritzenIntersectingLights_bps2012.pdf" target="_blank">Intersecting Lights with Pixels: Reasoning about Forward and Deferred Rendering</a>. A. Lauritzen. SIGGRAPH Beyond Programmable Shading Course 2012</li>
+     <li><a href="http://advances.realtimerendering.com/s2013/Tatarchuk-Destiny-SIGGRAPH2013.pdf" target="_blank">Mythic Science Fiction in Real-Time: The Destiny Rendering Engine</a>. Natalya Tatarchunk, Advances in Real-Time Rendering in Games, SIGGRAPH 2013 Course Notes</li>
+     <li><a href="http://www.iryoku.com/smaa/" target="_blank">SMAA: Enhanced Subpixel Morphological Antialiasing</a>. J. Jimenez et al. Eurographics 2012</li>
+     <li><a href="http://iryoku.com/aacourse/" target="_blank">Filtering Approaches for Real-Time Anti-Aliasing</a>. SIGGRAPH 2011 Course Notes</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('fastraytracing'); ?>">Lecture 22: High-Performance Ray Tracing</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/aila09_gpu_rt.pdf" target="_blank">Understanding the Efficiency of Ray Traversal on GPUs</a>. T. Aila and S. Laine, High Performance Graphics 2010</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/aila10_incoherentrays.pdf" target="_blank">Architecture Considerations for Tracing Incoherent Rays</a>. T. Aila and T. Karras, High Performance Graphics 2011</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/laine13_megakernels.pdf" target="_blank">Megakernels Considered Harmful: Wavefront Path Tracing on GPUs</a>. S. Laine, T. Karras and T. Aila,  High Performance Graphics 2013</li>
+      <li><a href="http://www.cs.utah.edu/~kshkurko/projects/HPG_13/HPG13_koptaEnergyBandwEfficientRTArch.pdf" target="_blank">An Energy and Bandwidth Efficient Ray Tracing Architecture</a>. D. Kopta et al. High Performance Graphics 2013</li>	
+     <li><a href="https://research.nvidia.com/publication/fast-parallel-construction-high-quality-bounding-volume-hierarchies" target="_blank">Fast Parallel Construction of High-Quality Bounding Volume Hierarchies</a>. T. Karras et al. High Performance Graphics 2013</li>
+     <li><a href="http://graphics.cs.cmu.edu/projects/aac/" target="_blank">Efficient BVH Construction via Approximate Agglomerative Clustering</a>. Y. Gu et al. High Performance Graphics 2013</li>	
+     <li><a href="http://pl887.pairlitesite.com/papers/hybrid-rt-2011.pdf" target="_blank">Combining Single and Packet Ray Tracing for Arbitrary Ray Distributions on the Intel MIC Architecture</a>. C. Benthin et al. IEEE Transactions on Visualization and Computer Graphics 2011</li>		
+     <li><a href="http://web.yonsei.ac.kr/wjlee/document/sgrthpg2013.htm" target="_blank">SGRT: A Mobile GPU Architecture for Real-Time Ray Tracing</a>. W. Lee et al. High Performance Graphics 2013</li>
+     <li><a href="http://dl.acm.org/citation.cfm?id=2024194" target="_blank">T&I engine: traversal and intersection engine for hardware accelerated ray tracing</a>. J. Nah et al. SIGGRAPH Asia 2011</li>	
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/parker10_optix.pdf" target="_blank">OptiX: A General Purpose Ray Tracing Engine</a>. S. Parker et al. SIGGRAPH 2010</li>	
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/christensen07_cars.pdf" target="_blank">Ray Tracing for the Movie Cars</a>. P. Christensen. Symposium on Interactive Ray Tracing 2007</li>	
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/pharr97_coherent_rt.pdf" target="_blank">Rendering Complex Scenes With Memory-Coherent Ray Tracing</a>. M. Pharr et al. SIGGRAPH 1997</li>
+<li><a href="http://www.pbrt.org" target="_blank">PBRT: Physically-Based Ray Tracing: From Theory to Implementation</a>, 2nd Edition. M. Pharr and G. Humphreys.</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('shadinglang'); ?>">Lecture 23: Shading Language Design</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/hanrahan90_rsl.pdf" target="_blank">A Language for Shading and Lighting Calculations</a>. P. Hanrahan and J. Lawson. SIGGRAPH 1990</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/mark03_cg.pdf" target="_blank">Cg: A System for Programming Graphics Hardware in a C-like Language</a>. W. R. Mark et al. SIGGRAPH 2003</li>
+     </ul>
+
+     <div>Further Reading:</div>
+     <ul>
+<li><a href="http://graphics.stanford.edu/papers/spark/" target="_blank">Spark: Modular, Composable Shaders for Graphics Hardware</a>. T. Foley and P. Hanrahan. SIGGRAPH 2011</li>
+     <li><a href="http://graphics.cs.cmu.edu/projects/spire/" target="_blank">A System for Rapid Exploration of Shader Optimization Choices</a>. Y. He et al. SIGGRAPH 2016</li>
+     <li><a href="http://graphics.stanford.edu/projects/shading/pubs/sig2001/" target="_blank">A Real-Time Procedural Shading System for
+Programmable Graphics Hardware</a>. K. Proudfoot et al. SIGGRAPH 2001</li>
+     <li><a href="http://graphics.pixar.com/library/ShadeTrees/paper.pdf" target="_blank">Shade Trees</a>. R. Cook. SIGGRAPH 1984</li>
+     <li><a href="http://dl.acm.org/citation.cfm?id=325247" target="_blank">An Image Synthesizer</a>. K. Perlin. SIGGRAPH 1985</li>	
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/mccool02_sh.pdf" target="_blank">Shader Metaprogramming</a>. M. McCool et al. Graphics Hardware 2002</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <span class="bold_text">Lecture 24: DSLs for Physical Simulation</span></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="https://arxiv.org/abs/1506.07577" target="_blank">Ebb: A DSL for Physical Simulation on CPUs and GPUs</a>. G. Bernstein et al. TOG 2016 (also see the <a href="http://ebblang.org/" target="_blank">Ebb language page</a>)</li>
+     </ul>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://graphics.stanford.edu/hackliszt/liszt_sc2011.pdf" target="_blank">Liszt: A Domain Specific Language for Building Portable Mesh-based PDE Solvers</a>. Z DeVito et al. Supercomputing 2011 (also see the <a href="http://graphics.stanford.edu/hackliszt/" target="_blank">Lizst language page</a>)</li>
+     <li><a href="http://simit-lang.org/tog16" target="_blank">Simit: A Language for Physical Simulation</a>. F. Kjolstad et al. TOG 2016 (also see the <a href="http://simit-lang.org/" target="_blank">Simit language page</a>)</li>
+     <li><a href="http://groups.csail.mit.edu/commit/papers/2016/why.pdf" target="_blank">Why New Programming Languages for Simulation?</a>. G. Bernstein and F. Kjolstad, TOG 2016</li>
+     </ul>
+     </div>
+</div>
 
 
 <!--

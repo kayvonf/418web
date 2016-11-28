@@ -143,24 +143,23 @@ $lectures = array(
   lecture_def('Nov 14', 'Scheduling the Graphics Pipeline on a GPU', lecture_url('scedulinggfx'), 'bold',
   array('Molnar sorting taxonomy, scheduling under data amplification, tiled rendering')),
 
-  lecture_def('Nov 16', 'Deferred Shading and Image-Space Rendering Techniques', '', 'bold',
+  lecture_def('Nov 16', 'Deferred Shading and Image-Space Rendering Techniques', lecture_url('deferred'), '',
   array('Deferred shading as a scheduling decision, image-space anti-aliasing')),
 
-  lecture_def('Nov 21', 'Hardware-Accelerated Ray Tracing', '', 'bold',
-  array('Ray-tracing as an alternative to rasterization, what does modern ray tracing HW do?')),
+  lecture_def('Nov 21', 'High-Performance Ray Tracing', lecture_url('fastraytracing'), '',
+  array('Ray-tracing as an alternative to rasterization, what does modern ray tracing hardware do?')),
 
-  lecture_def('Nov 28', 'Shading Language Design', '', 'bold',
-  array('Contrasting different shading languages, is CUDA a DSL?')),
+  lecture_def('Nov 28', 'Shading Language Design', lecture_url('shadinglang'), '',
+  array('RSL and Cg: Contrasting two different levels of abstraction for shading languages')),
 
-  lecture_def('Nov 30', 'Case Study: The Spire Shading Language', '', 'bold',
-  array('Discussion of relationship to other recent DSLs')),
-
-  lecture_def('', 'Part 5: Miscellaneous Topics', '', 'bold2'),
+  lecture_def('', 'Part 5: Final Topics', '', 'bold2'),
   
-  lecture_def('Dec 5', 'DSLs for Physical Simulation: Lizst and Ebb', '', 'bold',
+  lecture_def('Nov 30', 'DSLs for Physical Simulation: Lizst and Ebb', '', 'bold',
   array('Open research questions on high-performance DSL design')),
 
-  lecture_def('Dec 7', 'Topic TBD', '', 'bold')
+  lecture_def('Dec 5', 'TensorFlow, XLA, and Emerging IRs for Machine Learning', '', 'bold'),
+  
+  lecture_def('Dec 7', 'Class discussion', '', 'bold')
   
   );
 
