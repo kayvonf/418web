@@ -477,8 +477,8 @@ architectures. (You don't need to write this down, but you could.)
      
      <div>Further Reading:</div>
      <ul>
-     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/aila09_gpu_rt.pdf" target="_blank">Understanding the Efficiency of Ray Traversal on GPUs</a>. T. Aila and S. Laine, High Performance Graphics 2010</li>
-     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/aila10_incoherentrays.pdf" target="_blank">Architecture Considerations for Tracing Incoherent Rays</a>. T. Aila and T. Karras, High Performance Graphics 2011</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/aila09_gpu_rt.pdf" target="_blank">Understanding the Efficiency of Ray Traversal on GPUs</a>. T. Aila and S. Laine, High Performance Graphics 2009</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/aila10_incoherentrays.pdf" target="_blank">Architecture Considerations for Tracing Incoherent Rays</a>. T. Aila and T. Karras, High Performance Graphics 2010</li>
      <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/laine13_megakernels.pdf" target="_blank">Megakernels Considered Harmful: Wavefront Path Tracing on GPUs</a>. S. Laine, T. Karras and T. Aila,  High Performance Graphics 2013</li>
       <li><a href="http://www.cs.utah.edu/~kshkurko/projects/HPG_13/HPG13_koptaEnergyBandwEfficientRTArch.pdf" target="_blank">An Energy and Bandwidth Efficient Ray Tracing Architecture</a>. D. Kopta et al. High Performance Graphics 2013</li>	
      <li><a href="https://research.nvidia.com/publication/fast-parallel-construction-high-quality-bounding-volume-hierarchies" target="_blank">Fast Parallel Construction of High-Quality Bounding Volume Hierarchies</a>. T. Karras et al. High Performance Graphics 2013</li>
@@ -521,7 +521,7 @@ Programmable Graphics Hardware</a>. K. Proudfoot et al. SIGGRAPH 2001</li>
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <span class="bold_text">Lecture 24: DSLs for Physical Simulation</span></div>
+     <a href="<?php echo lecture_url('lizstnotes'); ?>">Lecture 24: DSLs for Physical Simulation</a></div>
 
      <div class="book_lecture_indent">
 
@@ -539,6 +539,30 @@ Programmable Graphics Hardware</a>. K. Proudfoot et al. SIGGRAPH 2001</li>
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <span class="">Lecture 25: TensorFlow, XLA, and Emerging IRs for Machine Learning</span></div>
+
+     <div class="bold_text" style="padding-bottom: 10px;">There are no
+     lecture slides from this lecture. The students led an in-class
+      discussion about the papers/links below..</div>
+     
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="https://www.usenix.org/system/files/conference/osdi16/osdi16-abadi.pdf" target="_blank">TensorFlow: A System for Large-Scale Machine Learning</a>. M. Abadi et al. OSDI 2016</li>
+     </ul>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://download.tensorflow.org/paper/whitepaper2015.pdf" target="_blank">TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems</a>. M. Abadi et al. (TensorFlow whitepaper from 2015)</li>
+     <li><a href="https://github.com/dmlc/nnvm" target="_blank">NNVM Documentation</a> (NxNet)</li>
+     <li><a href="https://www.tensorflow.org/versions/master/resources/xla_prerelease.html" target="_blank">XLA Documentation</a> (Google)</li>
+     <li><a href="https://www.nervanasys.com/intel-nervana-graph-preview-release/" target="_blank">Nervana Graph API Documentation</a></li>
+     </ul>
+     </div>
+</div>
 
 <!--
 <div class="book_lecture">

@@ -140,7 +140,7 @@ $lectures = array(
   lecture_def('Nov 9', 'Texture Mapping Algorithms and Hardware', lecture_url('texture'), '',
   array('Texture sampling and prefiltering, texture compression, data layout, latency hiding')),
 
-  lecture_def('Nov 14', 'Scheduling the Graphics Pipeline on a GPU', lecture_url('scedulinggfx'), 'bold',
+  lecture_def('Nov 14', 'Scheduling the Graphics Pipeline on a GPU', lecture_url('schedulinggfx'), 'bold',
   array('Molnar sorting taxonomy, scheduling under data amplification, tiled rendering')),
 
   lecture_def('Nov 16', 'Deferred Shading and Image-Space Rendering Techniques', lecture_url('deferred'), '',
@@ -154,12 +154,13 @@ $lectures = array(
 
   lecture_def('', 'Part 5: Final Topics', '', 'bold2'),
   
-  lecture_def('Nov 30', 'DSLs for Physical Simulation: Lizst and Ebb', '', 'bold',
+  lecture_def('Nov 30', 'DSLs for Physical Simulation: Lizst and Ebb', lecture_url('lizstnotes'), '',
   array('Open research questions on high-performance DSL design')),
 
-  lecture_def('Dec 5', 'TensorFlow, XLA, and Emerging IRs for Machine Learning', '', 'bold'),
+  lecture_def('Dec 5', 'TensorFlow, XLA, and Emerging IRs for Machine Learning (discussion only)', '', 'bold',
+  array('Convergence to tensor-based dataflow abstractions')),
   
-  lecture_def('Dec 7', 'Class discussion', '', 'bold')
+  lecture_def('Dec 7', 'No Class (Take Home Exam)', '', 'bold')
   
   );
 
