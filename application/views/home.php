@@ -4,23 +4,26 @@
 <div class="home_title">Parallel Computer Architecture and Programming <span style="font-size: 12pt;">(CMU 15-418/618)</span> </div>
 
 <!--
+
 <div class="bold_text colored_text">
 
-<p style="font-size: 14pt;">NOTE TO STUDENTS ON THE SPRING 2016 WAITLIST:</p>
+<p style="font-size: 14pt;">NOTE TO STUDENTS ON THE SPRING 2017 WAITLIST:</p>
 
-<p>We are excited that so many students are interested in 418/618, but
-unfortunately we are not going to be able to accommodate all
-students.</p>
+<p>We are excited that so many students are interested in 418/618.
+This year, we expect to be able to accommodate approximately 200
+students in 15-418/618.</p>
 
-<p style="font-size: 14pt;">YOUR ORDER ON THE WAITLIST IN SIO DOES NOT MATTER.</p>
+<p style="font-size: 14pt;">YOUR ORDER ON THE WAITLIST IN S3 DOES NOT MATTER.</p>
 
 <p>After handling special requests and students with a particular need
-to take 418/618 (please come talk to us if you're one of those folks),
-it is the instructors' policy to clear the waitlist in the order of
-students that hand in "A-quality" implementations of assignment 1
-prior to the course add deadline (the end of the second week of
-class).  
-</div>
+to take 418/618 to graduate (please come talk to us if you're one of
+those folks), it is Prof. Kayvon and Prof. Bryant's policy to clear
+the waitlist in the order that interested students hand in "A-quality"
+implementations of assignment 1 prior to the course add deadline (the
+end of the second week of class).  Assignment 1 is out and available
+below.  Lecture 2 material is necessary to complete the assignment.
+</p> </div>
+
 -->
 
 <p style="padding-bottom: .15em"> From smart phones, to multi-core
@@ -37,13 +40,13 @@ parallel hardware and software design.  </p>
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-<div>TIME TBD</div>
-<div>LOCATION TBD</div>
-<div>Instructors: <a href="TBD">TBD</a> and <a href="TBD">TBD</a></div>
+<div>Mon/Wed 1:30-2:50pm (recitation on Fri 1:30-2:50pm)</div>
+<div>GHC 4401 (Rashid Auditorium)</div>
+<div>Instructors: <a href="http://www.cs.cmu.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="http://www.cs.cmu.edu/~bryant">Randy Bryant</a></div>
 <div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on policies and logistics.</div>
 </div>
 
-<div class="overview_main_item overview_ruled_element">Fall 2016 Schedule</div>
+<div class="overview_main_item overview_ruled_element">Spring 2017 Schedule</div>
 
 <table>
 
@@ -90,13 +93,85 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Jan 1', 'Why Parallelism?', lecture_url('testlecture'), '', array('Example subitem 1', "Example subitem 2")),
+  lecture_def('Jan 16', 'No Class (CMU MLK holiday)', '', 'bold'),
 
-  lecture_def('Jan 2', 'Lecture With No Link', '', 'bold'),
+  lecture_def('Jan 18', 'Why Parallelism? Why Efficiency?', lecture_url('whyparallelism'), '',
+                   array('Assignment 1 out')),
 
-  lecture_def('Jan 3', 'Lecture With No Link', '', 'bold'),
-    
-  lecture_def('Jan 4', 'No Class (Labor Day)', '', 'bold')
+  lecture_def('Jan 20', 'A Modern Multi-Core Processor: Forms of Parallelism + Understanding Latency and BW', lecture_url('basicarch'), ''),
+
+  lecture_def('Jan 23', 'Parallel Programming Models and their Corresponding HW/SW Implementations', lecture_url('progmodels'), ''),
+
+  lecture_def('Jan 25', 'Parallel Programming Basics (the parallelization thought process)', lecture_url('progbasics'), '',
+                        array('Exercise 1 due (on Fri Jan 27)')),
+ 
+  lecture_def('Jan 30', 'GPU Architecture and CUDA Programming', lecture_url('gpuarch'), '',
+                         array('Assignment 1 due', 'Assignment 2 out')),
+
+  lecture_def('Feb 1', 'Performance Optimization I: Work Distribution and Scheduling', lecture_url('progperf1'), ''),
+
+  lecture_def('Feb 6', 'Performance Optimization II: Locality, Communication, and Contention', lecture_url('progperf2'), ''),
+
+  lecture_def('Feb 8', 'Parallel Application Case Studies', lecture_url('casestudies'), '',
+                       array('Exercise 2 due (on Fri Feb 10)')),
+
+  lecture_def('Feb 13', 'Workload-Driven Performance Evaluation', '', 'bold'),
+
+  lecture_def('Feb 15', 'Snooping-Based Cache Coherence', '', 'bold',
+                       array('Assignment 2 due', 'Assignment 3 out')),
+
+  lecture_def('Feb 20', 'Directory-Based Cache Coherence', '', 'bold'),
+
+  lecture_def('Feb 22', 'Basic Snooping-Based Multiprocessor Implementation', '', 'bold',
+                          array('Exercise 3 due (on Fri Feb 24)')),
+
+  lecture_def('Feb 27', 'Memory Consistency (+ Course-So-Far Review)', '', 'bold'),
+  
+  lecture_def('Mar 1', 'Exam I', '', 'bold'),
+
+  lecture_def('Mar 6', 'Scaling a Web Site: Scale-Out Parallelism, Elasticity, and Caching', '', 'bold',
+   array('Assignment 3 due', 'Assignment 4 out')),
+
+  lecture_def('Mar 8', 'Interconnection Networks', '', 'bold'),
+   
+  lecture_def('Mar 13-17', 'Spring Break. Partaaay!', '', 'bold'),
+  
+  lecture_def('Mar 20', 'Implementing Synchronization', '', 'bold'),
+  
+  lecture_def('Mar 22', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold',
+                        array('Exercise 4 due (on Fri Mar 24)')),
+
+  lecture_def('Mar 27', 'Transactional Memory', '', 'bold',
+                        array('Assignment 4 due')),
+
+  lecture_def('Mar 29', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold'),
+
+  lecture_def('Apr 3', 'Domain-Specific Parallel Programming Systems', '', 'bold',
+                        array('Project Proposal due')),
+                        
+  lecture_def('Apr 5', 'Domain-Specific Programming on Graphs', '', 'bold',
+                       array('Exercise 5 due (on Fri Apr 7)')),
+
+  lecture_def('Apr 10', 'In-Memory Distributed Computing in Spark', '', 'bold'),
+
+  lecture_def('Apr 12', 'Addressing the Memory Wall', '', 'bold'),
+
+  lecture_def('Apr 17', 'The Future of High-Performance Computing', '', 'bold'),
+              
+  lecture_def('Apr 19', 'Efficiently Evaluating Deep Neural Networks', '', 'bold',
+              array('Exercise 6 due (on Fri Apr 21)')),
+
+  lecture_def('Apr 24', 'Parallel Deep Neural Network Training', '', 'bold'),
+
+  lecture_def('Apr 26', 'Topic TBD', '', 'bold'),
+
+  lecture_def('May 1', 'Topic TBD', '', 'bold',
+              array('Exam 2 (evening exam)')),
+  
+  lecture_def('May 3', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', '', 'bold'),
+
+  lecture_def('TBD', '6th Annual Parallelism Competition', '', 'bold', array('text'=> 'Final Projects Due'))
+
   );
 
 
@@ -155,7 +230,19 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">Jan 1</td><td class="schedule_lecture"><a href="<?php echo article_url('3'); ?>">Assignment 1: This is a dummy link</a></td>
+    <td class="schedule_date">Jan 30</td><td class="schedule_lecture"><a href="<?php echo article_url('3'); ?>">Assignment 1: Analyzing Parallel Program Performance on an Eight-Core CPU</a></td>
+</tr>
+<tr>
+    <td class="schedule_date">Feb 15</td><td class="schedule_lecture"><a href="<?php echo article_url('4'); ?>">Assignment 2: A Simple Renderer in CUDA</a></td>
+</tr>
+<tr>
+    <td class="schedule_date">Mar 6</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: New assignment, to be announced!</span></td>
+</tr>
+<tr>
+    <td class="schedule_date">Mar 27</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple, Elastic Web Server</span></td>
+</tr>
+<tr>
+    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Final Project / Parallelism Competition</span></td>
 </tr>
 <tr>
     <td class="schedule_date">weekly</td><td class="schedule_lecture"><a href="<?php echo article_url('1'); ?>">Guidelines and Tips for Making Good Lecture Comments</a></td>

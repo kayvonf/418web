@@ -95,7 +95,7 @@ class Lecture extends MY_Controller {
     function view_summary($shortname) {
         $lecture = $this->lectures_model->get_lecture_by_shortname($shortname);
 
-        if (is_null($lecture)) {
+        if (!$lecture) {
             show_404();
         }
 

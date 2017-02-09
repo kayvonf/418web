@@ -2,7 +2,7 @@
 <hr size="1">
 
 <div class="footer">
-     Copyright 2016 Carnegie Mellon University
+     Copyright 2017 Carnegie Mellon University
 </div>
 
 <?php if (isset($debug_value)) { ?>

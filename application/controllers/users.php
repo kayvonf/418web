@@ -86,13 +86,23 @@ class Users extends MY_Controller {
         if (!$user_id) {
             return;
         }
+        
         $user = $this->users_model->get_user($user_id);
+
+        $match = array('author' => $user_id);
+        $comments = $this->comments_model->get_comments_matching($match);    
+        
+        $match_private = array('author' => $user_id, 'state' => PRIVATE_COMMENT);
+        $private_comments = $this->comments_model->get_comments_matching($match_private);
+        
         if (!$this->form_validation->run()) {
             $error = validation_errors();
             $this->load_view("Edit User Information", "user_edit",
                 array('error' => $error,
-                      'user' => $user,
-                      'profile_pictures_dir' => $this->profile_pictures_dir));
+                      'user' => $user,                      
+                      'profile_pictures_dir' => $this->profile_pictures_dir,
+                      'num_comments' => count($comments),
+                      'num_private_comments' => count($private_comments)));
             return;
         }
 
@@ -103,7 +113,9 @@ class Users extends MY_Controller {
                 $this->load_view("Edit User Information", "user_edit",
                     array('error' => $error,
                           'user' => $user,
-                          'profile_pictures_dir' => $this->profile_pictures_dir));
+                          'profile_pictures_dir' => $this->profile_pictures_dir,
+                          'num_comments' => count($comments),
+                          'num_private_comments' => count($private_comments)));
                 return;
             }
         }
@@ -112,17 +124,19 @@ class Users extends MY_Controller {
         $new_user_data['firstname'] = $this->input->post('firstname');
         $new_user_data['lastname'] = $this->input->post('lastname');
         $new_user_data['andrewid'] = $this->input->post('andrewid');
-	$new_user_data['email'] = $this->input->post('email');	
+     	$new_user_data['email'] = $this->input->post('email');	
         $new_user_data['department'] = $this->input->post('department');
         $new_user_data['year'] = $this->input->post('year');
 
         // Update user data.
         $this->users_model->edit_user($user->username, $new_user_data);
-
+        
         // Get updated user data.
         $user = $this->users_model->get_user($user_id);
         $data = array('user' => $user,
                       'profile_pictures_dir' => $this->profile_pictures_dir,
+                      'num_comments' => count($comments),
+                      'num_private_comments' => count($private_comments),
                       'updated' => true );
 
         $this->load_view("Edit User Information", "user_edit", $data);
@@ -283,7 +297,7 @@ class Users extends MY_Controller {
 
         if ($mode == CREATE) {
             $this->form_validation->set_rules('username',  'username',
-                'required|trim|max_length[32]|alpha_dash|is_unique[users.username]|xss_clean');
+                'required|trim|min_length[3]|max_length[32]|alpha_dash|is_unique[users.username]|xss_clean');
             $this->form_validation->set_rules('password1', 'password',
                 'required|matches[password2]');
             $this->form_validation->set_rules('password2', 'password confirmation',

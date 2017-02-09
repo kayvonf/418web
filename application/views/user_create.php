@@ -21,9 +21,9 @@ Step 1: Create an account on the course web site (or <a href="<?php echo site_ur
 
 <p class="form_top_dashed">
      <div class="form_label">Username</div>
-     <div class="form_help_text">Your username can be anything you like.  It does not need to be your andrew id
+     <div class="form_help_text">Your username can be anything you like (minimum three characters).  It does not need to be your andrew id
 (although your andrew username is fine too).  Keep in mind your comments on this site may be seen by the rest of
-the class and the public internet at large, so if you wish to remain anonymous, choose your username accordingly.</div>
+the class and the public internet at large, so if you wish to remain anonymous, please choose your username accordingly.</div>
      <div><input type="input" class="form_input_box" name="username"></div>
 </p>
 
@@ -79,7 +79,7 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 
 <p>
      <div class="form_label">Profile Picture</div>
-     <div class="form_help_text">Profile pictures are just for fun.  You need not upload a photo of yourself, or even anything at all. If you don't upload a profile photo, you'll temporarily be assigned a random picture of a cute robot (because CMU likes robots).  You can always change it later.</div>
+     <div class="form_help_text">Profile pictures are just for fun.  You need not upload a photo of yourself, or even anything at all. If you don't upload a profile photo, you'll temporarily be assigned a random picture of a cute robot (because CMU likes robots).  You can always change it later. (Images must be JPGs.)</div>
      <div><input type="file" name="picture"></div>
 
      <div class="overview_main_item form_submit_button"><button type="submit">[ Sign Me Up! ]</button></div>
