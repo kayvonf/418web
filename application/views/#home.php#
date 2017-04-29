@@ -163,7 +163,7 @@ $lectures = array(
   lecture_def('Apr 24', 'The Future of High Performance Computing', lecture_url('hpcfuture'), '',
              array('Project checkpoint due (on Tues April 25)')),
 
-  lecture_def('Apr 26', 'Database Systems Do Not Scale to 1,000 CPU Cores (guest lecture by Andy Pavlo)', lecture_url('dbscaling'), '',
+  lecture_def('Apr 26', 'Database Systems Do Not Scale to 1,000 CPU Cores (guest lecture by Andy Pavlo)', '', 'bold',
             array('Exercise 6 due (on Fri April 28)')),
 
   lecture_def('May 1', 'Exam 2 (evening exam)', '', 'bold'),

@@ -72,7 +72,7 @@ will cover both parallel hardware and software design.
 <div class="ta-name">Ravi Mullapudi</div>
 <div>[rmullapu at andrew]</div>
 <div class="bold_text">Office hours:</div>
-<div>Tue 4-5pm</div>
+<div>Tue 3-4pm</div>
 <div>Location: Smith Hall 234</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
@@ -84,7 +84,7 @@ will cover both parallel hardware and software design.
 <div class="ta-name">Teguh Hofstee</div>
 <div>[thofstee at andrew]</div>
 <div class="bold_text">Office hours:</div>
-<div>Tue 5-6pm</div>
+<div>Tue 5:30-6:30pm</div>
 <div>Location: Gates Collaborative Commons (5th floor)</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
