@@ -384,7 +384,7 @@ The full listing of lecture videos is available
 
 <div class="book_lecture">
      <div class="book_lecture_title" style="padding-bottom: 0px">
-     <a href="<?php echo lecture_url('paralleltraining'); ?>">Lecture 24: Parallel Deep Network Training</a></div>
+     <a href="<?php echo lecture_url('dnntraining'); ?>">Lecture 24: Parallel Deep Network Training</a></div>
      <div class="colored_text book_lecture_subtitle">(basics of gradient descent and backpropagation, memory footpring issues, asynchronous parallel implementations of gradient descent)</div>
 
      <div class="book_lecture_indent">
@@ -424,7 +424,32 @@ The full listing of lecture videos is available
      <div class="book_lecture_title" style="padding-bottom: 0px">
      <a href="<?php echo lecture_url('dbscaling'); ?>">Lecture 27: Database Systems Do Not Scale to 1000 CPU Cores</a></div>
      <div class="bold_text">(Guest lecture by <a href="http://www.cs.cmu.edu/~pavlo/">Andy Pavlo</a>)</div>
-     <div class="colored_text book_lecture_subtitle">(concurrency/synchonization in databases, transactions)</div>
+     <div class="colored_text book_lecture_subtitle">(concurrency control in databases, transactions, two-phase locking, timestamp ordering)</div>
+
+     <div class="book_lecture_indent">
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.vldb.org/pvldb/vol8/p209-yu.pdf" target="_blank">Staring into the Abyss: An Evaluation of
+     Concurrency Control with One Thousand Cores</a>. Yu et al. VLDB Endowment 2014</li>
+     </ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('finaltips'); ?>">Lecture 28: Course Wrap Up + How to Give a Talk</a></div>
+     <div class="colored_text book_lecture_subtitle">(tips for giving a clear talk, a bit of philosophy)</div>
+
+     <div class="book_lecture_indent">
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/~kayvonf/misc/cleartalktips.pdf" target="_blank">Kayvon's Clear Talk Tips</a> (expanded version)</li>
+     <li><a href="http://www.cs.cmu.edu/~kayvonf/misc/do_grades_matter.pdf" target="_blank">Do Grades Matter</a> (a discussion about thinking beyond classes at CMU)</li>
+     </ul>
+
+     </div>
 </div>
 
 

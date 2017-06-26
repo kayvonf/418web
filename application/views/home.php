@@ -168,7 +168,7 @@ $lectures = array(
 
   lecture_def('May 1', 'Exam 2 (evening exam)', '', 'bold'),
   
-  lecture_def('May 3', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', '', 'bold'),
+  lecture_def('May 3', 'Course Wrap Up and Project Presentation Tips (How to Give a Clear Talk)', lecture_url('finaltips'), ''),
 
   lecture_def('May 12', '6th Annual Parallelism Competition', '', 'bold', array('text'=> 'Final Projects Due'))
 

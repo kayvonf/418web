@@ -74,7 +74,7 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 <div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('lectures'); ?>">[Lectures]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('exercises'); ?>">[Exercises]</a></div>
-<!-- <div class="topbar_left"><a href="<?php echo site_url('projects'); ?>">[Projects]</a></div> -->
+<div class="topbar_left"><a href="<?php echo site_url('projects'); ?>">[Projects]</a></div>
 
 <?php // TODO(mburman) use check_privileged
     if (isset($logged_in_user) &&
