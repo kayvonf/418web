@@ -97,12 +97,12 @@ $route['scoreboard/(:any)/(:any)'] = 'scoreboard/index/$1/$2';
 $route['scoreboard/(:any)'] = 'scoreboard/index/$1';
 */
 
-$route['projects'] = 'article/view/16';
+//$route['projects'] = 'article/view/16';
 $route['getstarted'] = 'users/create';
 $route['welcome'] = 'simple_pages/welcome';
 $route['courseinfo'] = 'simple_pages/courseinfo';
-$route['lectures'] = 'simple_pages/reading';
-$route['exercises'] = 'simple_pages/exercises';
+//$route['lectures'] = 'simple_pages/reading';
+$route['assignments'] = 'simple_pages/exercises';
 $route['admin'] = 'simple_pages/admin_console';
 $route['votes'] = 'simple_pages/votes_overview';
 $route['home'] = 'simple_pages/index';

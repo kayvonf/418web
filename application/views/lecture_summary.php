@@ -1,5 +1,5 @@
 
-<div class="lecture_title">Lecture <?php echo $lecture->number; ?>: <?php echo $lecture->title; ?></div>
+<div class="lecture_title"><?php echo $lecture->title; ?></div>
 
 <?php if (isset($lecture->video_url) && $lecture->video_url != '') { ?>
 <div><a href="<?=$lecture->video_url?>">Watch the Lecture Video</a></div>

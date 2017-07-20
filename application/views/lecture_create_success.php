@@ -16,6 +16,6 @@
 <div>Internal id: <?php echo $lecture->id; ?></div>
 </p>
 
-<p><a href="<?php echo site_url('lectures'); ?>">To Main Lecture List</a></p>
+<p><a href="<?php echo site_url('lecture'); ?>">To Main Lecture List</a></p>
 </body>
 </html>

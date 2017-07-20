@@ -8,7 +8,7 @@ Profile successfully updated!
 
 <h2>User Information for <?php echo $user->username; ?></h2>
 
-<p>You have made <?php echo $num_comments; ?> comments. (<a href="<?php echo site_url('user/' . $logged_in_user->username) ?>">seem them all here</a>)</p>
+<p>You have made <?php echo $num_comments; ?> comments. (<a href="<?php echo site_url('user/' . $logged_in_user->username) ?>">see them all here</a>)</p>
 <p>You have made <?php echo $num_private_comments; ?> private comments.</p>
 
 <?php echo form_open_multipart('users/do_edit');?>
@@ -32,7 +32,7 @@ Profile successfully updated!
 </p>
 
 <p>
-     <div class="form_label">Andrew ID</div>
+     <div class="form_label">School ID</div>
      <div><input type="input" class="form_input_box" name="andrewid" value="<?php echo $user->andrewid; ?>"></div>
 </p>
 

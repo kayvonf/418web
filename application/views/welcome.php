@@ -9,7 +9,7 @@ sign up for the class on Piazza.
 -->
 
 <h2 class="form_top_dashed">
-Your account is ready to go!
+Success. Your account is ready to go!
 </h2>
 
 <p class="overview_main_item">

@@ -29,7 +29,7 @@ td
 }
 
 body A {
-    color: #c00000;
+    color: #5c307d;
     font-weight: 700;
     text-decoration: none;
 }
@@ -42,8 +42,8 @@ body A:hover
 .topbar {
    height: 22px;
    color: #ffffff;
-   background: #c02020;
-   border-bottom: #f44000 4px solid;
+   background: #5c307d;
+   border-bottom: #8c60ad 4px solid;
    padding-top: 2px;
    padding-right: 12px;
    padding-left: 12px;
@@ -119,7 +119,7 @@ body A:hover
 
 .colored_text
 {
-    color: #c00000;
+    color: #5c307d;
 }
 
 .bold_text
@@ -259,8 +259,8 @@ label textarea
 td.schedule_date
 {
     vertical-align: top;
-    width: 80px;
-    text-align: right;
+    width: 50px;
+    text-align: left;
     padding-right: 30px;
 }
 
@@ -279,7 +279,7 @@ td.schedule_lecture
 .form_errors
 {
    background-color: #fff0f0;
-   border: #c00000 2px dashed;
+   border: #5c307d 2px dashed;
    padding: 1em;
    margin: 1em 1em 1em 0em;
 }
@@ -308,7 +308,7 @@ td.schedule_lecture
 {
     margin-top: 25px;
     padding-top: 20px;
-    border-top: #c00000 2px dashed;
+    border-top: #5c307d 2px dashed;
 }
 
 .form_submit_button
@@ -321,7 +321,7 @@ td.schedule_lecture
     display: block;
     color: #ffffff;
     background-image: none;
-    background-color: #c00000;
+    background-color: #5c307d;
     font-family: open-sans-condensed, sans-serif;
     font-size: 18pt;
     font-weight: 700;
@@ -412,23 +412,31 @@ td.schedule_lecture
  * Book Table of Contents Page
  ***************************************************************************************
  */
-
-.book_lecture
-{
-    padding: 0px 0px 35px 0px; 
+.home_lecture_list {
+    margin-top: .25em;
 }
 
-.book_lecture_subtitle {
+.home_lecture_title
+{
+    font-weight: 700;
+}
+
+.home_lecture_video {
+    padding-bottom: .5em;
+}
+
+.home_lecture_subtitle {
    
+   font-size: 9pt;
    padding-bottom: .5em;
 }
 
-.book_lecture_indent
+.home_lecture_indent
 {
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
-.book_lecture .resources
+.home_lecture .resources
 {
     padding: 0px 0px 10px 0px;
 }

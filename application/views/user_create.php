@@ -1,7 +1,7 @@
 
 <div class="narrow_container">
 
-<h1>Welcome to 15-418/618</h1>
+<h1>Welcome to Parallel Computer Architecture and Programming</h1>
 
 <h2>
 Step 1: Create an account on the course web site (or <a href="<?php echo site_url('users/login'); ?>">login</a>)
@@ -43,7 +43,7 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 
 <p>
      <div class="form_label">Password</div>
-     <div class="form_help_text">This will be your password for the 15-418/618 site.  It is not your andrew password. (and probably should not be)</div>
+     <div class="form_help_text">This will be your password for the course site.</div>
      <div><input type="password" class="form_input_box" name="password1"></div>
 </p>
 <p>
@@ -56,11 +56,10 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 </p>
 
 <p>
-     <div class="form_label">Andrew ID</div>
+     <div class="form_label">Tsinghua User ID (@mails.tsinghua)</div>
      <div><input type="input" class="form_input_box" name="andrewid"></div>
      </p>
 <p>
-
 
      <p class="form_label form_top_dashed">And... please tell us a bit about yourself:</p>
      <div style="float: left; padding-right: 25px;">
