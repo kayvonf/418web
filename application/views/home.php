@@ -426,8 +426,8 @@ version of this course is <a href="http://15418.courses.cs.cmu.edu">15-418/618</
 <tr>
 <td class="schedule_date">Jul 24</td>
 <td class="schedule_lecture">
-   <div class="home_lecture_title"><span class="bold_text">Efficiently Evaluating and Training Deep Neural Networks</span></div>
-   <div class="colored_text home_lecture_subtitle">(intro to DNNs, what a convolution does, mapping convolution to matrix multiplication, deep network compression, basics of gradient descent and backpropagation, memory footpring issues, asynchronous parallel implementations of gradient descent)</div>
+   <div class="home_lecture_title"><a href="<?php echo lecture_url('dnneval'); ?>">Efficiently Evaluating Deep Neural Networks</a></div>
+   <div class="colored_text home_lecture_subtitle">(intro to DNNs, what a convolution does, mapping convolution to matrix multiplication, deep network compression, parameter/flop efficient DNN topologies)</div>
    <div class="home_lecture_indent">
 
    <!-- <div class="home_lecture_video">Watch the Lecture:</div>
@@ -435,9 +435,9 @@ version of this course is <a href="http://15418.courses.cs.cmu.edu">15-418/618</
    <li><a href="">Bilibili</a></li>
    <li><a href="">Youtube</a></li>
    </ul>
-
+   -->
    
-   <div>Further Reading on Efficient Evaluation:</div>
+   <div>Further Reading:</div>
      <ul class="home_lecture_list">
      <li><a href="http://cs231n.stanford.edu" target="_blank">Stanford cs231: Convolutional Neural Networks for Visual Recognition</a>. I recommend that you read through the lecture notes for modules 1 and 2 for a very nice explanation of key topics.</li>     
      <li><a href="http://neuralnetworksanddeeplearning.com" target="_blank">Neural Networks and Deep Learning</a>, Nielson, 2016 (a free online book)</li> 
@@ -446,28 +446,48 @@ version of this course is <a href="http://15418.courses.cs.cmu.edu">15-418/618</
      <li><a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank">ImageNet Classification with Deep Convolutional Neural Networks</a>. Krizhevsky et al. NIPS 2012 (this is the original "AlexNet" paper)</li>
      <li><a href="https://arxiv.org/abs/1409.4842" target="_blank">Going Deeper with Convolutions</a>, Szegedy et al. CVPR 2015 (this is the original Google Inception paper)</li>
      <li><a href="https://arxiv.org/abs/1602.07360" target="_blank">SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and &lt;0.5MB model size</a>, Iandola et al. 2016</li>
+     <li><a href="https://arxiv.org/abs/1704.04861" target="_blank">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a>, Howard et al. 2017</li>
      <li><a href="https://arxiv.org/pdf/1510.00149.pdf" target="_blank">Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding</a>, Han et al. ICLR 2016</li>
      <li><a href="https://arxiv.org/abs/1602.01528" target="_blank">EIE: Efficient Inference Engine on Compressed Deep Neural Network</a>, Han et al. ISCA 2016</li>
-     <li><a href="https://arxiv.org/abs/1704.04760" target="_blank">In-Datacenter Performance Analysis of a Tensor Processing Unit</a>. Jouppi et al. ISCA 2017</li>     
+     <li><a href="https://arxiv.org/abs/1704.04760" target="_blank">In-Datacenter Performance Analysis of a Tensor Processing Unit</a>. Jouppi et al. ISCA 2017</li> 
      </ul>
-   <div>Further Reading on Efficient Training:</div>
-     <ul class="home_lecture_list">
-          <li><a href="https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf" target="_blank">Scaling Distributed Machine Learning with the Parameter Server</a>, Li et al. OSDI 2014</li>
-     <li><a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-chilimbi.pdf" target="_blank">Project Adam: Building an Efficient and Scalable Deep Learning Training System</a>, Chilimbi et al. OSDI 2014</li>
-     <li><a href="https://arxiv.org/abs/1511.00175" target="_blank">FireCaffe: Near-linear Acceleration of Deep Neural Network Training on Compute Clusters</a>, Iandola et al. CVPR 2016</li>
-
 </ul>
-     
-     -->
      
    </div>  
 </td>
 </tr>
 
 <tr>
+<td class="schedule_date">Jul 24</td>
+<td class="schedule_lecture">
+   <div class="home_lecture_title"><a href="<?php echo lecture_url('dnntraining'); ?>">Parallel Training of Deep Neural Networks</a></div>
+   <div class="colored_text home_lecture_subtitle">(basics of gradient descent and backpropagation, memory footprint issues, synchronous and asynchronous parallel implementations of gradient descent, parameter server)</div>
+   <div class="home_lecture_indent">
+
+   <!-- <div class="home_lecture_video">Watch the Lecture:</div>
+   <ul class="home_lecture_list">
+   <li><a href="">Bilibili</a></li>
+   <li><a href="">Youtube</a></li>
+   </ul>
+-->
+  
+   <div>Further Reading:</div>
+     <ul class="home_lecture_list">
+          <li><a href="https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf" target="_blank">Scaling Distributed Machine Learning with the Parameter Server</a>, Li et al. OSDI 2014</li>
+     <li><a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-chilimbi.pdf" target="_blank">Project Adam: Building an Efficient and Scalable Deep Learning Training System</a>, Chilimbi et al. OSDI 2014</li>
+     <li><a href="https://arxiv.org/abs/1511.00175" target="_blank">FireCaffe: Near-linear Acceleration of Deep Neural Network Training on Compute Clusters</a>, Iandola et al. CVPR 2016</li>
+     <li><a href="https://arxiv.org/abs/1706.02677" target="_blank">Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour</a>, Goyal et al. 2017</li>
+</ul>
+       
+   </div>  
+</td>
+</tr>
+
+
+<tr>
 <td class="schedule_date">Jul 26</td>
 <td class="schedule_lecture">
-   <div class="home_lecture_title"><span class="bold_text">Addressing the Memory Wall</span></div>
+   <div class="home_lecture_title"><a href="<?php echo lecture_url('memory'); ?>">Addressing the Memory Wall</a></div>
    <div class="colored_text home_lecture_subtitle">(how DRAM works, cache compression, DRAM compression, 3D stacking)</div>
    <div class="home_lecture_indent">
 
@@ -476,14 +496,13 @@ version of this course is <a href="http://15418.courses.cs.cmu.edu">15-418/618</
    <li><a href="">Bilibili</a></li>
    <li><a href="">Youtube</a></li>
    </ul>
+   -->
    
    <div>Further Reading:</div>
      <ul class="home_lecture_list">
      <li><a href="https://users.ece.cmu.edu/~omutlu/pub/bdi-compression_pact12.pdf" target="_blank">Base-Delta-Immediate Compression: Practical Data Compression for On-Chip Caches</a>. by Pekhimenko et al. PACT 2012</li>
      <li><a href="http://www.anandtech.com/show/11002/the-amd-vega-gpu-architecture-teaser/3" target="_blank">AnandTech Article on HBM2</a></li>
      </ul>
-
-     -->
      
    </div>  
 </td>
@@ -492,7 +511,7 @@ version of this course is <a href="http://15418.courses.cs.cmu.edu">15-418/618</
 <tr>
 <td class="schedule_date">Jul 27</td>
 <td class="schedule_lecture">
-   <div class="home_lecture_title"><span class="bold_text">Scaling a Web Site</span></div>
+   <div class="home_lecture_title"><a href="<?php echo lecture_url('webscaling'); ?>">Scaling a Web Site</a></div>
    <div class="colored_text home_lecture_subtitle">(scale out thinking, load balancing, elasticity, caching)</div>
    <div class="home_lecture_indent">
 
@@ -501,15 +520,37 @@ version of this course is <a href="http://15418.courses.cs.cmu.edu">15-418/618</
    <li><a href="">Bilibili</a></li>
    <li><a href="">Youtube</a></li>
    </ul>
-   
+-->
+
    <div>Further Reading:</div>
      <ul class="home_lecture_list">
      <li><a href="http://www.highscalability.com" target="_blank">www.highscalability.com</a>. A cool site with many case studies (see "All Time Favorites" section)</li>
      <li><a href="http://perspectives.mvdirona.com" target="_blank">James Hamilton's Blog</li></ul>
 
      </ul>
+     
+   </div>  
+</td>
+</tr>
 
-     -->
+<tr>
+<td class="schedule_date">Jul 27</td>
+<td class="schedule_lecture">
+   <div class="home_lecture_title"><a href="<?php echo lecture_url('wrapup'); ?>">Course Wrap Up</a></div>
+   <div class="colored_text home_lecture_subtitle">(course summary, post-course opportunities, undergraduate research)</div>
+   <div class="home_lecture_indent">
+
+   <!-- <div class="home_lecture_video">Watch the Lecture:</div>
+   <ul class="home_lecture_list">
+   <li><a href="">Bilibili</a></li>
+   <li><a href="">Youtube</a></li>
+   </ul>
+-->
+
+   <div>Further Reading:</div>
+     <ul class="home_lecture_list">
+     <li><a href="http://www.cs.cmu.edu/~harchol/gradschooltalk.pdf" target="_blank">Applying to Ph.D. Programs in Computer Science</a>, by CMU Professor <a href="http://www.cs.cmu.edu/~harchol/" target="_blank">Mor Harchol-Balter</a></li>
+     </ul>
      
    </div>  
 </td>
