@@ -1,8 +1,8 @@
 
 <div class="narrow_container">
 
-<div class="main_title">Parallel Computer Architecture and Programming</div>
-<div>CMU 15-418/618</div>
+<div class="main_title">Computer Graphics</div>
+<div>CMU 15-462/662</div>
 
 <div style="padding-top: 20px; padding-bottom: 10px;">
 
