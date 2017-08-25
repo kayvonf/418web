@@ -9,7 +9,7 @@ available on the <a href="<?php echo site_url('lectures'); ?>">Lectures</a> page
 <div class="overview_main_item overview_ruled_element">Quizzes</div>
 
 <p>
-<div><a href="<?php echo $article_url('1'); ?>">Quiz 1: TBD</a></div>
+<div><a href="<?php echo article_url('1'); ?>">Quiz 1: TBD</a></div>
 <div class="small_text colored_text">Concepts tested: concept 1 concept 2, ...</div>
 </p>
 

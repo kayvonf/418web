@@ -32,10 +32,10 @@ class Simple_pages extends MY_Controller {
         $this->load_view("Lectures and Readings", 'reading', $data);
     }
 
-    function exercises() {
+    function assignments() {
     	$exercises_base_url = $this->config->item('content_base_url') . '/exercises';
         $data = array('exercises_base_url' => $exercises_base_url);
-        $this->load_view("Exercises and Practice Problems", 'exercises', $data);
+        $this->load_view("Assignments", 'assignments', $data);
     }
 
     function welcome() {
