@@ -48,7 +48,7 @@
                 <div class="footer">
                     <table width="100%">
                         <tr>
-                            <td class="aligncenter content-block">You are receiving this email because you are registered as a student in <a href="<?php echo $site_url?>">15-418/618.</a>.</td>
+                            <td class="aligncenter content-block">You are receiving this email because you are registered as a student in <a href="<?php echo $site_url?>">CS348K.</a>.</td>
                         </tr>
                     </table>
                 </div>

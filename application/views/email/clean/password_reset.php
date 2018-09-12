@@ -9,7 +9,7 @@
 <head>
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>15-418/618 Password Reset</title>
+<title>Password Reset</title>
 <link href="styles.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 

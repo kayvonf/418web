@@ -1,7 +1,7 @@
 
 <div class="narrow_container">
 
-<h1>Welcome to 15-418/618</h1>
+<h1>Welcome to CS348K</h1>
 
 <h2>
 Step 1: Create an account on the course web site (or <a href="<?php echo site_url('users/login'); ?>">login</a>)
@@ -21,8 +21,7 @@ Step 1: Create an account on the course web site (or <a href="<?php echo site_ur
 
 <p class="form_top_dashed">
      <div class="form_label">Username</div>
-     <div class="form_help_text">Your username can be anything you like (minimum three characters).  It does not need to be your andrew id
-(although your andrew username is fine too).  Keep in mind your comments on this site may be seen by the rest of
+     <div class="form_help_text">Your username can be anything you like (minimum three characters).  It does not need to be your Stanford user id (although your SUNet username is fine too).  Keep in mind your comments on this site may be seen by the rest of
 the class and the public internet at large, so if you wish to remain anonymous, please choose your username accordingly.</div>
      <div><input type="input" class="form_input_box" name="username"></div>
 </p>
@@ -43,7 +42,7 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 
 <p>
      <div class="form_label">Password</div>
-     <div class="form_help_text">This will be your password for the 15-418/618 site.  It is not your andrew password. (and probably should not be)</div>
+     <div class="form_help_text">This will be your password for the CS348K site.  It is not your SUNet password. (and probably should not be). NOTE: THIS SITE WAS MADE BY THE COURSE STAFF, AND WHILE WE HAVE TRIED TO EMPLOY SECURITY BEST PRACTICIES, WE'RE JUST ACADEMICS, SO BE CAREFUL ABOUT YOUR CHOICE OF PASSWORD.</div>
      <div><input type="password" class="form_input_box" name="password1"></div>
 </p>
 <p>
@@ -56,7 +55,7 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 </p>
 
 <p>
-     <div class="form_label">Andrew ID</div>
+     <div class="form_label">SUNet ID</div>
      <div><input type="input" class="form_input_box" name="andrewid"></div>
      </p>
 <p>
@@ -64,8 +63,8 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 
      <p class="form_label form_top_dashed">And... please tell us a bit about yourself:</p>
      <div style="float: left; padding-right: 25px;">
-     <div class="form_label">Department</div>
-     <div class="form_help_text">(e.g., CS, ECE, ISR)</div>
+     <div class="form_label">Major</div>
+     <div class="form_help_text">(CS, EE, etc...)</div>
      <div><input type="input" class="form_input_box" name="department"></div>
      </div>
      <div class="float: left;">
@@ -79,7 +78,7 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 
 <p>
      <div class="form_label">Profile Picture</div>
-     <div class="form_help_text">Profile pictures are just for fun.  You need not upload a photo of yourself, or even anything at all. If you don't upload a profile photo, you'll temporarily be assigned a random picture of a cute robot (because CMU likes robots).  You can always change it later. (Images must be JPGs.)</div>
+     <div class="form_help_text">Profile pictures are just for fun.  You need not upload a photo of yourself, or even anything at all. If you don't upload a profile photo, you'll temporarily be assigned a random picture of a cute robot.  You can always change it later. (Images must be JPGs.)</div>
      <div><input type="file" name="picture"></div>
 
      <div class="overview_main_item form_submit_button"><button type="submit">[ Sign Me Up! ]</button></div>
