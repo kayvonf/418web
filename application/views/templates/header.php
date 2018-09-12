@@ -71,19 +71,19 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 
 <div class="topbar">
 <div class="topbar_left"><a href="<?php echo site_url('home'); ?>">[Home]</a></div>
-<div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div>
-<div class="topbar_left"><a href="<?php echo site_url('lectures'); ?>">[Lectures]</a></div>
-<div class="topbar_left"><a href="<?php echo site_url('exercises'); ?>">[Exercises]</a></div>
-<div class="topbar_left"><a href="<?php echo site_url('projects'); ?>">[Projects]</a></div>
+<!-- <div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div> -->
+<div class="topbar_left"><a href="<?php echo site_url('courseinfo'); ?>">[Course Info]</a></div>
+<div class="topbar_left"><a href="<?php echo site_url('lectures'); ?>">[Lectures/Readings]</a></div>
 
-<?php // TODO(mburman) use check_privileged
+<?php
+    // TODO(mburman) use check_privileged
     if (isset($logged_in_user) &&
     ($logged_in_user->type == USER_TYPE_INSTRUCTOR ||
-    $logged_in_user->type == USER_TYPE_TA)) { ?>
-<div class="topbar_left"><a href="<?php echo site_url('admin') ?>">[Admin Console]</a></div>
-<? }
+    $logged_in_user->type == USER_TYPE_TA)) {
 ?>
-
+<div class="topbar_left"><a href="<?php echo site_url('admin') ?>">[Admin Console]</a></div>
+<?php }
+?>
 
 <div class="topbar_right">
 

@@ -158,10 +158,10 @@ if __name__ == "__main__":
     # move current deployment to backup
     if do_backup and os.path.exists(deploy_dir):
         mkdirDashP(course_config.site_backup_dir);
-        execute("mv -f %s %s" % (deploy_dir, backup_target_dir));
+        execute("sudo mv -f %s %s" % (deploy_dir, backup_target_dir));
     else:
         # or remove the existing deployment
-        execute("rm -rf %s" % deploy_dir);
+        execute("sudo rm -rf %s" % deploy_dir);
 
     # copy over code tree + set permissions to make the new site live
     execute("mv -f %s %s" % (staging_dir, deploy_dir));
