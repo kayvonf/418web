@@ -63,7 +63,7 @@ if ($can_comment || count($comment_htmls) > 0) {
     <?php } ?>
     <div>
         <div class="submit_button_container">
-            <? echo form_submit(array('name' => 'mysubmit', 'class' => 'submit_button'), 'Submit Comment!'); ?>
+            <?php echo form_submit(array('name' => 'mysubmit', 'class' => 'submit_button'), 'Submit Comment!'); ?>
             <?php if ($is_privileged) { ?>
             <button class="slide-prompt-button" type="button">Prompt</button>
             <?php } ?>
@@ -89,8 +89,8 @@ if ($can_comment || count($comment_htmls) > 0) {
         <?php // Clearfix ?>
         <div style="clear: both;"></div>
 	</div>
-<? echo form_close(''); ?>
-<? } // end if $can_comment ?>
+<?php echo form_close(''); ?>
+<?php } // end if $can_comment ?>
 
 <?php if ($display_style != VISIBLE) { ?>
 <button class="show-comments-button">
