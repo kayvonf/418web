@@ -11,7 +11,7 @@
 <div class="book_lecture">
      <div class="book_lecture_title">
      <!-- <a href="lectures/01_introReview.pdf">Lecture 1: Throughput Architecture Review</a> -->
-     <span>Lecture 1: Throughput Architecture Review</span>
+     <a href="<?php echo lecture_url('introreview'); ?>">Lecture 1: Throughput Architecture Review</a>
      </div>
 
      <div class="book_lecture_indent">
@@ -67,7 +67,7 @@ GPUs, etc.</p>
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <span>Lecture 2: The Digital Camera Processing Pipeline</span>
+     <a href="<?php echo lecture_url('camerapipeline'); ?>">Lecture 2: The Digital Camera Processing Pipeline</a>
      </div>
 
      <div class="book_lecture_indent">
@@ -92,7 +92,7 @@ GPUs, etc.</p>
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <span>Lecture 3: Modern Smartphone Camera Processing (such as in the Pixel 2 Phone)</span>
+     <a href="<?php echo lecture_url('camerapipeline2'); ?>">Lecture 3: Modern Smartphone Camera Processing (such as in the Pixel 2 Phone)</a>
      </div>
 
      <div class="book_lecture_indent">
@@ -116,7 +116,7 @@ GPUs, etc.</p>
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <span>Lecture 4: Efficiently Scheduling Image Processing Algorithms on Parallel Hardware</span>
+     <a href="<?php echo lecture_url('imagesched'); ?>">Lecture 4: Efficiently Scheduling Image Processing Algorithms on Parallel Hardware</a>
      </div>
      
 
@@ -125,16 +125,116 @@ GPUs, etc.</p>
      <div>Required Reading:</div>
      <ul>
      <li><a href="http://people.csail.mit.edu/jrk/halide-pldi13.pdf" target="_blank">Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines</a>. Ragan-Kelley, Andrew Adams, et al. PLDI 2013 (or read the selected chapters in the Ragan-Kelley thesis below)</li>
-     <li><a href="http://graphics.cs.cmu.edu/projects/halidesched/" target="_blank">Automatically Scheduling Halide Image Processing Pipelines</a>, Mullapudi et al. SIGGRAPH 2016</li>
      </ul>
 
      <div>Further Reading:</div>
      <ul>
        <li><a href="http://people.csail.mit.edu/jrk/jrkthesis.pdf" target="_blank">Decoupling Algorithms from the Organization of Computation for High Performance Image Processing</a> (please read Chapters 1, 4, 5, and 6.1), Ragan-Kelley (MIT Ph.D. thesis, 2014)</li>
+       <li><a href="http://graphics.cs.cmu.edu/projects/halidesched/" target="_blank">Automatically Scheduling Halide Image Processing Pipelines</a>, Mullapudi et al. SIGGRAPH 2016</li>
+
+     <li><a href="https://people.csail.mit.edu/tzumao/gradient_halide/">Differentiable Programming for Image Processing and Deep Learning in Halide</a>. T. Li et al. SIGGRAPH 2018</li>
+     <li><a href="https://drive.google.com/file/d/1JukgkGGPFrQ4_Vwi5ZxpgkRND0yU2gyk/view">Parallel Associative Reductions in Halide</a>. P. Suriana et al. CGO 2017</li>
      <li><a href="http://halide-lang.org/" target="_blank">Halide Language Website</a> (contains documentation and many tutorials)</li>
+     <li>Check out <a href="https://www.youtube.com/watch?v=3uiEyEKji0M">this Youtube Video</a> on scheduling</li>
      </ul>
      </div>
 </div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('imagehw'); ?>">Lecture 5:
+     Specialized Hardware for Image Processing</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+      <li><a href="http://graphics.stanford.edu/papers/fcam/" target="_blank">The Frankencamera: An Experimental Platform for Computational Photography</a>. A. Adams et al. SIGGRAPH 2010</li>    
+     </ul>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://graphics.stanford.edu/papers/darkroom14/">Darkroom: Compiling High-Level Image Processing Code into Hardware Pipelines</a> Hegarty et al. SIGGRAPH 2014</li>
+     <li><a href="http://graphics.stanford.edu/papers/rigel/" target="_blank">Rigel: Flexible Multi-Rate Image Processing Hardware</a>, Hegarty et al. SIGGRAPH 2016.</li>
+     <li><a href="https://dl.acm.org/citation.cfm?id=3107953">Programming Heterogeneous Systems from an Image Processing DSL</a>. Pu et al. TACO 2017</li>
+     </ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('compression'); ?>">Lecture 6: Lossy Image (JPG) and Video (H.264) Compression</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+      <li><span class="bold_text">There is no required reading for this lecture.</span></li>
+     </ul>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/wiegand03_h264.pdf" target="_blank">Overview of the H.264/AVC Video Coding Standard</a></li>
+     <li><a href="https://arxiv.org/pdf/1712.05087.pdf">Learning Binary Residual Representations for Domain-specific Video Streaming</a>. Tsai et al. AAAI 18</li>
+     <li><a href="https://arxiv.org/abs/1705.05823">Real-Time Adaptive Image Compression</a>. Rippel and Bourdev. 2017</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('lightfield_vr'); ?>">Lecture 7:
+     The Light Field and Capture for VR</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Further reading on the light field:</div>
+     <ul>
+     <li><a href="https://graphics.stanford.edu/papers/light/" target="_blank">Light Field Rendering</a>. Levoy and Hanrahan SIGGRAPH 1996</li>
+     <li><a href="https://dl.acm.org/citation.cfm?id=237200" target="_blank">The Lumigraph</a>. Gortler et al. SIGGRAPH 1996</li>
+     <li><a href="http://persci.mit.edu/pub_pdfs/plenoptic.pdf" target="_blank">Single Lens Stereo with a Plenoptic Camera</a>. E. Adelseon and J. Wang. Transactions on Pattern Analysis and Machine Intelligence, 1992</li>
+     <li><a href="http://graphics.stanford.edu/papers/lfcamera/" target="_blank">Light-Field Photography with a Hand-Held Plenoptic Camera</a>. Ng et al. Stanford Technical Report, 2005</li>
+     <li><a href="https://cdn.lytro.com/renng-thesis.pdf" target="_blank">Digital Light Field Photography</a>. R. Ng. Stanford Ph.D. Dissertation, 2006 (see chapters 1-4)</li>
+     </ul>
+     <div>Further reading on VR content acquisition:</div>
+     <ul>
+     <li><a href="https://research.google.com/pubs/pub45617.html" target="_blank">Jump: Virtual Reality Video</a>, Andersen et al. SIGGRAPH Asia 2016 (<a href="https://vr.google.com/jump/" target="_blank">Jump website</a>)</li>
+          <li><a href="http://visual.cs.ucl.ac.uk/pubs/casual3d/" target="_blank">Casual 3D Photography</a>, Hedman et al. SIGGRAPH Asia 2017</li>
+	  <li><a href="http://visual.cs.ucl.ac.uk/pubs/instant3d/" target="_blank">Instant 3D Photography</a>. Hedman and Kopf. SIGGRAPH 2018 
+          <li><a href="https://facebook360.fb.com/facebook-surround-360/" target="_blank">Facebook Surround 360 page</a></li>          
+     </ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnneval'); ?>">Lecture 8: Efficient DNN Evaluation for Image Analysis</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+       <li><a href="https://arxiv.org/abs/1409.4842" target="_blank">Going Deeper with Convolutions</a>, Szegedy et al. CVPR 2015 (the Inception paper).  You may also enjoy reading this useful <a href="https://towardsdatascience.com/a-simple-guide-to-the-versions-of-the-inception-network-7fc52b863202">blog post</a> about versions of the Inception network.</li>
+       <li><a href="https://arxiv.org/abs/1704.04861" target="_blank">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a>. Howard et al. 2017</li>
+     </ul>
+       
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://cs231n.stanford.edu" target="_blank">Stanford cs231: Convolutional Neural Networks for Visual Recognition</a>. If you haven't taken CS231N, I recommend that you read through the lecture notes of modules 1 and 2 for very nice explanation of key topics.</li>
+     <li><a href="https://towardsdatascience.com/types-of-convolutions-in-deep-learning-717013397f4d" target="_blank">An Introduction to different Types of Convolutions in Deep Learning</a>. by Paul-Louis Pr&ouml;ve (a nice little tutorial)</li>
+     <li><a href="http://neuralnetworksanddeeplearning.com" target="_blank">Neural Networks and Deep Learning</a>, Nielson, 2016 (a free online book)</li>
+     <li><a href="https://arxiv.org/abs/1512.03385" target="_blank">Deep Residual Learning for Image Recognition</a>. K. He et al. CVPR 2016 (the ResNet paper)</li>
+     <li><a href="https://arxiv.org/pdf/1311.2901v1.pdf" target="_blank">Visualizing and Understanding Convolutional Neural Networks</a>, Zeiler and Fergus, ECCV14</li>
+     <li><a href="https://research.fb.com/announcing-tensor-comprehensions/">Facebook Tensor Comprehensions</a> (Arxiv paper is <a href="https://arxiv.org/abs/1802.04730">here</a>)</li>
+     <li><a href="https://arxiv.org/pdf/1510.00149v5.pdf">Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding</a>. Han et al. ICLR 2016</li>
+     <li><a href="https://arxiv.org/abs/1712.00559">Progressive Neural Architecture Search</a>. Liu et al. ECCV 2018</li>
+     </ul>
+     </div>
+</div>
+
 
 
 <p>&nbsp;</p>

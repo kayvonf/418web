@@ -633,6 +633,7 @@ class CI_Input {
 
 			foreach ($_COOKIE as $key => $val)
 			{
+			        // log_message('error', 'Cookie: ' . $key);
 				$_COOKIE[$this->_clean_input_keys($key)] = $this->_clean_input_data($val);
 			}
 		}
@@ -726,9 +727,9 @@ class CI_Input {
 	*/
 	function _clean_input_keys($str)
 	{
-		if ( ! preg_match("/^[a-z0-9:_\/-]+$/i", $str))
+		if ( ! preg_match("/^[a-z0-9:_\/-@~]+$/i", $str))
 		{
-			exit('Disallowed Key Characters.');
+			exit('Disallowed Key Characters.' . ' [[' . $str . ']]');
 		}
 
 		// Clean UTF-8 if supported

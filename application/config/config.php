@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://cs348k.stanford.edu/fall18/';
 
 /*
 |--------------------------------------------------------------------------
@@ -247,7 +247,7 @@ $config['encryption_key'] = 'elevRsASOtI8vPvgn30iFbr9yQjLyg3T';
 | 'sess_time_to_update'     = how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']     = 'ci_session_15418_spr14';
+$config['sess_cookie_name']     = 'ci_session_cs348k';
 $config['sess_expiration']      = 60 * 60 * 24 * 7 * 2; // 2 weeks.
 $config['sess_expire_on_close'] = FALSE;
 // TODO(awreece) We should really do this in production.

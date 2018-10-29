@@ -2,3 +2,4 @@
 
 $config['mailtype'] = 'html';
 $config['charset'] = 'utf-8';
+

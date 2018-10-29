@@ -71,7 +71,7 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 
 <div class="topbar">
 <div class="topbar_left"><a href="<?php echo site_url('home'); ?>">[Home]</a></div>
-<!-- <div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div> -->
+<div class="topbar_left"><a href="<?php echo site_url('newsfeed'); ?>">[Feed]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('courseinfo'); ?>">[Course Info]</a></div>
 <div class="topbar_left"><a href="<?php echo site_url('lectures'); ?>">[Lectures/Readings]</a></div>
 

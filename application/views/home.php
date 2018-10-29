@@ -84,55 +84,54 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Sep 25', 'Course Introduction + Review of Parallel Hardware Architecture', '', 'bold',
+  lecture_def('Sep 25', 'Course Introduction + Review of Throughput Hardware Design Principles', lecture_url('introreview'), '',
               array('How superscalar, multi-core, SIMD, and hardware multi-threading are used in CPUs,
 	             GPUs; understanding latency and bandwidth constraints')),
 
-  lecture_def('Sep 27', 'The Digital Camera Processing Pipeline', '', 'bold',
+  lecture_def('Sep 27', 'The Digital Camera Processing Pipeline', lecture_url('camerapipeline'), '',
               array('Algorithms for taking raw sensor pixels to an RGB image: demosaicing, sharpening,
-	             correcting lens aberrations, autofocus/autoexposure, image filtering')),
+	             correcting lens aberrations, multi-shot alignment/merging, image filtering')),
 
-  lecture_def('Oct 2', 'Modern Smartphone Camera Processing (such as in the Pixel 2 Phone)', '', 'bold',
-             array('Multi-scale processing with Gaussian and Laplacian pyramids, local tone mapping,
-	           multi-shot alignment/merging, HDR/portrait mode in the Pixel 2 camera')),
+  lecture_def('Oct 2', 'Modern Smartphone Camera Processing (such as in the Pixel 2 Phone)', lecture_url('camerapipeline2'), '',
+             array('Multi-scale processing with Gaussian and Laplacian pyramids, HDR/local tone mapping,
+	            portrait mode in the Pixel 2 camera')),
 
-  lecture_def('Oct 4', 'Efficiently Scheduling Image Processing Algorithms on Parallel Hardware', '', 'bold',
+  lecture_def('Oct 4', 'Efficiently Scheduling Image Processing Algorithms on Parallel Hardware', lecture_url('imagesched'), '',
               array('Balancing locality, parallelism, and work, fusion and tiling,
               design of the Halide domain-specific language, automatically scheduling image processing pipelines')),
 
-  lecture_def('Oct 9', 'Specialized Hardware for Efficient Image Processing', '', 'bold',
+  lecture_def('Oct 9', 'Specialized Hardware for Efficient Image Processing', lecture_url('imagehw'), '',
               array('Benefits of fixed-function processing, comparing GPUs, DSPs, Image Signal Processors,
 	             and FPGAs for image processing, 
 		     domain-specific languages for hardware synthesis such as
 		     Darkroom/Rigel, compiling Halide to hardware')),
 
-  lecture_def('Oct 11', 'Lossy Video Compression', '', 'bold',
-              array('H.264 video representation/encoding, parallel encoding,
+  lecture_def('Oct 11', 'Lossy Image and Video Compression', lecture_url('compression'), '',
+              array('JPG compression. H.264 video representation/encoding, parallel encoding,
 	             motivations for ASIC acceleration,
 	             emerging opportunities for compression when machines,
 		     not humans, will observe most images')),
 
-  lecture_def('Oct 16', 'The Light Field and Image Capture for VR Display', '', 'bold',
+  lecture_def('Oct 16', 'The Light Field and Capture for VR Display', lecture_url('lightfield_vr'), '',
               array('Light field representation, light-field cameras, computational challenges
 	             of synthesizing video streams for VR output, Google\'s Jump VR pipeline')),
 
-  lecture_def('Oct 18', 'Efficient DNN Inference (for Image Analysis)', '', 'bold',
+  lecture_def('Oct 18', 'Efficient DNN Inference (for Image Analysis)', lecture_url('dnneval'), '',
               array('popular DNN trunks and topologies, design of MobileNet,
 	             challenges of direct implementation, where the compute lies in modern networks,
 		     DNN pruning, neural architecture search')),
 
-  lecture_def('Oct 23', 'Algorithms for Parallel DNN Training at Scale', '', 'bold',
+  lecture_def('Oct 23', 'Algorithms for Parallel DNN Training at Scale', lecture_url('dnntrain'), '',
               array('Footprint challenges of training, model vs. data parallelism,
 	             asynchronous vs. synchronous training debate, parameter server designs,
 		     key optimizations for parallel training')),
 
-  lecture_def('Oct 25', 'Hardware Accelerators for DNN Inference', '', 'bold',
+  lecture_def('Oct 25', 'Hardware Accelerators for DNN Inference', lecture_url('dnnhw'), '',
               array('GPUs, Google TPU, special instructions for DNN evaluation,
 	             choice of precision in arithmetic, recent ISCA/MICRO papers on DNN acceleration')),
 
   lecture_def('Oct 30', 'Algorithmic Optimization: Examples of Task-Motivated DNN Structure', '', 'bold',
-              array('Neural module networks, learning to compress images/video,
-	             discussion on value of modularity vs. end-to-end learning')),
+              array('Neural module networks, discussion on value of modularity vs. end-to-end learning')),
 
   lecture_def('Nov 1', 'Algorithmic Optimizations for DNN-Based Video Analysis', '', 'bold',
               array('Exploiting temporal coherence in video, pipelined networks,
@@ -142,23 +141,23 @@ $lectures = array(
   lecture_def('Nov 6', 'Video Stream Processing at Cloud Scale', '', 'bold',
               array('Facebook SVE/Lumos, Scanner, emerging platforms for video processing as a service')),
 
-  lecture_def('Nov 8', 'Guest Lecture: to be announced', '', 'bold',
-              array('Topic: specialized hardware for deep learning and computational photography')),
-
-  lecture_def('Nov 13', 'The GPU-Accelerated Real-Time Graphics Pipeline', '', 'bold',
+  lecture_def('Nov 8', 'The GPU-Accelerated Real-Time Graphics Pipeline', '', 'bold',
               array('3D graphics pipeline as a machine architecture (abstraction),
 	             pipeline semantics/functionality, contrasting graphics pipeline architecture with
 		     compute-mode GPU architecture')),
 
-  lecture_def('Nov 15', 'Hardware Acceleration of Texture Mapping and Depth Buffering', '', 'bold',
+  lecture_def('Nov 13', 'Hardware Acceleration of Texture Mapping and Depth Buffering', '', 'bold',
               array('Texture sampling basics, hardware texture compression, depth-and-color buffer compression,
 	             motivations for hardware multi-threading for latency hiding in modern GPUs')),
 
-  lecture_def('Nov 27', 'Scheduling the Graphics Pipeline onto a GPU', '', 'bold',
+  lecture_def('Nov 15', 'Scheduling the Graphics Pipeline onto a GPU', '', 'bold',
               array('Molnar sorting taxonomy, dataflow scheduling under data amplification,
 	             tiled rendering for bandwidth-efficiency, deferred shading as a scheduling decision')),
 
-  lecture_def('Nov 29', 'The Design of Domain-Specific Languages for Shading', '', 'bold',
+  lecture_def('Nov 27', 'Guest Lecture: Bill Mark (Google)', '', 'bold',
+              array('Topic: specialized hardware for deep learning and computational photography')),
+
+  lecture_def('Nov 29', 'Domain-Specific Languages for Shading (with Tim Foley, NVIDIA)', '', 'bold',
               array('Renderman Shading Language and Cg: contrasting two different levels of
 	             abstraction for shading languages, Slang')),
 
@@ -225,13 +224,13 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">optional</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348v/asst1">Optional Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a>
+    <td class="schedule_date">optional</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348k/asst0">Optional Assignment 0: Analyzing Parallel Program Performance on a Quad-Core CPU</a>
     </br>
     All CVS348K students are encouraged to attempt this assignment during or before the first week of the course to check their background in parallel systems.</td>
 </tr>
 
 <tr>
-<td class="schedule_date">Oct 18</td><td class="schedule_lecture"><span class="bold_text">Required Assignment:</span> In this multi-part assignment, students will implement a basic pipeline for processing RAW images produced by a camera sensor into high-quality images. This pipeline will employ techniques common in modern smartphone camera applications.  Students will optionally tune the performance of their implementation for modern multi-core CPUs or GPUs. </td>
+<td class="schedule_date">Oct 22</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348k/camera_asst">Assignment 1:</a> Burst Mode HDR Camera RAW Processing for the kPhone 348</td>
 </tr>
 <tr>
  <td class="schedule_date">optional</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348v/asst3">Optional Assignment 2: Implementing a Separable Conv Layer in Halide</a></td>
@@ -239,7 +238,7 @@ foreach ($lectures as $lecture)
 </tr>
 
 <tr>
-    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Final Project:</span> students will complete a substantial term project on a course-relevant topic of their choosing.</td>
+    <td class="schedule_date">Dec 10</td><td class="schedule_lecture"><a href="<?php echo article_url('2'); ?>">Final Project Guidelines</a>: students will complete a substantial term project on a course-relevant topic of their choosing.</td>
 </tr>
 
 </table>
