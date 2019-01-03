@@ -1,7 +1,7 @@
 
 <div class="narrow_container">
 
-<h1>Welcome to CS348K</h1>
+<h1>Welcome to CS149</h1>
 
 <h2>
 Step 1: Create an account on the course web site (or <a href="<?php echo site_url('users/login'); ?>">login</a>)
@@ -42,7 +42,7 @@ the class and the public internet at large, so if you wish to remain anonymous, 
 
 <p>
      <div class="form_label">Password</div>
-     <div class="form_help_text">This will be your password for the CS348K site.  It is not your SUNet password. (and probably should not be). NOTE: THIS SITE WAS MADE BY THE COURSE STAFF, AND WHILE WE HAVE TRIED TO EMPLOY SECURITY BEST PRACTICIES, WE'RE JUST ACADEMICS, SO BE CAREFUL ABOUT YOUR CHOICE OF PASSWORD.</div>
+     <div class="form_help_text">This will be your password for the CS149 site.  It is not your SUNet password. (and probably should not be). NOTE: THIS SITE WAS MADE BY THE COURSE STAFF, AND WHILE WE HAVE TRIED TO EMPLOY SECURITY BEST PRACTICIES, WE'RE JUST ACADEMICS, SO BE CAREFUL ABOUT YOUR CHOICE OF PASSWORD.</div>
      <div><input type="password" class="form_input_box" name="password1"></div>
 </p>
 <p>

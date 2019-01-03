@@ -2,7 +2,7 @@
 <hr size="1">
 
 <div class="footer">
-     Copyright 2018 Stanford University
+     Copyright 2019 Stanford University
 </div>
 
 <?php if (isset($debug_value)) { ?>

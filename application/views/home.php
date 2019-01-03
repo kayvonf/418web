@@ -1,43 +1,41 @@
 
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS348K, Fall 2018</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">VISUAL COMPUTING SYSTEMS</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Winter 2019</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
 
+<!--
 <div>
 <img style="padding-bottom: 5px;" src="<?php echo base_url('assets/images/teaser.jpg'); ?>" width="800" height="125"></a>
 </div>
+-->
 
 <p style="padding-bottom: .15em">
-Visual computing tasks such as computational imaging, image/video
-understanding, and real-time 3D graphics are key responsibilities of
-modern computer systems ranging from sensor-rich smart phones,
-autonomous robots, and large datacenters. These workloads demand
-exceptional system efficiency and this course examines the key ideas,
-techniques, and challenges associated with the design of parallel,
-heterogeneous systems that accelerate visual computing
-applications. This course is intended for systems students interested
-in architecting efficient graphics, image processing, and computer
-vision platforms (both new hardware architectures and domain-optimized
-programming frameworks for these platforms) and for graphics, vision,
-and machine learning students that wish to understand throughput
-computing principles to design new algorithms that map efficiently to
-these machines.
+From smart phones, to multi-core
+CPUs and GPUs, to the world's largest supercomputers and web sites,
+parallel processing is ubiquitous in modern computing. The goal of
+this course is to provide a deep understanding of the fundamental
+principles and engineering trade-offs involved in designing modern
+parallel computing systems as well as to teach parallel programming
+techniques necessary to effectively utilize these machines. Because
+writing good parallel programs requires an understanding of key
+machine performance characteristics, this course will cover both
+parallel hardware and software design.
 </p>
 
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-<div>Tues/Thurs 1:30-2:50pm</div>
-<div>Room 60-109</div>
-<div>Instructor: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
+<div>Tues/Thurs 4:30-6:00pm</div>
+<div>Room 420-040</div>
+<div>Instructors: <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a> and <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
 
-<div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on course policies, logistics, and how to prepare for the course.</div>
+<div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on course policies and logistics.</div>
 
 </div>
 
 
-<div class="overview_main_item overview_ruled_element">Fall 2018 Schedule</div>
+<div class="overview_main_item overview_ruled_element">Winter 2019 Schedule</div>
 
 <table>
 
@@ -84,88 +82,65 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Sep 25', 'Course Introduction + Review of Throughput Hardware Design Principles', lecture_url('introreview'), '',
-              array('How superscalar, multi-core, SIMD, and hardware multi-threading are used in CPUs,
-	             GPUs; understanding latency and bandwidth constraints')),
+  lecture_def('Jan 8', 'Course Introduction + Why Parallelism?', '', 'bold',
+              array('Motivations for parallel chip decisions, challenges of parallelizing code')),
 
-  lecture_def('Sep 27', 'The Digital Camera Processing Pipeline', lecture_url('camerapipeline'), '',
-              array('Algorithms for taking raw sensor pixels to an RGB image: demosaicing, sharpening,
-	             correcting lens aberrations, multi-shot alignment/merging, image filtering')),
+  lecture_def('Jan 10', 'A Modern Multi-Core Processor', '', 'bold',
+              array('Forms of parallelism: multicore, SIMD, threading + understanding latency and bandwidth')),
 
-  lecture_def('Oct 2', 'Modern Smartphone Camera Processing (such as in the Pixel 2 Phone)', lecture_url('camerapipeline2'), '',
-             array('Multi-scale processing with Gaussian and Laplacian pyramids, HDR/local tone mapping,
-	            portrait mode in the Pixel 2 camera')),
+  lecture_def('Jan 15', 'Parallel Programming Models and their Corresponding HW/SW Implementations', '', 'bold',
+              array('ways of thinking about parallel programs, and their corresponding hardware implementations, ISPC programming')),
 
-  lecture_def('Oct 4', 'Efficiently Scheduling Image Processing Algorithms on Parallel Hardware', lecture_url('imagesched'), '',
-              array('Balancing locality, parallelism, and work, fusion and tiling,
-              design of the Halide domain-specific language, automatically scheduling image processing pipelines')),
+  lecture_def('Jan 17', 'Parallel Programming Basics', '', 'bold',
+              array('Thought process of parallelizing a program in data parallel and shared address space models')),
 
-  lecture_def('Oct 9', 'Specialized Hardware for Efficient Image Processing', lecture_url('imagehw'), '',
-              array('Benefits of fixed-function processing, comparing GPUs, DSPs, Image Signal Processors,
-	             and FPGAs for image processing, 
-		     domain-specific languages for hardware synthesis such as
-		     Darkroom/Rigel, compiling Halide to hardware')),
+  lecture_def('Jan 22', 'Program Optimization 1: Work Distribution and Scheduling', '', 'bold',
+              array('Achieving good work distribution while minimizing overhead, scheduling Cilk programs with work stealing')),
 
-  lecture_def('Oct 11', 'Lossy Image and Video Compression', lecture_url('compression'), '',
-              array('JPG compression. H.264 video representation/encoding, parallel encoding,
-	             motivations for ASIC acceleration,
-	             emerging opportunities for compression when machines,
-		     not humans, will observe most images')),
+  lecture_def('Jan 24', 'Program Optimization 2: Locality and Communication', '', 'bold',
+              array('Message passing, async vs. blocking sends/receives, pipelining, increasing arithmetic intensity, avoiding contention')),
 
-  lecture_def('Oct 16', 'The Light Field and Capture for VR Display', lecture_url('lightfield_vr'), '',
-              array('Light field representation, light-field cameras, computational challenges
-	             of synthesizing video streams for VR output, Google\'s Jump VR pipeline')),
+  lecture_def('Jan 29', 'GPU architecture and CUDA Programming', '', 'bold',
+              array('CUDA programming abstractions, and how they are implemented on modern GPUs')),
 
-  lecture_def('Oct 18', 'Efficient DNN Inference (for Image Analysis)', lecture_url('dnneval'), '',
-              array('popular DNN trunks and topologies, design of MobileNet,
-	             challenges of direct implementation, where the compute lies in modern networks,
-		     DNN pruning, neural architecture search')),
+  lecture_def('Jan 31', 'Data-Parallel Programming', '', 'bold',
+              array('Data parallel thinking: map, reduce, scan, prefix sum, groupByKey')),
 
-  lecture_def('Oct 23', 'Algorithms for Parallel DNN Training at Scale', lecture_url('dnntrain'), '',
-              array('Footprint challenges of training, model vs. data parallelism,
-	             asynchronous vs. synchronous training debate, parameter server designs,
-		     key optimizations for parallel training')),
+  lecture_def('Feb 5', 'Snooping-Based Cache Coherence', '', 'bold',
+              array('Definition of memory coherence, invalidation-based coherence using MSI and MESI, false sharing')),
 
-  lecture_def('Oct 25', 'Hardware Accelerators for DNN Inference', lecture_url('dnnhw'), '',
-              array('GPUs, Google TPU, special instructions for DNN evaluation,
-	             choice of precision in arithmetic, recent ISCA/MICRO papers on DNN acceleration')),
+  lecture_def('Feb 7', 'Memory Consistency', '', 'bold',
+              array('Consistency vs. coherence, relaxed consistency models and their motivation, acquire/release semantics')),
 
-  lecture_def('Oct 30', 'Algorithmic Optimization: Examples of Task-Motivated DNN Structure', lecture_url('dnnstructure'), '',
-              array('Neural module networks, discussion on value of modularity vs. end-to-end learning')),
+  lecture_def('Feb 12', 'Midterm Exam', '', 'bold', array('')),
 
-  lecture_def('Nov 1', 'Algorithmic Optimizations for DNN-Based Video Analysis', lecture_url('dnnvideo'), '',
-              array('Exploiting temporal coherence in video, pipelined networks,
-	             specialization to scene and camera viewpoint,
-		     sharing computations across applications and users')),
+  lecture_def('Feb 14', 'Implementing Synchronization', '', 'bold',
+              array('Machine-level atomic operations, implementing locks, implementing barriers, deadlock/livelock/starvation')),
 
-  lecture_def('Nov 6', 'Video Stream Processing at Cloud Scale', lecture_url('cloudvideo'), '',
-              array('Facebook SVE/Lumos, Scanner, processing as a service')),
+  lecture_def('Feb 19', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold',
+              array('Fine-grained snychronization via locks, basics of lock-free programming: single-reader/writer queues, lock-free stacks, the ABA problem, hazard pointers')),
 
-  lecture_def('Nov 8', 'The GPU-Accelerated Real-Time Graphics Pipeline', lecture_url('gfxpipeline'), '',
-              array('3D graphics pipeline as a machine architecture (abstraction),
-	             pipeline semantics/functionality, contrasting graphics pipeline architecture with
-		     compute-mode GPU architecture')),
+  lecture_def('Feb 21', 'Transactional memory', '', 'bold',
+              array('Motivation for transactions, design space of transactional memory implementations, lazy-optimistic HTM')),
 
-  lecture_def('Nov 13', 'Efficiently Accessing Memory: Hardware for Texture Mapping and Depth Buffering', lecture_url('gfxmemory'), '',
-              array('Texture sampling basics, hardware texture compression, depth-and-color buffer compression,
-	             motivations for hardware multi-threading for latency hiding in modern GPUs')),
+  lecture_def('Feb 26', 'Distributed Computing using Spark', '', 'bold',
+              array('producer-consumer locality, RDD abstraction, Spark implementation and scheduling')),
 
-  lecture_def('Nov 15', 'Scheduling the Graphics Pipeline onto a GPU', lecture_url('schedulinggfx'), '',
-              array('Molnar sorting taxonomy, dataflow scheduling under data amplification,
-	             tiled rendering for bandwidth-efficiency, deferred shading as a scheduling decision')),
+  lecture_def('Feb 28', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold',
+              array('Energy-efficient computing, motivation for heterogeneous processing, fixed-function processing, FPGAs, mobile SoCs')),
 
-  lecture_def('Nov 27', 'Guest Lecture: Bill Mark (Google)', '', 'bold',
-              array('Topic: specialized hardware for deep learning and computational photography at Google')),
+  lecture_def('Mar 5', 'Domain-Specific Programming Systems', '', 'bold',
+              array('Motivation for DSLs, case studies on Halide and TBD DSL')),
 
-  lecture_def('Nov 29', 'Domain-Specific Languages for Shading (with Tim Foley, NVIDIA)', '', 'bold',
-              array('Renderman Shading Language and Cg: contrasting two different levels of
-	             abstraction for shading languages, Slang')),
+  lecture_def('Mar 7', 'Domain-Specific Programming for Parallel Graph Processing', '', 'bold',
+              array('GraphLab, Ligra, and GraphChi, streaming graph processing, graph compression')),
 
-  lecture_def('Dec 4', 'Misc topics: Design of ML Frameworks / VR Rendering', lecture_url('mlframe_vr'), '',
-              array('Mapping shaders to GPUs, Design of platform for ML computations, rendering concerns of VR')),
+  lecture_def('Mar 12', 'Applications Talk TBD', '', 'bold',
+              array('Topic TBD: scaling a web site, DNN performance tuning, etc.')),
 
-  lecture_def('Dec 6', 'The Fusion of Rendering and Deep Learning', lecture_url('rtrt'), '',
-              array('How deep learning and hardware specialization stand to make real-time raytracing feasible'))
+  lecture_def('Mar 14', 'Course Wrap Up', '', 'bold',
+              array('Have a great spring break!'))
+
   );
 
 
@@ -220,25 +195,28 @@ foreach ($lectures as $lecture)
 
 </table>
 
-<div class="overview_main_item overview_ruled_element">Assignments and Projects</div>
+<div class="overview_main_item overview_ruled_element">Programming Assignments</div>
 
 <table>
 <tr>
-    <td class="schedule_date">optional</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348k/asst0">Optional Assignment 0: Analyzing Parallel Program Performance on a Quad-Core CPU</a>
-    </br>
-    All CVS348K students are encouraged to attempt this assignment during or before the first week of the course to check their background in parallel systems.</td>
+    <td class="schedule_date">Jan 17</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</span>
+</td>
 </tr>
 
 <tr>
-<td class="schedule_date">Oct 22</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348k/camera_asst">Assignment 1:</a> Burst Mode HDR Camera RAW Processing for the kPhone 348</td>
-</tr>
-<tr>
- <td class="schedule_date">optional</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348v/asst3">Optional Assignment 2: Implementing a Separable Conv Layer in Halide</a></td>
-
+<td class="schedule_date">Jan 29</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Multi-Threaded Web Server</span></td>
 </tr>
 
 <tr>
-    <td class="schedule_date">Dec 11</td><td class="schedule_lecture"><a href="<?php echo article_url('2'); ?>">Final Project Guidelines</a>: students will complete a substantial term project on a course-relevant topic of their choosing.</td>
+ <td class="schedule_date">Feb 11</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Parallel Graph Processing</span></td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple Renderer in CUDA</span></td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Mar 7</td><td class="schedule_lecture"><span class="bold_text">Assignment 5: Big Data Processing in Spark</span></td>
 </tr>
 
 </table>

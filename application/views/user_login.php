@@ -1,8 +1,8 @@
 
 <div class="narrow_container">
 
-<div class="main_title">Visual Computing Systems</div>
-<div>Stanford CS348K</div>
+<div class="main_title">Parallel Computing</div>
+<div>Stanford CS149</div>
 
 <div style="padding-top: 20px; padding-bottom: 10px;">
 

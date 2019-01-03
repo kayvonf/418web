@@ -41,7 +41,7 @@ Profile successfully updated!
 
 <div style="float: left; padding-right: 25px;">
 <div class="form_label">Department</div>
-<div class="form_help_text">(e.g., CS, ECE, ISR, CMUQ)</div>
+<div class="form_help_text">(e.g., CS, EE, Physics)</div>
 <div><input type="input" class="form_input_box" name="department" value="<?php echo $user->department?>"></div>
 </div>
 

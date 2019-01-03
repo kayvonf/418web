@@ -9,34 +9,22 @@ function make_url($first, $second) {
 
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS348K, Fall 2018</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">VISUAL COMPUTING SYSTEMS</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Winter 2019</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
 
 
-<div>Stanford CS348K, Fall 2018</div>
-     <div><Tues/Thurs 1:30-2:50pm</div>
-     <div>Room 60-109</div>
-     <div style="padding-bottom: 20px;">Instructor: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
+<div>Stanford CS149, Winter 2019</div>
+     <div><Tues/Thurs 4:30-6:00pm</div>
+     <div>Room 420-040</div>
+     <div style="padding-bottom: 20px;">Instructors:
+     <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a> and <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a>
+     </div>
 
 <div class="overview_main_item overview_ruled_element">Course Description</div>
 
-<p style="padding-bottom: .15em">
-Visual computing tasks such as computational imaging, image/video
-understanding, and real-time 3D graphics are key responsibilities of
-modern computer systems ranging from sensor-rich smart phones,
-autonomous robots, and large datacenters. These workloads demand
-exceptional system efficiency and this course examines the key ideas,
-techniques, and challenges associated with the design of parallel,
-heterogeneous systems that accelerate visual computing
-applications.</p>
 
-<p>This course is intended for systems students interested in
-architecting efficient graphics, image processing, and computer vision
-platforms (both new hardware architectures and domain-optimized
-programming frameworks for these platforms) and for graphics, vision,
-and machine learning students that wish to understand throughput
-computing principles so they can design new algorithms that map
-efficiently to these machines.
+<p style="padding-bottom: .15em">
+From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomputers and web sites, parallel processing is ubiquitous in modern computing. The goal of this course is to provide a deep understanding of the fundamental principles and engineering trade-offs involved in designing modern parallel computing systems as well as to teach parallel programming techniques necessary to effectively utilize these machines. Because writing good parallel programs requires an understanding of key machine performance characteristics, this course will cover both parallel hardware and software design.
 </p>
 
 
@@ -44,24 +32,45 @@ efficiently to these machines.
 
 <div class="indented_block">
 
-<div>
-  <img src="<?php echo make_url($staff_photos_url,'kayvonf.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-  <div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
-  <div>[kayvonf at cs.stanford] </div>
-  <div>Gates 366</div>
-  <div>Office hours: by appointment</div>
+<div style="width: 360px; float: left;">
+  <img src="<?php echo make_url($staff_photos_url,'kunle.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+  <div><a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
+  <div>[kunle at stanford] </div>
+  <div>Gates </div>
+  <div>Office hours: TBD</div>
   <div style="clear: both;">&nbsp;</div>
 </div>
 
-<div>
-  <img src="<?php echo make_url($staff_photos_url,'apoms.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-  <div><a href="https://www.cs.cmu.edu/~apoms/">Alex Poms</a> (course TA)</div>
-  <div>[apoms at cs.stanford]</div>
-  <div>Gates 372</div>
-  <div>Office hours: by appointment</div>
-  <div style="clear: both;">&nbsp;</div>
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_photos_url, 'kayvonf.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
+<div>[kayvonf at cs.stanford]</div>
+<div>GHC 366</div>
+<div>Office hours: TBD</div>
+<div style="clear: both;">&nbsp;</div>
 </div>
 
+<div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful TAs:</div>
+
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_photos_url, 'juan.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Juan Manual Camacho</div>
+<div>[jcamach2 at stanford]</div>
+<div class="bold_text">Office hours:</div>
+<div>TBD</div>
+<div>Location: TBD</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
+
+<div style="width: 360px; float: left;">
+<img src="<?php echo make_url($staff_photos_url, 'mario.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Mario Srouji</div>
+<div>[msrouji at stanford]</div>
+<div class="bold_text">Office hours:</div>
+<div>TBD</div>
+<div>Location: TBD</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
 
 <div style="clear: both;">&nbsp;</div>
 
@@ -71,91 +80,34 @@ efficiently to these machines.
 
 <div class="overview_main_item overview_ruled_element">Announcements via Piazza</div>
 
-<p>All class announcements will be made via our <a href="http://piazza.com/stanford/fall2018/cs348k/home" target="_blank">class Piazza Page</a>. Please make sure you <a href="http://piazza.com/stanford/fall2018/cs348k" target="_blank">sign up</a> for the course on Piazza.</p>
+<p>All class announcements will be made via our <a href="piazza.com/stanford/winter2019/cs149/home" target="_blank">class Piazza Page</a>. Please make sure you <a href="https://piazza.com/class/jqgzf4qojwk1nz" target="_blank">sign up</a> for the course on Piazza.</p>
 
-<div class="overview_main_item overview_ruled_element">What You Will Do</div>
+<div class="overview_main_item overview_ruled_element">Assignments, Projects, and Exams: (What You Will Do!)</div>
 
 <p>
-All students will be expected to:
+<span class="italic_text">Programming assignments.</span> Students
+will complete five programming assignments using parallel programming systems such as ISPC, OpenMP, CUDA, and Spark.
+You are not expected to know these languages/systems in advance of the course, you will pick them up as you go.
+</p>
+
+<p><span class="italic_text">Take home written assignments.</span> Students will
+complete five take-home written quizzes assigned approximately every two weeks.</p>
+
+<p><span class="italic_text">Making per-lecture comments.</span> Each
+student must individually contribute one interesting comment per
+lecture using the course web site.</p>
+
+<p><span class="italic_text">Midterm and Final Exam.</span> There will be midterm and final exams.</p>
+
+
+<div class="overview_main_item overview_ruled_element">Grading</div>
+
 <ul>
-  <li>Perform academic paper readings approximately every class
-(and be prepared to summarize aspects of the paper and participate in class paper discussion). <span class="bold_text colored_text">35&#37;</span>
-  </li>
-  <li>Complete two short programming assignments (written in
-  languages such as C/C++, ISPC, and Halide) that are designed to give
-  brief, but first-hand experience with course topics. <span class="bold_text colored_text">20&#37;</span>
-  </li>
-  <li>Complete one take-home written assignment that reinforces concepts in the course.<span class="bold_text colored_text">10&#37;</span></li>
-  <li>Complete a self-selected term project.  Students may work in
-  teams of two for the final project. <span class="bold_text colored_text">35&#37;</li>
+<li>Programming Assignments (5): 5&#37; + 8&#37; + 12&#37; + 12&#37; + 8&#37 = <span class="colored_text">45&#37;</span></li>
+<li>Written Assignments (5): <span class="colored_text">30&#37;</span></li>
+<li>Exams (2):  <span class="colored_text">25&#37;</span></li>
 </ul>
-</p>
 
-<div class="overview_main_item overview_ruled_element">Prerequisites and How to Prepare</div>
-
-<p>
-Hello there. I'm glad you are interested in cs348K. This course
-focuses on the design of computing systems that efficiently meet the
-aggressive performance demands of visual computing
-applications. Specifically we'll be concerned with digital camera
-image processing, image/video understanding (largely deep learning
-based methods), and real-time 3D graphics. Since designing highly
-efficient systems requires in-depth knowledge of the workloads to
-execute, we will cover key algorithms used in each of these
-domains. That is, you will certainly learn some advanced
-graphics/vision. Conversely, to execute with high performance, algorithms
-must be mapped efficiently to hardware resources, and to do so, we
-will talk extensively about the characteristics of modern parallel
-architecture, and how that impacts the choice of algorithms used. That
-is, we will also be discussing parallel computer architecture is this
-class. A key theme of this course is that, to achieve the most
-efficient solutions, modern systems architects should simultaneously
-consider opportunities for innovation in the design of algorithms, the
-programming frameworks used to express them, and the capabilities of
-the underlying hardware architecture. Regardless of whether you are an
-application developer, systems software programmer, or hardware
-architect, I want to you leave this course with a better understanding
-of how to think end-to-end.</p>
-
-<p>It is likely that you may have a strong background in parallel
-architecture or in algorithms for either computer graphics/computer
-vision, but not in both. <span class="bold_text">Do not
-panic, but please read the tips below.</span></p>
-
-<p>This is a graduate-level course but advanced undergraduates are
-  certainly welcome. (You are responsible for determining whether you
-  can keep up with the course). <span class="bold_text">For undergraduates cs107 is a strict
-  prerequisite.</span> Although the programming assignments in this
-  class are short, you need to have a strong systems programming
-  background. The more prior implementation experience the better.
-</p>
-
-<p>On the parallel systems side, I recommend having some background in
-modern parallel computing at the level of cs149, or a computer
-architecture course such as ee282.  <span class="bold_text">You may
-wish to review some of the lectures in my own prior course on parallel
-computing at CMU</span>, from which you can find public online
-lectures <a href="http://15418.courses.cs.cmu.edu/spring2017/">here
-(2017)</a> and <a
-href="http://15418.courses.cs.cmu.edu/spring2017/">here (2016)</a>
-(newer content in 2017, better videos in 2016).</p>
-    
-<p>On the graphics, computer vision, and deep learning side of the
-fence, I recommend you have some background implementing algorithms in
-at least one of these areas.  For 3D computer graphics, that would be
-at the level of cs248, for computer vision it is cs231a or cs230n
-(cs230n is very relevant to our discussions), and for image
-processing: cs232/ee368.  Graduate-level systems and computer
-architecture students without substantial graphics/computer vision
-experience are welcome in cs348V (in fact the course is designed for
-you!), but you must be willing to familiarize yourselves with key
-graphics/visual computing concepts during the course.  You can't
-design good systems unless you really understand the workloads.
-
-<p>If you are still unsure if you're prepared to take the course, just come talk to
- your <a href="http://graphics.stanford.edu/~kayvonf">friendly
- instructor</a> before the start of the course.
-</p>
 
 <p>&nbsp;</p>
 
