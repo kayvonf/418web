@@ -14,7 +14,13 @@
 | path to your installation.
 |
 */
-$config['base_url'] = 'http://cs348k.stanford.edu/fall18/';
+
+# NOTE(kayvonf): the reason this is set is that on my GCP server, the
+# redirect from xxx.stanford.edu is somehow losing the appropriate
+# requestor host.  As a result, all the generated links have the
+# server's IP address as the hostname, not xxx.stanford.edu
+$config['base_url'] = 'http://cs348k.stanford.edu/cs348k/fall18/';
+
 
 /*
 |--------------------------------------------------------------------------
