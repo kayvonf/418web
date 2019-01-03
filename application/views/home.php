@@ -130,42 +130,42 @@ $lectures = array(
               array('GPUs, Google TPU, special instructions for DNN evaluation,
 	             choice of precision in arithmetic, recent ISCA/MICRO papers on DNN acceleration')),
 
-  lecture_def('Oct 30', 'Algorithmic Optimization: Examples of Task-Motivated DNN Structure', '', 'bold',
+  lecture_def('Oct 30', 'Algorithmic Optimization: Examples of Task-Motivated DNN Structure', lecture_url('dnnstructure'), '',
               array('Neural module networks, discussion on value of modularity vs. end-to-end learning')),
 
-  lecture_def('Nov 1', 'Algorithmic Optimizations for DNN-Based Video Analysis', '', 'bold',
+  lecture_def('Nov 1', 'Algorithmic Optimizations for DNN-Based Video Analysis', lecture_url('dnnvideo'), '',
               array('Exploiting temporal coherence in video, pipelined networks,
 	             specialization to scene and camera viewpoint,
 		     sharing computations across applications and users')),
 
-  lecture_def('Nov 6', 'Video Stream Processing at Cloud Scale', '', 'bold',
-              array('Facebook SVE/Lumos, Scanner, emerging platforms for video processing as a service')),
+  lecture_def('Nov 6', 'Video Stream Processing at Cloud Scale', lecture_url('cloudvideo'), '',
+              array('Facebook SVE/Lumos, Scanner, processing as a service')),
 
-  lecture_def('Nov 8', 'The GPU-Accelerated Real-Time Graphics Pipeline', '', 'bold',
+  lecture_def('Nov 8', 'The GPU-Accelerated Real-Time Graphics Pipeline', lecture_url('gfxpipeline'), '',
               array('3D graphics pipeline as a machine architecture (abstraction),
 	             pipeline semantics/functionality, contrasting graphics pipeline architecture with
 		     compute-mode GPU architecture')),
 
-  lecture_def('Nov 13', 'Hardware Acceleration of Texture Mapping and Depth Buffering', '', 'bold',
+  lecture_def('Nov 13', 'Efficiently Accessing Memory: Hardware for Texture Mapping and Depth Buffering', lecture_url('gfxmemory'), '',
               array('Texture sampling basics, hardware texture compression, depth-and-color buffer compression,
 	             motivations for hardware multi-threading for latency hiding in modern GPUs')),
 
-  lecture_def('Nov 15', 'Scheduling the Graphics Pipeline onto a GPU', '', 'bold',
+  lecture_def('Nov 15', 'Scheduling the Graphics Pipeline onto a GPU', lecture_url('schedulinggfx'), '',
               array('Molnar sorting taxonomy, dataflow scheduling under data amplification,
 	             tiled rendering for bandwidth-efficiency, deferred shading as a scheduling decision')),
 
   lecture_def('Nov 27', 'Guest Lecture: Bill Mark (Google)', '', 'bold',
-              array('Topic: specialized hardware for deep learning and computational photography')),
+              array('Topic: specialized hardware for deep learning and computational photography at Google')),
 
   lecture_def('Nov 29', 'Domain-Specific Languages for Shading (with Tim Foley, NVIDIA)', '', 'bold',
               array('Renderman Shading Language and Cg: contrasting two different levels of
 	             abstraction for shading languages, Slang')),
 
-  lecture_def('Dec 4', 'High-Performance Ray Tracing Techniques', '', 'bold',
-              array('Algorithms for fast ray tracing, mapping ray tracing to GPU hardware')),
+  lecture_def('Dec 4', 'Misc topics: Design of ML Frameworks / VR Rendering', lecture_url('mlframe_vr'), '',
+              array('Mapping shaders to GPUs, Design of platform for ML computations, rendering concerns of VR')),
 
-  lecture_def('Dec 6', 'Guest Lecture: Emerging GPU Hardware for Accelerating Ray Tracing', '', 'bold',
-              array('How deep learning and custom hardware will soon make real-time raytracing feasible'))
+  lecture_def('Dec 6', 'The Fusion of Rendering and Deep Learning', lecture_url('rtrt'), '',
+              array('How deep learning and hardware specialization stand to make real-time raytracing feasible'))
   );
 
 
@@ -238,7 +238,7 @@ foreach ($lectures as $lecture)
 </tr>
 
 <tr>
-    <td class="schedule_date">Dec 10</td><td class="schedule_lecture"><a href="<?php echo article_url('2'); ?>">Final Project Guidelines</a>: students will complete a substantial term project on a course-relevant topic of their choosing.</td>
+    <td class="schedule_date">Dec 11</td><td class="schedule_lecture"><a href="<?php echo article_url('2'); ?>">Final Project Guidelines</a>: students will complete a substantial term project on a course-relevant topic of their choosing.</td>
 </tr>
 
 </table>

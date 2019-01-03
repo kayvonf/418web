@@ -235,6 +235,219 @@ GPUs, etc.</p>
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnntrain'); ?>">Lecture 9: Parallel DNN Training</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+ 
+     <ul>
+<li><a href="https://arxiv.org/abs/1706.02677" target="_blank">Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour</a>. Goyal et al. 2017</li>
+</ul>
+
+     <div>Further Reading: </div>
+     <ul>
+     <li><a href="https://arxiv.org/abs/1709.05011" target="_blank">ImageNet Training in Minutes</a>. You et al. 2018</li>
+     <li><a href="https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf" target="_blank">Scaling Distributed Machine Learning with the Parameter Server</a>, Li et al. OSDI 2014</li>
+     <li><a href="https://arxiv.org/abs/1712.01887">Deep Gradient Compression</a>. Lin et al. ICLR 2018</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnnhw'); ?>">Lecture 10: Hardware Accelerators for Deep Neural Network Evaluation</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+       <li><a href="https://arxiv.org/abs/1704.04760" target="_blank">In-Datacenter Performance Analysis of a Tensor Processing Unit</a>. Jouppi et al. ISCA 2017</li>
+     </ul>
+       
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://arxiv.org/abs/1708.04485" target="_blank">SCNN: An Accelerator for Compressed-sparse Convolutional Neural Networks</a>. Parashar et al. ISCA 2017</li>
+     <li><a href="https://arxiv.org/abs/1602.01528" target="_blank">EIE: Efficient Inference Engine on Compressed Deep Neural Network</a>, Han et al. ISCA 2016</li>
+     <li><a href="https://arxiv.org/abs/1602.08124" target="_blank">vDNN: Virtualized Deep Neural Networks for Scalable, Memory-Efficient Neural Network Design</a>, Rhu et al. MICRO 2016</li> 
+     <li><a href="http://eyeriss.mit.edu/" target="_blank">Eyeriss: A Spatial Architecture for Energy-Efficient Dataflow for Convolutional Neural Network</a>, Chen et al. ISCA 2016</li>
+     </ul>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnnstructure'); ?>">Lecture 11: Imposing Structure on DNN Topologies</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="https://cs.stanford.edu/people/jcjohns/iep/" target="_blank">Inferring and Executing Programs for Visual Reasoning</a>. J. Johnson et al. ICCV 2017</li>
+     </ul>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://cs.stanford.edu/people/jcjohns/clevr/" target="_blank">CLEVR: A Diagnostic Dataset for
+     Compositional Language and Elementary Visual Reasoning</a>. J. Johnson et al. CVPR 2017</li>
+<li><a href="https://arxiv.org/abs/1511.02799" target="_blank">Neural Module Networks</a>, Andreas et al. CVPR 2016</li>
+     <li><a href="https://rmullapudi.bitbucket.io/data/hydranet_cvpr_final.pdf">HydraNets: Specialized Dynamic Architectures for Efficient Inference</a>. Mullapudi et al. CVPR 2018</li>
+     <li><a href="https://groups.csail.mit.edu/graphics/hdrnet/" target="_blank">Deep Bilateral Learning
+for Real-Time Image Enhancement</a>. Gharni et al. SIGGRAPH 2017</li>
+     </ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('dnnvideo'); ?>">Lecture 12: Efficient Inference on Video Streams</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="https://arxiv.org/abs/1703.02529" target="_blank">NoScope: Optimizing Neural Network Queries over Video at Scale</a>. D. Kang et al. 2017</li>
+     </ul>
+
+     <div>Further Reading:</div>
+     <ul>
+       <li><a href="https://www.usenix.org/conference/atc18/presentation/jiang" target="_blank">Mainstream: Dynamic Stem-Sharing for Multi-Tenant Video Processing</a>. Jiang et al. USENIX 2018</li>
+       <li><a href="https://arxiv.org/abs/1611.07715" target="_blank">Deep Feature Flow for Video Recognition</a>. Zhu et al. CVPR 2017</li>
+       <li><a href="https://arxiv.org/abs/1608.03609" target="_blank">Clockwork Convnets for Video Semantic Segmentation</a>. E. Shelhamer et al. 2016</li>
+     </ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('cloudvideo'); ?>">Lecture 13: Video Processing at Cloud Scale</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><a href="http://graphics.stanford.edu/papers/scanner/scanner_sig18.pdf" target="_blank">Scanner: Efficient Video Analysis at Scale</a>. Poms et al. SIGGRAPH 2018 (<a href="https://github.com/scanner-research/scanner">Github code here</a>)</li>
+     </ul>
+
+
+     <div>Further Reading:</div>
+     <ul>
+       <li><a href="https://research.fb.com/wp-content/uploads/2017/10/sosp-226-cameraready.pdf" target="_blank">SVE: Distributed Video Processing at Facebook Scale</a>. Huang et al. SOSP 2017</li>
+       <li><a href="http://people.cs.uchicago.edu/~junchenj/docs/Chameleon_SIGCOMM_CameraReady.pdf" target="_blank">Chameleon: Scalable Adaptation of Video Analytics</a>. Jiang et al. SIGCOMM 2018</li>
+       <li><a href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-fouladi.pdf" target="_blank">Encoding, Fast and Slow: Low-Latency Video Processing Using Thousands of Tiny Threads</a>. Fouladi et al. NSDI 2017</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('gfxpipeline'); ?>">Lecture 14: Real-Time 3D Graphics Pipeline Architecture
+     </a></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+     <ul>
+     <li><div class="bold_text" style="padding-bottom: 10px;">Please read the Fouladi et al. paper listed under the recommended readings from last class.</div></li>
+     </ul>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://engineering.riotgames.com/news/trip-down-lol-graphics-pipeline" target="_blank">A Trip Down the LOL Graphics Pipeline</a>. A nice introductory blog post for Riot Games that illustrates all the different rendering passes used to construct a League of Legends scene.  Note how each of these passes draws geometry under different graphics pipeline state configurations.</li>
+    <li><a href="https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/" target="_blank">A Trip Down the Graphics Pipeline</a>. A much more detailed blog post by Fabian Giesen describing the Direct3D 10-class pipeline</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/design_opengl.pdf" target="_blank">The Design of the OpenGL Graphics Interface</a>. by M. Segal and K. Akeley. [unpublished 1994]</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/blythe06_d3d10.pdf" target="_blank">The Direct3D 10 System</a> by D. Blythe. SIGGRAPH 2006</li>
+     </ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('gfxmemory'); ?>">Lecture 15: Data Access in the Graphics Pipeline (Efficient Texture Mapping and Depth Buffering)
+     </a></div>
+
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/williams83_mipmap.pdf" target="_blank">Pyramidal Parametrics</a>. L. Williams, Computer Graphics 1983</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/peachey90_texthrift.pdf" target="_blank">Texture on Demand</a>. D. Peachy. Pixar Technical Memory #217. 1990</li>
+<li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/hakura97_texcaching.pdf" target="_blank">The Design and Analysis of a Cache Architecture for Texture Mapping</a>. Z. S. Hakura and Anoop Gupta, ISCA 1997</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/igehy98_texprefetching.pdf" target="_blank">Prefetching in a Texture Cache Architecture</a>. H. Igehy et al. Graphics Hardware 1998<br/></li>
+     <li><a href="http://faculty.cs.tamu.edu/schaefer/research/cardinality.pdf" target="_blank">Cardinality-Constrained Texture Filtering</a>. J. Manson and S. Schaefer. SIGGRAPH 2013.</li>
+<li><a href="http://faculty.cs.tamu.edu/schaefer/research/ParamAwareMIP.pdf" target="_blank">Parameterization-Aware MIP-Mapping</a>. J. Manson and S. Schaefer. Computer Graphics Forum. 2012.</li>
+     </ul>
+
+     <div>Further Reading on Texture Compression:</div>
+     <ul>
+     <li><a href="http://web.onetel.net.uk/~simonnihal/assorted3d/fenney03texcomp.pdf" target="_blank">Texture Compression using Low-Frequency Signal Modulation</a>. S. Fenney. Graphics Hardware 2003</li>
+     <li><a href="http://fileadmin.cs.lth.se/graphics/research/papers/ipackman2005/"  target="_blank">iPACKMAN: High-Quality, Low-Complexity Texture Compression for Mobile Phones</a>. J. Str&ouml;m and T. Akenine-M&ouml;ller. Graphics Hardware 2005</li>
+     <li><a href="http://www.jacobstrom.com/publications/StromPetterssonGH07.pdf"  target="_blank">ETC2: Texture Compression using Invalid Combinations</a>. J. Str&ouml;m and M. Pettersson. Graphics Hardware 2007</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/nystad12_astc.pdf"  target="_blank">Adaptive Scalable Texture Compression</a>. T. Olson et al. High Performance Graphics 2012</li>
+<li><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb694531(v=vs.85).aspx" target="_blank">Block Compression in Direct3D 10</a>. MSDN Developer Reference. 2013</li>
+     </ul>
+
+     <div>Further Reading on Depth Compression:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/hasselgren06_zcompression.pdf" target="_blank">Efficient Depth Buffer Compression</a>. J. Hasselgren and T. Akenine M&ouml;ller. </li>
+     <li><a href="http://software.intel.com/sites/default/files/article/392311/stochastic-depth-buffer-compression-using-generalized-plane-encoding.pdf" target="_blank">Stochastic Depth Buffer Compression using Generalized Plane Encoding</a>. M. Andersson et al. Computer Graphics Forum 2013</li>     
+     </ul>
+</div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('schedulinggfx');?>">Lecture 16: Scheduling the Graphics Pipeline on a GPU</a></div>
+
+     <div class="book_lecture_indent">
+
+     <div class="bold_text" style="padding-bottom: 10px;">There is no required reading for this lecture.</div>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/eldridge00_pomegranate.pdf" target="_blank">Pomegranate: A Fully Scalable Graphics Architecture</a>. M. Eldridge et al. SIGGRAPH 2000</li>
+     <li><a href="https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline" target="_blank">Life of a Triangle - NVIDIA's Logical Pipeline</a>. C. Kubisch (NVIDIA GameWorks Blog, 2015)
+     <li><a href="http://attila.ac.upc.edu/wiki/images/d/db/HPG10_Hot3D_Fermi.pdf" target="_blank">Fast Tessellated Rendering on Fermi GF100</a>. T. Purcell (High Performance Graphics Hot3D talk)</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/molnar94_sorting.pdf" target="_blank">A Sorting Classification of Parallel Rendering</a>. S. Molnar et al. IEEE Computer Graphics and Applications, 1994.</li>
+     </ul>
+     </div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <span class="bold_text">Lecture 17: Domain-Specific Languages for Shading</span></div>
+
+     <div class="book_lecture_indent">
+
+     <div>Required Reading:</div>
+
+     <ul>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/hanrahan90_rsl.pdf" target="_blank">A Language for Shading and Lighting Calculations</a>. P. Hanrahan and J. Lawson. SIGGRAPH 1990</li>
+     <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15869-f11/www/readings/mark03_cg.pdf" target="_blank">Cg: A System for Programming Graphics Hardware in a C-like Language</a>. W. R. Mark et al. SIGGRAPH 2003</li>
+
+     </ul>
+
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="http://graphics.cs.cmu.edu/projects/slang/" target="_blank">Slang: Language Mechanisms for Extensible Real-time Shading Systems</a>. Y. He, K. Fatahalian, T. Foley. SIGGRAPH 2018</li>
+     <li><a href="http://graphics.cs.cmu.edu/projects/shadercomp/" target="_blank">Shader Components: Modular and High Performance Shader Development</a>. Y. He et al. SIGGRAPH 2017</li>
+     <li><a href="http://graphics.stanford.edu/projects/shading/pubs/sig2001/" target="_blank">A Real-Time Procedural Shading System for
+Programmable Graphics Hardware</a>. K. Proudfoot et al. SIGGRAPH 2001</li>
+     <li><a href="http://graphics.pixar.com/library/ShadeTrees/paper.pdf" target="_blank">Shade Trees</a>. R. Cook. SIGGRAPH 1984</li>
+     <li><a href="http://dl.acm.org/citation.cfm?id=325247" target="_blank">An Image Synthesizer</a>. K. Perlin. SIGGRAPH 1985</li>	
+
+     </ul>
+     </div>
+</div>
+
 
 
 <p>&nbsp;</p>
