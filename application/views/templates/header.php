@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<link rel="icon" href="<?=base_url()?>assets/images/favicon/dragon.png" type="image/png">
+<link rel="icon" href="<?=base_url()?>assets/images/favicon/stanford.png" type="image/png">
 <?php
    $page_title = $page_name;
    if (strlen($page_name) == 0)
