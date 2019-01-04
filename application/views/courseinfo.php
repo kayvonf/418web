@@ -78,6 +78,30 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 </div> <!-- indented -->
 
 
+<div class="overview_main_item overview_ruled_element">Textbook</div>
+
+<p> There is no required textbook for CS149. However, you may find the following textbooks helpful.  However, in general these days there's plenty of great parallel programming resources available for free on the web.</p>
+
+<p>
+<div>John L. Hennessy and David A. Patterson</div>
+<div>Computer Architecture, Sixth Edition: A Quantitative Approach. Morgan Kaufmann, 2017</div>
+<div><a href="https://www.amazon.com/Computer-Architecture-Quantitative-Approach-Kaufmann/dp/0128119055" target="_blank">[ On Amazon ]</a></div>
+</p>
+
+<p>
+<div>Jason Sanders</div>
+<div>CUDA by Example: An Introduction to General-Purpose GPU Programming. 1st Edition. Addison-Wesley. 2010</div>
+<div><a href="https://www.amazon.com/CUDA-Example-Introduction-General-Purpose-Programming/dp/0131387685" target="_blank">[ On Amazon ]</a></div>
+</p>
+
+<p>
+<div>David Kirk and Wen-mei Hwu</div>
+<div>Programming Massively Parallel Processors, Second Edition: A Hands-on Approach. 2nd Edition. Morgan Kauffmann. 2012</div>
+<div><a href="https://www.amazon.com/Programming-Massively-Parallel-Processors-Second/dp/0124159923" target="_blank">[ On Amazon ]</a></div>
+</p>
+
+
+
 <div class="overview_main_item overview_ruled_element">Announcements via Piazza</div>
 
 <p>All class announcements will be made via our <a href="piazza.com/stanford/winter2019/cs149/home" target="_blank">class Piazza Page</a>. Please make sure you <a href="https://piazza.com/class/jqgzf4qojwk1nz" target="_blank">sign up</a> for the course on Piazza.</p>
