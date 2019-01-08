@@ -1,34 +1,34 @@
 
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Winter 2019</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248, Winter 2019</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">INTERACTIVE COMPUTER GRAPHICS</div>
 
-<!--
+
 <div>
 <img style="padding-bottom: 5px;" src="<?php echo base_url('assets/images/teaser.jpg'); ?>" width="800" height="125"></a>
 </div>
--->
 
 <p style="padding-bottom: .15em">
-From smart phones, to multi-core
-CPUs and GPUs, to the world's largest supercomputers and web sites,
-parallel processing is ubiquitous in modern computing. The goal of
-this course is to provide a deep understanding of the fundamental
-principles and engineering trade-offs involved in designing modern
-parallel computing systems as well as to teach parallel programming
-techniques necessary to effectively utilize these machines. Because
-writing good parallel programs requires an understanding of key
-machine performance characteristics, this course will cover both
-parallel hardware and software design.
+
+This course provides a comprehensive introduction to computer
+graphics, focusing on fundamental concepts and techniques, as well as
+their cross-cutting relationship to multiple problem domains in
+interactive graphics (such as rendering, animation, geometry, image
+processing). Topics include: 2D and 3D drawing, sampling,
+interpolation, rasterization, image compositing, the GPU graphics
+pipeline (and parallel rendering), geometric transformations, curves
+and surfaces, geometric data structures, subdivision, meshing, spatial
+hierarchies, image processing, compression, time integration,
+physically-based animation, and inverse kinematics.
 </p>
 
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-<div>Tues/Thurs 4:30-6:00pm</div>
-<div>Room 420-040</div>
-<div>Instructors: <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a> and <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
+<div>Tues/Thurs noon-1:30pm</div>
+<div>Room: Gates B1</div>
+<div>Instructor: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
 
 <div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on course policies and logistics.</div>
 
@@ -82,66 +82,67 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Jan 8', 'Course Introduction + Why Parallelism?', '', 'bold',
-              array('Motivations for parallel chip decisions, challenges of parallelizing code')),
+  lecture_def('Jan 8', 'Course Introduction + Intro to Drawing', '', 'bold',
+              array('Breadth of graphics, simple drawing of lines, linear algebra and vector math review')),
 
-  lecture_def('Jan 10', 'A Modern Multi-Core Processor', '', 'bold',
-              array('Forms of parallelism: multicore, SIMD, threading + understanding latency and bandwidth')),
+  lecture_def('Jan 10', 'Drawing a Triangle + Basics of Sampling Theory', '', 'bold',
+              array('Drawing a triangle via point sampling, point-in-triangle testing, aliasing, Fourier interpretation of aliasing, anti-aliasing')),
 
-  lecture_def('Jan 15', 'Parallel Programming Models and their Corresponding HW/SW Implementations', '', 'bold',
-              array('ways of thinking about parallel programs, and their corresponding hardware implementations, ISPC programming')),
+  lecture_def('Jan 15', 'Cooordinate Spaces and Transformations', '', 'bold',
+              array('Definition of linear transform, basic geometric transforms, homogeneous coordinates, transform hierarchies, perspective projection')),
 
-  lecture_def('Jan 17', 'Parallel Programming Basics', '', 'bold',
-              array('Thought process of parallelizing a program in data parallel and shared address space models')),
+  lecture_def('Jan 17', 'Perspective Projection and Texture Mapping', '', 'bold',
+              array('perspective projection, texture coordinate space, bilinear/trilinear interpolation, how aliasing arises during texture sampling, prefiltering as an anti-aliasing technique')),
 
-  lecture_def('Jan 22', 'Program Optimization 1: Work Distribution and Scheduling', '', 'bold',
-              array('Achieving good work distribution while minimizing overhead, scheduling Cilk programs with work stealing')),
+  lecture_def('Jan 22', 'The Rasterization Pipeline', '', 'bold',
+              array('Z-buffer algorithm, image compositing, end-to-end 3D graphics pipeline as implemented by modern GPUs')),
 
-  lecture_def('Jan 24', 'Program Optimization 2: Locality and Communication', '', 'bold',
-              array('Message passing, async vs. blocking sends/receives, pipelining, increasing arithmetic intensity, avoiding contention')),
+  lecture_def('Jan 24', 'Introduction to Geometry', '', 'bold',
+              array('Properties of surfaces (manifold, normal, curvature), implicit vs. explicit representations, basic representations such as triangle meshes, bezier curves and patches')),
 
-  lecture_def('Jan 29', 'GPU architecture and CUDA Programming', '', 'bold',
-              array('CUDA programming abstractions, and how they are implemented on modern GPUs')),
+  lecture_def('Jan 29', 'Mesh Representations and Geometry Processing', '', 'bold',
+              array('Half-edge mesh structures, mesh operations such as tessellation and simplification')),
 
-  lecture_def('Jan 31', 'Data-Parallel Programming', '', 'bold',
-              array('Data parallel thinking: map, reduce, scan, prefix sum, groupByKey')),
+  lecture_def('Jan 31', 'Geometric Queries', '', 'bold',
+              array('closest point, ray-triangle intersection, ray-mesh intersection')),
 
-  lecture_def('Feb 5', 'Snooping-Based Cache Coherence', '', 'bold',
-              array('Definition of memory coherence, invalidation-based coherence using MSI and MESI, false sharing')),
+  lecture_def('Feb 5', 'Accelerating Geometric Queries', '', 'bold',
+              array('Acceleration structures such as bounding volume hierarchies, K-D trees, uniform grids, application to ray-casting, the relationship between rasterization and ray casting')),
 
-  lecture_def('Feb 7', 'Memory Consistency', '', 'bold',
-              array('Consistency vs. coherence, relaxed consistency models and their motivation, acquire/release semantics')),
+  lecture_def('Feb 7', 'Materials, Lighting, and Shading', '', 'bold',
+              array('Common material models, use of texture for lighting (bump mapping, environment mapping, prebaked lighting), motivating need for shaders on modern GPUs')),
 
-  lecture_def('Feb 12', 'Midterm Exam', '', 'bold', array('')),
+  lecture_def('Feb 12', 'Midterm Exam', '', 'bold',
+              array('Good luck!')),
 
-  lecture_def('Feb 14', 'Implementing Synchronization', '', 'bold',
-              array('Machine-level atomic operations, implementing locks, implementing barriers, deadlock/livelock/starvation')),
+  lecture_def('Feb 14', 'Rendering Challenges of Virtual Reality', '', 'bold',
+              array('VR Headset hardware, how head-mounted displays cause challenges for renderers, resolution and latency requirements, judder, foveated rendering')),
 
-  lecture_def('Feb 19', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold',
-              array('Fine-grained snychronization via locks, basics of lock-free programming: single-reader/writer queues, lock-free stacks, the ABA problem, hazard pointers')),
+  lecture_def('Feb 19', 'Introduction to Animation', '', 'bold',
+              array('Animation examples, splines, keyframing')),
 
-  lecture_def('Feb 21', 'Transactional memory', '', 'bold',
-              array('Motivation for transactions, design space of transactional memory implementations, lazy-optimistic HTM')),
+  lecture_def('Feb 21', 'Kinematics and Motion Capture', '', 'bold',
+              array('Optimization basics, inverse kinematics, motion graphs, methods of capturing human motion (motion capture suits, Kinect, computer vision methods)')),
 
-  lecture_def('Feb 26', 'Distributed Computing using Spark', '', 'bold',
-              array('producer-consumer locality, RDD abstraction, Spark implementation and scheduling')),
+  lecture_def('Feb 26', 'Dynamics and Time Integration', '', 'bold',
+              array('basic numerical integration, forward Euler, mass-spring systems (e.g., for cloth simulation), particle systems')),
 
-  lecture_def('Feb 28', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold',
-              array('Energy-efficient computing, motivation for heterogeneous processing, fixed-function processing, FPGAs, mobile SoCs')),
+  lecture_def('Feb 28', 'Theory of Color', '', 'bold',
+              array('How the eye works, color spaces, brightness and lightness, motivation for Gamma correction')),
 
-  lecture_def('Mar 5', 'Domain-Specific Programming Systems', '', 'bold',
-              array('Motivation for DSLs, case studies on Halide and TBD DSL')),
+  lecture_def('Mar 5', 'Image Processing and Image Compression', '', 'bold',
+              array('JPG image compression, image filtering via convolution (sharpening/blurring), non-linear filters')),
 
-  lecture_def('Mar 7', 'Domain-Specific Programming for Parallel Graph Processing', '', 'bold',
-              array('GraphLab, Ligra, and GraphChi, streaming graph processing, graph compression')),
+  lecture_def('Mar 7', 'Modern Rendering Techniques for the Graphics Pipeline', '', 'bold',
+              array('Shadow mapping, reflections, ambient occlusion, precomputed lighting, deferred shading, parallel rasterization')),
 
-  lecture_def('Mar 12', 'Applications Talk TBD', '', 'bold',
-              array('Topic TBD: scaling a web site, DNN performance tuning, etc.')),
+  lecture_def('Mar 12', 'Efficient 3D Graphics on Mobile GPUs', '', 'bold',
+              array('Energy efficient rendering on mobile phones, overview of recent research topics in computer graphics')),
 
-  lecture_def('Mar 14', 'Course Wrap Up', '', 'bold',
-              array('Have a great spring break!'))
+  lecture_def('Mar 14', 'Course Recap', '', 'bold',
+              array('Have a great Spring Break!')),
 
-  );
+);
 
 
 /*
@@ -199,24 +200,20 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">Jan 17</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</span>
+    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: Write Your own SVG Renderer</span>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">Jan 29</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Multi-Threaded Web Server</span></td>
+<td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Mini 3D Triangle Mesh Editor</span></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Feb 11</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Parallel Graph Processing</span></td>
+ <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Lighting and Materials In GLSL</span></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple Renderer in CUDA</span></td>
-</tr>
-
-<tr>
- <td class="schedule_date">Mar 7</td><td class="schedule_lecture"><span class="bold_text">Assignment 5: Big Data Processing in Spark</span></td>
+ <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: Self-Selected Final Project</span></td>
 </tr>
 
 </table>

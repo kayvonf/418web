@@ -2,7 +2,7 @@
 
 <?php if (isset($token)) { ?>
     <div class="main_title">Change Password</div>
-    <div>Stanford CS149</div>
+    <div>Stanford CS248</div>
 
 <?php echo form_open('users/do_password_change', '', array('token' => $token));?>
         <p>
@@ -19,7 +19,7 @@
     </form>
 <?php } else { ?>
     <div class="main_title">Reset Password</div>
-    <div>Stanford CS149</div>
+    <div>Stanford CS248</div>
 
 <?php echo form_open('users/do_reset');?>
         <p>
