@@ -10,8 +10,8 @@
 
 <div class="book_lecture">
      <div class="book_lecture_title">
-     <span class="bold_text">Lecture 1:
-     Why Parallelism? Why Efficiency?</span></div>
+     <a href="<?php echo lecture_url('whyparallelism'); ?>">Lecture 1:
+     Why Parallelism? Why Efficiency?</a></div>
      <div class="colored_text book_lecture_subtitle">(motivations for parallel chip decisions, challenges of parallelizing code)</div>
      
      <div class="book_lecture_indent">

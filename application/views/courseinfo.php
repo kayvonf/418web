@@ -11,10 +11,7 @@ function make_url($first, $second) {
 
 <div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Winter 2019</div>
 <div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
-
-
-<div>Stanford CS149, Winter 2019</div>
-     <div><Tues/Thurs 4:30-6:00pm</div>
+     <div>Tues/Thurs 4:30-6:00pm</div>
      <div>Room 420-040</div>
      <div style="padding-bottom: 20px;">Instructors:
      <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a> and <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a>
@@ -28,7 +25,7 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 </p>
 
 
-<div class="overview_main_item overview_ruled_element">Instructors and TAs</div>
+<div class="overview_main_item overview_ruled_element">Instructors and CAs</div>
 
 <div class="indented_block">
 
@@ -50,7 +47,7 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div style="clear: both;">&nbsp;</div>
 </div>
 
-<div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful TAs:</div>
+<div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful CAs:</div>
 
 <div style="width: 360px; float: left;">
 <img src="<?php echo make_url($staff_photos_url, 'juan.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
@@ -128,8 +125,8 @@ lecture using the course web site.</p>
 
 <ul>
 <li>Programming Assignments (5): 5&#37; + 8&#37; + 12&#37; + 12&#37; + 8&#37 = <span class="colored_text">45&#37;</span></li>
-<li>Written Assignments (5): <span class="colored_text">30&#37;</span></li>
-<li>Exams (2):  <span class="colored_text">25&#37;</span></li>
+<li>Written Assignments (5): <span class="colored_text">25&#37;</span></li>
+<li>Exams (2):  <span class="colored_text">30&#37;</span></li>
 </ul>
 
 
