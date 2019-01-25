@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
 
 <div class="home_container">
 
-<div class="feed_title"><? echo $type; ?></div>
+<div class="feed_title">What's Going On</div>
 
 <div id="newsfeed">
 

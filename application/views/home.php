@@ -82,22 +82,22 @@ function lecture_def($date, $title, $link, $fmt='', $extras=array()) {
 
 $lectures = array(
 
-  lecture_def('Jan 8', 'Course Introduction + Intro to Drawing', '', 'bold',
-              array('Breadth of graphics, simple drawing of lines, linear algebra and vector math review')),
+  lecture_def('Jan 8', 'Course Introduction + Intro to Drawing', lecture_url('introduction'), '',
+              array('Breadth of graphics, simple drawing of lines')),
 
-  lecture_def('Jan 10', 'Drawing a Triangle + Basics of Sampling Theory', '', 'bold',
+  lecture_def('Jan 10', 'Drawing a Triangle + Basics of Sampling Theory', lecture_url('drawtriangle'), '',
               array('Drawing a triangle via point sampling, point-in-triangle testing, aliasing, Fourier interpretation of aliasing, anti-aliasing')),
 
-  lecture_def('Jan 15', 'Cooordinate Spaces and Transformations', '', 'bold',
+  lecture_def('Jan 15', 'Cooordinate Spaces and Transformations', lecture_url('transforms'), '',
               array('Definition of linear transform, basic geometric transforms, homogeneous coordinates, transform hierarchies, perspective projection')),
 
-  lecture_def('Jan 17', 'Perspective Projection and Texture Mapping', '', 'bold',
+  lecture_def('Jan 17', 'Perspective Projection and Texture Mapping', lecture_url('texture'), '',
               array('perspective projection, texture coordinate space, bilinear/trilinear interpolation, how aliasing arises during texture sampling, prefiltering as an anti-aliasing technique')),
 
-  lecture_def('Jan 22', 'The Rasterization Pipeline', '', 'bold',
+  lecture_def('Jan 22', 'The Rasterization Pipeline', lecture_url('pipeline'), '',
               array('Z-buffer algorithm, image compositing, end-to-end 3D graphics pipeline as implemented by modern GPUs')),
 
-  lecture_def('Jan 24', 'Introduction to Geometry', '', 'bold',
+  lecture_def('Jan 24', 'Introduction to Geometry', lecture_url('geometry'), '',
               array('Properties of surfaces (manifold, normal, curvature), implicit vs. explicit representations, basic representations such as triangle meshes, bezier curves and patches')),
 
   lecture_def('Jan 29', 'Mesh Representations and Geometry Processing', '', 'bold',
@@ -200,16 +200,16 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: Write Your own SVG Renderer</span>
+    <td class="schedule_date">Jan 24</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs248/draw-svg">Assignment 1: Write Your own SVG Renderer</a>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Mini 3D Triangle Mesh Editor</span></td>
+<td class="schedule_date">Feb 7</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs248/triangle-mesh-editor">Assignment 2: A Mini 3D Triangle Mesh Editor</a></td>
 </tr>
 
 <tr>
- <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Lighting and Materials In GLSL</span></td>
+ <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Lighting and Materials In GLSL</span></td>
 </tr>
 
 <tr>
