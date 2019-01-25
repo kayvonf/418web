@@ -126,7 +126,7 @@ if __name__ == "__main__":
     # rewrite rules are necessary to remove the ugly index.php part of
     # the codeignighter urls
     htaccess_file = os.path.join(staging_dir, ".htaccess");
-    execute("sed -i 's/MY_WEBSITE_BASE_DIRECTORY/%s/' %s" % (course_config.site_code_base_url.replace("/", "\\/"), htaccess_file))
+    execute("sed -i 's/MY_WEBSITE_BASE_DIRECTORY/%s/' %s" % (course_config.site_local_code_base_url.replace("/", "\\/"), htaccess_file))
 
     ##############################################################
     ## Okay, here we go. Now deploy the site.

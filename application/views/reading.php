@@ -24,6 +24,54 @@
      </div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('basicarch'); ?>">Lecture 2: A Modern Multi-Core Processor</a></div>
+     <div class="colored_text book_lecture_subtitle">(forms of parallelism: multicore, SIMD, threading + understanding latency and bandwidth)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources>"
+     
+     <div>Further Reading:</div>
+     <ul>
+     <li><a href="https://queue.acm.org/detail.cfm?id=2181798" target="_blank">CPU DB: Recording Microprocessor History</a>. A. Danowitz, K. Kelley, J. Mao, J.P. Stevenson, M. Horowitz, ACM Queue 2005.
+     (You can also take a peak at the <a href="http://cpudb.stanford.edu/">CPU DB</a> website)</li>
+     <li><a href="https://software.intel.com/sites/default/files/managed/c5/9a/The-Compute-Architecture-of-Intel-Processor-Graphics-Gen9-v1d0.pdf" target="_blank">The Compute Architecture of Intel Processor Graphics</a>.
+     Intel Technical Report, 2015  (a very nice description of a modern throughput processor)</li>
+     <li><a href="http://www.realworldtech.com/haswell-cpu/" target="_blank">Intel's Haswell CPU Microarchitecture</a>. D. Kanter, 2013 (realworldtech.com article)</li>
+     <li><a href="https://images.nvidia.com/content/pdf/tesla/whitepaper/pascal-architecture-whitepaper.pdf" target="_blank">NVIDIA GP100 Pascal Whitepaper</a>. NVIDIA Technical Report 2016</li>
+     </ul>
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <a href="<?php echo lecture_url('progmodels'); ?>">Lecture 3: Parallel Programming Abstractions</a></div>
+     <div class="colored_text book_lecture_subtitle">(ways of thinking about parallel programs, and their corresponding hardware implementations)</div>
+
+     <div class="book_lecture_indent">
+
+     <div class="resources">
+     
+     <div>Further Reading: (some fun systems)</div>
+     <ul>
+     <li><a href="https://ispc.github.io/index.html" target="_blank">ISPC Programmer's Manual</a></li>
+     <li><a href="https://www.threadingbuildingblocks.org/" target="_blank">Thread Building Blocks</a></li>
+     <li><a href="https://graphics.stanford.edu/papers/brookgpu/">Brook for GPUs: Stream Computing on Graphics Hardware</a>
+     <li><a href="http://groups.csail.mit.edu/cag/streamit/" target="_blank">MIT's StreaMIT Project</a></li>
+     </ul>     
+     </div>
+</div>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
+     <span class="bold_text">Lecture 4: Parallel Programming Basics</span></div>
+     <div class="colored_text book_lecture_subtitle">(the thought process of parallelizing a program)</div>
+</div>
+
 
 
 <p>&nbsp;</p>

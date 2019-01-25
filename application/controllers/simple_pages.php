@@ -19,6 +19,9 @@ class Simple_pages extends MY_Controller {
                 '">Create Article(Privileged)</a></p>';
         }
 
+    	$exercises_base_url = $this->config->item('content_base_url') . '/written';
+        $data['exercises_base_url'] = $exercises_base_url;
+
         $this->load_view("", "home", $data);
     }
 

@@ -33,7 +33,7 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
   <img src="<?php echo make_url($staff_photos_url,'kunle.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
   <div><a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
   <div>[kunle at stanford] </div>
-  <div>Gates </div>
+  <div>Gates 310</div>
   <div>Office hours: TBD</div>
   <div style="clear: both;">&nbsp;</div>
 </div>
@@ -43,7 +43,7 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
 <div>[kayvonf at cs.stanford]</div>
 <div>GHC 366</div>
-<div>Office hours: TBD</div>
+<div>Office hours: by announcement and appointment</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
@@ -54,8 +54,8 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div class="ta-name">Juan Manual Camacho</div>
 <div>[jcamach2 at stanford]</div>
 <div class="bold_text">Office hours:</div>
-<div>TBD</div>
-<div>Location: TBD</div>
+<div>Tues/Thurs 6-8pm</div>
+<div>Location: Huang basement</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
@@ -64,8 +64,8 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div class="ta-name">Mario Srouji</div>
 <div>[msrouji at stanford]</div>
 <div class="bold_text">Office hours:</div>
-<div>TBD</div>
-<div>Location: TBD</div>
+<div>Mon/Wed 1-3pm</div>
+<div>Location: Huang basement</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
@@ -112,14 +112,9 @@ You are not expected to know these languages/systems in advance of the course, y
 </p>
 
 <p><span class="italic_text">Take home written assignments.</span> Students will
-complete five take-home written quizzes assigned approximately every two weeks.</p>
-
-<p><span class="italic_text">Making per-lecture comments.</span> Each
-student must individually contribute one interesting comment per
-lecture using the course web site.</p>
+complete five take-home written assignments assigned approximately every two weeks.</p>
 
 <p><span class="italic_text">Midterm and Final Exam.</span> There will be midterm and final exams.</p>
-
 
 <div class="overview_main_item overview_ruled_element">Grading</div>
 
@@ -127,6 +122,21 @@ lecture using the course web site.</p>
 <li>Programming Assignments (5): 5&#37; + 8&#37; + 12&#37; + 12&#37; + 8&#37 = <span class="colored_text">45&#37;</span></li>
 <li>Written Assignments (5): <span class="colored_text">25&#37;</span></li>
 <li>Exams (2):  <span class="colored_text">30&#37;</span></li>
+</ul>
+
+<p><span class="bold_text">Late day policy: Each student (or team of
+students if working in pairs) has a total of five late days for use
+over the entire quarter.  Late days can be used either for programming
+assignments or written assignments.</p>
+
+<ul>
+<li>A one-person team can extend a programming assignment deadline by one day using one point.</li>
+<li>A two-person team can extend a programming assignment deadline by one day using two points. </li
+(e.g., one point from each student)
+<li>If a team does not have remaining late day points, late hand-ins will incur a 10% penalty per day 
+(up to three days per assignment).</li>
+<li>No assignments will be accepted more than three days after the deadline. (we have to start
+grading and distribute solutions)</li>
 </ul>
 
 

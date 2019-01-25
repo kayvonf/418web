@@ -85,46 +85,46 @@ $lectures = array(
   lecture_def('Jan 8', 'Course Introduction + Why Parallelism?', lecture_url('whyparallelism'), '',
               array('Motivations for parallel chip decisions, challenges of parallelizing code')),
 
-  lecture_def('Jan 10', 'A Modern Multi-Core Processor', '', 'bold',
+  lecture_def('Jan 10', 'A Modern Multi-Core Processor', lecture_url('basicarch'), '',
               array('Forms of parallelism: multicore, SIMD, threading + understanding latency and bandwidth')),
 
-  lecture_def('Jan 15', 'Parallel Programming Models and their Corresponding HW/SW Implementations', '', 'bold',
+  lecture_def('Jan 15', 'Parallel Programming Models and their Corresponding HW/SW Implementations', lecture_url('progmodels'), '',
               array('ways of thinking about parallel programs, and their corresponding hardware implementations, ISPC programming')),
 
-  lecture_def('Jan 17', 'Parallel Programming Basics', '', 'bold',
+  lecture_def('Jan 17', 'Parallel Programming Basics', lecture_url('progbasics'), '',
               array('Thought process of parallelizing a program in data parallel and shared address space models')),
 
-  lecture_def('Jan 22', 'Program Optimization 1: Work Distribution and Scheduling', '', 'bold',
+  lecture_def('Jan 22', 'Program Optimization 1: Work Distribution and Scheduling', lecture_url('perfopt1'), '',
               array('Achieving good work distribution while minimizing overhead, scheduling Cilk programs with work stealing')),
 
-  lecture_def('Jan 24', 'Program Optimization 2: Locality and Communication', '', 'bold',
+  lecture_def('Jan 24', 'Program Optimization 2: Locality and Communication', lecture_url('perfopt2'), '',
               array('Message passing, async vs. blocking sends/receives, pipelining, increasing arithmetic intensity, avoiding contention')),
 
   lecture_def('Jan 29', 'GPU architecture and CUDA Programming', '', 'bold',
               array('CUDA programming abstractions, and how they are implemented on modern GPUs')),
 
-  lecture_def('Jan 31', 'Data-Parallel Programming', '', 'bold',
-              array('Data parallel thinking: map, reduce, scan, prefix sum, groupByKey')),
-
-  lecture_def('Feb 5', 'Snooping-Based Cache Coherence', '', 'bold',
+  lecture_def('Jan 31', 'Snooping-Based Cache Coherence', '', 'bold',
               array('Definition of memory coherence, invalidation-based coherence using MSI and MESI, false sharing')),
 
-  lecture_def('Feb 7', 'Memory Consistency', '', 'bold',
+  lecture_def('Feb 5', 'Memory Consistency', '', 'bold',
               array('Consistency vs. coherence, relaxed consistency models and their motivation, acquire/release semantics')),
+
+  lecture_def('Feb 17', 'Implementing Synchronization', '', 'bold',
+              array('Machine-level atomic operations, implementing locks, implementing barriers, deadlock/livelock/starvation')),
 
   lecture_def('Feb 12', 'Midterm Exam', '', 'bold', array('')),
 
-  lecture_def('Feb 14', 'Implementing Synchronization', '', 'bold',
-              array('Machine-level atomic operations, implementing locks, implementing barriers, deadlock/livelock/starvation')),
+  lecture_def('Feb 14', 'Data-Parallel Programming', '', 'bold',
+              array('Data parallel thinking: map, reduce, scan, prefix sum, groupByKey')),
 
-  lecture_def('Feb 19', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold',
+  lecture_def('Feb 19', 'Distributed Computing using Spark', '', 'bold',
+              array('producer-consumer locality, RDD abstraction, Spark implementation and scheduling')),
+
+  lecture_def('Feb 21', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold',
               array('Fine-grained snychronization via locks, basics of lock-free programming: single-reader/writer queues, lock-free stacks, the ABA problem, hazard pointers')),
 
-  lecture_def('Feb 21', 'Transactional memory', '', 'bold',
+  lecture_def('Feb 26', 'Transactional memory', '', 'bold',
               array('Motivation for transactions, design space of transactional memory implementations, lazy-optimistic HTM')),
-
-  lecture_def('Feb 26', 'Distributed Computing using Spark', '', 'bold',
-              array('producer-consumer locality, RDD abstraction, Spark implementation and scheduling')),
 
   lecture_def('Feb 28', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold',
               array('Energy-efficient computing, motivation for heterogeneous processing, fixed-function processing, FPGAs, mobile SoCs')),
@@ -199,27 +199,53 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-    <td class="schedule_date">Jan 17</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</span>
+<td class="schedule_date">Jan 18</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs149/asst1">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">Jan 29</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Multi-Threaded Web Server</span></td>
+<td class="schedule_date">Feb 1</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs149/asst2">Assignment 2: A Multi-Threaded Web Server in Java</a></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Feb 11</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Parallel Graph Processing</span></td>
+ <td class="schedule_date">Feb 15</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Parallel Graph Processing</span></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple Renderer in CUDA</span></td>
+ <td class="schedule_date">Mar 1</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple Renderer in CUDA</span></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Mar 7</td><td class="schedule_lecture"><span class="bold_text">Assignment 5: Big Data Processing in Spark</span></td>
+ <td class="schedule_date">Mar 11</td><td class="schedule_lecture"><span class="bold_text">Assignment 5: Big Data Processing in Spark</span></td>
 </tr>
 
 </table>
+
+<div class="overview_main_item overview_ruled_element">Written Assignments</div>
+
+<table>
+<tr>
+<td class="schedule_date">Jan 25</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst1.pdf' ?>">Multi-threading Scheduling + The Professor with the Most ALUs (Sometimes) Wins + Angry Students</a>
+</td>
+</tr>
+
+<tr>
+<td class="schedule_date">Feb 5</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 2</span></td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Feb 20</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 3</span></td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 4</span></td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Mar 8</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 5</span></td>
+</tr>
+</table>
+
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
