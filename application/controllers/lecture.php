@@ -566,7 +566,7 @@ class Lecture extends MY_Controller {
 	if ($aspect_ratio == '16-9')
 	  return 16 / 9;
         else if ($aspect_ratio == '85-11')
-          return 8.5 / 11;
+	  return 26.667 / 15;
         else
           return 4 / 3;
     }

@@ -100,16 +100,16 @@ $lectures = array(
   lecture_def('Jan 24', 'Program Optimization 2: Locality and Communication', lecture_url('perfopt2'), '',
               array('Message passing, async vs. blocking sends/receives, pipelining, increasing arithmetic intensity, avoiding contention')),
 
-  lecture_def('Jan 29', 'GPU architecture and CUDA Programming', '', 'bold',
+  lecture_def('Jan 29', 'GPU architecture and CUDA Programming', lecture_url('gpuarch'), '',
               array('CUDA programming abstractions, and how they are implemented on modern GPUs')),
 
-  lecture_def('Jan 31', 'Snooping-Based Cache Coherence', '', 'bold',
+  lecture_def('Jan 31', 'Snooping-Based Cache Coherence', lecture_url('cachecoherence'), '',
               array('Definition of memory coherence, invalidation-based coherence using MSI and MESI, false sharing')),
 
   lecture_def('Feb 5', 'Memory Consistency', '', 'bold',
               array('Consistency vs. coherence, relaxed consistency models and their motivation, acquire/release semantics')),
 
-  lecture_def('Feb 17', 'Implementing Synchronization', '', 'bold',
+  lecture_def('Feb 7', 'Implementing Synchronization', '', 'bold',
               array('Machine-level atomic operations, implementing locks, implementing barriers, deadlock/livelock/starvation')),
 
   lecture_def('Feb 12', 'Midterm Exam', '', 'bold', array('')),
@@ -230,7 +230,7 @@ foreach ($lectures as $lecture)
 </tr>
 
 <tr>
-<td class="schedule_date">Feb 5</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 2</span></td>
+<td class="schedule_date">Feb 5</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst2.pdf' ?>">Sending Messages + A Cardinal Processing Pipeline + Be a Processor Architect</a></td>
 </tr>
 
 <tr>
