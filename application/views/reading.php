@@ -50,6 +50,36 @@
      <div class="colored_text book_lecture_subtitle">(Z-buffer algorithm, image compositing, end-to-end 3D graphics pipeline as implemented by modern GPUs)</div>
 </div>
 
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('geometry'); ?>">Lecture 6:
+     Introduction to Geometry</a></div>
+     <div class="colored_text book_lecture_subtitle">(Properties of surfaces (manifold, normal, curvature), implicit vs. explicit representations, basic representations such as triangle meshes, bezier curves and patches)</div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('geometryprocessing'); ?>">Lecture 7:
+     	Mesh Representations and Geometry Processing</a></div>
+     <div class="colored_text book_lecture_subtitle">(Half-edge mesh structures, mesh operations such as tessellation and simplification)</div>
+</div>
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url('geometricqueries'); ?>">Lecture 8:
+     Geometric Queries</a></div>
+     <div class="colored_text book_lecture_subtitle">(closest point, ray-triangle intersection, ray-mesh intersection, the relationship between rasterization and ray tracing)</div>
+</div>
+
+<!--
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="<?php echo lecture_url(''); ?>">Lecture XXX:
+     XXX</a></div>
+     <div class="colored_text book_lecture_subtitle">()</div>
+</div>
+-->
+
 
 
 

@@ -100,14 +100,14 @@ $lectures = array(
   lecture_def('Jan 24', 'Introduction to Geometry', lecture_url('geometry'), '',
               array('Properties of surfaces (manifold, normal, curvature), implicit vs. explicit representations, basic representations such as triangle meshes, bezier curves and patches')),
 
-  lecture_def('Jan 29', 'Mesh Representations and Geometry Processing', '', 'bold',
+  lecture_def('Jan 29', 'Mesh Representations and Geometry Processing', lecture_url('geometryprocessing'), '',
               array('Half-edge mesh structures, mesh operations such as tessellation and simplification')),
 
-  lecture_def('Jan 31', 'Geometric Queries', '', 'bold',
-              array('closest point, ray-triangle intersection, ray-mesh intersection')),
+  lecture_def('Jan 31', 'Geometric Queries', lecture_url('geometricqueries'), '',
+              array('closest point, ray-triangle intersection, ray-mesh intersection, the relationship between rasterization and ray tracing')),
 
   lecture_def('Feb 5', 'Accelerating Geometric Queries', '', 'bold',
-              array('Acceleration structures such as bounding volume hierarchies, K-D trees, uniform grids, application to ray-casting, the relationship between rasterization and ray casting')),
+              array('Acceleration structures such as bounding volume hierarchies, K-D trees, uniform grids')),
 
   lecture_def('Feb 7', 'Materials, Lighting, and Shading', '', 'bold',
               array('Common material models, use of texture for lighting (bump mapping, environment mapping, prebaked lighting), motivating need for shaders on modern GPUs')),
