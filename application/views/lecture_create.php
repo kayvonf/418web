@@ -16,7 +16,7 @@
 <select name="aspect_ratio">
 <option value="4-3">4x3</option>
 <option value="16-9">16x9</option>
-<option value="85-11">8.5x11</option>
+<option value="85-11">26x15</option>
 </select>
 </p>
 <p><input type="file" name="userfile" size="20" /></p>

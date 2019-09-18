@@ -4,12 +4,6 @@
 <div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Winter 2019</div>
 <div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
 
-<!--
-<div>
-<img style="padding-bottom: 5px;" src="<?php echo base_url('assets/images/teaser.jpg'); ?>" width="800" height="125"></a>
-</div>
--->
-
 <p style="padding-bottom: .15em">
 From smart phones, to multi-core
 CPUs and GPUs, to the world's largest supercomputers and web sites,
@@ -106,39 +100,39 @@ $lectures = array(
   lecture_def('Jan 31', 'Snooping-Based Cache Coherence', lecture_url('cachecoherence'), '',
               array('Definition of memory coherence, invalidation-based coherence using MSI and MESI, false sharing')),
 
-  lecture_def('Feb 5', 'Memory Consistency', '', 'bold',
+  lecture_def('Feb 5', 'Memory Consistency', lecture_url('consistency'), '',
               array('Consistency vs. coherence, relaxed consistency models and their motivation, acquire/release semantics')),
 
-  lecture_def('Feb 7', 'Implementing Synchronization', '', 'bold',
-              array('Machine-level atomic operations, implementing locks, implementing barriers, deadlock/livelock/starvation')),
+  lecture_def('Feb 7', 'Directory-Based Coherence + Implementing Synchronization', lecture_url('synchronization'), '',
+              array('Directory-based coherence, machine-level atomic operations, implementing locks, implementing barriers')),
 
   lecture_def('Feb 12', 'Midterm Exam', '', 'bold', array('')),
 
-  lecture_def('Feb 14', 'Data-Parallel Programming', '', 'bold',
+  lecture_def('Feb 14', 'Data-Parallel Thinking', lecture_url('dataparallel'), '',
               array('Data parallel thinking: map, reduce, scan, prefix sum, groupByKey')),
 
-  lecture_def('Feb 19', 'Distributed Computing using Spark', '', 'bold',
+  lecture_def('Feb 19', 'Distributed Computing using Spark', lecture_url('spark'), '',
               array('producer-consumer locality, RDD abstraction, Spark implementation and scheduling')),
 
-  lecture_def('Feb 21', 'Fine-Grained Synchronization and Lock-Free Programming', '', 'bold',
+  lecture_def('Feb 21', 'Fine-Grained Synchronization and Lock-Free Programming', lecture_url('lockfree'), '',
               array('Fine-grained snychronization via locks, basics of lock-free programming: single-reader/writer queues, lock-free stacks, the ABA problem, hazard pointers')),
 
-  lecture_def('Feb 26', 'Transactional memory', '', 'bold',
+  lecture_def('Feb 26', 'Transactional memory', lecture_url('tm'), '',
               array('Motivation for transactions, design space of transactional memory implementations, lazy-optimistic HTM')),
 
-  lecture_def('Feb 28', 'Heterogeneous Parallelism and Hardware Specialization', '', 'bold',
+  lecture_def('Feb 28', 'Heterogeneous Parallelism and Hardware Specialization', lecture_url('heterogeneity'), '',
               array('Energy-efficient computing, motivation for heterogeneous processing, fixed-function processing, FPGAs, mobile SoCs')),
 
-  lecture_def('Mar 5', 'Domain-Specific Programming Systems', '', 'bold',
-              array('Motivation for DSLs, case studies on Halide and TBD DSL')),
+  lecture_def('Mar 5', 'Domain-Specific Programming Systems', lecture_url('dsl'), '',
+              array('Motivation for DSLs, OptiML, Delite, case study on Halide')),
 
-  lecture_def('Mar 7', 'Domain-Specific Programming for Parallel Graph Processing', '', 'bold',
+  lecture_def('Mar 7', 'Parallel Graph Processing Frameworks + How DRAM Works', lecture_url('graphmemory'), '',
               array('GraphLab, Ligra, and GraphChi, streaming graph processing, graph compression')),
 
-  lecture_def('Mar 12', 'Applications Talk TBD', '', 'bold',
-              array('Topic TBD: scaling a web site, DNN performance tuning, etc.')),
+  lecture_def('Mar 12', 'Efficienly Evaluating DNNs', lecture_url('dnneval'), '',
+              array('Scheduling convlayers, exploiting precision and sparsity, DNN acelerators (e.g., GPU TensorCores, TPU)')),
 
-  lecture_def('Mar 14', 'Course Wrap Up', '', 'bold',
+  lecture_def('Mar 14', 'Parallel DNN Training + Course Wrap Up', lecture_url('dnntrain'), '',
               array('Have a great spring break!'))
 
   );
@@ -208,15 +202,15 @@ foreach ($lectures as $lecture)
 </tr>
 
 <tr>
- <td class="schedule_date">Feb 15</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Parallel Graph Processing</span></td>
+ <td class="schedule_date">Feb 17</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs149/asst3">Assignment 3: Big Graph Processing in OpenMP</a></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Mar 1</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: A Simple Renderer in CUDA</span></td>
+ <td class="schedule_date">Mar 1</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs149/asst4">Assignment 4: A Simple Renderer in CUDA</a></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Mar 11</td><td class="schedule_lecture"><span class="bold_text">Assignment 5: Big Data Processing in Spark</span></td>
+ <td class="schedule_date">Mar 14</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs149/asst5">Assignment 5: Big Data Processing in Spark</a></td>
 </tr>
 
 </table>
@@ -225,24 +219,24 @@ foreach ($lectures as $lecture)
 
 <table>
 <tr>
-<td class="schedule_date">Jan 25</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst1.pdf' ?>">Multi-threading Scheduling + The Professor with the Most ALUs (Sometimes) Wins + Angry Students</a>
+<td class="schedule_date">Jan 25</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst1.pdf' ?>">Written Assignment 1: Multi-threading Scheduling + The Most ALUs Wins + Angry Students</a>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">Feb 5</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst2.pdf' ?>">Sending Messages + A Cardinal Processing Pipeline + Be a Processor Architect</a></td>
+<td class="schedule_date">Feb 5</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst2.pdf' ?>">Written Assignment 2: Sending Messages + Processing Pipeline + Be a Processor Architect</a></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Feb 20</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 3</span></td>
+ <td class="schedule_date">Feb 20</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst3.pdf' ?>">Written Assignment 3: Spin Locks + PKPU + Data Parallel Thinking</a></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Feb 26</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 4</span></td>
+ <td class="schedule_date">Feb 27</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst4.pdf' ?>">Written Assignment 4: Spark Memory Footprint + Concurrent Hashtables and Graphs</a></td>
 </tr>
 
 <tr>
- <td class="schedule_date">Mar 8</td><td class="schedule_lecture"><span class="bold_text">Written Assignment 5</span></td>
+ <td class="schedule_date">Mar 8</td><td class="schedule_lecture"><a href="<?php echo $exercises_base_url . '/asst5.pdf' ?>">Written Assignment 5: Comparing and Swapping + Transactions on Trees</a></td>
 </tr>
 </table>
 
