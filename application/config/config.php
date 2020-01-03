@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url'] = 'http://cs248.stanford.edu/winter19/';
+$config['base_url'] = 'http://cs248.stanford.edu/winter20/';
 
 /*
 |--------------------------------------------------------------------------

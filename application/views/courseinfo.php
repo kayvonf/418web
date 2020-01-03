@@ -9,7 +9,7 @@ function make_url($first, $second) {
 
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248, Winter 2019</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248, Winter 2020</div>
 <div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">INTERACTIVE COMPUTER GRAPHICS</div>
 
      <div>Tues/Thurs noon-1:30</div>
@@ -43,42 +43,33 @@ physically-based animation, and inverse kinematics.
 <div>
   <img src="<?php echo make_url($staff_photos_url,'kayvonf.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
   <div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
-  <div>[kayvonf at cs.stanford] </div>
-  <div>Gates 366</div>
-  <div>Office hours: Tues 1:30-2:30pm, or by appointment</div>
+  <div>[kayvonf] </div>
+  <div>Office Hours: Thurs 2:30-3:30, Gates 366</div>
   <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful CAs:</div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_photos_url, 'colin.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Colin Dolese</div>
-<div>[cdolese at stanford]</div>
+<img src="<?php echo make_url($staff_photos_url, 'yaodavid.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">David Yao</div>
+<div>[yaodavid]</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_photos_url, 'nikki.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Nikki Nikolenko</div>
-<div>[liubov at stanford]</div>
+<img src="<?php echo make_url($staff_photos_url, 'yxu72.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Yinchen Xu</div>
+<div>[yxu72]</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div style="clear: both;">&nbsp;</div>
 
 <div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_photos_url, 'katherine.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Katherine Sun</div>
-<div>[ksun97 at stanford]</div>
-<div style="clear: both;">&nbsp;</div>
-</div>
-
-
-<div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_photos_url, 'elbert.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Elbert Lin</div>
-<div>[el168 at stanford]</div>
+<img src="<?php echo make_url($staff_photos_url, 'zhouwen.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Wen Zhou</div>
+<div>[zhouwen]</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
@@ -86,14 +77,15 @@ physically-based animation, and inverse kinematics.
 
 <div class="overview_main_item overview_ruled_element">Office Hours Calendar</div>
 
+<p>COMING SOON!</p>
+<!--
 <iframe src="https://calendar.google.com/calendar/embed?src=cs248winter2019staff%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
-</div>
+-->
 
 <div class="overview_main_item overview_ruled_element">Announcements via Piazza</div>
 
-<p>All class announcements will be made via our <a href="http://piazza.com/stanford/winter2019/cs248/home" target="_blank">class Piazza Page</a>.
-  Please make sure you <a href="http://piazza.com/stanford/winter2019/cs248" target="_blank">sign up</a> for the course on Piazza.</p>
+<p>All class announcements will be made via our <a href="piazza.com/stanford/winter2020/cs248/home" target="_blank">class Piazza Page</a>.
+  Please make sure you <a href="http://piazza.com/stanford/winter2020/cs248" target="_blank">sign up</a> for the course on Piazza.</p>
 
 <div class="overview_main_item overview_ruled_element">Prerequisites</div>
 
@@ -120,11 +112,10 @@ physically-based animation, and inverse kinematics.
 <p>
 All students will be expected to perform:
 <ul>
-  <li>Participation in and out of class: Make comments on the course web site (one per lecture):  <span class="bold_text colored_text">5&#37;</span></li>
-
-  <li>Three programming assignments:  <span class="bold_text colored_text">45&#37;</span></li>
+  <li>Three programming assignments:  <span class="bold_text colored_text">40&#37;</span></li>
+  <li>Participation on written assignments: <span class="bold_text colored_text">10&#37;</span></li>
   <li>Self-selected final project: <span class="bold_text colored_text">25&#37;</span></li>
-  <li>Two exams: <span class="bold_text colored_text">25&#37;</span> (one in class, one take-home)</li>
+  <li>One exam: <span class="bold_text colored_text">25&#37;</span></li>
 </ul>
 </p>
 
