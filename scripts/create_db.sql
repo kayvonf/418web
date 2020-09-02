@@ -64,7 +64,7 @@ DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state` enum('INSTRUCTOR', 'PRIVATE', 'DELETED', 'ARCHIVED', 'REVISED', 'ACTIVE') NOT NULL DEFAULT 'ACTIVE',
-  `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `author` int(11) NOT NULL COMMENT 'Primary key of users table',
   `parent_type` enum('ARTICLE','LECTURE') NOT NULL,
   `parent_id` int(11) NOT NULL COMMENT 'Primary key of relevant table',
@@ -72,7 +72,7 @@ CREATE TABLE `comments` (
   `body_markdown` text NOT NULL COMMENT 'The unprocessed markdown for the comment',
   `total_upvotes` int(11) NOT NULL DEFAULT 0,
   `total_downvotes` int(11) NOT NULL DEFAULT 0,
-  `edit_timestamp` timestamp,
+  `edit_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `edit_author` int(11) COMMENT 'Primary key of users table',
   `edit_reason` text COMMENT 'Reason for edit if done by instructor',
   -- TODO(caryy) The below should have been implemented by adding parent_type
