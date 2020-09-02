@@ -1,8 +1,8 @@
 
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248, Winter 2020</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">INTERACTIVE COMPUTER GRAPHICS</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS348K, Spring 2020</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">VISUAL COMPUTING SYSTEMS</div>
 
 
 <div>
@@ -10,24 +10,13 @@
 </div>
 
 <p style="padding-bottom: .15em">
-
-This course provides a comprehensive introduction to computer
-graphics, focusing on fundamental concepts and techniques, as well as
-their cross-cutting relationship to multiple problem domains in
-interactive graphics (such as rendering, animation, geometry, image
-processing). Topics include: 2D and 3D drawing, sampling,
-interpolation, rasterization, image compositing, the GPU graphics
-pipeline (and parallel rendering), geometric transformations, curves
-and surfaces, geometric data structures, subdivision, meshing, spatial
-hierarchies, image processing, compression, time integration,
-physically-based animation, and inverse kinematics.
+Visual computing tasks such as computational imaging, image/video understanding, and real-time 3D graphics are key responsibilities of modern computer systems ranging from sensor-rich smart phones, autonomous robots, and large datacenters. These workloads demand exceptional system efficiency and this course examines the key ideas, techniques, and challenges associated with the design of parallel, heterogeneous systems that accelerate visual computing applications. This course is intended for systems students interested in architecting efficient graphics, image processing, and computer vision platforms (both new hardware architectures and domain-optimized programming frameworks for these platforms) and for graphics, vision, and machine learning students that wish to understand throughput computing principles to design new algorithms that map efficiently to these machines.
 </p>
 
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-<div>Tues/Thurs noon-1:30pm</div>
-<div>Room: Gates B1</div>
+<div>Tues/Thurs 3:00-4:30pm (virtual class only)</div>
 <div>Instructor: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
 
 <div style="padding-top:1em;">See the <a href="<?php echo site_url('courseinfo'); ?>">course info</a> page for more info on course policies and logistics.</div>
@@ -35,7 +24,7 @@ physically-based animation, and inverse kinematics.
 </div>
 
 
-<div class="overview_main_item overview_ruled_element">Winter 2020 Schedule</div>
+<div class="overview_main_item overview_ruled_element">Spring 2020 Schedule</div>
 
 <table>
 
@@ -83,72 +72,74 @@ function lecture_def($date, $title, $link, $fmt='', $topics_arg=array(), $deadli
 
 $lectures = array(
 
-  lecture_def('Jan 7', 'Course Introduction + Intro to Drawing', '', 'bold',
-              array('Breadth of graphics applications, simple drawing of lines')),
+  lecture_def('Apr 7', 'Course Introduction + Throughput Computing Review', lecture_url('intro'), '',
+      array('How superscalar, multi-core, SIMD, and hardware multi-threading are used in CPUs/GPUs,
+      understanding latency and bandwidth constraints')),
+      
+  lecture_def('Apr 9', 'The Digital Camera Processing Pipeline (Basics)', lecture_url('camerabasics'), '',
+      array('Algorithms for taking raw sensor pixels to an RGB image: demosaicing, sharpening,
+             correcting lens aberrations, multi-shot alignment/merging, image filtering')),
+	     
+  lecture_def('Apr 14', 'Modern Smartphone Camera Processing', lecture_url('camerapipeline2'), '',
+      array('Multi-scale processing with Gaussian and Laplacian pyramids, HDR/local tone mapping,
+             portrait mode in the Pixel 2 camera')),
+	     
+  lecture_def('Apr 16', 'Efficiently Scheduling Image Processing Algorithms to Parallel Hardware', lecture_url('halide'), '',
+      array('Balancing locality, parallelism, and work, fusion and tiling, design of the Halide domain-specific language,
+             automatically scheduling image processing pipelines')),
+	     
+  lecture_def('Apr 21', 'Efficient DNN Inference (for Image Analysis)', lecture_url('dnneval'), '',
+      array('popular DNN trunks and topologies, design of MobileNet, challenges of direct implementation,
+             where the compute lies in modern networks, DNN pruning, neural architecture search')),
 
-  lecture_def('Jan 9', 'Drawing a Triangle + Basics of Sampling Theory', '', 'bold',
-              array('Drawing a triangle via point sampling, point-in-triangle testing, aliasing, Fourier interpretation of aliasing, anti-aliasing'),
-	      array('- Programming Assignment 1 Released')),
+  lecture_def('Apr 23', 'Hardware Accelerators for DNN Workloads', lecture_url('dnnhardware'), '',
+      array('GPUs, Google TPU, special instructions for DNN evaluation,
+             choice of precision in arithmetic, recent ISCA/MICRO papers on DNN acceleration, flexibility vs efficiency trade-offs')),
 
-  lecture_def('Jan 14', 'Cooordinate Spaces and Transformations', '', 'bold',
-              array('Definition of linear transforms, basic geometric transforms, homogeneous coordinates, transform hierarchies, perspective projection')),
+  lecture_def('Apr 28', 'Algorithms for Parallel DNN Training at Scale', lecture_url('dnntrain'), '',
+      array('Footprint challenges of training, model vs. data parallelism,
+             asynchronous vs. synchronous training debate, parameter server designs,
+	     key systems optimizations for parallel training')),
 
-  lecture_def('Jan 16', 'Perspective Projection and Texture Mapping', '', 'bold',
-              array('Perspective projection, texture coordinate space, bilinear/trilinear interpolation, how aliasing arises during texture sampling, prefiltering as an anti-aliasing technique')),
+  lecture_def('Apr 30', 'Raising the Level of Abstraction in Machine Learning', lecture_url('highlevelml'), ''),
 
-  lecture_def('Jan 21', 'The Rasterization Pipeline', '', 'bold',
-              array('Z-buffer algorithm, image compositing, end-to-end 3D graphics pipeline as implemented by modern GPUs')),
+  lecture_def('May 5', '(The Lack of) System Support for Generating Supervision', lecture_url('supervision'), '',
+      array('If the most important step of ML is acquiring training data, why don\'t we have systems for it?')),
 
-  lecture_def('Jan 23', 'Introduction to Geometry', '', 'bold',
-              array('Properties of surfaces (manifold, normal, curvature), implicit vs. explicit representations, basic representations such as triangle meshes, bezier curves and patches'),
-	      array('- Programming Assignment 1 Due', '- Programming Assignment 2 Released')),
+  lecture_def('May 7', 'Efficient Inference on Video via Specialization', lecture_url('videospecialization'), '',
+      array('Exploiting temporal coherence in video, specialization to scene and camera viewpoint')),
 
-  lecture_def('Jan 28', 'Mesh Representations and Geometry Processing', '', 'bold',
-              array('Half-edge mesh structures, mesh operations such as tessellation and simplification')),
+  lecture_def('May 12', 'Video Compression', lecture_url('videocompression'), '',
+      array('H.264 video representation/encoding, parallel encoding, motivations for ASIC acceleration,
+      emerging opportunities for compression when machines, not humans, will observe most images')),
 
-  lecture_def('Jan 30', 'Geometric Queries', '', 'bold',
-              array('Closest point, ray-triangle intersection, ray-mesh intersection, the relationship between rasterization and ray tracing')),
+  lecture_def('May 14', 'Miscellaneous Video Topics', lecture_url('videomisc'), '',
+      array('Parallel video encoding, video ingest at Facebook, discussion of ethics of continuous capture')),
 
-  lecture_def('Feb 4', 'Accelerating Geometric Queries', '', 'bold',
-              array('Acceleration structures such as bounding volume hierarchies, K-D trees, uniform grids')),
+  lecture_def('May 19', 'The Real-Time Graphics Pipeline Workload', lecture_url('gfxpipeline'), '',
+      array('3D graphics pipeline as a machine architecture (abstraction), pipeline semantics/functionality, contrasting graphics pipeline architecture with compute-mode GPU architecture')),
 
-  lecture_def('Feb 6', 'Materials, Lighting, and Shading', '', 'bold',
-              array('Common material models, use of texture for lighting (bump mapping, environment mapping, prebaked lighting), motivating need for shaders on modern GPUs'),
-	      array('- Programming Assignment 2 Due', '- Programming Assignment 3 Released')),
+  lecture_def('May 21', 'Scheduling the Real-Time 3D Graphics Pipeline onto GPU Hardware', lecture_url('gfxscheduling'), '',
+      array('3D graphics pipeline as a machine architecture (abstraction), Molnar sorting taxonomy, dataflow scheduling under data amplification, tiled rendering for bandwidth-efficiency, deferred shading as a scheduling decision')),
 
-  lecture_def('Feb 11', 'Introduction to Animation', '', 'bold',
-              array('Animation examples, splines, keyframing')),
+  lecture_def('May 26', 'Domain-Specific Languages for Shading', lecture_url('shadinglang'), '',
+      array('Renderman Shading Language and Cg: contrasting two different levels of abstraction for shading languages, Slang')),
 
-  lecture_def('Feb 13', 'Kinematics and Motion Capture', '', 'bold',
-              array('Optimization basics, inverse kinematics, motion graphs, methods of capturing human motion (motion capture suits, Kinect, computer vision methods)')),
+  lecture_def('May 28', 'Platform Support for Real-Time Ray Tracing', lecture_url('rtrt'), '',
+      array('DXR ray tracing APIs, hardware acceleration of raytracing')),
 
-  lecture_def('Feb 18', 'Dynamics and Time Integration', '', 'bold',
-              array('basic numerical integration, forward Euler, mass-spring systems (e.g., for cloth simulation), particle systems')),
+  lecture_def('Jun 2', 'Class Discussion', '', 'bold'),
 
-  lecture_def('Feb 20', 'Theory of Color', '', 'bold',
-              array('How the eye works, color spaces, brightness and lightness, motivation for Gamma correction'),
-	      array('- Programming Assignment 3 Due')),
+  lecture_def('Jun 4', 'Rendering for Learning: Designing Renderers to Support Model Training', lecture_url('renderlearn'), '',
+      array('How might we architects renderers differently to support the needs of training, rather than game engines?')),
 
-  lecture_def('Feb 25', 'Image Compression and Basic Image Processing', '', 'bold',
-              array('JPG image compression, image filtering via convolution (sharpening/blurring), non-linear filters')),
+  lecture_def('Jun 9', 'Project Presentations', '', 'bold',
+      array('')),
 
 
-  lecture_def('Feb 27', 'Image Processing for Digital Photography', '', 'bold',
-              array('Multi-resolution techniques, tone adjustment, trends in deep learning-based image manipulation'),
-	      array('- Project Proposal Due')),
 
-  lecture_def('Mar 3', 'Modern Rendering Techniques for the Real-Time Graphics Pipeline', '', 'bold',
-              array('Shadow mapping, reflections, ambient occlusion, precomputed lighting, deferred shading, parallel rasterization'),
-	      array('- Evening Exam')),
 
-  lecture_def('Feb 5', 'Rendering Challenges of Virtual and Augmented Reality', '', 'bold',
-              array('VR Headset hardware, how head-mounted displays cause challenges for renderers, resolution and latency requirements, judder, foveated rendering')),
-
-  lecture_def('Mar 10', 'Efficient 3D Graphics on Mobile GPUs', '', 'bold',
-              array('Energy efficient rendering on mobile phones, overview of recent research topics in computer graphics')),
-
-  lecture_def('Mar 12', 'Course Recap', '', 'bold',
-              array('Have a great Spring Break!')),
+  
 
 );
 
@@ -215,25 +206,21 @@ foreach ($lectures as $lecture)
 
 </table>
 
-<div class="overview_main_item overview_ruled_element">Programming Assignments</div>
+<div class="overview_main_item overview_ruled_element">Assignments</div>
 
 <table>
 <tr>
-    <td class="schedule_date">Jan 23</td><td class="schedule_lecture"><span class="bold_text">Assignment 1: Write Your own SVG Renderer</span>
+    <td class="schedule_date">Apr 23</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348k/camera_asst">Burst Mode HDR Camera RAW Processing</a>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">Feb 6</td><td class="schedule_lecture"><span class="bold_text">Assignment 2: A Mini 3D Triangle Mesh Editor</span>
+    <td class="schedule_date">May 5</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348k/asst2-convlayer">Optimizing a Conv Layer in Halide (Making Students Appreciate cuBLAS)</a>
 </td>
 </tr>
 
-<tr>
- <td class="schedule_date">Feb 20</td><td class="schedule_lecture"><span class="bold_text">Assignment 3: Lighting and Materials In GLSL</span></td>
-</tr>
 
-<tr>
- <td class="schedule_date">TBD</td><td class="schedule_lecture"><span class="bold_text">Assignment 4: Self-Selected Final Project</span></td>
+ <td class="schedule_date">Jun 9</td><td class="schedule_lecture"><a href="https://github.com/stanford-cs348k/project">Self-Selected Term Project</a></td>
 </tr>
 
 </table>

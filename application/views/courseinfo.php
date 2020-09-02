@@ -9,30 +9,36 @@ function make_url($first, $second) {
 
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248, Winter 2020</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">INTERACTIVE COMPUTER GRAPHICS</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS348K, Spring 2020</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">VISUAL COMPUTING SYSTEMS</div>
 
-     <div>Tues/Thurs noon-1:30</div>
-     <div>Room: Gates B1</div>
+     <div>Tues/Thurs 3:00-4:20 (virtual only)</div>
      <div style="padding-bottom: 20px;">Instructor:
      <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a>
      </div>
 
 <div class="overview_main_item overview_ruled_element">Course Description</div>
 
+<p style="padding-bottom: .15em">
+Visual computing tasks such as computational imaging, image/video
+understanding, and real-time 3D graphics are key responsibilities of
+modern computer systems ranging from sensor-rich smart phones,
+autonomous robots, and large datacenters. These workloads demand
+exceptional system efficiency and this course examines the key ideas,
+techniques, and challenges associated with the design of parallel,
+heterogeneous systems that accelerate visual computing
+applications.</p>
+
+<p>This course is intended for systems students interested in
+architecting efficient graphics, image processing, and computer vision
+platforms (both new hardware architectures and domain-optimized
+programming frameworks for these platforms) and for graphics, vision,
+and machine learning students that wish to understand throughput
+computing principles so they can design new algorithms that map
+efficiently to these machines.
+</p>
 
 <p style="padding-bottom: .15em">
-This course provides a comprehensive introduction to computer
-graphics, focusing on fundamental concepts and techniques, as well as
-their cross-cutting relationship to multiple problem domains in
-interactive graphics (such as rendering, animation, geometry, image
-processing). Topics include: 2D and 3D drawing, sampling,
-interpolation, rasterization, image compositing, the GPU graphics
-pipeline (and parallel rendering), geometric transformations, curves
-and surfaces, geometric data structures, subdivision, meshing, spatial
-hierarchies, image processing, compression, time integration,
-physically-based animation, and inverse kinematics.
-
 </p>
 
 
@@ -43,120 +49,108 @@ physically-based animation, and inverse kinematics.
 <div>
   <img src="<?php echo make_url($staff_photos_url,'kayvonf.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
   <div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
-  <div>[kayvonf] </div>
-  <div>Office Hours: Thurs 2:30-3:30, Gates 366</div>
+  <div>Office Hours: by appointment</div>
   <div style="clear: both;">&nbsp;</div>
 </div>
 
-<div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful CAs:</div>
-
-<div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_photos_url, 'yaodavid.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">David Yao</div>
-<div>[yaodavid]</div>
-<div style="clear: both;">&nbsp;</div>
-</div>
-
-<div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_photos_url, 'yxu72.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Yinchen Xu</div>
-<div>[yxu72]</div>
+<div>
+<img src="<?php echo make_url($staff_photos_url, 'dillon.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
+<div class="ta-name">Dillon Huff</div>
+<div>Office Hours: by appointment</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div style="clear: both;">&nbsp;</div>
-
-<div style="width: 360px; float: left;">
-<img src="<?php echo make_url($staff_photos_url, 'zhouwen.jpg'); ?>" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;" />
-<div class="ta-name">Wen Zhou</div>
-<div>[zhouwen]</div>
-<div style="clear: both;">&nbsp;</div>
-</div>
-
-<div style="clear: both;">&nbsp;</div>
-
-<div class="overview_main_item overview_ruled_element">Office Hours Calendar</div>
-
-<p>COMING SOON!</p>
-<!--
-<iframe src="https://calendar.google.com/calendar/embed?src=cs248winter2019staff%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
--->
 
 <div class="overview_main_item overview_ruled_element">Announcements via Piazza</div>
 
-<p>All class announcements will be made via our <a href="piazza.com/stanford/winter2020/cs248/home" target="_blank">class Piazza Page</a>.
-  Please make sure you <a href="http://piazza.com/stanford/winter2020/cs248" target="_blank">sign up</a> for the course on Piazza.</p>
-
-<div class="overview_main_item overview_ruled_element">Prerequisites</div>
-
-<p>CS248 <span class="bold_text">DOES NOT</span> depend upon CS148 as a prereq.  However, we expect you to be a proficient C/C++ programmer to complete the required programming assignments. (We expect you've taken CS107).  We also assume basic understanding of linear algebra (MATH 51) and 3D calculus.</p>
-
-<div class="overview_main_item overview_ruled_element">Textbook</div>
-
-<p>There is no required textbook for CS248, though a variety of books may provide good supplementary material:</p>
-
-<p>
-<div>Pete Shirley and Steve Marschner with Michael Ashikhmin, Michael Gleicher, Naty Hoffman, Garrett Johnson, Tamara Munzner, Erik Reinhard, Kelvin Sung, William B. Thompson, Peter Willemsen, and Bryan Wyvill</div>
-<div><span class="bold_text">Fundamentals of Computer Graphics. A K Peters, 2009</div>
-<div><a href="https://www.amazon.com/Fundamentals-Computer-Graphics-Fourth-Marschner/dp/1482229390/ref=dp_ob_title_bk">[ On Amazon ]</a></div>
-</p>
-
-<p>
-<div>John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner, and Kurt Akeley</div>
-<div><span class="bold_text">Computer Graphics: Principles and Practice</span></div>
-<div><a href="https://www.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528/ref=sr_1_2?s=books&ie=UTF8&qid=1440872554&sr=1-2&keywords=foundations+of+3d+computer+graphics">[ On Amazon ]</a></div>
-</p>
+<p>All class announcements will be made via our <a href="https://piazza.com/stanford/spring2020/cs348k/home" target="_blank">class Piazza Page</a>.
+  Please make sure you <a href="https://piazza.com/stanford/spring2020/cs348k" target="_blank">sign up</a> for the course on Piazza.</p>
 
 <div class="overview_main_item overview_ruled_element">Grading / What You Will Do</div>
 
 <p>
-All students will be expected to perform:
+All students will be expected to:
 <ul>
-  <li>Three programming assignments:  <span class="bold_text colored_text">40&#37;</span></li>
-  <li>Participation on written assignments: <span class="bold_text colored_text">10&#37;</span></li>
-  <li>Self-selected final project: <span class="bold_text colored_text">25&#37;</span></li>
-  <li>One exam: <span class="bold_text colored_text">25&#37;</span></li>
+  <li>Perform academic paper readings approximately every class
+(and be prepared to summarize aspects of the paper and participate in the paper discussions we have in class). <span class="bold_text \
+colored_text">(40&#37;)</span>
+  </li>
+  <li>Complete two programming assignments that are designed to give a brief, but first-hand experience with course topics in the first section of the course. <span class="bold_text colored_text">(20&#37;)</span>
+  </li>
+  <li>Complete a self-selected term project.  Students may work in
+  teams of two for the final project. <span class="bold_text colored_text">(40&#37;)</li>
 </ul>
 </p>
 
-<p>Programming assigments and the final project can be completed in teams of up to two students.</p>
+<div class="overview_main_item overview_ruled_element">Prerequisites and How to Prepare</div>
 
 <p>
-<span class="italic_text"Late hand-in policy.</span> Each student is allotted a total of five late-day points for the semester. Late-day points are for use on the three programming assignments only. Late-day points work as follows:
+Hello there. I'm glad you are interested in cs348K. This course
+focuses on the design of computing systems that efficiently meet the
+aggressive performance demands of visual computing
+applications. Specifically we'll be concerned with digital camera
+image processing, image/video understanding (largely deep learning
+based methods), and real-time 3D graphics. Since designing highly
+efficient systems requires in-depth knowledge of the workloads to
+execute, we will cover key algorithms used in each of these
+domains. That is, you will certainly learn some advanced
+graphics/vision. Conversely, to execute with high performance, algorithms
+must be mapped efficiently to hardware resources, and to do so, we
+will talk extensively about the characteristics of modern parallel
+architecture, and how that impacts the choice of algorithms used. That
+is, we will also be discussing parallel computer architecture is this
+class. A key theme of this course is that, to achieve the most
+efficient solutions, modern systems architects should simultaneously
+consider opportunities for innovation in the design of algorithms, the
+programming frameworks used to express them, and the capabilities of
+the underlying hardware architecture. Regardless of whether you are an
+application developer, systems software programmer, or hardware
+architect, I want to you leave this course with a better understanding
+of how to think end-to-end.</p>
 
-<ul>
-<li>A one-person team can extend a programming assignment deadline by one day using one point.</li>
-<li>A two-person team can extend a programming assignment deadline by one day using two points.
-  (e.g., one point from each student)</li>
-<li>If a team does not have remaining late day points, late hand-ins will incur a 10% penalty per day
-(up to three days per assignment).</li>
-<li>No assignments will be accepted more than three days after the deadline. This is true whether or not the student has late-day points remaining.</li>
-</ul>
+<p>It is likely that you may have a strong background in parallel
+architecture or in algorithms for either computer graphics/computer
+vision, but not in both. <span class="bold_text">Do not
+panic, but please read the tips below.</span></p>
 
-<div class="overview_main_item overview_ruled_element">Collaboration Policy</div>
+<p>This is a graduate-level course but advanced undergraduates are
+  certainly welcome. (You are responsible for determining whether you
+  can keep up with the course). <span class="bold_text">For
+  undergraduates CS110 (or equivalent) is a strict
+  prerequisite.</span> Although the programming assignments in this
+  class are short, you need to have a strong systems programming
+  background to do the assignments, as well has have enough systems
+  programming experience to understand the papers we read.  The more
+  prior implementation experience the better.  </p>
 
-<p>
-Students in CS248 are absolutely encouraged to talk to each other, to
-the TAs, to the instructors, or to anyone else about course
-assignments. Any assistance, though, must be limited to discussion of
-the problems and sketching general approaches to a solution. Each
-student should write their own code and produce their own
-writeup. Consulting another student's solution is prohibited and
-submitted solutions may not be copied from any source. These and any
-other form of collaboration on assignments constitute cheating. If you
-have any question about whether some activity would constitute
-cheating, just be cautious and ask the instructors before proceeding!
+<p>On the parallel systems side, I recommend having some background in
+modern parallel computing at the level of <a
+href="http://cs149.stanford.edu">CS149</a>, or a computer architecture
+course such as EE282.  <span class="bold_text">You may wish to review
+some of the lectures in my own prior course on parallel computing at
+CMU</span>, from which you can find public online lectures <a
+href="http://15418.courses.cs.cmu.edu/spring2017/">here (2017)</a> and
+<a href="http://15418.courses.cs.cmu.edu/spring2017/">here (2016)</a>
+(newer content in 2017, better videos in 2016).</p>
+
+<p>On the graphics, computer vision, and deep learning side of the
+fence, I recommend you have some background implementing algorithms in
+at least one of these areas.  For 3D computer graphics, that would be
+at the level of <a href="http://cs248.stanford.edu/">CS248</a>, for
+computer vision it is CS231A or <A
+href="http://cs231n.stanford.edu/">CS231N</a> (CS231N is very relevant
+to our discussions), and for image processing: CS232/EE368.
+Graduate-level systems and computer architecture students without
+substantial graphics/computer vision experience are welcome in CS348K
+(in fact the course is designed for you!), but you must be willing to
+familiarize yourselves with key graphics/visual computing concepts
+during the course.  You can't design good systems unless you really
+understand the workloads.
+
+<p>If you are still unsure if you're prepared to take the course, just come talk to
+ your <a href="http://graphics.stanford.edu/~kayvonf">friendly
+ instructor</a> before the start of the course.
 </p>
-
-<p>You may not supply code, assignment writeups, or exams you complete
-during CS248 to other students in future instances of this course
-or make these items available (e.g., on the web) for use in future
-instances of this course (just as you may not use work completed by
-students who've taken the course previously). Make sure to make
-repositories private if you use public source control hosts like
-github.
-</p>
-
 
 <p>&nbsp;</p>
-

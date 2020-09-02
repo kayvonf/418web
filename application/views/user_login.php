@@ -1,15 +1,15 @@
 
 <div class="narrow_container">
 
-<div class="main_title">Interactive Computer Graphics</div>
-<div>Stanford CS248</div>
+<div class="main_title">Visual Computing Systems</div>
+<div>Stanford CS348K</div>
 
 <div style="padding-top: 20px; padding-bottom: 10px;">
 
 <?php if(isset($prev_url)) { ?>
     <p class="form_label">You must be logged in to access this page. No account? Then <a href="<?php echo site_url('users/create'); ?>">sign up</a>!</p>
 <?php } else { ?>
-    <p>No account? Then <a href="<?php echo site_url('users/create'); ?>">sign up</a>!</p>
+    <!-- <p>No account? Then <a href="<?php echo site_url('users/create'); ?>">sign up</a>!</p> -->
 <?php } ?>
 
 </div>
