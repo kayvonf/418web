@@ -5,7 +5,7 @@ from .models import Lecture, LectureSlide
 
 # Create your views here.
 def index(request):
-    lectures = get_list_or_404(Lecture)
+    lectures = Lecture.objects.filter(published=True).order_by('date')
     return render(request, 'lectures/index.html', {'lectures': lectures})
 
 def lecture(request, lecture_shortname):

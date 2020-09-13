@@ -7,14 +7,18 @@
 
 <!-- this is the big image of the slide -->
 
-<div>
-<a href="{{next_slide_url}}">
-     <img src="{{lecture_slide.image_url}}" width="{{slide_image_width}}px" height="{{slide_image_height}}px" class="lecture_slide_img"></a>
-</div>
+{% if lecture_slide.slide_number < lecture.num_slides %}
+<a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:1 %}">
+  <img src="{{lecture_slide.image_url}}" width="{{lecture_slide.image_width}}" height="{{lecture_slide.image_height}}" class="lecture_slide_img">
+</a>
+{% else %}
+<img src="{{lecture_slide.image_url}}" width="{{lecture_slide.image_width}}" height="{{lecture_slide.image_height}}" class="lecture_slide_img">
+{% endif %}
+
+<div style="width: {{lecture_slide.image_width}}px; border-bottom: #c0c0c0 3px solid; padding-top: 6px; padding-bottom: 10px; margin-bottom: 10px;">
 
 <!-- begin slide navigation elements -->
 
-<div style="width: {{slide_image_width}}px; border-bottom: #c0c0c0 3px solid; padding-top: 6px; padding-bottom: 10px; margin-bottom: 10px;">
 
 <div style="float: left;">
 {% if lecture_slide.slide_number > 1 %}
@@ -59,3 +63,5 @@ $(document).keydown(function (e) {
   {% if comments_html %} {{comments_html}} {% endif %}
 </div>
 {% endblock %}
+
+

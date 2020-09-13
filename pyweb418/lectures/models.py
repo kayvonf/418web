@@ -13,7 +13,7 @@ class Lecture(models.Model):
     readings  = models.TextField(null=True, blank=True)
     date = models.DateField()
     number = models.CharField(max_length=10, unique=True)
-    num_slides = models.IntegerField()
+    num_slides = models.IntegerField(null=True, blank=True)
     published = models.BooleanField(default=False)
     scheduling_dummy = models.BooleanField(default=False)
     pdf = models.FileField(upload_to=lecture_upload_path, max_length=300,
@@ -23,6 +23,8 @@ class LectureSlide(models.Model):
     lecture = models.ForeignKey(Lecture, on_delete=models.CASCADE)
     slide_number = models.IntegerField()
     image_url = models.CharField(max_length=300)
+    image_width = models.IntegerField(null=True)
+    image_height = models.IntegerField(null=True)
     thumb_url = models.CharField(max_length=300)
     num_comments = models.IntegerField()
 
