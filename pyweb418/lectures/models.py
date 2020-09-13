@@ -11,9 +11,11 @@ class Lecture(models.Model):
     title = models.CharField(max_length=300)
     subtitle = models.TextField()
     readings  = models.TextField(null=True, blank=True)
+    date = models.DateField()
     number = models.CharField(max_length=10, unique=True)
     num_slides = models.IntegerField()
     published = models.BooleanField(default=False)
+    scheduling_dummy = models.BooleanField(default=False)
     pdf = models.FileField(upload_to=lecture_upload_path, max_length=300,
                            null=True, blank=True)
 
