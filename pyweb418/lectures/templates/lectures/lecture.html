@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="lecture_title">Lecture {{lecture.number}}: {{lecture.title}}</div>
+
+<div><a href="{{lecture.pdf.url}}">Download slides as PDF</a></div>
+
+<p>
+<div class="lecture_summary_thumbnail_block">
+
+{% for lecture_slide in lecture_slides %}
+    <div class="slide-thumbnail" style="width: {{slide_thumbnail_horiz_spacing}}px;">
+    <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}">
+    <img width="{{lecture_slide_thumbnail_width}}"
+     height="{{lecture_slide_thumbnail_height}}"
+     src="{{lecture_slide.thumb_url}}"
+     class="lecture_summary_thumbnail_img">
+    </a>
+{% if lecture_slide.num_comments > 0 %}
+    <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}" class="slide-comments-link">
+        {{lecture_slide.num_comments}} comment{% if lecture_slide.num_comments > 1 %}s{% endif %}
+    </a>
+{% endif %}
+    </div>
+{% endfor %}
+
+
+</div>
+</p>
+{% endblock %}

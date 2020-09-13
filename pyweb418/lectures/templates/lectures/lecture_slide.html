@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="lecture_title">
+<a href="{% url 'lectures:lecture' lecture.short_name %}">{{lecture.title}}</a>
+</div>
+
+<!-- this is the big image of the slide -->
+
+<div>
+<a href="{{next_slide_url}}">
+     <img src="{{lecture_slide.image_url}}" width="{{slide_image_width}}px" height="{{slide_image_height}}px" class="lecture_slide_img"></a>
+</div>
+
+<!-- begin slide navigation elements -->
+
+<div style="width: {{slide_image_width}}px; border-bottom: #c0c0c0 3px solid; padding-top: 6px; padding-bottom: 10px; margin-bottom: 10px;">
+
+<div style="float: left;">
+{% if lecture_slide.slide_number > 1 %}
+    <a id="previous-slide" href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:-1 %}">Previous</a>
+{% endif %}
+|
+{% if lecture_slide.slide_number < lecture.num_slides %}
+    <a id="next-slide" href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:1 %}">Next</a>
+{% endif %}
+
+--- Slide {{lecture_slide.slide_number}} of {{lecture.num_slides}}
+</div>
+
+<script>
+$(document).keydown(function (e) {
+    // Let textareas handle their own keypresses.
+    if ( $("*:focus").is("textarea, input") ) return;
+
+{% if lecture_slide.slide_number > 1 %}
+    if (e.keyCode == 37) { // Left
+        document.location = "{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:-1 %}";
+        return false;
+    }
+{% endif %}
+{% if lecture_slide.slide_number < lecture.num_slides %}
+    if (e.keyCode == 39) { // Right
+        document.location = "{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:1 %}";
+        return false;
+    }
+{% endif %}
+});
+</script>
+
+<div style="text-align: right;">Back to <a href="{% url 'lectures:lecture' lecture.short_name %}">Lecture Thumbnails</a></div>
+
+</div>
+
+
+<!-- end slide navigation elements  -->
+
+<div class="slide_comments_container">
+  {% if comments_html %} {{comments_html}} {% endif %}
+</div>
+{% endblock %}

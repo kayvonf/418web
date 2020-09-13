@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home_container">
+
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Fall 2020</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
+
+
+<p>This page contains lecture slides, videos, and recommended readings for the Fall 2020 offering of CS149.
+
+</p>
+
+{% for lecture in lectures %}
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="{% url 'lectures:lecture' lecture.short_name %}">Lecture {{lecture.number}}: {{lecture.title}}</a></div>
+     <div class="colored_text book_lecture_subtitle">({{lecture.subtitle}})</div>
+     
+     <div class="book_lecture_indent">
+
+     {% if lecture.readings %}
+     {{lecture.readings}}
+     {% endif %}
+</div>
+
+{% endfor %}
+
+</div>
+{% endblock %}
