@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="narrow_container">
+
+<div class="main_title">Parallel Computing</div>
+<div>CS 149</div>
+
+<div style="padding-top: 20px; padding-bottom: 10px;">
+
+{% if prev_url %}
+    <p class="form_label">You must be logged in to access this page.</p>
+{% endif %}
+    <p>No account? Then <a href="{% url 'students:create' %}">sign up</a>!</p>
+
+</div>
+
+<form action="{% url 'students:do_login' %}" method="post">
+{% csrf_token %}
+    <p>
+        <div class="form_label">Username:</div>
+        <div><input type="input" class="form_input_box" name="username" ></div>
+    </p>
+
+    <p>
+        <div class="form_label">Password:</div>
+        <div><input type="password" class="form_input_box" name="password"></div>
+    </p>
+
+    <p><a href="<?php echo site_url('users/reset_password') ?>">Forgot Password?</a></p>
+
+    <div class="form_submit_button"><button type="submit">[ Login ]</div></button></div>
+
+</form>
+</div>
+
+{% endblock %}

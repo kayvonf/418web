@@ -1063,3 +1063,10 @@ p code {
     border: #c0c0c0 1px solid;
 }
 */
+
+.errorlist {
+    background-color: #fff0f0;
+    border: #c00000 2px dashed;
+    padding: 1em;
+    margin: 1em 1em 1em 0em;
+}

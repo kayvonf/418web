@@ -97,9 +97,9 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 Welcome, <a href="<?php echo site_url('users/edit'); ?>"><?php echo $logged_in_user->firstname; ?></a><?php echo "&nbsp <img class='topbar_profile_picture' src='" . $logged_in_user->profile_picture_url ."' align='top' />";
 ?>
 
-<a href="<?php echo site_url('users/logout') ?>">[Logout]</a>
+<a href="{% url 'students:logout' %}">[Logout]</a>
 {% else %}
-<a href="<?php echo site_url('users/login') ?>">[Login]</a>
+<a href="{% url 'students:login' %}">[Login]</a>
 {% endif %}
 
 </div>

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'lectures.apps.LecturesConfig',
+    'students.apps.StudentsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,6 +127,9 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.expanduser('~/pyweb418_media')
 MEDIA_URL = '/media/'
+
+# Students app settings
+STUDENTS_SIGNUP_CODE = ''
 
 # Lecture app settings
 LECTURES_IMAGES_DIR = 'images'

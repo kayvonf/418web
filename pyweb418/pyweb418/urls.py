@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('courseinfo', views.courseinfo, name='courseinfo'),
     path('lecture/', include('lectures.urls')),
+    path('students/', include('students.urls')),
 ]
 
 if settings.DEBUG:

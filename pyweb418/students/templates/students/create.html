@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="narrow_container">
+
+{% if form and form.errors %}
+  <div class="form_errors">
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<h1>Welcome to CS 149</h1>
+
+<h2>
+Step 1: Create an account on the course web site (or <a href={% url 'students:login' %}">login</a>)
+</h2>
+
+<form enctype="multipart/form-data" action="{% url 'students:do_create' %}" method="post">
+{% csrf_token %}
+
+{% if needs_signup_code %}
+<p>
+    <div class="form_label">Secret Code</div>
+    <div class="form_help_text">You can only sign up with the secret code</div>
+    <div><input type="input" class="form_input_box" name="secretcode"></div>
+</p>
+{% endif %}
+
+<p class="form_top_dashed">
+     <div class="form_label">Username</div>
+     {{ form.username.errors }}
+     <div class="form_help_text">Your username can be anything you like (minimum three characters).  It does not need to be your student id. Keep in mind your comments on this site may be seen by the rest of the class and the public internet at large, so if you wish to remain anonymous, please choose your username accordingly.</div>
+    <div>{{ form.username }}</div>
+</p>
+
+<p>
+     <div style="float: left; margin-right: 25px;">
+       <div class="form_label">First Name</div>
+       {{ form.firstname.errors }}
+       <div>{{ form.firstname }}</div>
+     </div>
+
+     <div style="float:left;">
+       <div class="form_label">Last Name</div>
+       {{ form.lastname.errors }}
+       <div>{{ form.lastname }}</div>
+     </div>
+</p>
+
+<div style="clear:both;"></div>
+
+<p>
+     <div class="form_label">Password</div>
+     {{ form.password1.errors }}
+     <div class="form_help_text">This will be your password for the CS 149 site.  It is not your suid password. (and probably should not be). NOTE: THIS SITE WAS MADE BY THE COURSE STAFF, AND WHILE WE HAVE TRIED TO EMPLOY SECURITY BEST PRACTICIES, WE'RE JUST ACADEMICS, SO BE CAREFUL ABOUT YOUR CHOICE OF PASSWORD.
+     </div>
+     <div>{{ form.password1 }}</div>
+</p>
+<p>
+     <div class="form_label">Confirm Password</div>
+     {{ form.password2.errors }}
+     <div>{{ form.password2 }}</div>
+</p>
+<p>
+     <div class="form_label">Preferred Email</div>
+     {{ form.email.errors }}
+     <div>{{ form.email }}</div>
+</p>
+
+<p>
+     <div class="form_label">SUNet ID</div>
+     {{ form.suid.errors }}
+     <div>{{ form.suid }}</div>
+</p>
+
+<p>
+     <p class="form_label form_top_dashed">And... please tell us a bit about yourself:</p>
+     <div style="float: left; padding-right: 25px;">
+
+     <div class="form_label">Major</div>
+     {{ form.major.errors }}
+     <div class="form_help_text">(e.g., CS, EE, etc)</div>
+     <div>{{ form.major }}</div>
+     </div>
+     <div class="float: left;">
+     <div class="form_label">Year</div>
+     {{ form.year.errors }}
+     <div class="form_help_text">(e.g., junior, senior, MS, PhD)</div>
+     <div>{{ form.year }}</div>
+     </div>
+</p>
+
+<div style="clear:both;"></div>
+
+<p>
+     <div class="form_label">Profile Picture</div>
+     {{ form.photo.errors }}
+     <div class="form_help_text">Profile pictures are just for fun.  You need not upload a photo of yourself, or even anything at all. If you don't upload a profile photo, you'll temporarily be assigned a random picture of a cute robot.  You can always change it later. (Images must be JPGs.)</div>
+     <div>{{ form.photo }}</div>
+
+     <div class="overview_main_item form_submit_button"><button type="submit">[ Sign Me Up! ]</button></div>
+</p>
+
+</form>
+
+</div>
+
+{% endblock %}
