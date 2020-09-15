@@ -1,0 +1,11 @@
+A new comment has been posted on <a href="{{content_object_uri}}">{{content_object}}</a>:
+
+<div>
+<div>
+    <span class="user">{{comment.user.username}}</span>
+    <time class="timeago" datetime="{{comment.submit_date}}"></time>
+</div>
+<div class="comment-data">
+{{comment.comment | linebreaks}}
+</div>
+</div>

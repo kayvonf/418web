@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load comments %}
+
 {% block content %}
 <div class="lecture_title">Lecture {{lecture.number}}: {{lecture.title}}</div>
 
@@ -16,9 +18,12 @@
      src="{{lecture_slide.thumb_url}}"
      class="lecture_summary_thumbnail_img">
     </a>
-{% if lecture_slide.num_comments > 0 %}
+
+{% get_comment_count for lecture_slide as num_comments %}
+
+{% if num_comments > 0 %}
     <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}" class="slide-comments-link">
-        {{lecture_slide.num_comments}} comment{% if lecture_slide.num_comments > 1 %}s{% endif %}
+        {{num_comments}} comment{% if num_comments > 1 %}s{% endif %}
     </a>
 {% endif %}
     </div>

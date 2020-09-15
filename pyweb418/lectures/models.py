@@ -28,4 +28,7 @@ class LectureSlide(models.Model):
     thumb_url = models.CharField(max_length=300)
     num_comments = models.IntegerField()
 
+    def __str__(self):
+        return 'Lecture {:s}, Slide {:d}'.format(self.lecture.number, self.slide_number)
+
     

@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load comments %}
+
 {% block content %}
 <div class="lecture_title">
 <a href="{% url 'lectures:lecture' lecture.short_name %}">{{lecture.title}}</a>
@@ -60,7 +62,40 @@ $(document).keydown(function (e) {
 <!-- end slide navigation elements  -->
 
 <div class="slide_comments_container">
-  {% if comments_html %} {{comments_html}} {% endif %}
+  {% get_comment_list for lecture_slide as comment_list %}
+  {% for comment in comment_list %}
+  <div class="comment">
+    <div class="about">
+      <div>
+        <img src="{{comment.user.student.photo.url}}">
+      </div>
+      <div>
+        <span class="user">{{comment.user.username}}</span>
+        <time class="timeago" datetime="{{comment.submit_date}}"></time>
+      </div>
+    </div>
+    <div class="comment-data">
+      {{comment.comment | linebreaks}}
+    </div>
+  </div>
+  {% endfor %}
+
+  {% if user.is_authenticated %}
+    {% get_comment_form for lecture_slide as form %}
+    <form action="{% comment_form_target %}" method="POST">
+    {% csrf_token %}
+    {{ form.comment }}
+    {{ form.honeypot }}
+    {{ form.content_type }}
+    {{ form.object_pk }}
+    {{ form.timestamp }}
+    {{ form.security_hash }}
+    <input type="hidden" name="next" value="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}" />
+    <input type="submit" value="Add comment" id="id_submit" />
+    </form>
+{% else %}
+    <p>Please <a href="{% url 'students:login' %}">log in</a> to leave a comment.</p>
+{% endif %}
 </div>
 {% endblock %}
 

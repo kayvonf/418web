@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpResponse
 from django.urls import reverse
+from django.conf import settings
 from .models import Lecture, LectureSlide
 
 # Create your views here.
@@ -11,10 +12,18 @@ def index(request):
 def lecture(request, lecture_shortname):
     lecture = get_object_or_404(Lecture, short_name=lecture_shortname)
     lecture_slides = LectureSlide.objects.filter(lecture=lecture.pk).order_by('slide_number')
+    first_slide = lecture_slides.first()
+    aspect_ratio = first_slide.image_height / first_slide.image_width
+    thumbnail_height = settings.LECTURES_SLIDE_THUMB_HEIGHT
+    thumbnail_width = settings.LECTURES_SLIDE_THUMB_HEIGHT / aspect_ratio
+    horiz_spacing = thumbnail_width + 7
     return render(request, 'lectures/lecture.html', {
         'lecture': lecture,
-        'lecture_slides': lecture_slides}
-    )
+        'lecture_slides': lecture_slides,
+        'lecture_slide_thumbnail_height': thumbnail_height,
+        'lecture_slide_thumbnail_width': thumbnail_width,
+        'slide_thumbnail_horiz_spacing': horiz_spacing,
+    })
 
 def slide(request, lecture_shortname, slide_number):
     lecture = get_object_or_404(Lecture, short_name=lecture_shortname)

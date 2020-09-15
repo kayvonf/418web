@@ -25,6 +25,7 @@ urlpatterns = [
     path('courseinfo', views.courseinfo, name='courseinfo'),
     path('lecture/', include('lectures.urls')),
     path('students/', include('students.urls')),
+    path('comments/', include('django_comments.urls')),
 ]
 
 if settings.DEBUG:
