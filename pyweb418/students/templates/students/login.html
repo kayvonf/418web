@@ -3,6 +3,23 @@
 {% block content %}
 <div class="narrow_container">
 
+{% if form and form.errors %}
+  <div class="form_errors">
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
 <div class="main_title">Parallel Computing</div>
 <div>CS 149</div>
 
@@ -19,15 +36,17 @@
 {% csrf_token %}
     <p>
         <div class="form_label">Username:</div>
-        <div><input type="input" class="form_input_box" name="username" ></div>
+        {{ form.username.errors }}
+        <div>{{ form.username }}</div>
     </p>
 
     <p>
         <div class="form_label">Password:</div>
-        <div><input type="password" class="form_input_box" name="password"></div>
+        {{ form.password.errors }}
+        <div>{{ form.password }}</div>
     </p>
 
-    <p><a href="<?php echo site_url('users/reset_password') ?>">Forgot Password?</a></p>
+    <p><a href="{% url 'students:reset_password' %}">Forgot Password?</a></p>
 
     <div class="form_submit_button"><button type="submit">[ Login ]</div></button></div>
 

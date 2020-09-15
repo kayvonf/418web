@@ -40,7 +40,7 @@ MathJax.Hub.Config({
 </script>
 
 
-<link rel="stylesheet" type="text/css" href="{% static "third_party/codemirror-3.0/lib/codemirror.css"}">
+<link rel="stylesheet" type="text/css" href="{% static "third_party/codemirror-3.0/lib/codemirror.css" %}">
 
 <script src="{% static "third_party/google-code-prettify/prettify.js" %}"></script>
 <link rel="stylesheet" type="text/css" href="{% static "third_party/google-code-prettify/prettify.css" %}">
@@ -81,22 +81,19 @@ var keep_alive_url = "<?php echo site_url("keep_alive"); ?>";
 <!-- <div class="topbar_left"><a href="<?php echo site_url('exercises'); ?>">[Exercises]</a></div> -->
 <!-- <div class="topbar_left"><a href="{% url 'lectures:index' %}">[Projects]</a></div> -->
 
-<?php // TODO(mburman) use check_privileged
-    if (isset($logged_in_user) &&
-    ($logged_in_user->type == USER_TYPE_INSTRUCTOR ||
-    $logged_in_user->type == USER_TYPE_TA)) { ?>
-<div class="topbar_left"><a href="<?php echo site_url('admin') ?>">[Admin Console]</a></div>
-<? }
-?>
+{% if user.is_authenticated and user.is_staff %}
+<div class="topbar_left"><a href="/admin">[Admin Console]</a></div>
+{% endif %}
 
 
 <div class="topbar_right">
 
-{% if logged_in_user %}
+{% if user.is_authenticated %}
 
-Welcome, <a href="<?php echo site_url('users/edit'); ?>"><?php echo $logged_in_user->firstname; ?></a><?php echo "&nbsp <img class='topbar_profile_picture' src='" . $logged_in_user->profile_picture_url ."' align='top' />";
-?>
-
+  Welcome, <a href="{% url 'students:edit' %}">{{user.username}}</a>
+  {% if user.student %}
+  &nbsp <img class='topbar_profile_picture' src="{{user.student.photo.url}}" align='top'>
+  {% endif %}
 <a href="{% url 'students:logout' %}">[Logout]</a>
 {% else %}
 <a href="{% url 'students:login' %}">[Login]</a>

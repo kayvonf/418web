@@ -102,6 +102,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Login url
+LOGIN_URL = '/students/login'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
