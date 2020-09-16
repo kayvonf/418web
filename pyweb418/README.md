@@ -1,5 +1,7 @@
 ## Getting the website setup
 
+Set the secret key in `settings.py` to the development secret key
+
 ```
 mkdir ~/pyweb418_media                     # Create the default uploaded media directory
 python3 manage.py makemigrations lectures  # Setup the database tables
