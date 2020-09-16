@@ -90,7 +90,13 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST_USER = 'your_account@gmail.com'
+    EMAIL_HOST_PASSWORD = 'your account’s password'
 
+DEFAULT_FROM_EMAIL="noreply@cs149.stanford.edu"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -142,7 +148,7 @@ MEDIA_ROOT = os.path.expanduser('~/pyweb418_media')
 MEDIA_URL = '/media/'
 
 # Students app settings
-STUDENTS_SIGNUP_CODE = ''
+STUDENTS_SIGNUP_CODE = 'cs149remote'
 
 # Lecture app settings
 LECTURES_IMAGES_DIR = 'images'

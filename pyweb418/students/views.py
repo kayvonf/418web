@@ -18,14 +18,26 @@ import shutil
 
 def create(request):
     form = CreateForm()
-    return render(request, 'students/create.html', {'form': form})
+    needs_signup_code = settings.STUDENTS_SIGNUP_CODE is not None
+    return render(request, 'students/create.html', {
+        'form': form,
+        'needs_signup_code': needs_signup_code})
 
 
 def do_create(request):
+    needs_signup_code = settings.STUDENTS_SIGNUP_CODE is not None
     form = CreateForm(request.POST, request.FILES)
     try:
         if not form.is_valid():
             raise ValidationError('')
+
+        if needs_signup_code:
+            signup_code = form.cleaned_data['secretcode']
+            if signup_code != settings.STUDENTS_SIGNUP_CODE:
+                error = ValidationError('Signup code is not correct.')
+                form.add_error('secretcode', error)
+                raise error
+
         pass1 = form.cleaned_data['password1']
         pass2 = form.cleaned_data['password2']
         if pass1 != pass2:
@@ -77,11 +89,12 @@ def do_create(request):
 
         auth.login(request, user)
 
-        return HttpResponseRedirect(reverse('students:edit'))
+        return HttpResponseRedirect(reverse('students:edit') + "?created=true")
     except ValidationError:
         # Redisplay the question voting form.
         return render(request, 'students/create.html', {
-            'form': form
+            'form': form,
+            'needs_signup_code': needs_signup_code
         })
 
 
@@ -142,7 +155,19 @@ def edit(request):
             'photo': student.photo,
         })
     form = EditForm(form_data)
-    return render(request, 'students/edit.html', {'form': form})
+
+    template_data = {'form': form}
+
+    print(request.GET.get('created'))
+    if request.GET.get('created', None) == 'true':
+        template_data['created'] = True
+
+    if request.GET.get('updated', None) == 'true':
+        template_data['updated'] = True
+
+    print(template_data)
+
+    return render(request, 'students/edit.html', template_data)
 
 
 @login_required
@@ -177,7 +202,7 @@ def do_edit(request):
         user.save()
         student.save()
 
-        return HttpResponseRedirect(reverse('students:edit'))
+        return HttpResponseRedirect(reverse('students:edit') + '?updated=true')
     except ValidationError:
         # Redisplay the question voting form.
         return render(request, 'students/edit.html', {

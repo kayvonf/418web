@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load comments %}
+{% load message_tags %}
 
 {% block content %}
 <div class="lecture_title">
@@ -71,7 +72,15 @@ $(document).keydown(function (e) {
       </div>
       <div>
         <span class="user">{{comment.user.username}}</span>
-        <time class="timeago" datetime="{{comment.submit_date}}"></time>
+      </div>
+      <div>
+        <time class="timeago" datetime="{{comment.submit_date}}">
+          {% if comment.submit_date|days_ago:7%}
+          {{comment.submit_date | time:"M, D"}}
+          {% else %}
+          {{comment.submit_date | timesince}} ago
+          {% endif %}
+        </time>
       </div>
     </div>
     <div class="comment-data">
@@ -82,16 +91,34 @@ $(document).keydown(function (e) {
 
   {% if user.is_authenticated %}
     {% get_comment_form for lecture_slide as form %}
-    <form action="{% comment_form_target %}" method="POST">
+    <form action="{% comment_form_target %}" method="POST" class="comment-form">
     {% csrf_token %}
-    {{ form.comment }}
+      <div class="add-comment-area">
+        <textarea name="comment" cols="40" rows="10" maxlength="3000" required="" id="id_comment" placeholder="Add a comment"></textarea>
+      </div>
     {{ form.honeypot }}
     {{ form.content_type }}
     {{ form.object_pk }}
     {{ form.timestamp }}
     {{ form.security_hash }}
     <input type="hidden" name="next" value="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}" />
-    <input type="submit" value="Add comment" id="id_submit" />
+    <div>
+        <div class="submit_button_container">
+          <input type="submit" name="mysubmit" id="id_submit" value="Submit Comment!" class="submit_button">
+        </div>
+        <div class="subscription_container">
+        <div class="subscription_container">
+          <span class="text_subscribed">You are currently subscribed to this thread!</span>
+          <!--
+          <span class="text_unsubscribed">You are not currently subscribed to this thread.</span>
+          <button class="subscribe_button" type="button">
+            <span class="text_subscribed">Unsubscribe</span>
+            <span class="text_unsubscribed">Subscribe</span>
+          </button>
+          -->
+        </div>
+        <div style="clear: both;"></div>
+	</div>
     </form>
 {% else %}
     <p>Please <a href="{% url 'students:login' %}">log in</a> to leave a comment.</p>

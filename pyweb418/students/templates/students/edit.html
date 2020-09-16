@@ -3,10 +3,16 @@
 {% block content %}
 <div class="narrow_container">
 
+{% if created %}
+<h1>
+Profile successfully created! Welcome!
+</h1>
+{% endif %}
+
 {% if updated %}
-<p>
+<h3>
 Profile successfully updated!
-</p>
+</h3>
 {% endif %}
 
 <h2>User Information for {{user.username}}</h2>
