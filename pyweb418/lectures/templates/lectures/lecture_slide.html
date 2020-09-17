@@ -12,10 +12,10 @@
 
 {% if lecture_slide.slide_number < lecture.num_slides %}
 <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:1 %}">
-  <img src="{{lecture_slide.image_url}}" width="{{lecture_slide.image_width}}" height="{{lecture_slide.image_height}}" class="lecture_slide_img">
+  <img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}" width="{{lecture_slide.image_width}}" height="{{lecture_slide.image_height}}" class="lecture_slide_img">
 </a>
 {% else %}
-<img src="{{lecture_slide.image_url}}" width="{{lecture_slide.image_width}}" height="{{lecture_slide.image_height}}" class="lecture_slide_img">
+<img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}" width="{{lecture_slide.image_width}}" height="{{lecture_slide.image_height}}" class="lecture_slide_img">
 {% endif %}
 
 <div style="width: {{lecture_slide.image_width}}px; border-bottom: #c0c0c0 3px solid; padding-top: 6px; padding-bottom: 10px; margin-bottom: 10px;">

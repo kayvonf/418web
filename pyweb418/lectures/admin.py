@@ -96,8 +96,8 @@ class LectureAdmin(admin.ModelAdmin):
 
             for slide_number, slide in slides.items():
                 slide_obj = LectureSlide.objects.get(lecture=obj, slide_number=slide_number)
-                slide_obj.image_url = os.path.join(settings.MEDIA_URL, slide['image_path'])
+                slide_obj.image_url = slide['image_path']
                 slide_obj.image_width = slide['image_width']
                 slide_obj.image_height = slide['image_height']
-                slide_obj.thumb_url = os.path.join(settings.MEDIA_URL, slide['thumb_path'])
+                slide_obj.thumb_url = slide['thumb_path']
                 slide_obj.save()
