@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 import django.contrib.auth as auth
 from django.urls import reverse
 from django.views.decorators.cache import never_cache
+from django_comments.models import Comment
 
 from .models import Student
 from .forms import CreateForm, EditForm, LoginForm
@@ -54,7 +55,6 @@ def do_create(request):
         major = form.cleaned_data['major']
         year = form.cleaned_data['year']
         photo = form.cleaned_data['photo']
-        print(photo)
 
         if User.objects.filter(username=username).first():
             error = ValidationError('Username already taken.')
@@ -62,7 +62,7 @@ def do_create(request):
             raise error
 
         if photo is None:
-            rand_int = random.randint(0, 5)
+            rand_int = random.randint(1, 5)
             default_image_path = os.path.join(settings.BASE_DIR, 'pyweb418/static/images/robot{:d}.jpg'.format(rand_int))
             media_dir = os.path.join('users', username)
             abs_media_dir = os.path.join(settings.MEDIA_ROOT, media_dir)
@@ -165,7 +165,7 @@ def edit(request):
     if request.GET.get('updated', None) == 'true':
         template_data['updated'] = True
 
-    print(template_data)
+    template_data['num_comments'] = len(Comment.objects.filter(user=user))
 
     return render(request, 'students/edit.html', template_data)
 

@@ -10,10 +10,11 @@ admin.site.register(LectureSlide)
 
 def im_convert(input_path, image_height, image_quality, output_path):
     cmd = (
-        'magick convert {input_path:s} '
+        '{exe:s} {input_path:s} '
         '-resize x{image_height:d} '
         '-quality {image_quality:d} '
         '-scene 1 {output_path:s}').format(
+            exe=settings.LECTURES_CONVERT_COMMAND,
             input_path=input_path,
             image_height=image_height,
             image_quality=image_quality,
@@ -73,7 +74,7 @@ class LectureAdmin(admin.ModelAdmin):
                 input_path = os.path.join(settings.MEDIA_ROOT, image_path)
                 im_convert(
                     input_path=input_path,
-                    image_height=settings.LECTURES_SLIDE_THUMB_HEIGHT,
+                    image_height=settings.LECTURES_SLIDE_THUMB_HEIGHT * 2,
                     image_quality=settings.LECTURES_SLIDE_THUMB_QUALITY,
                     output_path=os.path.join(settings.MEDIA_ROOT, thumb_path))
                 slide['thumb_path'] = thumb_path
@@ -95,8 +96,8 @@ class LectureAdmin(admin.ModelAdmin):
 
             for slide_number, slide in slides.items():
                 slide_obj = LectureSlide.objects.get(lecture=obj, slide_number=slide_number)
-                slide_obj.image_url = os.path.join('/media', slide['image_path'])
+                slide_obj.image_url = os.path.join(settings.MEDIA_URL, slide['image_path'])
                 slide_obj.image_width = slide['image_width']
                 slide_obj.image_height = slide['image_height']
-                slide_obj.thumb_url = os.path.join('/media', slide['thumb_path'])
+                slide_obj.thumb_url = os.path.join(settings.MEDIA_URL, slide['thumb_path'])
                 slide_obj.save()

@@ -7,6 +7,7 @@ def lecture_upload_path(instance, filename):
     return os.path.join(instance.short_name, filename)
 
 class Lecture(models.Model):
+    # TODO(fpoms): validate short_name does not have spaces in it
     short_name = models.CharField(max_length=200, unique=True)
     title = models.CharField(max_length=300)
     subtitle = models.TextField()

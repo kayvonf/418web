@@ -20,7 +20,7 @@ Profile successfully updated!
 <p>You have made {{num_comments}} comments.
 <!--  (<a href="<?php echo site_url('user/' . $logged_in_user->username) ?>">seem them all here</a>) -->
 </p>
-<p>You have made {{num_private_comments}} private comments.</p>
+<!-- <p>You have made {{num_private_comments}} private comments.</p> -->
 
 <form enctype="multipart/form-data" action="{% url 'students:do_edit' %}" method="post">
 {% csrf_token %}

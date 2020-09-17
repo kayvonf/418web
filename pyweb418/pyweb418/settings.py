@@ -17,21 +17,63 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+LOCAL_PREFIX = ''
+LOCAL_CONFIG = {
+    'prefix': LOCAL_PREFIX,
+    'allowed_hosts': [],
+    'secret_key': 'e5xj$ejn160m^rvl-x-2b%m5c=ii@gahp7ay%95aq+h4jux$4*',
+    'db_path': BASE_DIR / 'db.sqlite3',
+    'static_url': '/static/',
+    'static_root': os.path.expanduser('~/pyweb418_static'),
+    'media_url': '/media/',
+    'media_root': os.path.expanduser('~/pyweb418_media'),
+    'magick_cmd': 'magick convert',
+}
+
+PREFIX = LOCAL_PREFIX
+CONFIG = LOCAL_CONFIG
+
+if False:
+    PROD_PREFIX = 'fall20-dev'
+    with open('/etc/pyweb418/{:s}/django_secret.txt'.format(PROD_PREFIX)) as f:
+        skey = f.read()
+
+    PROD_CONFIG = {
+        'prefix': PROD_PREFIX,
+        'allowed_hosts': ['cs149.stanford.edu', '35.227.169.186'],
+        'force_script_name': '{:s}/'.format(PROD_PREFIX),
+        'secret_key': skey,
+        'db_path': '/etc/pyweb418/{:s}/db.sqlite3'.format(PROD_PREFIX),
+        'static_url': '/{:s}content/static'.format(PROD_PREFIX),
+        'static_root': '/var/www/cs149/{:s}content/static'.format(PROD_PREFIX),
+        'media_url': '/{:s}content/media'.format(PROD_PREFIX),
+        'media_root': '/var/www/cs149/{:s}content/media'.format(PROD_PREFIX),
+        'magick_cmd': 'convert',
+    }
+
+    #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    #EMAIL_HOST = 'smtp.gmail.com'
+    #EMAIL_USE_TLS = True
+    #EMAIL_PORT = 587
+    #EMAIL_HOST_USER = 'your_account@gmail.com'
+    #EMAIL_HOST_PASSWORD = 'your account’s password'
+
+    PREFIX = PROD_PREFIX
+    CONFIG = PROD_CONFIG
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'e5xj$ejn160m^rvl-x-2b%m5c=ii@gahp7ay%95aq+h4jux$4*'
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = CONFIG['secret_key']
 
-if DEBUG:
-    ALLOWED_HOSTS = []
-else:
-    ALLOWED_HOSTS = ['cs149.stanford.edu']
+ALLOWED_HOSTS = CONFIG['allowed_hosts']
+if 'force_script_name' in CONFIG:
+    FORCE_SCRIPT_NAME = CONFIG['force_script_name']
 
 
 # Application definition
@@ -64,7 +106,7 @@ ROOT_URLCONF = 'pyweb418.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['pyweb418/templates'],
+        'DIRS': [BASE_DIR / 'pyweb418/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,21 +128,12 @@ WSGI_APPLICATION = 'pyweb418.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': CONFIG['db_path'],
     }
 }
 
 # Email
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST_USER = 'your_account@gmail.com'
-    EMAIL_HOST_PASSWORD = 'your account’s password'
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL="noreply@cs149.stanford.edu"
 
 # Password validation
@@ -124,7 +157,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Login url
 LOGIN_URL = '/students/login'
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -144,18 +176,23 @@ SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = CONFIG['static_url']
+STATIC_ROOT = CONFIG['static_root']
+
 STATICFILES_DIRS = [
     BASE_DIR / "pyweb418" / "static",
 ]
 
-MEDIA_ROOT = os.path.expanduser('~/pyweb418_media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = CONFIG['media_root']
+MEDIA_URL = CONFIG['media_url']
 
 # Students app settings
 STUDENTS_SIGNUP_CODE = 'cs149remote'
 
 # Lecture app settings
+
+LECTURES_CONVERT_COMMAND = CONFIG['magick_cmd']
+
 LECTURES_IMAGES_DIR = 'images'
 LECTURES_IMAGE_PATH_PREFIX = 'slide'
 
