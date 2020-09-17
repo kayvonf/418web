@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 <div class="home_container">
 
@@ -22,14 +24,14 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div class="indented_block">
 
 <div style="width: 360px; float: left;">
-<img src="/fall20content/staff_photos/kayvonf.jpg" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<img src="{% static 'images/staff_photos/kayvonf.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
 <div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
 <div>[kayvonf at cs.stanford]</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div style="width: 360px; float: left;">
-  <img src="/fall20content/staff_photos/kunle.jpg" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+  <img src="{% static 'images/staff_photos/kunle.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
   <div><a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
   <div>[kunle at stanford] </div>
   <div style="clear: both;">&nbsp;</div>
@@ -39,7 +41,7 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful CAs:</div>
 
 <div style="width: 360px; float: left;">
-<img src="/fall20content/staff_photos/durst.jpg" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<img src="{% static 'images/staff_photos/durst.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
 <div class="ta-name">David Durst</div>
 <div>[durst at stanford]</div>
 <div class="bold_text">Office hours:</div>
@@ -48,9 +50,20 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 </div>
 
 <div style="width: 360px; float: left;">
-<img src="/fall20content/staff_photos/fpoms.jpg" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<img src="{% static 'images/staff_photos/fpoms.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
 <div class="ta-name">Fait Poms</div>
-<div>[fpoms at stanford]</div>
+<div>[fpoms at cs.stanford]</div>
+<div>TBD</div>
+<div style="clear: both;">&nbsp;</div>
+</div>
+
+<div class="overview_minor_item" style="clear: both;">&nbsp;</div>
+
+<div style="width: 360px; float: left;">
+<img src="{% static 'images/staff_photos/mattlkf.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<div class="ta-name">Matthew Kay Fei Lee</div>
+<div>[mattlkf at stanford]</div>
+<div class="bold_text">Office hours:</div>
 <div>TBD</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
@@ -108,18 +121,18 @@ You are not expected to know these languages/systems in advance of the course, y
 <p><span class="italic_text">Take home written assignments.</span> Students will
 complete five take-home written assignments assigned approximately every two weeks.</p>
 
-<p><span class="italic_text">Midterm and Final Exam.</span> There will be midterm and final exams.</p>
+<p><span class="italic_text">One Exam.</span> There will be one exam, scheduled about 3/4 of the way through the quarter.</p>
 
 <div class="overview_main_item overview_ruled_element">Grading</div>
 
 <ul>
-<li>Programming Assignments (4): 8% + 10% + 11% + 11% = <span class="colored_text">40%</span></li>
+<li>Programming Assignments (4): 8% + 10% + 12% + 12% = <span class="colored_text">42%</span></li>
 <li>Written Assignments (5): <span class="colored_text">25%</span></li>
-<li>Exams (2):      <span class="colored_text">30%</span></li>
-<li>Participation:  <span class="colored_text">5%</span>  (lecture comments)</li>
+<li>Exam:      <span class="colored_text">28%</span></li>
+<li>Participation:  <span class="colored_text">5%</span>  (async lecture comments)</li>
 </ul>
 
-<p><span class="bold_text">Late day policy: Each student has a total of five late days for use
+<p><span class="bold_text">Late day policy: Each student has a total of seven late days for use
 over the entire quarter.  Late days can be used either for programming
 assignments or written assignments.</span></p>
 
