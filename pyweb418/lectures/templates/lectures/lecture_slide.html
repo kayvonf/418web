@@ -84,7 +84,7 @@ $(document).keydown(function (e) {
       </div>
     </div>
     <div class="comment-data">
-      {{comment.comment | linebreaks}}
+      {{comment.comment | markdownify | safe}}
     </div>
   </div>
   {% endfor %}

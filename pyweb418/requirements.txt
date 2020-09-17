@@ -1,3 +1,5 @@
 django==3.1.1
 pillow
 django-contrib-comments
+markdown
+pymdown-extensions
