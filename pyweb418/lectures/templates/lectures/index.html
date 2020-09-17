@@ -7,22 +7,23 @@
 <div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
 
 
-<p>This page contains lecture slides, videos, and recommended readings for the Fall 2020 offering of CS149.
-
-</p>
+<p> This page contains lecture slides and recommended readings for the Fall 2020 offering of CS149.</p>
 
 {% for lecture in lectures %}
 
 <div class="book_lecture">
-     <div class="book_lecture_title">
+     <div class="book_lecture_title" style="padding-bottom: 0px">
      <a href="{% url 'lectures:lecture' lecture.short_name %}">Lecture {{lecture.number}}: {{lecture.title}}</a></div>
      <div class="colored_text book_lecture_subtitle">({{lecture.subtitle}})</div>
      
-     <div class="book_lecture_indent">
 
      {% if lecture.readings %}
-     {{lecture.readings}}
+     <div class="book_lecture_indent">
+       <div>Further Reading:</div>
+       {{lecture.readings | safe}}
+     </div>
      {% endif %}
+
 </div>
 
 {% endfor %}
