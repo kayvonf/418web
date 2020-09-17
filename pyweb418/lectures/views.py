@@ -28,9 +28,12 @@ def lecture(request, lecture_shortname):
 def slide(request, lecture_shortname, slide_number):
     lecture = get_object_or_404(Lecture, short_name=lecture_shortname)
     lecture_slide = get_object_or_404(LectureSlide, lecture=lecture.pk, slide_number=slide_number)
+    aspect_ratio = lecture_slide.image_height / lecture_slide.image_width
+    slide_width = settings.LECTURES_SLIDE_IMAGE_HEIGHT / aspect_ratio
+    slide_height = settings.LECTURES_SLIDE_IMAGE_HEIGHT
     params = {'lecture': lecture,
               'lecture_slide': lecture_slide,
-              'slide_image_width': 100,
-              'slide_image_height': 100}
+              'slide_image_width': slide_width,
+              'slide_image_height': slide_height}
     return render(request, 'lectures/lecture_slide.html', params)
 

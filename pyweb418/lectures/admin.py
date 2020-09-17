@@ -47,7 +47,7 @@ class LectureAdmin(admin.ModelAdmin):
             os.makedirs(abs_slide_images_dir)
             im_convert(
                 input_path=abs_pdf_path,
-                image_height=settings.LECTURES_SLIDE_IMAGE_HEIGHT,
+                image_height=settings.LECTURES_SLIDE_IMAGE_HEIGHT * 2,
                 image_quality=settings.LECTURES_SLIDE_IMAGE_QUALITY,
                 output_path=output_path_template)
             # Get list of pdf pages
