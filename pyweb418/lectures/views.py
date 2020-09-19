@@ -36,4 +36,3 @@ def slide(request, lecture_shortname, slide_number):
               'slide_image_width': slide_width,
               'slide_image_height': slide_height}
     return render(request, 'lectures/lecture_slide.html', params)
-

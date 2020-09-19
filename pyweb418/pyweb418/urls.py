@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('courseinfo', views.courseinfo, name='courseinfo'),
+    path('newsfeed', views.newsfeed, name='newsfeed'),
     path('lecture/', include('lectures.urls')),
     path('students/', include('students.urls')),
     path('comments/', include('django_comments.urls')),
