@@ -12,10 +12,16 @@
 
 {% if lecture_slide.slide_number < lecture.num_slides %}
 <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:1 %}">
-  <img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}" width="{{slide_image_width}}" height="{{slide_image_height}}" class="lecture_slide_img">
+  <img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}"
+       width="{{slide_image_width}}"
+       height="{{slide_image_height}}"
+       class="lecture_slide_img">
 </a>
 {% else %}
-<img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}" width="{{slide_image_width}}" height="{{slide_image_height}}" class="lecture_slide_img">
+<img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}"
+     width="{{slide_image_width}}"
+     height="{{slide_image_height}}"
+     class="lecture_slide_img">
 {% endif %}
 
 <div style="width: {{slide_image_width}}px; border-bottom: #c0c0c0 3px solid; padding-top: 6px; padding-bottom: 10px; margin-bottom: 10px;">
@@ -62,6 +68,7 @@ $(document).keydown(function (e) {
 
 <!-- end slide navigation elements  -->
 
+{% if lecture.comments_enabled %}
 <div class="slide_comments_container">
   {% get_comment_list for lecture_slide as comment_list %}
   {% for comment in comment_list %}
@@ -120,10 +127,10 @@ $(document).keydown(function (e) {
         <div style="clear: both;"></div>
 	</div>
     </form>
-{% else %}
+  {% else %}
     <p>Please <a href="{% url 'students:login' %}">log in</a> to leave a comment.</p>
-{% endif %}
+  {% endif %}
 </div>
+{% endif %}
+
 {% endblock %}
-
-

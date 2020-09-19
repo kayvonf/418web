@@ -17,8 +17,10 @@ class Lecture(models.Model):
     num_slides = models.IntegerField(null=True, blank=True)
     published = models.BooleanField(default=False)
     scheduling_dummy = models.BooleanField(default=False)
+    comments_enabled = models.BooleanField(default=True)
     pdf = models.FileField(upload_to=lecture_upload_path, max_length=300,
                            null=True, blank=True)
+
 
 class LectureSlide(models.Model):
     lecture = models.ForeignKey(Lecture, on_delete=models.CASCADE)
@@ -31,5 +33,3 @@ class LectureSlide(models.Model):
 
     def __str__(self):
         return 'Lecture {:s}, Slide {:d}'.format(self.lecture.number, self.slide_number)
-
-    
