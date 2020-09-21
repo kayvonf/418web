@@ -15,7 +15,7 @@
     <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}">
     <img width="{{lecture_slide_thumbnail_width}}"
      height="{{lecture_slide_thumbnail_height}}"
-     src="{{MEDIA_URL}}/{{lecture_slide.thumb_url}}"
+     src="{{MEDIA_URL}}{{lecture_slide.thumb_url}}"
      class="lecture_summary_thumbnail_img">
     </a>
 

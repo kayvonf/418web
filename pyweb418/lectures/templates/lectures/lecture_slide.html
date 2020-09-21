@@ -11,14 +11,17 @@
 <!-- this is the big image of the slide -->
 
 {% if lecture_slide.slide_number < lecture.num_slides %}
+<!-- Preload html and image for next page to speed up slide browsing -->
+<link rel="prefetch" href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:1 %}">
+<link rel="prefetch" href="{{preload_image_url}}">
 <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number|add:1 %}">
-  <img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}"
+  <img src="{{MEDIA_URL}}{{lecture_slide.image_url}}"
        width="{{slide_image_width}}"
        height="{{slide_image_height}}"
        class="lecture_slide_img">
 </a>
 {% else %}
-<img src="{{MEDIA_URL}}/{{lecture_slide.image_url}}"
+<img src="{{MEDIA_URL}}{{lecture_slide.image_url}}"
      width="{{slide_image_width}}"
      height="{{slide_image_height}}"
      class="lecture_slide_img">
@@ -114,7 +117,6 @@ $(document).keydown(function (e) {
           <input type="submit" name="mysubmit" id="id_submit" value="Submit Comment!" class="submit_button">
         </div>
         <div class="subscription_container">
-        <div class="subscription_container">
           <span class="text_subscribed">You are currently subscribed to this thread!</span>
           <!--
           <span class="text_unsubscribed">You are not currently subscribed to this thread.</span>
@@ -125,7 +127,7 @@ $(document).keydown(function (e) {
           -->
         </div>
         <div style="clear: both;"></div>
-	</div>
+    </div>
     </form>
   {% else %}
     <p>Please <a href="{% url 'students:login' %}">log in</a> to leave a comment.</p>

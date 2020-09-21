@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.conf import settings
 from .models import Lecture, LectureSlide
+import os.path
 
 # Create your views here.
 def index(request):
@@ -35,4 +36,9 @@ def slide(request, lecture_shortname, slide_number):
               'lecture_slide': lecture_slide,
               'slide_image_width': slide_width,
               'slide_image_height': slide_height}
+    if slide_number < lecture.num_slides:
+        next_slide = get_object_or_404(
+            LectureSlide, lecture=lecture.pk, slide_number=slide_number+1)
+        params['preload_image_url'] = os.path.join(
+            settings.MEDIA_URL, next_slide.image_url)
     return render(request, 'lectures/lecture_slide.html', params)
