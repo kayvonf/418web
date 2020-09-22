@@ -174,6 +174,9 @@ USE_TZ = True
 # For Sites app
 SITE_ID = 1
 
+# Comments app settings
+COMMENT_MAX_LENGTH = 10_000
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
