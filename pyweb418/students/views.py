@@ -189,7 +189,7 @@ def do_edit(request):
         user = request.user
 
         user.first_name = first_name
-        user.last_name = first_name
+        user.last_name = last_name
         user.email = email
         
         student = Student.objects.get(user=user)
