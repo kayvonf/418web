@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 <div class="home_container">
 
@@ -40,9 +42,6 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div>Instructors: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
 
 <div style="padding-top:1em;">See the <a href="{% url 'courseinfo' %}">course info</a> page for more info on policies and logistics.</div>
-
-<p class="bold_text red_text" style="font-size: 16pt;">FALL 2020 STUDENTS: PLEASE <a href="https://piazza.com/stanford/fall2020/cs149">SIGN UP ON PIAZZA</a> FOR ANNOUNCEMENTS.</p>
-<p class="bold_text red_text" style="font-size: 16pt;">YOU CAN WORK WITH A PARTNER IN CS149. WANT US TO ASSIGN YOU A PARTNER? USE OUR <a href="https://forms.gle/KreF25fbn17ykYP27">PARTNER REQUEST FORM</a>.</p>
 
 </div>
 
@@ -118,31 +117,31 @@ From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomp
 <div class="overview_main_item overview_ruled_element">Written Assignments</div>
 <table>
 <tbody><tr>
-<td class="schedule_date">TBD</td><td class="schedule_lecture">
-<span class="bold_text">Written Assignment 1</span>
+<td class="schedule_date">Oct 6</td><td class="schedule_lecture">
+<a href="{% static 'pdfs/written_asst1.pdf' %}">Written Assignment 1</a>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">TBD</td><td class="schedule_lecture">
+<td class="schedule_date">Oct 13</td><td class="schedule_lecture">
 <span class="bold_text">Written Assignment 2</span>
 </td>
 </tr>
 
 <tr>
- <td class="schedule_date">TBD</td><td class="schedule_lecture">
+ <td class="schedule_date">Oct 20</td><td class="schedule_lecture">
  <span class="bold_text">Written Assignment 3</span>
  </td>
 </tr>
 
 <tr>
- <td class="schedule_date">TBD</td><td class="schedule_lecture">
+ <td class="schedule_date">Nov 3</td><td class="schedule_lecture">
  <span class="bold_text">Written Assignment 4</span>
  </td>
 </tr>
 
 <tr>
- <td class="schedule_date">TBD</td><td class="schedule_lecture">
+ <td class="schedule_date">Nov 17</td><td class="schedule_lecture">
  <span class="bold_text">Written Assignment 5</span>
  </td>
 </tr>

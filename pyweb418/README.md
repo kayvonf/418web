@@ -1,5 +1,13 @@
 ## Getting the website setup
 
+Setup the SMTP server for sending email
+
+```
+sudo apt-get update
+sudo apt install mailutils
+sed /etc/postfix/main.cf
+```
+
 Set the secret key in `settings.py` to the development secret key
 
 ```
@@ -20,4 +28,10 @@ then
 
 ```
 python3 manage.py migrate
+```
+
+## When adding or changing any static files
+
+```
+python3 manage.py collectstatic
 ```
