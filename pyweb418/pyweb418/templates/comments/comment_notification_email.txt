@@ -1,11 +1,15 @@
-A new comment has been posted on <a href="{{content_object_uri}}">{{content_object}}</a>:
+{% load message_tags %}
 
-<div>
-<div>
-    <span class="user">{{comment.user.username}}</span>
-    <time class="timeago" datetime="{{comment.submit_date}}"></time>
-</div>
-<div class="comment-data">
-{{comment.comment | linebreaks}}
-</div>
-</div>
+<div style="height: 22px; color: #ffffff; background: #c02020; border-bottom: #f44000 4px solid; padding-top: 2px; padding-right: 12px; padding-left: 12px; font-size: 10pt; width: 750px"></div>
+
+<div class="news_item" style="padding: 10px 0px 10px 0px">
+    <div class="news_item_body">
+        <div class="headline" style="padding-left: 6px">
+          <span style="font-weight: bold">{{comment.user.username}}</span> commented on <a href="{{content_object_uri}}">{{content_object}}</a> <span>({{comment.submit_date | date:"M j,"}} {{comment.submit_date | time:"g:i A"}})</span>:
+        </div>
+        <div class="comment" style="width: 740px; font-size: 10pt; padding: 5px 5px 5px 5px; margin-top: 3px; -moz-box-shadow: 2px 2px 3px #c0c0c0; -webkit-box-shadow: 2px 2px 3px #c0c0c0; box-shadow: 2px 2px 3px #c0c0c0; padding: 4px 4px 8px 8px; overflow: auto; margin-top: 4px; margin-left: 20px">
+          {{comment.comment | markdownify | safe}}
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div> <br>

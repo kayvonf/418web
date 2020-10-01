@@ -3,3 +3,4 @@ pillow
 django-contrib-comments
 markdown
 pymdown-extensions
+sendgrid

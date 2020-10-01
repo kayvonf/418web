@@ -8,6 +8,10 @@ from django.urls import reverse
 from smtplib import SMTPException
 from lectures.models import LectureSlide
 
+import os
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+
 @receiver(comment_was_posted)
 def handle_comment_was_posted(sender, **kwargs):
     comment = kwargs['comment']
@@ -27,23 +31,35 @@ def handle_comment_was_posted(sender, **kwargs):
     }
 
     all_users = set()
-    for comment in sender.objects.filter(content_type=comment.content_type, object_pk=comment.object_pk):
-        all_users.add(comment.user)
+    for ncomment in sender.objects.filter(content_type=comment.content_type, object_pk=comment.object_pk):
+        if ncomment.user.username == comment.user.username:
+            continue
+        all_users.add(ncomment.user)
 
+    # Filter user if they posted the comment
     recipient_list = [user.email for user in all_users]
 
     t = loader.get_template('comments/comment_notification_email.txt')
 
     # Email all users about new comment
-    print(content_object)
     subject = ('[{site:s}] New comment posted on "{obj:s}"'.format(
         site=get_current_site(request).name,
         obj=str(content_object)
     ))
-    message = t.render(c)
+    html_content = t.render(c)
 
+    message = Mail(
+        from_email=settings.SENDGRID_EMAIL,
+        to_emails=recipient_list,
+        subject=subject,
+        html_content=html_content,
+        is_multiple=True)
+
+    with open(settings.SENDGRID_KEY_PATH, 'r') as f:
+        sendgrid_key = f.read().strip()
     try:
-        send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, recipient_list)
-    except SMTPException as e:
-        print(e)
-    print('sent mail')
+        sg = SendGridAPIClient(sendgrid_key)
+        response = sg.send(message)
+    except Exception as e:
+        print('Could not send mail!!!')
+        print(e.message)

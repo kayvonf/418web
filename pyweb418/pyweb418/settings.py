@@ -28,6 +28,8 @@ LOCAL_CONFIG = {
     'media_url': '/media/',
     'media_root': os.path.expanduser('~/pyweb418_media'),
     'magick_cmd': 'magick convert',
+    'sendgrid_key_path': BASE_DIR / 'sendgrid.env',
+    'sendgrid_email': 'cs149-noreply@stanford.edu',
 }
 
 PREFIX = LOCAL_PREFIX
@@ -49,6 +51,8 @@ if False:
         'media_url': '/{:s}content/media/'.format(PROD_PREFIX),
         'media_root': '/var/www/cs149/{:s}content/media'.format(PROD_PREFIX),
         'magick_cmd': 'convert',
+        'sendgrid_key_path': '/etc/pyweb418/{:s}/sendgrid.env'.format(PROD_PREFIX),
+        'sendgrid_email': 'cs149-noreply@stanford.edu',
     }
 
     #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -208,3 +212,7 @@ LECTURES_SLIDE_IMAGE_QUALITY = 85
 
 LECTURES_SLIDE_THUMB_HEIGHT = 130
 LECTURES_SLIDE_THUMB_QUALITY = 95
+
+# Email
+SENDGRID_KEY_PATH = CONFIG['sendgrid_key_path']
+SENDGRID_EMAIL = CONFIG['sendgrid_email']
