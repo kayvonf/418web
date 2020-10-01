@@ -15,7 +15,7 @@ def courseinfo(request):
 def newsfeed(request):
     recent_comments = [
         (c, LectureSlide.objects.get(pk=c.object_pk))
-        for c in Comment.objects.order_by('-submit_date')[:100]
+        for c in Comment.objects.filter(is_removed=False).order_by('-submit_date')[:100]
     ]
     return render(request, 'newsfeed.html',
                   {'recent_comments': recent_comments})

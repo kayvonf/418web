@@ -22,8 +22,12 @@ def handle_comment_was_posted(sender, **kwargs):
     content_object_uri = ''
     if isinstance(content_object, LectureSlide):
         lecture_slide = content_object
-        content_object_uri = request.build_absolute_uri(reverse(
-            'lectures:lecture_slide', args=(lecture_slide.lecture.short_name, lecture_slide.slide_number)))
+        current_site = get_current_site(request)
+        domain_name = current_site.domain
+        content_object_uri = ''.join([
+            'http://', domain_name, 
+            reverse('lectures:lecture_slide',
+                    args=(lecture_slide.lecture.short_name, lecture_slide.slide_number))])
     c = {
         'comment': comment,
         'content_object': content_object,
