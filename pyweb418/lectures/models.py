@@ -22,7 +22,7 @@ class Lecture(models.Model):
                            null=True, blank=True)
 
     def __str__(self):
-        return '{:s}'.format(self.title)
+        return 'Lecture {:d}: {:s}'.format(self.number, self.title)
 
 
 class LectureSlide(models.Model):
