@@ -21,6 +21,9 @@ class Lecture(models.Model):
     pdf = models.FileField(upload_to=lecture_upload_path, max_length=300,
                            null=True, blank=True)
 
+    def __str__(self):
+        return '{:s}'.format(self.title)
+
 
 class LectureSlide(models.Model):
     lecture = models.ForeignKey(Lecture, on_delete=models.CASCADE)

@@ -17,4 +17,6 @@ class Student(models.Model):
                               null=True, blank=True)
 
     def __str__(self):
-        return '{:s} {:s} (username: {:s}, suid: {:s})'.format(self.user.first_name, self.user.last_name, self.user.username, self.suid)
+        return '{:s} {:s} (username: {:s}, suid: {:s})'.format(
+            self.user.first_name, self.user.last_name, self.user.username,
+            self.suid)
