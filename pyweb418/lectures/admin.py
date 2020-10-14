@@ -8,13 +8,16 @@ import shutil
 
 admin.site.register(LectureSlide)
 
-def im_convert(input_path, image_height, image_quality, output_path):
+def im_convert(input_path, image_height, image_quality, output_path, density=150):
+    # density results in non-blurry pdfs, alpha remove stops pdfs from having
+    # black backgrounds
     cmd = (
-        '{exe:s} {input_path:s} '
+        '{exe:s} -density {density:d} -alpha remove {input_path:s} '
         '-resize x{image_height:d} '
         '-quality {image_quality:d} '
         '-scene 1 {output_path:s}').format(
             exe=settings.LECTURES_CONVERT_COMMAND,
+            density=density,
             input_path=input_path,
             image_height=image_height,
             image_quality=image_quality,
@@ -45,9 +48,11 @@ class LectureAdmin(admin.ModelAdmin):
             if os.path.exists(abs_slide_images_dir):
                 shutil.rmtree(abs_slide_images_dir)
             os.makedirs(abs_slide_images_dir)
+            # Get num pages with a fast convert
             im_convert(
                 input_path=abs_pdf_path,
-                image_height=settings.LECTURES_SLIDE_IMAGE_HEIGHT * 2,
+                density=10,
+                image_height=100,
                 image_quality=settings.LECTURES_SLIDE_IMAGE_QUALITY,
                 output_path=output_path_template)
             # Get list of pdf pages
@@ -56,9 +61,21 @@ class LectureAdmin(admin.ModelAdmin):
                 settings.LECTURES_THUMBS_DIR)
             image_paths = os.listdir(os.path.join(settings.MEDIA_ROOT, slide_images_dir))
             slides = {}
-            for path in image_paths:
+            for i, path in enumerate(image_paths):
                 if not path.endswith('.jpg'):
                     continue
+
+                # Perform high quality converstion
+                output_path = os.path.join(
+                    settings.MEDIA_ROOT,
+                    slide_images_dir,
+                    settings.LECTURES_IMAGE_PATH_PREFIX + '_{:03d}.jpg'.format(i+1))
+                im_convert(
+                    input_path=abs_pdf_path + '[{:d}]'.format(i),
+                    image_height=settings.LECTURES_SLIDE_IMAGE_HEIGHT * 2,
+                    image_quality=settings.LECTURES_SLIDE_IMAGE_QUALITY,
+                    output_path=output_path)
+
                 slide_number = int(path.split('_')[1][:3])
                 slides[slide_number] = {'image_path': os.path.join(slide_images_dir, path)}
             # Create thumbnails for each image
