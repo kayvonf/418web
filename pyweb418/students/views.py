@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
@@ -11,11 +11,33 @@ from django_comments.models import Comment
 
 from .models import Student
 from .forms import CreateForm, EditForm, LoginForm
+from lectures.models import Lecture, LectureSlide
 
 import random
 import os
 import os.path
 import shutil
+
+@login_required
+@never_cache
+def detail(request, username):
+    user = get_object_or_404(User, username=username)
+    form_data = {
+        'firstname': user.first_name,
+        'lastname': user.last_name,
+        'email': user.email,
+    }
+    student = Student.objects.filter(user=user).first()
+
+    recent_comments = [
+        (c, LectureSlide.objects.get(pk=c.object_pk))
+        for c in Comment.objects.filter(is_removed=False, user=user).order_by('-submit_date')
+    ]
+    return render(request, 'students/detail.html',
+                  {'user': user,
+                   'recent_comments': recent_comments})
+
+
 
 def create(request):
     form = CreateForm()

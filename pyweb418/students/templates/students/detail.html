@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load message_tags %}
+
+{% block content %}
+
+<div class="home_container">
+
+<div class="feed_title">Comment Feed for {{user.first_name}} {{user.last_name}}</div>
+
+<div id="newsfeed">
+
+{% for comment, lecture_slide in recent_comments %}
+<div class="news_item">
+    <img src="{{comment.user.student.photo.url}}">
+    <div class="news_item_body">
+        <div class="headline">
+          <span class="bold_text">{{comment.user.username}}</span> commented on <a href="{% url 'lectures:lecture_slide' lecture_slide.lecture.short_name lecture_slide.slide_number %}">Lecture {{lecture_slide.lecture.number}}: {{lecture_slide.lecture.title}}, Slide {{lecture_slide.slide_number}}</a> <time class="timeago" datetime="{{comment.submit_date}}">({% if comment.submit_date|days_ago:7%}{{comment.submit_date | date:"F jS, Y"}}{% else %}{{comment.submit_date | timesince}} ago{% endif %})</time>
+        </div>
+        <div class="comment">
+          {{comment.comment | markdownify | safe}}
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div> <br>
+{% endfor %}
+</div>  <!-- newsfeed -->
+
+<script>
+$(document).ready(function () {
+    $("#newsfeed .comment").postProcess();
+});
+</script>
+
+</div>
+{% endblock %}

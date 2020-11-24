@@ -118,3 +118,5 @@ class LectureAdmin(admin.ModelAdmin):
                 slide_obj.image_height = slide['image_height']
                 slide_obj.thumb_url = slide['thumb_path']
                 slide_obj.save()
+
+
