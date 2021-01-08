@@ -35,24 +35,24 @@ LOCAL_CONFIG = {
 PREFIX = LOCAL_PREFIX
 CONFIG = LOCAL_CONFIG
 
-if False:
-    PROD_PREFIX = 'fall20-dev'
+if True:
+    PROD_PREFIX = 'winter21'
     with open('/etc/pyweb418/{:s}/django_secret.txt'.format(PROD_PREFIX)) as f:
         skey = f.read()
 
     PROD_CONFIG = {
         'prefix': PROD_PREFIX,
-        'allowed_hosts': ['cs149.stanford.edu', '35.227.169.186'],
+        'allowed_hosts': ['cs248.stanford.edu', '35.227.169.186'],
         'force_script_name': '/{:s}/'.format(PROD_PREFIX),
         'secret_key': skey,
         'db_path': '/etc/pyweb418/{:s}/db.sqlite3'.format(PROD_PREFIX),
         'static_url': '/{:s}content/static/'.format(PROD_PREFIX),
-        'static_root': '/var/www/cs149/{:s}content/static'.format(PROD_PREFIX),
+        'static_root': '/var/www/cs248/{:s}content/static'.format(PROD_PREFIX),
         'media_url': '/{:s}content/media/'.format(PROD_PREFIX),
-        'media_root': '/var/www/cs149/{:s}content/media'.format(PROD_PREFIX),
+        'media_root': '/var/www/cs248/{:s}content/media'.format(PROD_PREFIX),
         'magick_cmd': 'convert',
         'sendgrid_key_path': '/etc/pyweb418/{:s}/sendgrid.env'.format(PROD_PREFIX),
-        'sendgrid_email': 'cs149-noreply@stanford.edu',
+        'sendgrid_email': 'cs248-noreply@stanford.edu',
     }
 
     #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -139,7 +139,7 @@ DATABASES = {
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL="noreply@cs149.stanford.edu"
+DEFAULT_FROM_EMAIL="noreply@cs248.stanford.edu"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
