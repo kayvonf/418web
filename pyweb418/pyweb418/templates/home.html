@@ -5,38 +5,24 @@
 {% block content %}
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248, Winter 2021</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">INTERACTIVE COMPUTER GRAPHICS</div>
-
-<div>
-<img style="padding-bottom: 5px;" src="{% static 'images/teaser.jpg' %}" width="800" height="125"></a>
-</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Fall 2021</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
 
 <p style="padding-bottom: .15em">
-This course provides a comprehensive introduction to computer
-graphics, focusing on fundamental concepts and techniques, as well as
-their cross-cutting relationship to multiple problem domains in
-interactive graphics (such as rendering, animation, geometry, image
-processing). Topics include: 2D and 3D drawing, sampling,
-interpolation, rasterization, image compositing, the GPU graphics
-pipeline (and parallel rendering), geometric transformations, curves
-and surfaces, geometric data structures, subdivision, meshing, spatial
-hierarchies, image processing, compression, time integration,
-physically-based animation, and inverse kinematics.
-</p>
+From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomputers and web sites, parallel processing is ubiquitous in modern computing. The goal of this course is to provide a deep understanding of the fundamental principles and engineering trade-offs involved in designing modern parallel computing systems as well as to teach parallel programming techniques necessary to effectively utilize these machines. Because writing good parallel programs requires an understanding of key machine performance characteristics, this course will cover both parallel hardware and software design.</p>
 
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-<div>Tues/Thurs 2:30-3:50pm</div>
-<div>Virtual Course Only</div>
-<div>Instructors: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
+<div>Tues/Thurs 3:15-4:45pm</div>
+<div>All lectures are virtual</div>
+<div>Instructors: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
 
-<!-- <div style="padding-top:1em;">See the <a href="{% url 'courseinfo' %}">course info</a> page for more info on policies and logistics.</div> -->
+<div style="padding-top:1em;">See the <a href="{% url 'courseinfo' %}">course info</a> page for more info on policies and logistics.</div>
 
 </div>
 
-<div class="overview_main_item overview_ruled_element">Winter 2021 Schedule</div>
+<div class="overview_main_item overview_ruled_element">Fall 2021 Schedule</div>
 
 <table>
 
@@ -72,80 +58,76 @@ physically-based animation, and inverse kinematics.
 </table>
 
 <div class="overview_main_item overview_ruled_element">Programming Assignments</div>
-<!--
 <table>
 <tbody><tr>
-<td class="schedule_date">Sep 25</td><td class="schedule_lecture">
-<a href="https://github.com/stanford-cs149/asst1">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a>
+<td class="schedule_date">Oct 1</td><td class="schedule_lecture">
+<span class="bold_text">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</span>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">Oct 8</td><td class="schedule_lecture">
-<a href="https://github.com/stanford-cs149/asst2">Assignment 2: Scheduling Task Graphs</a>
+<td class="schedule_date">Oct 19</td><td class="schedule_lecture">
+<span class="bold_text">Assignment 2: Scheduling Task Graphs</span>
 </td>
 </tr>
 
 <tr>
- <td class="schedule_date">Oct 23</td><td class="schedule_lecture">
- <a href="https://github.com/stanford-cs149/asst3">Assignment 3: A Simple Renderer in CUDA</a>
+ <td class="schedule_date">Nov 4</td><td class="schedule_lecture">
+ <span class="bold_text">Assignment 3: A Simple Renderer in CUDA</a>
  </td>
 </tr>
 
 <tr>
- <td class="schedule_date">Nov 10</td><td class="schedule_lecture">
- <a href="https://github.com/stanford-cs149/asst4">Assignment 4: Big Graph Processing in OpenMP</a>
+ <td class="schedule_date">Nov 18</td><td class="schedule_lecture">
+ <span class="bold_text">Assignment 4: Big Graph Processing in OpenMP</span>
  </td>
 </tr>
 
 <tr>
- <td class="schedule_date">Nov 19</td><td class="schedule_lecture">
- <span class="bold_text">Assignment 5: Optional Assignment</span>
+ <td class="schedule_date">Dec 2</td><td class="schedule_lecture">
+ <span class="bold_text">Assignment 5: Optional (Going Farther) Assignment</span>
  </td>
 </tr>
 
 </tbody></table>
--->
 
 <div class="overview_main_item overview_ruled_element">Written Assignments</div>
-
-<!--
 <table>
 <tbody><tr>
-<td class="schedule_date">Oct 6</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/written_asst1.pdf' %}">Written Assignment 1</a>
+<td class="schedule_date">Sep 30</td><td class="schedule_lecture">
+
+<!-- <a href="{% static 'pdfs/written_asst1.pdf' %}"> -->
+<span class="bold_text">Written Assignment 1</span>
 </td>
 </tr>
 
 <tr>
-<td class="schedule_date">Oct 13</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/written_asst2.pdf' %}">Written Assignment 2</a>
+<td class="schedule_date">Oct 7</td><td class="schedule_lecture">
+<span class="bold_text">Written Assignment 2</span>
 </td>
 </tr>
 
 <tr>
- <td class="schedule_date">Oct 20</td><td class="schedule_lecture">
- <a href="{% static 'pdfs/written_asst3.pdf' %}">Written Assignment 3</a>
+ <td class="schedule_date">Oct 21</td><td class="schedule_lecture">
+<span class="bold_text">Written Assignment 3</span>
  </td>
 </tr>
 
 <tr>
- <td class="schedule_date">Nov 5</td><td class="schedule_lecture">
- <a href="{% static 'pdfs/written_asst4.pdf' %}">Written Assignment 4</a>
+ <td class="schedule_date">Nov 9</td><td class="schedule_lecture">
+<span class="bold_text">Written Assignment 4</span>
  </td>
 </tr>
 
 <tr>
-  <td class="schedule_date">Nov 17</td><td class="schedule_lecture">
- <a href="{% static 'pdfs/written_asst5.pdf' %}">Written Assignment 5</a>
+  <td class="schedule_date">Nov 30</td><td class="schedule_lecture">
+<span class="bold_text">Written Assignment 5</span>
  </td>
 </tr>
 </tbody></table>
--->
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 
 </div>  <!-- end of home_container -->
 {% endblock %}
->OA

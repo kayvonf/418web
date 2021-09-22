@@ -43,11 +43,14 @@ def handle_comment_was_posted(sender, **kwargs):
     # Filter user if they posted the comment
     recipient_list = [user.email for user in all_users]
 
+    if len(recipient_list) == 0:
+        return
+    
     t = loader.get_template('comments/comment_notification_email.txt')
 
     # Email all users about new comment
     subject = ('[{site:s}] New comment posted on "{obj:s}"'.format(
-        site=get_current_site(request).name,
+        site=current_site.name,
         obj=str(content_object)
     ))
     html_content = t.render(c)
@@ -66,4 +69,3 @@ def handle_comment_was_posted(sender, **kwargs):
         response = sg.send(message)
     except Exception as e:
         print('Could not send mail!!!')
-        print(e.message)
