@@ -23,7 +23,9 @@ def handle_comment_was_posted(sender, **kwargs):
     if isinstance(content_object, LectureSlide):
         lecture_slide = content_object
         current_site = get_current_site(request)
-        domain_name = current_site.domain
+        #domain_name = current_site.domain
+        domain_name = "35.227.169.186"
+        #FIXME(kayvonf):
         content_object_uri = ''.join([
             'http://', domain_name, 
             reverse('lectures:lecture_slide',

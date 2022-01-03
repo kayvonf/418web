@@ -36,22 +36,24 @@ PREFIX = LOCAL_PREFIX
 CONFIG = LOCAL_CONFIG
 
 if True:
-    PROD_PREFIX = 'fall21'
-    with open('/etc/pyweb418/{:s}/django_secret.txt'.format(PROD_PREFIX)) as f:
+    PROD_PREFIX = 'cs149/fall21'
+    ETC_TEMP_PATH = 'fall21'
+    
+    with open('/etc/pyweb418/{:s}/django_secret.txt'.format(ETC_TEMP_PATH)) as f:
         skey = f.read()
-
+    
     PROD_CONFIG = {
         'prefix': PROD_PREFIX,
         'allowed_hosts': ['cs149.stanford.edu', '35.227.169.186'],
         'force_script_name': '/{:s}/'.format(PROD_PREFIX),
         'secret_key': skey,
-        'db_path': '/etc/pyweb418/{:s}/db.sqlite3'.format(PROD_PREFIX),
+        'db_path': '/etc/pyweb418/{:s}/db.sqlite3'.format(ETC_TEMP_PATH),
         'static_url': '/{:s}content/static/'.format(PROD_PREFIX),
-        'static_root': '/var/www/cs149/{:s}content/static'.format(PROD_PREFIX),
+        'static_root': '/var/www/{:s}content/static'.format(PROD_PREFIX),
         'media_url': '/{:s}content/media/'.format(PROD_PREFIX),
-        'media_root': '/var/www/cs149/{:s}content/media'.format(PROD_PREFIX),
+        'media_root': '/var/www/{:s}content/media'.format(PROD_PREFIX),
         'magick_cmd': 'convert',
-        'sendgrid_key_path': '/etc/pyweb418/{:s}/sendgrid.env'.format(PROD_PREFIX),
+        'sendgrid_key_path': '/etc/pyweb418/{:s}/sendgrid.env'.format(ETC_TEMP_PATH),
         'sendgrid_email': 'cs149-noreply@stanford.edu',
     }
 
@@ -65,6 +67,7 @@ if True:
     PREFIX = PROD_PREFIX
     CONFIG = PROD_CONFIG
 
+print(CONFIG['db_path']);
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
