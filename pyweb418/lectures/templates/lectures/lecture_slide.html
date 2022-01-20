@@ -71,7 +71,7 @@ $(document).keydown(function (e) {
 
 <!-- end slide navigation elements  -->
 
-{% if lecture.comments_enabled %}
+{% if user.is_authenticated and lecture.comments_enabled %}
 <div class="slide_comments_container">
   {% get_comment_list for lecture_slide as comment_list %}
   {% for comment in comment_list %}
