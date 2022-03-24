@@ -14,11 +14,11 @@
 ?>
 <title>{{page_title}}</title>
 
-<script src="http://use.edgefonts.net/open-sans:n3,i3,n4,i4,n6,i6,n7,i7,n8,i8.js"></script>
-<script src="http://use.edgefonts.net/open-sans-condensed:n3,i3,n7.js"></script>
+<script src="https://use.edgefonts.net/open-sans:n3,i3,n4,i4,n6,i6,n7,i7,n8,i8.js"></script>
+<script src="https://use.edgefonts.net/open-sans-condensed:n3,i3,n7.js"></script>
 
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
 </script>
 
 <script type="text/x-mathjax-config">
@@ -46,7 +46,7 @@ MathJax.Hub.Config({
 <div class="topbar_left"><a href="{% url 'index' %}">[Home]</a></div>
 <div class="topbar_left"><a href="{% url 'newsfeed' %}">[Feed]</a></div>
 <div class="topbar_left"><a href="{% url 'courseinfo' %}">[Course Info]</a></div>
-<div class="topbar_left"><a href="{% url 'lectures:index' %}">[Lectures/Readings]</a></div>
+<div class="topbar_left"><a href="https://github.com/stanford-cs348k/readings/blob/master/README.md">[Lectures/Readings]</a></div>
 
 {% if user.is_authenticated and user.is_staff %}
 <div class="topbar_left"><a href="{% url 'admin:index' %}">[Admin Console]</a></div>

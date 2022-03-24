@@ -20,13 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 if True:
 
     # NOTE(kayvonf): this should be the only line that needs to change.
-    CLASS_NAME = 'cs149';
+    CLASS_NAME = 'cs348k';
     
     # path for data in /etc/pyweb418/...  (sendgrid keys, sql db, etc)
-    ETC_TEMP_PATH = '{:s}winter22'.format(CLASS_NAME)
+    ETC_TEMP_PATH = '{:s}spring22'.format(CLASS_NAME)
     
     # path in webtree: /www/data/...
-    PROD_PREFIX = '{:s}/winter22'.format(CLASS_NAME)
+    PROD_PREFIX = '{:s}/spring22'.format(CLASS_NAME)
     
     with open('/etc/pyweb418/{:s}/django_secret.txt'.format(ETC_TEMP_PATH)) as f:
         skey = f.read()
