@@ -10,6 +10,7 @@
 
 <div id="newsfeed">
 
+{% if user.is_authenticated %} 
 {% for comment, lecture_slide in recent_comments %}
 <div class="news_item">
     <img src="{{comment.user.student.photo.url}}">
@@ -25,6 +26,11 @@
 </div> <br>
 {% endfor %}
 </div>  <!-- newsfeed -->
+{% else %}
+
+<p>Please <a href="{% url 'students:login' %}">log in</a> to view comments.</p>
+
+{% endif %}
 
 <script>
 $(document).ready(function () {

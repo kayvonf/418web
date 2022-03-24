@@ -20,10 +20,10 @@
   </div>
 {% endif %}
 
-<h1>Welcome to CS 149</h1>
+<h1>Welcome to CS 248</h1>
 
 <h2>
-Step 1: Create an account on the course web site (or <a href={% url 'students:login' %}">login</a>)
+Step 1: Create an account on the course web site (or <a href={% url 'students:login' %}>login</a>)
 </h2>
 
 <form enctype="multipart/form-data" action="{% url 'students:do_create' %}" method="post">
@@ -63,7 +63,7 @@ Step 1: Create an account on the course web site (or <a href={% url 'students:lo
 <p>
      <div class="form_label">Password</div>
      {{ form.password1.errors }}
-     <div class="form_help_text">This will be your password for the CS 149 site.  It is not your suid password. (and probably should not be). NOTE: THIS SITE WAS MADE BY THE COURSE STAFF, AND WHILE WE HAVE TRIED TO EMPLOY SECURITY BEST PRACTICIES, WE'RE JUST ACADEMICS, SO BE CAREFUL ABOUT YOUR CHOICE OF PASSWORD.
+     <div class="form_help_text">This will be your password for the CS 248 site.  It is not your suid password. (and probably should not be). NOTE: THIS SITE WAS MADE BY THE COURSE STAFF, AND WHILE WE HAVE TRIED TO EMPLOY SECURITY BEST PRACTICIES, WE'RE JUST ACADEMICS, SO BE CAREFUL ABOUT YOUR CHOICE OF PASSWORD.
      </div>
      <div>{{ form.password1 }}</div>
 </p>
