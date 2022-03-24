@@ -17,34 +17,23 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-LOCAL_PREFIX = ''
-LOCAL_CONFIG = {
-    'prefix': LOCAL_PREFIX,
-    'allowed_hosts': [],
-    'secret_key': 'e5xj$ejn160m^rvl-x-2b%m5c=ii@gahp7ay%95aq+h4jux$4*',
-    'db_path': BASE_DIR / 'db.sqlite3',
-    'static_url': '/static/',
-    'static_root': os.path.expanduser('~/pyweb418_static'),
-    'media_url': '/media/',
-    'media_root': os.path.expanduser('~/pyweb418_media'),
-    'magick_cmd': 'magick convert',
-    'sendgrid_key_path': BASE_DIR / 'sendgrid.env',
-    'sendgrid_email': 'cs149-noreply@stanford.edu',
-}
-
-PREFIX = LOCAL_PREFIX
-CONFIG = LOCAL_CONFIG
-
 if True:
-    PROD_PREFIX = 'cs149/fall21'
-    ETC_TEMP_PATH = 'fall21'
+
+    # NOTE(kayvonf): this should be the only line that needs to change.
+    CLASS_NAME = 'cs149';
+    
+    # path for data in /etc/pyweb418/...  (sendgrid keys, sql db, etc)
+    ETC_TEMP_PATH = '{:s}winter22'.format(CLASS_NAME)
+    
+    # path in webtree: /www/data/...
+    PROD_PREFIX = '{:s}/winter22'.format(CLASS_NAME)
     
     with open('/etc/pyweb418/{:s}/django_secret.txt'.format(ETC_TEMP_PATH)) as f:
         skey = f.read()
     
     PROD_CONFIG = {
         'prefix': PROD_PREFIX,
-        'allowed_hosts': ['cs149.stanford.edu', '35.227.169.186'],
+        'allowed_hosts': ['{:s}.stanford.edu'.format(CLASS_NAME), '35.227.169.186', 'gfxcourses.stanford.edu'],
         'force_script_name': '/{:s}/'.format(PROD_PREFIX),
         'secret_key': skey,
         'db_path': '/etc/pyweb418/{:s}/db.sqlite3'.format(ETC_TEMP_PATH),
@@ -54,7 +43,7 @@ if True:
         'media_root': '/var/www/{:s}content/media'.format(PROD_PREFIX),
         'magick_cmd': 'convert',
         'sendgrid_key_path': '/etc/pyweb418/{:s}/sendgrid.env'.format(ETC_TEMP_PATH),
-        'sendgrid_email': 'cs149-noreply@stanford.edu',
+        'sendgrid_email': '{:s}-noreply@stanford.edu'.format(CLASS_NAME),
     }
 
     #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -142,7 +131,7 @@ DATABASES = {
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL="noreply@cs149.stanford.edu"
+DEFAULT_FROM_EMAIL='noreply@{:s}.stanford.edu'.format(CLASS_NAME)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -198,7 +187,7 @@ MEDIA_ROOT = CONFIG['media_root']
 MEDIA_URL = CONFIG['media_url']
 
 # Students app settings
-STUDENTS_SIGNUP_CODE = 'nodependencies'
+STUDENTS_SIGNUP_CODE = 'somanytriangles'
 
 # Lecture app settings
 
