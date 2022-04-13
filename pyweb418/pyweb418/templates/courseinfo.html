@@ -5,31 +5,24 @@
 {% block content %}
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Fall 2021</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS348B, Spring 2022</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">IMAGE SYNTHESIS TECHNIQUES</div>
 <div>Tues/Thurs 3:15-4:45pm</div>
-<div>All lectures are virtual</div>
-     <div style="padding-bottom: 20px;">Instructors:
-      <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a>
-     </div>
+<div>Location: 380-380F</div>
+<div>Instructors: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a>, <a href="https://graphics.stanford.edu/~djames/">Doug James</a>, and <a href="https://pharr.org/matt/">Matt Pharr</a></div>
 
 <div class="overview_main_item overview_ruled_element">Course Description</div>
 
 <p style="padding-bottom: .15em">
-From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomputers and web sites, parallel processing is ubiquitous in modern computing. The goal of this course is to provide a deep understanding of the fundamental principles and engineering trade-offs involved in designing modern parallel computing systems as well as to teach parallel programming techniques necessary to effectively utilize these machines. Because writing good parallel programs requires an understanding of key machine performance characteristics, this course will cover both parallel hardware and software design.
+High-quality rendering is ubiquitous today, with applications ranging
+from entertainment to product design and architecture. The goal of this
+course is to provide a deep understanding of the fundamental mathematical
+and physical principles that are the basis of modern physically based
+rendering while also introducing the design principles and engineering
+trade-offs involved in designing and implementing high-performance rendering systems.
 </p>
 
-<p class="bold_text colored_text">The Fall 2021 version of CS149 will be virtual lecture format.  Exams will also be administered virtually.</p>
-
-<p class="bold_text colored_text">Lectures will be recorded for offline viewing on Canvas. We will
-have frequent discussions and student breakouts during live lecture.
-Therefore, while attendence at live lecture will not be checked or
-  graded, we ask you to make an effort to attend live lecture as much as possible.
-  </p>
-
-<p class="bold_text colored_text">Course staff will hold both in person and virtual office hours.</p>
-
-<div class="overview_main_item overview_ruled_element">Instructors and CAs</div>
+<div class="overview_main_item overview_ruled_element">Course Staff</div>
 
 <div class="indented_block">
 
@@ -37,55 +30,30 @@ Therefore, while attendence at live lecture will not be checked or
 <img src="{% static 'images/staff_photos/kayvonf.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
 <div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
 <div>[kayvonf at cs.stanford]</div>
-<div class="bold_text">Office hours:</div>
-<div>Tu/Tr: 4:45-5:15pm PST</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div style="width: 360px; float: left;">
-  <img src="{% static 'images/staff_photos/kunle.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-  <div><a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
-  <div>[kunle at stanford] </div>
+  <img src="{% static 'images/staff_photos/djames.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+  <div><a href="https://graphics.stanford.edu/~djames/">Doug James</a></div>
+  <div>[djames at stanford] </div>
   <div style="clear: both;">&nbsp;</div>
 </div>
 
-
-<div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful CAs:</div>
-
-<div style="width: 360px; float: left;">
-<img src="{% static 'images/staff_photos/yhdeng.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-<div class="ta-name">Yuhan Deng</div>
-<div>[yhdeng at stanford]</div>
-<div style="clear: both;">&nbsp;</div>
-</div>
-
-<div style="width: 360px; float: left;">
-<img src="{% static 'images/staff_photos/thofstee.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-<div class="ta-name">Teguh Hofstee</div>
-<div>[thofstee at stanford]</div>
-</div>
-
 <div class="overview_minor_item" style="clear: both;">&nbsp;</div>
 
 <div style="width: 360px; float: left;">
-<img src="{% static 'images/staff_photos/owhsu.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-<div class="ta-name">Olivia Hsu</div>
-<div>[owhsu at stanford]</div>
+  <img src="{% static 'images/staff_photos/mpharr.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+  <div><a href="https://pharr.org/matt/">Matt Pharr</a></div>
+  <div>[matt at pharr dot org]</div>
+  <div style="clear: both;">&nbsp;</div>
+</div>
+
+<div style="width: 360px; float: left;">
+<img src="{% static 'images/staff_photos/vishnu.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<div class="ta-name">Vishnu Sarukkai (CA)</div>
+<div>[sarukkai at stanford]</div>
 <div style="clear: both;">&nbsp;</div>
-</div>
-
-<div style="width: 360px; float: left;">
-<img src="{% static 'images/staff_photos/nichoj10.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-<div class="ta-name">Jack Nichols</div>
-<div>[nichoj10 at stanford]</div>
-</div>
-
-<div class="overview_minor_item" style="clear: both;">&nbsp;</div>
-
-<div style="width: 360px; float: left;">
-<img src="{% static 'images/staff_photos/ulloa.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-<div class="ta-name">Luis Ulloa</div>
-<div>[ulloa at stanford]</div>
 </div>
 
 <div style="clear: both;">&nbsp;</div>
@@ -95,86 +63,182 @@ Therefore, while attendence at live lecture will not be checked or
 
 <div class="overview_main_item overview_ruled_element">Office Hours Calendar</div>
 
-<iframe src="https://calendar.google.com/calendar/embed?src=ja553k994l5n1qds6tegofkrck%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<p>Coming soon</p>
+<!-- <iframe src="https://calendar.google.com/calendar/embed?src=ja553k994l5n1qds6tegofkrck%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+-->
 
-<p>Coming Soon</p>
 
 <div class="overview_main_item overview_ruled_element">Prerequisites</div>
 
+
 <p>
-<a href="http://web.stanford.edu/class/cs110/">CS110: Principles of Computer Systems</a> is strong prerequisite for CS149.  If you have not taken CS110 and feel like you have the background to take CS149, please contact your friendly instructors and let's talk it over.
+You should have a working knowledge of computer graphics at the level
+of <a href="https://cs248.stanford.edu">CS248</a>. Although CS248 is not *required*, if you have not taken
+CS248 and feel like you have the background to take CS348B, please
+contact your friendly instructors and let's talk it over.  In
+particular, you should fully understand the basic 3D display pipeline,
+viewing and modeling transformations, simple geometric modeling using
+polygons and quadrics, and hidden surface algorithms like the z-buffer
+algorithm.
 </p>
 
+<p>
+Solid knowledge of integral calculus and basic geometric algorithms is
+important.  You should understand the principles behind
+object-oriented programming and be a very good C++ programmer.
+Previous exposure to signal processing and probability is helpful, but
+not absolutely necessary.
+</p>
 
 <div class="overview_main_item overview_ruled_element">Textbook</div>
 
-<p> There is no required textbook for CS149. However, you may find the following textbooks helpful.  However, in general these days there's plenty of great parallel programming resources available for free on the web.</p>
+<p> There is one required text for the course.</p>
 
 <p>
-</p><div>John L. Hennessy and David A. Patterson</div>
-<div>Computer Architecture, Sixth Edition: A Quantitative Approach. Morgan Kaufmann, 2017</div>
-<div><a href="https://www.amazon.com/Computer-Architecture-Quantitative-Approach-Kaufmann/dp/0128119055" target="_blank">[ On Amazon ]</a></div>
-<p></p>
-
-<p>
-</p><div>Jason Sanders</div>
-<div>CUDA by Example: An Introduction to General-Purpose GPU Programming. 1st Edition. Addison-Wesley. 2010</div>
-<div><a href="https://www.amazon.com/CUDA-Example-Introduction-General-Purpose-Programming/dp/0131387685" target="_blank">[ On Amazon ]</a></div>
-<p></p>
-
-<p>
-</p><div>David Kirk and Wen-mei Hwu</div>
-<div>Programming Massively Parallel Processors, Second Edition: A Hands-on Approach. 2nd Edition. Morgan Kauffmann. 2012</div>
-<div><a href="https://www.amazon.com/Programming-Massively-Parallel-Processors-Second/dp/0124159923" target="_blank">[ On Amazon ]</a></div>
-<p></p>
-
-
-<div class="overview_main_item overview_ruled_element">Announcements via Piazza</div>
-
-<p>All class announcements will be made via our <a href="https://piazza.com/stanford/fall2021/cs149/home" target="_blank">class Piazza Page</a>. Please make sure you <a href="https://piazza.com/stanford/fall2021/cs149" target="_blank">sign up</a> for the course on Piazza.</p>
-
-<div class="overview_main_item overview_ruled_element">Assignments, Projects, and Exams (What You Will Do!)</div>
-
-<p>
-<span class="italic_text">Programming assignments.</span> Students
-will complete four programming assignments (plus one optional assignment used to boost grades) using parallel programming systems such as ISPC, OpenMP, and CUDA.
-You are not expected to know these languages/systems in advance of the course, you will pick them up as you go.  Programming assignments can optionally be done in teams of up to 2.
+<div>Matt Pharr, Wenzel Jakob, and Greg Humphreys</div>
+<div>Physically Based Rendering: From Theory to Implementation</div>
+<div>Third Edition, Morgan Kaufmann, 2016.</div>
+<div><a href="https://www.amazon.com/gp/product/0128006455/" target="_blank">[ On Amazon ]</a></div>
 </p>
 
-<p><span class="italic_text">Written assignments.</span>  Students
-will complete five take-home written assignments assigned
-approximately every two weeks. These assignments will be graded on a
-credit/no credit basis based on effort. Written assignments can
-optionally be done in teams of up to 2.</p>
+<p>
+This book has an extensive <a href="http://pbrt.org">web site</a>
+with additional information.
+The book is also freely available
+<a href="http://www.pbr-book.org/">online</a>.
+</p>
 
-<p><span class="italic_text">Individual written assignments. There
-will be two timed take-home assessments. These will be graded for
-correctness and must be done individually by students. These will be held on Oct 14th and Nov 12th.</p>
+<p>
+Additional readings will be assigned from research papers from
+journals and conference proceedings, and excerpts from conference
+tutorials.
+</p>
 
-<p><span class="italic_text">Final exam.</span> There will be a final
-exam.</p>
+<div class="overview_main_item overview_ruled_element">Announcements via Ed Discussion</div>
+
+<p>All class announcements will be made via our <a href="https://edstem.org/us/courses/21377/discussion/">Ed Discussion</a> forum. Everyone enrolled in the course via Canvas should be able to access this site.</a>
+
+<div class="overview_main_item overview_ruled_element">Programming Assignments </div>
+
+You will be given four programming assignments.
+We will use a a ray tracing system called <a
+href="http://pbrt.org/">pbrt</a>.
+This system is a combined C++ codebase
+and textbook written in a literate programming language.
+Each student is expected
+to work individually
+and implement your own solutions
+(See the collaboration policy for additional guidance).
+</p>
+
+<p> <span class="italic_text">Late assignments:</span>
+To allow for unforeseeable circumstances,
+you will be allowed three weekdays of grace
+during the quarter
+(to clarify: an assignment due on Friday and turned in
+on Monday will use one late day).
+Beyond this, late assignments will be
+penalized by 10% per weekday that they are late.
+On the last programming project,
+neither the demo nor the writeup may be late.
+Incompletes in this course are given only in exceptional circumstances.
+</p>
+
+<div class="overview_main_item overview_ruled_element">Final Project and Rendering Competition</div>
+
+<p>
+  <span class="italic_text">Final project:</span>
+During the last two weeks of the course,
+you will propose and work on a self-selected final project.
+The final project may be done with one or two partners;
+teams may discuss their project with other teams, but may not share code.
+Each team will present the project orally during the Rendering Competition
+  and produce a detailed write-up describing their work and results.
+</p>
+
+<p>For the final project, you will render a new image by
+extending the system so that it is capable of
+reproducing an image of a real object that it can't currently render
+accurately (for example: a gemstone, a puff of smoke, a candle flame,
+etc). Check out the <a
+href="http://www.graphics.stanford.edu/courses/cs348b-competition">results
+produced by previous students</a>.
+
+<p>In case the delight of learning does not sufficiently motivate you to
+exert yourself heroically on your final project, there will also be a
+rendering competition. During finals week, a judging will be held to select
+the most impressive final projects.  The rendering competition jury, to be
+named later, will consist of computer graphics experts from both industry
+and academia. There will be several awards and one grand prize-an
+all-expenses-paid trip to <a href="http://s2020.siggraph.org/">SIGGRAPH
+2022</a> in Vancouver, Canada</p>
+
 
 <div class="overview_main_item overview_ruled_element">Grading</div>
 
 <ul>
-<li>Programming Assignments (4): 10% + 12% + 13% + 13% = <span class="colored_text">48%</span></li>
-<li>Written Assignments (5): <span class="colored_text">15%</span></li>
-<li>Individual Written Assessments (2): <span class="colored_text">16%</span></li>
-<li>Final Exam:      <span class="colored_text">16%</span></li>
-<li>Participation:  <span class="colored_text">5%</span>  (async lecture comments)</li>
+<li>Programming Assignments (4): 10&#37; each = <span class="colored_text">40&#37;</span></li>
+<li>Final Project: <span class="colored_text">50&#37;</span></li>
+<li>Participation (on-line comments): <span class="colored_text">10&#37;</span></li>
 </ul>
 
-<p><span class="bold_text">Late day policy: Each student has a total of seven late days for use
-over the entire quarter.  Late days can be used either for programming
-assignments or written assignments.</span></p>
+<div class="overview_main_item overview_ruled_element">Hardware and Software</div>
 
-<ul>
-<li>A student can extend a programming assignment deadline by one day using one point.  (A team of two students can extend an assignment deadline by one day using one point from each student.)</li>
-<li>If a team does not have remaining late day points, late hand-ins will incur a 10% penalty per day 
-(up to three days per assignment).</li>
-<li>No assignments will be accepted more than three days after the deadline.</li>
+<p>You are welcome and encouraged to do class assignments
+on your own machines.
+Although pbrt builds successfully on most systems,
+the TAs will be able to provide support for compiling pbrt on Linux
+(on the public Stanford 'myth' machines, see below),
+on Mac OSX, and on Windows (via Visual Studio 2015, or 2017).
+Check out
+<a href="https://github.com/mmp/pbrt-v3/blob/master/README.md#building-pbrt">
+how to build pbrt</a> for more information.</p>
 
-</ul>
+<p>
+If you do not wish to develop on a personal machine, you will have access
+to the 'myth' machines located in Gates B08. They can be accessed via ssh at myth.stanford.edu.
+</p>
+
+<p> All students with Leland accounts automatically
+have accounts on these machines.
+Home directories on these machines are shared with other Stanford
+Computing Clusters using AFS.
+If you do not have a Leland account, consult this
+<a href="http://itservices.stanford.edu/service/accounts/sunetids">ITSS
+web page</a>.
+<!---Registered students will get an extra 500MB of disk quota for
+the quarter (Please contact the course staff if your quota does not
+increase within 48 hours of signing up for the class).--->  </p>
+
+<div class="overview_main_item overview_ruled_element">Collaboration Policy</div>
+
+<p>
+Students in CS348B are absolutely encouraged to talk to each other, to
+the CAs, to the instructors, or to anyone else about course
+assignments.  However, any assistance must be limited to discussion of
+the problems and sketching general approaches to a solution.  Each
+programming project team must write their own code and produce their
+own writeup.
+</p>
+
+<p>
+Consulting another student's or team's solution is prohibited and
+submitted solutions may not be copied from any source.
+<span class="colored_text">These and any other form of collaboration on assignments constitute cheating.</span>
+If you have any question about whether
+some activity would constitute cheating,
+be cautious and ask the instructors before proceeding!
+</p>
+
+<p>
+You may not supply code, assignment writeups, or exams you complete
+during CS348B to other students in future instances of this course or make
+these items available (e.g., on the web) for use in future instances of
+this course (just as you may not use work completed by students who've
+taken the course previously). Your github repository for the class must be
+made private.
+</p>
+
 
 </div>
 {% endblock %}

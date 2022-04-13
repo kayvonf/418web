@@ -72,6 +72,9 @@ $(document).keydown(function (e) {
 <!-- end slide navigation elements  -->
 
 {% if lecture.comments_enabled %}
+
+{% if user.is_authenticated %}
+
 <div class="slide_comments_container">
   {% get_comment_list for lecture_slide as comment_list %}
   {% for comment in comment_list %}
@@ -99,7 +102,6 @@ $(document).keydown(function (e) {
   </div>
   {% endfor %}
 
-  {% if user.is_authenticated %}
     {% get_comment_form for lecture_slide as form %}
     <form action="{% comment_form_target %}" method="POST" class="comment-form">
     {% csrf_token %}
@@ -130,7 +132,7 @@ $(document).keydown(function (e) {
     </div>
     </form>
   {% else %}
-    <p>Please <a href="{% url 'students:login' %}">log in</a> to leave a comment.</p>
+    <p>Please <a href="{% url 'students:login' %}">log in</a> to view and leave comments.</p>
   {% endif %}
 </div>
 {% endif %}

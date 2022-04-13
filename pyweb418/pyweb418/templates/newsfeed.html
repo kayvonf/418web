@@ -8,6 +8,8 @@
 
 <div class="feed_title">What's Going On</div>
 
+{% if user.is_authenticated %}
+
 <div id="newsfeed">
 
 {% for comment, lecture_slide in recent_comments %}
@@ -25,6 +27,10 @@
 </div> <br>
 {% endfor %}
 </div>  <!-- newsfeed -->
+
+  {% else %}
+    <p>Please <a href="{% url 'students:login' %}">log in</a> to view comments.</p>
+{% endif %}
 
 <script>
 $(document).ready(function () {

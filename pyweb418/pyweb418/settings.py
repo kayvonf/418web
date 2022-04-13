@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 if True:
 
     # NOTE(kayvonf): this should be the only line that needs to change.
-    CLASS_NAME = 'cs149';
+    CLASS_NAME = 'cs348b';
     CLASS_QUARTER = 'spring22';
     
     # path for data in /etc/pyweb418/...  (sendgrid keys, sql db, etc)
@@ -188,7 +188,7 @@ MEDIA_ROOT = CONFIG['media_root']
 MEDIA_URL = CONFIG['media_url']
 
 # Students app settings
-STUDENTS_SIGNUP_CODE = 'somanytriangles'
+STUDENTS_SIGNUP_CODE = 'bouncerays'
 
 # Lecture app settings
 
