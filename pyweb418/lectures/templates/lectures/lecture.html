@@ -21,7 +21,7 @@
 
 {% get_comment_count for lecture_slide as num_comments %}
 
-{% if num_comments > 0 %}
+{% if user.is_authenticated and num_comments > 0 %}
     <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}" class="slide-comments-link">
         {{num_comments}} comment{% if num_comments > 1 %}s{% endif %}
     </a>

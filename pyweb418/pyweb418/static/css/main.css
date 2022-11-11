@@ -12,7 +12,7 @@ body {
   color: #505050;
   
   font-size: 11pt;  
-  font-family: open-sans, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -20,9 +20,9 @@ body {
 td
 {
     /* NOTE(kayvonf): keep this consistent with the body element above.
-       It's very annoying how <td> doesn't inherent from it's container */
+       It's very annoying how <td> doesn't inherent from its container */
     font-size: 11pt;
-    font-family: open-sans, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
 }
