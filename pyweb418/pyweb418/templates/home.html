@@ -5,43 +5,42 @@
 {% block content %}
 <div class="home_container">
 
-  <div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248A, Winter 2023</div>
-  <div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">
-    <div style="font-size: 44pt">Computer Graphics:</div>
-    <div style="font-size: 24pt">Rendering, Geometry, and Image Manipulation</div>
-  </div>
-
-<p style="padding-bottom: .15em">
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS348K, Spring 2023</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">VISUAL COMPUTING SYSTEMS</div>
 
 <div>
 <img style="padding-bottom: 5px;" src="{% static 'images/teaser.jpg' %}" width="800" height="125"></a>
 </div>
 
 <p style="padding-bottom: .15em">
-This course provides a comprehensive introduction to computer
-graphics, focusing on fundamental concepts and techniques, as well as
-their cross-cutting relationship to multiple problem domains in
-interactive graphics (such as rendering, geometry, image
-processing). Topics include: 2D and 3D drawing, sampling,
-interpolation, rasterization, image compositing, the GPU graphics
-pipeline (and parallel rendering), geometric transformations, curves
-and surfaces, geometric data structures, subdivision, meshing, spatial
-hierarchies, image processing, and image compression.
+Visual computing tasks such as computational imaging, image/video
+understanding, and real-time 3D graphics are key responsibilities of
+modern computer systems ranging from sensor-rich smart phones,
+autonomous robots, and large datacenters. These workloads demand
+exceptional system efficiency and this course examines the key ideas,
+techniques, and challenges associated with the design of parallel,
+heterogeneous systems that accelerate visual computing
+applications. This course is intended for systems students interested
+in architecting efficient graphics, image processing, and computer
+vision platforms (both new hardware architectures and domain-optimized
+programming frameworks for these platforms) and for graphics, vision,
+and machine learning students that wish to understand throughput
+computing principles to design new algorithms that map efficiently to
+these machines.
 </p>
-
 
 <div class="overview_main_item overview_ruled_element">Basic Info</div>
 
 <div style="padding-bottom: 15px;">
-  <div>Time: Tues/Thurs 1:30-2:50am</div>
-  <div>Location: Gates B1</div>
+<div>Tues/Thurs 10:30-11:50pm</div>
+<div>Location: STLC 105</div>
 <div>Instructor: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
 
-<div style="padding-top:1em;">See the <a href="{% url 'courseinfo' %}">course info</a> page for more info on policies and logistics.</div>
+<div style="padding-top:1em;"><span class="bold_text">Welcome to CS348K Spring 2023</span>. Please see the <a href="{% url 'courseinfo' %}">course info</a> page for more info on policies and logistics, and well as answers to common questions like "Am I prepared to take this class?"  This course is a paper-reading and in-class discussion-based course, so live attendence is expected of all participants.</div>
 
 </div>
 
-<div class="overview_main_item overview_ruled_element">Winter 2023 Schedule</div>
+<div class="overview_main_item overview_ruled_element">Spring 2023 Schedule</div>
 
 <table>
 
@@ -76,95 +75,27 @@ hierarchies, image processing, and image compression.
 
 </table>
 
-<div class="overview_main_item overview_ruled_element">Programming Assignments</div>
-<table>
-<tbody><tr>
-<td class="schedule_date">Jan 26</td><td class="schedule_lecture">
-<a href="https://github.com/stanford-cs248/draw-svg">Assignment 1: Write Your own SVG Renderer</a>
-</td>
-</tr>
-
-<tr>
-<td class="schedule_date">Feb 10</td><td class="schedule_lecture">
-<a href="https://github.com/stanford-cs248/Cardinal3D/blob/master/MeshEditHandout.md">Assignment 2: MeshEdit: A Mini 3D Triangle Mesh Editor</a>
-</td>
-</tr>
-
-<tr>
- <td class="schedule_date">Feb 27</td><td class="schedule_lecture">
-<span class="bold_text"><a href="https://github.com/stanford-cs248/Cardinal3D/blob/master/PathTracerHandout.md">Assignment 3: Path Tracer</a> or <a href="https://github.com/stanford-cs248/shading">Lighting and Materials In GLSL</a> (student choice)</span>
- </td>
-</tr>
-
-<tr>
- <td class="schedule_date">Mar 21</td><td class="schedule_lecture">
- <a href="https://github.com/stanford-cs248/project">Self-selected Final Project</a>
- </td>
-</tr>
-
-</tbody></table>
-
-<div class="overview_main_item overview_ruled_element">Practice Exercises</div>
-
-<div style="padding-bottom: 1em">One written practice exercise per week, graded on a credit/no credit basis.</div>
+<div class="overview_main_item overview_ruled_element">Projects</div>
 
 <table>
-<tbody>
- 
-<tr>
-<td class="schedule_date">Jan 18</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise1.pdf' %}">
-  Practice Exercise 1
-</a>
+  <tbody>
+
+    <!-- <tr>
+<td class="schedule_date">TBD</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs348k/camera_asst">Burst Mode HDR Camera RAW Processing</a>
 </td>
 </tr>
+-->
 
-<tr> 
-<td class="schedule_date">Jan 25</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise2.pdf' %}">Practice Exercise 2</a>
+<tr>
+<td class="schedule_date">Jun 13</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs348k/project">Term Project Information</a>
 </td>
-</tr>
-
-<tr>
- <td class="schedule_date">Feb 1</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise3.pdf' %}">Practice Exercise 3</a>
- </td>
-</tr>
-
-<tr>
- <td class="schedule_date">Feb 8</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise4.pdf' %}">Practice Exercise 4</a>
- </td>
-</tr>
-
-<tr>
-  <td class="schedule_date">Feb 15</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise5.pdf' %}">Practice Exercise 5</a>
- </td>
-</tr>
-
-<tr>
-  <td class="schedule_date">Feb 22</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise6.pdf' %}">Practice Exercise 6</a>
- </td>
-</tr>
-
-<tr>
-  <td class="schedule_date">Mar 1</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise7.pdf' %}">Practice Exercise 7</a>
- </td>
-</tr>
-
-<tr>
-  <td class="schedule_date">&nbsp;</td><td class="schedule_lecture">
-<a href="{% static 'pdfs/exercise8.pdf' %}">Practice Exercise 8</a>
- </td>
 </tr>
 
 
 </tbody></table>
-
-
+  
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 
