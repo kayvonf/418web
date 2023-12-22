@@ -70,4 +70,4 @@ def handle_comment_was_posted(sender, **kwargs):
         sg = SendGridAPIClient(sendgrid_key)
         response = sg.send(message)
     except Exception as e:
-        print('Could not send mail!!!')
+        print('Could not send mail!!!', e, settings.SENDGRID_EMAIL)

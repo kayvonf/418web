@@ -60,7 +60,7 @@ MathJax.Hub.Config({
 
   Welcome, <a href="{% url 'students:edit' %}">{{user.username}}</a>
   {% if user.student %}
-  &nbsp <img class='topbar_profile_picture' src="{{user.student.photo.url}}" align='top'>
+  &nbsp <img class='topbar_profile_picture' src="{{user.student.photo.url}}" align='top' alt="My profile photo">
   {% endif %}
 <a href="{% url 'students:logout' %}">[Logout]</a>
 {% else %}

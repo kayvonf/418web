@@ -21,7 +21,7 @@ if True:
 
     # NOTE(kayvonf): this should be the only line that needs to change.
     CLASS_NAME = 'cs149';
-    CLASS_QUARTER = 'spring22';
+    CLASS_QUARTER = 'fall23';
     
     # path for data in /etc/pyweb418/...  (sendgrid keys, sql db, etc)
     ETC_TEMP_PATH = '{:s}{:s}'.format(CLASS_NAME, CLASS_QUARTER)
@@ -44,7 +44,8 @@ if True:
         'media_root': '/var/www/{:s}content/media'.format(PROD_PREFIX),
         'magick_cmd': 'convert',
         'sendgrid_key_path': '/etc/pyweb418/{:s}/sendgrid.env'.format(ETC_TEMP_PATH),
-        'sendgrid_email': '{:s}-noreply@stanford.edu'.format(CLASS_NAME),
+#        'sendgrid_email': '{:s}-noreply@stanford.edu'.format(CLASS_NAME),
+        'sendgrid_email': 'gfxcourses.noreply@gmail.com',
     }
 
     #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -188,7 +189,7 @@ MEDIA_ROOT = CONFIG['media_root']
 MEDIA_URL = CONFIG['media_url']
 
 # Students app settings
-STUDENTS_SIGNUP_CODE = 'somanytriangles'
+STUDENTS_SIGNUP_CODE = 'highefficiency'
 
 # Lecture app settings
 

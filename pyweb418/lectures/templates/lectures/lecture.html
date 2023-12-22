@@ -15,8 +15,9 @@
     <a href="{% url 'lectures:lecture_slide' lecture.short_name lecture_slide.slide_number %}">
     <img width="{{lecture_slide_thumbnail_width}}"
      height="{{lecture_slide_thumbnail_height}}"
-     src="{{MEDIA_URL}}{{lecture_slide.thumb_url}}"
-     class="lecture_summary_thumbnail_img">
+	 src="{{MEDIA_URL}}{{lecture_slide.thumb_url}}"
+	 class="lecture_summary_thumbnail_img"
+	 alt="Thumbnail for slide {{lecture_slide.slide_number}}">
     </a>
 
 {% get_comment_count for lecture_slide as num_comments %}
