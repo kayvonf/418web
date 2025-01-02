@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="home_container">
+
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Fall 2024</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
+
+<p style="padding-bottom: .15em">
+From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomputers and web sites, parallel processing is ubiquitous in modern computing. The goal of this course is to provide a deep understanding of the fundamental principles and engineering trade-offs involved in designing modern parallel computing systems as well as to teach parallel programming techniques necessary to effectively utilize these machines. Because writing good parallel programs requires an understanding of key machine performance characteristics, this course will cover both parallel hardware and software design.</p>
+
+<div class="overview_main_item overview_ruled_element">Basic Info</div>
+
+<div style="padding-bottom: 15px;">
+  <div>Time: Tues/Thurs 10:30-11:50am</div>
+  <div>Location: NVIDIA Auditorium</div>
+<div>Instructors: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
+
+<div style="padding-top:1em;">See the <a href="{% url 'courseinfo' %}">course info</a> page for more info on policies and logistics.</div>
+
+</div>
+
+<div class="overview_main_item overview_ruled_element">Fall 2024 Schedule</div>
+
+<table>
+
+{% for lecture in lectures %}
+
+<tr>
+
+<td class="schedule_date">
+     {{lecture.date|date:"M d"}}
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            {% if lecture.published %}
+            <a href="{% url 'lectures:lecture' lecture.short_name %}">
+              <span class="bold_text">{{lecture.title}}</span>
+            </a>
+            {% else %}
+            <span class="bold_text">{{lecture.title}}</span>
+            {% endif %}
+          </div>
+          <div class="small_text colored_text"> {{lecture.subtitle}} </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<div class="overview_main_item overview_ruled_element">Programming Assignments</div>
+<table>
+<tbody><tr>
+<td class="schedule_date">Oct 7</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs149/asst1">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a>
+</td>
+</tr>
+
+<tr>
+<td class="schedule_date">Oct 24</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs149/asst2">Assignment 2: Scheduling Task Graphs on a Multi-Core CPU</a>
+</td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Nov 7</td><td class="schedule_lecture">
+<span>Assignment 3: A Simple Renderer in CUDA</span>
+ </td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Dec 3</td><td class="schedule_lecture">
+ <span>Assignment 4: Optimizing DNN Performance on DNN Accelerator Hardware</span>
+ </td>
+</tr>
+
+</tbody></table>
+
+<div class="overview_main_item overview_ruled_element">Written Assignments</div>
+
+
+<table>
+<tbody>
+
+<tr>     
+<td class="schedule_date">Oct 8</td><td class="schedule_lecture">
+<a href="{% static 'pdfs/written_asst1.pdf' %}">
+  Written Assignment 1
+</a>
+</td>
+</tr>
+
+
+<tr>     
+<td class="schedule_date">Oct 15</td><td class="schedule_lecture">
+<a href="{% static 'pdfs/written_asst2.pdf' %}">
+  Written Assignment 2
+</a>
+</td>
+</tr>
+
+<tr>     
+<td class="schedule_date">Oct 29</td><td class="schedule_lecture">
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="home_container">
+
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Fall 2024</div>
+<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
+
+<p style="padding-bottom: .15em">
+From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomputers and web sites, parallel processing is ubiquitous in modern computing. The goal of this course is to provide a deep understanding of the fundamental principles and engineering trade-offs involved in designing modern parallel computing systems as well as to teach parallel programming techniques necessary to effectively utilize these machines. Because writing good parallel programs requires an understanding of key machine performance characteristics, this course will cover both parallel hardware and software design.</p>
+
+<div class="overview_main_item overview_ruled_element">Basic Info</div>
+
+<div style="padding-bottom: 15px;">
+  <div>Time: Tues/Thurs 10:30-11:50am</div>
+  <div>Location: NVIDIA Auditorium</div>
+<div>Instructors: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
+
+<div style="padding-top:1em;">See the <a href="{% url 'courseinfo' %}">course info</a> page for more info on policies and logistics.</div>
+
+</div>
+
+<div class="overview_main_item overview_ruled_element">Fall 2024 Schedule</div>
+
+<table>
+
+{% for lecture in lectures %}
+
+<tr>
+
+<td class="schedule_date">
+     {{lecture.date|date:"M d"}}
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            {% if lecture.published %}
+            <a href="{% url 'lectures:lecture' lecture.short_name %}">
+              <span class="bold_text">{{lecture.title}}</span>
+            </a>
+            {% else %}
+            <span class="bold_text">{{lecture.title}}</span>
+            {% endif %}
+          </div>
+          <div class="small_text colored_text"> {{lecture.subtitle}} </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<div class="overview_main_item overview_ruled_element">Programming Assignments</div>
+<table>
+<tbody><tr>
+<td class="schedule_date">Oct 7</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs149/asst1">Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU</a>
+</td>
+</tr>
+
+<tr>
+<td class="schedule_date">Oct 24</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs149/asst2">Assignment 2: Scheduling Task Graphs on a Multi-Core CPU</a>
+</td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Nov 7</td><td class="schedule_lecture">
+<span>Assignment 3: A Simple Renderer in CUDA</span>
+ </td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Dec 3</td><td class="schedule_lecture">
+ <span>Assignment 4: Optimizing DNN Performance on DNN Accelerator Hardware</span>
+ </td>
+</tr>
+
+</tbody></table>
+
+<div class="overview_main_item overview_ruled_element">Written Assignments</div>
+
+<table>
+<tbody>
+
+
+</tbody>
+</table>
+
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>  <!-- end of home_container -->
+{% endblock %}

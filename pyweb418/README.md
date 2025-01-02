@@ -1,6 +1,6 @@
 
 # 1. Clone repo
-# 2. Create directory /etc/cs149fall23
+# 2. Create directory /etc/pyweb418/cs149fall23
 # 3. Put sendgrid.env in that directory
 # 4. Generate unique django secret key
 
