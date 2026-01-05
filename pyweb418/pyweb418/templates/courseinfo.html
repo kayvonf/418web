@@ -1,29 +1,41 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block content %}
 <div class="home_container">
 
-<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS149, Fall 2024</div>
-<div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">PARALLEL COMPUTING</div>
-<div>Time: Tues/Thurs 10:30-11:50am</div>
-  <div>Location: NVIDIA Auditorium</div>
-     <div style="padding-bottom: 20px;">Instructors:
-      <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a> and <a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a>
+<div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248A, Winter 2025</div>
+  <div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">
+    <div style="font-size: 44pt">Computer Graphics:</div>
+    <div style="font-size: 24pt">Rendering, Geometry, and Image Manipulation</div>
+  </div>
+     <div>Tues/Thurs 1:30-2:50pm</div>
+     <div>Location: Gates B1</div>
+     <div style="padding-bottom: 20px;">Instructor:
+     <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a>
      </div>
 
 <div class="overview_main_item overview_ruled_element">Course Description</div>
 
 <p style="padding-bottom: .15em">
-From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomputers and web sites, parallel processing is ubiquitous in modern computing. The goal of this course is to provide a deep understanding of the fundamental principles and engineering trade-offs involved in designing modern parallel computing systems as well as to teach parallel programming techniques necessary to effectively utilize these machines. Because writing good parallel programs requires an understanding of key machine performance characteristics, this course will cover both parallel hardware and software design.
+This course provides a comprehensive introduction to computer
+graphics, focusing on fundamental concepts and techniques, as well as
+their cross-cutting relationship to multiple problem domains in
+computer graphics (such as rendering, geometry, image processing, and
+modern AI-based graphics). Topics include: 2D and 3D drawing,
+sampling, interpolation, rasterization, image compositing, the GPU
+graphics pipeline (and parallel rendering), geometric transformations,
+curves and surfaces, geometric data structures, subdivision, meshing,
+spatial hierarchies, ray tracing, global illumination, image
+processing, and image compression.
 </p>
 
-<p><span class="bold_text">Lectures will be recorded for offline viewing via Canvas.</span>
-We will have frequent discussions and student breakouts during live lecture.
+<p class="bold_text colored_text">Lectures will be recorded for
+offline viewing on Canvas. We will have frequent discussions and
+student breakouts during live lecture.  Therefore, while attendance at
+live lecture will not be checked or graded, we ask you to make an
+effort to attend live lecture as much as possible.
 </p>
-
-<p class="bold_text">The course staff will hold both in person and virtual office hours.</p>
 
 <div class="overview_main_item overview_ruled_element">Instructors and CAs</div>
 
@@ -32,181 +44,118 @@ We will have frequent discussions and student breakouts during live lecture.
 <div style="width: 360px; float: left;">
 <img src="{% static 'images/staff_photos/kayvonf.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
 <div><a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
-<div>[kayvonf at cs]</div>
+</div>
+
+<div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful CAs:</div>
+
+
+<div style="width: 360px; float: left;">
+<img src="{% static 'images/staff_photos/jitong.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<div class="ta-name">Jitong Zhou</div>
 <div style="clear: both;">&nbsp;</div>
 </div>
 
 <div style="width: 360px; float: left;">
-  <img src="{% static 'images/staff_photos/kunle.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-  <div><a href="https://engineering.stanford.edu/people/kunle-olukotun">Kunle Olukotun</a></div>
-  <div>[kunle at cs] </div>
-  <div style="clear: both;">&nbsp;</div>
+<img src="{% static 'images/staff_photos/haoyi.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<div class="ta-name">Haoyi Duan</div>
 </div>
-
-</div>  <!-- intented -->
-
-<!-- <div class="overview_minor_item" style="clear: both; padding-top: 2em; padding-bottom: 2em;">Your fun and helpful CAs:</div> -->
-
 
 <!--
-<div class="indented_block">
-
-
-<div style="width: 360px; float: left;">
-  <img src="{% static 'images/staff_photos/james.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-  <div class="ta-name">James Hong</div>
-  <div style="clear: both;">&nbsp;</div>
-</div>
-
+<div class="overview_minor_item" style="clear: both;">&nbsp;</div>
 
 <div style="width: 360px; float: left;">
-  <img src="{% static 'images/staff_photos/michael.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
-  <div class="ta-name">Michael Granado</div>
-  <div style="clear: both;">&nbsp;</div>
+<img src="{% static 'images/staff_photos/mia_cropped.jpg' %}" width="100" height="100" style="float: left; margin-right: 20px; border: #808080 1px solid;">
+<div class="ta-name">Mia Tang</div>
+<div style="clear: both;">&nbsp;</div>
 </div>
 
 <div class="overview_minor_item" style="clear: both;">&nbsp;</div>
-
-
-</div>
-
 -->
+
+<div style="clear: both;">&nbsp;</div>
+
+</div> <!-- indented -->
+
 
 
 <div class="overview_main_item overview_ruled_element">Office Hours Calendar</div>
 
-<iframe src="https://calendar.google.com/calendar/embed?src=cs149oh%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showPrint=0&mode=WEEK&showCalendars=0&title=CS248A%20Calendar&src=Y3MyNDhhLndpbjI1QGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 <div class="overview_main_item overview_ruled_element">Prerequisites</div>
 
-<p>
-<span class="bold_text"><a href="https://cs111.stanford.edu/">CS111:
-Operating Systems Principles</a> is a strongly recommended
-prerequisite for CS149.</span>  If you have not taken CS111 and feel
-like you have the background to take CS149 (for example, due to
-similar classes at another school or via previous employment), please
-contact your friendly instructors and let's talk it over.
-</p>
-
-<p>Concepts we expect you to be familiar with:</p>
-<ul>
-  <li>The idea that a compiled computer program is a sequence of machine instructions.</li>
-  <li>That a processor executes machine instructions, and the result of executing an instruction is the update of state stored in registers or memory.</li>
-  <li>The motivation for a modern memory hierarchy and it's implementation via registers, on-chip caches, off-chip memory, persistent storage.</li>
-  <li>You should be familiar with reading, writing, and debugging C/C++ code (basic C++ features like classes, STL vector types). Programming assignments in this class require debugging skill due to the challenges of debugging parallel code. The primary reason students struggle in CS149 is a lack of code debugging experience.</li>
-  <li>You should have enough programming experience/proficiency in C-like languages to pick up new C-like languages introduced throughout the class (languages such as CUDA, or ISPC) 
-  <li>We hope that you've had at least an introductory experience writing code that creates threads, e.g., via std::threads or pthreads in C/C++.</li>
-</ul>
+<p><span class="bold_text">CS248A DOES NOT depend upon CS148 as a prerequisuite. We do not assume you have taken CS148.</span>
+  However, we expect you to be a proficient C/C++ programmer to complete the required programming assignments. (We expect you've taken at least CS107).  We also assume basic understanding of linear algebra (at least MATH 51) and 3D calculus.</p>
 
 <div class="overview_main_item overview_ruled_element">Textbook</div>
 
-<p><span class="bold_text">There is no required textbook for CS149.</span> However, you may find the following textbooks helpful.  However, in general these days there's plenty of great parallel programming resources available for free on the web.</p>
+<p>There is no required textbook for CS248A, though a variety of books may provide good supplementary material:</p>
 
 <p>
-</p><div>John L. Hennessy and David A. Patterson</div>
-<div>Computer Architecture, Sixth Edition: A Quantitative Approach. Morgan Kaufmann, 2017</div>
-<div><a href="https://www.amazon.com/Computer-Architecture-Quantitative-Approach-Kaufmann/dp/0128119055" target="_blank">[ On Amazon ]</a></div>
-<p></p>
+<div>Pete Shirley and Steve Marschner with Michael Ashikhmin, Michael Gleicher, Naty Hoffman, Garrett Johnson, Tamara Munzner, Erik Reinhard, Kelvin Sung, William B. Thompson, Peter Willemsen, and Bryan Wyvill</div>
+<div><span class="bold_text">Fundamentals of Computer Graphics. A K Peters, 2009</div>
+<div><a href="https://www.amazon.com/Fundamentals-Computer-Graphics-Fourth-Marschner/dp/1482229390/ref=dp_ob_title_bk">[ On Amazon ]</a></div>
+</p>
 
 <p>
-</p><div>Jason Sanders</div>
-<div>CUDA by Example: An Introduction to General-Purpose GPU Programming. 1st Edition. Addison-Wesley. 2010</div>
-<div><a href="https://www.amazon.com/CUDA-Example-Introduction-General-Purpose-Programming/dp/0131387685" target="_blank">[ On Amazon ]</a></div>
-<p></p>
-
-<p>
-</p><div>David Kirk and Wen-mei Hwu</div>
-<div>Programming Massively Parallel Processors, Second Edition: A Hands-on Approach. 2nd Edition. Morgan Kauffmann. 2012</div>
-<div><a href="https://www.amazon.com/Programming-Massively-Parallel-Processors-Second/dp/0124159923" target="_blank">[ On Amazon ]</a></div>
-<p></p>
-
+<div>John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner, and Kurt Akeley</div>
+<div><span class="bold_text">Computer Graphics: Principles and Practice</span></div>
+<div><a href="https://www.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528/ref=sr_1_2?s=books&ie=UTF8&qid=1440872554&\
+sr=1-2&keywords=foundations+of+3d+computer+graphics">[ On Amazon ]</a></div>
+</p>
 
 <div class="overview_main_item overview_ruled_element">Announcements via Ed Discussion</div>
 
-<p>All class announcements will be made via our <a href="https://edstem.org/us/courses/67413/discussion/">Ed Discussion</a> forum. Everyone enrolled in the course via Canvas should be able to access this site.</p>
+<p>All class announcements will be made via our <a href="https://edstem.org/us/courses/70707/discussion" target="_blank">Ed discussion</a>. Everyone enrolled in the course via Canvas should be able to access this site.
 
-<div class="overview_main_item overview_ruled_element">Assignments, Projects, and Exams (What You Will Do!)</div>
+<div class="overview_main_item overview_ruled_element">Grading (What You Will Do!)</div>
 
 <p>
-<span class="italic_text">Programming assignments.</span> Students
-will complete four programming assignments using parallel programming
-systems such as ISPC, OpenMP, and CUDA. You are not expected to know
-these languages/systems in advance of the course, you will pick them
-up as you go. Programming assignments can optionally be done in teams
-of up to two, but all teams both one-person and two-person teams will be graded the same.
-Each year there are students that decide to do all
-programming assignments by themselves, so it is perfectly acceptable
-to go through the class without a partner if you choose to do
-so. There will also be one optional "bonus" programming assignment at
-the end of the quarter that can be used to boost the grade of any
-prior programming assignment.
+All students will be expected to perform:
+<ul>
+  <li>Four programming assignments: <span class="bold_text colored_text">4 x 15&#37; = 60&#37;</span></li>
+  <li>Five written exercises: <span class="bold_text colored_text">5 x 5&#37; = 25&#37;</span></li>
+  <li>One exam: <span class="bold_text colored_text">15&#37;</span> (scheduled for 6pm on Wed March 5th)</li>
+</ul>
 </p>
 
-<p><span class="italic_text">Written assignments.</span>  Students
-will complete six take-home written assignments. Like programming
-assignments, written assignments can optionally be done in teams of up
-to two. Written assignments are graded on a combination of correctness
-and effort.</p>
-
-<p><span class="italic_text">Midterm exam.</span> There will be a
-midterm exam. All on-campus (non-CGOE) students will be expected to be
-present for the midterm unless special arrangements are made in
-advance with the staff.
+<p class="bold_text">
+Programming assignments can be completed in teams of up to two students. Students can pick their own partners, work on their own, or have the staff recommend a partner. Written assignments will be performed in teams of three, with new randomly assigned partners each assignment.
 </p>
 
-<p><span class="italic_text">Final exam.</span> There will be a final
-exam during the university designated final exam slot, which is 3:30pm
-on Thursday December 12th. In person (non-CGOE) students are expected
-to be present for the exam. CGOE students can take the exam remotely
-via standard CGOE protocols.</p>
-
-<div class="overview_main_item overview_ruled_element">Grading</div>
+<p>
+  <span class="italic_text"Late hand-in policy.</span> Each student is allotted a total of eight late-day points for the semester. Late-day points are for use on <span class="bold_text">programming assignments only</span>. Late-day points work as follows:
 
 <ul>
-<li>Programming Assignments (4): 11% + 15% + 15% + 15% = <span class="colored_text">56%</span></li>
-<li>Written Assignments (5): 2.4% x 5 = <span class="colored_text">12%</span></li>
-<li>Midterm Exam: <span class="colored_text">15%</span></li>
-<li>Final Exam:   <span class="colored_text">17%</span></li>
+<li>A one-person team can extend a programming assignment deadline by one day using one point.</li>
+<li>A two-person team can extend a programming assignment deadline by one day using two points.
+  (e.g., one point from each student)</li>
+<li>If a team does not have remaining late day points, late hand-ins will incur a 10% penalty per day.</li>
+<li>No assignments will be accepted more than three days after the deadline. This is true whether or not the student(s) have late-day points remaining.</li>
 </ul>
 
-<p><span class="bold_text">Late day policy: Each student has a total
-of eight late days for use over the entire quarter on programming
-assignments only.</span> You do not need to notify the staff that you
-are using late days. Just submit after the deadline and we will track
-late days used.</p>
-
-<ul>
-<li>A student can extend an assignment deadline by one day using one
-point. (A team of two students can extend an assignment deadline by
-one day using one point from each student.)</li>
-
-<li>If a student does not have remaining late day points, late
-hand-ins will incur a 15% penalty per day (up to the max number of
-  late days allowed). We'll record points on a per-student basis, so if one
-student is ``out of points'' and the other is not, only the student
-out of late days will be assessed the penalty.</li>
-
-<li><span class="bold_text colored_text">Unless special arrangements
-are made with the staff at least 72 hours in advance of the original
-assignment deadline, no programming assignments will be accepted more
-than FOUR DAYS after their posted deadline.</span></li>
-</ul>
+</p>
 
 <div class="overview_main_item overview_ruled_element">FAQ</div>
 
 <a id="#faq"></a>
 
-<p><span class="bold_text">Do I need a partner for assignments in CS149?</span></p>
+<p><span class="bold_text">Do I need a partner for programming and written assignments?</span></p>
 
-<p>CS149 students will complete both written assignments and programming
-assignments during the quarter. Written assignments must be done with
-the partners assigned to you be the course staff. However, doing the
-programming assignments with a partner is optional. Each year a number
-of students decide to do all the programming assignments on their own
-because they think it will help them learn the material better.  CS149
-programming assignments take a lot of thought, but do not require
-writing a lot of code, and so it's reasonable for a single student to
-do all the required work.  Note that all teams, regardless of whether
-they are one or two person teams, are graded the same.</p>
+<p>CS248A students will complete both written assignments and
+programming assignments during the quarter. Written assignments will
+be done in groups of three, with partners randomly assigned to you by
+the course staff. (We will assign you unique random partners on each
+  assignment to help you get to know your fellow classmates.)</p>
+
+<p>
+Programming assignments can be done in tems of up to two
+students. However, doing programming assignments with a partner is
+optional. Each year a number of students decide to do all the
+programming assignments on their own because they think it will help
+them learn the material better.  Note that all teams, regardless of
+whether they are one or two person teams, are graded the same.
+</p>
 
 <p><span class="bold_text">I don't have a programming assignment
 partner but definitely want one, what should I do?</span></p>
@@ -217,24 +166,37 @@ partner but definitely want one, what should I do?</span></p>
   staff will run a partner matching service that will ask students to
   fill out a survey and match students according to responses.</p>
 
-<p>If you need to change partners or find a partner in the middle of the quarter, just reach out to the staff and we'll do our best to help you find someone. We are here to help!</p>
+<p>If you need to change partners or find a partner in the middle of
+the quarter, just reach out to the staff and we'll do our best to help
+you find someone. We are here to help!</p>
 
-<p><span class="bold_text">Do I need to tell the staff that I am using late days on a programming assignment?</span></p>
+<p><span class="bold_text">Do I need to tell the staff that I am using
+late days on a programming assignment?</span></p>
 
-<p>No, just submit your assignment. The submission will be time stamped and the staff will keep track of late days.</p>
+<p>No, just submit your assignment. The submission will be time
+stamped and the staff will keep track of late days.</p>
 
 <p><span class="bold_text">I got sick, had a busy week, had extra
 curricular activities, had a family event I want to attend, etc.? Can
 I get an extension?</span></p>
 
 <p>You are going to have periods throughout the quarter where you
-cannot put much time in CS149. That's perfectly fine! Late days are
-there to allow you to adjust your deadlines. Given that you have a generous number of
-late days for the quarter, we expect you to manage those days
-according to your needs. We intend to only give students additional
-late days under exceptional circumstances (significant long-running illnesses, important family concerns, etc.) or in accordance with OAE designations.  If you believe exceptional circumstances may be in play, we want to help! <span class="bold_text colored_text">But please make the staff aware of your situation at least 72 hours prior to the impacted deadline.</span>  We are going to hold all students to the 72-advance notice rule and deny last-minute requests, unless the exceptional event happened during this last-minute period.</p>
+cannot put much time in CS248A. That's perfectly fine! Late days are
+there to allow you to adjust your deadlines. Given that you have a
+generous number of late days for the quarter, we expect you to manage
+those days according to your needs. We intend to only give students
+additional late days under exceptional circumstances (significant
+long-running illnesses, important family concerns, etc.) or in
+accordance with OAE designations.  If you believe exceptional
+circumstances may be in play, we want to help! <span class="bold_text
+colored_text">But please make the staff aware of your situation at
+least 72 hours prior to the impacted deadline.</span>  We are going to
+hold all students to the 72-advance notice rule and deny last-minute
+requests, unless an unforeseeable exceptional event happened during this
+last-minute period.</p>
 
-<p><span class="bold_text">Office hours are busy and I'm having trouble getting the help I need. What can I do?</span></p>
+<p><span class="bold_text">Office hours are busy and I'm having
+trouble getting the help I need. What can I do?</span></p>
 
 <p>Office hours aren't the only time you can get help from the staff.
 Just reach out by posting on Ed or writing an email to the staff
@@ -251,7 +213,9 @@ review and reference.</p>
 
 <p><span class="bold_text">Can I audit the class?</span></p>
 
-<p>Please email one of the CAs and we will be happy to add you to Canvas as an observer.</p>
+<p>Please email one of the CAs and we will be happy to add you to
+Canvas as an observer.</p>
+
 
 </div>
 {% endblock %}
