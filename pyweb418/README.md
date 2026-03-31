@@ -10,6 +10,7 @@ https://humberto.io/blog/tldr-generate-django-secret-key/
 From a django environment, such as the one in:
 /home/kayvonf/courses/websites-mar22-venv
 
+source bin/activate
 python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 
 # 5. Set ownership of /etc/pyweb418/cs149fall23 to www-data  (chown -R www-data:www-data cs149fall23)
@@ -24,7 +25,7 @@ python -c 'from django.core.management.utils import get_random_secret_key; print
        sudo python3 manage.py migrate
        sudo python3 manage.py createsuperuser
 
-# 9. Make the database file writable to www-data
+# 9. Make the database file /etc/pyweb418/xxxxx/db.sqlite3 writable by www-data
 # 10. Make the /var/www/cs149/fall23content writable to www-data
 
 # 11. In admin console, change name of site from example.com to cs149.stanford.edu
